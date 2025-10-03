@@ -5762,7 +5762,7 @@ class BarTutorV3:
 
             avg_mastery = total_mastery / len(perf_data)
 
-            print(".2f")
+            print(f"Average mastery: {avg_mastery:.2f}")
 
             if avg_mastery >= 0.9:
 
