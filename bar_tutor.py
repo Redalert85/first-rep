@@ -1967,6 +1967,264 @@ class AdvancedAnalytics:
         }
 
 
+# ---------- MBE Mistake Analysis System ----------
+
+
+class MBEMistakeAnalyzer:
+    """
+    Analyzes WHY wrong answers are tempting and trains pattern recognition.
+
+    Identifies cognitive errors, MBE traps, and creates targeted remediation exercises
+    to inoculate students against recurring mistake patterns.
+    """
+
+    COMMON_MBE_TRAPS = {
+        "temporal_misdirection": "Applying rule from wrong time period",
+        "burden_shifting": "Confusing which party must prove what",
+        "similar_doctrine_confusion": "Mixing up related but distinct rules",
+        "incomplete_element_analysis": "Forgetting one required element",
+        "jurisdiction_error": "Applying minority rule when majority is tested",
+        "procedural_vs_substantive": "Confusing when substantive law applies",
+        "scope_creep": "Extending rule beyond its proper boundaries",
+        "policy_over_law": "Choosing 'fair' answer over legally correct one",
+        "notice_trap": "Missing actual/record/inquiry notice distinction (property)",
+        "early_bird_trap": "Assuming early sale defeats common scheme (property)",
+        "intent_trap": "Missing intent requirement for all lots (property servitudes)",
+        "remedy_confusion": "Confusing damages (law) with injunction (equity)",
+    }
+
+    def __init__(self, client: OpenAI, model: str = DEFAULT_MODEL):
+        self.client = client
+        self.model = model
+        self.error_patterns = defaultdict(int)  # Track which traps student falls for
+        self.remediation_history = []  # Track correction exercises completed
+
+    def analyze_wrong_answer(
+        self, question: str, correct_answer: str, student_answer: str, explanation: str
+    ) -> Dict:
+        """
+        Diagnose the specific cognitive error pattern and generate targeted remediation.
+
+        Returns structured analysis with trap identification, cognitive diagnosis,
+        correction protocol, and inoculation exercises.
+        """
+
+        analysis_prompt = f"""
+        Diagnostic analysis of MBE error pattern:
+
+        QUESTION STEM: {question}
+        
+        CORRECT ANSWER: {correct_answer}
+        STUDENT SELECTED: {student_answer}
+        EXPLANATION PROVIDED: {explanation}
+
+        REQUIRED ANALYSIS (be devastatingly specific):
+
+        1. TRAP IDENTIFICATION:
+        What specific MBE examiner trap did this distractor employ?
+        Categories to consider:
+        - Temporal misdirection (wrong time period/sequence)
+        - Burden shifting (who proves what)
+        - Similar doctrine conflation (e.g., easement vs. servitude)
+        - Incomplete element analysis (missing one required element)
+        - Jurisdiction error (minority vs. majority rule)
+        - Procedural vs. substantive confusion
+        - Scope creep (extending rule too far)
+        - Policy over law (fair but legally wrong)
+        - Notice distinction errors (actual/record/inquiry)
+        - Common scheme traps (intent, early sale, notice)
+
+        Identify PRIMARY trap and any SECONDARY traps present.
+
+        2. COGNITIVE ERROR DIAGNOSIS:
+        What mental shortcut or faulty assumption led to this error?
+        - Pattern matched to superficially similar but legally distinct scenario?
+        - Overlooked key qualifier word (e.g., "only", "all", "unless")?
+        - Applied policy reasoning instead of black-letter rule?
+        - Stopped analysis prematurely (satisfied 2/3 elements, missed 3rd)?
+        - Confused similar-sounding doctrines (e.g., reversion vs. remainder)?
+        - Failed to apply jurisdictional default (chose minority when majority tested)?
+
+        3. CORRECTION PROTOCOL:
+        Provide a specific, actionable analytical step to prevent this error:
+        
+        FORMAT: "When you see [triggering fact pattern], ALWAYS [specific action] before selecting answer."
+        
+        Example: "When you see subdivision + restrictions, ALWAYS run IRIS checklist (Intent/Restrictive/Notice/Same scheme) before assuming deed silence defeats enforcement."
+        
+        Create 2-3 such protocols specific to this error.
+
+        4. PATTERN RECOGNITION TRAINING:
+        What visual/verbal cue should trigger immediate recognition of this issue?
+        - Magic words that signal the trap (e.g., "so long as" = determinable)
+        - Fact patterns that always require this analysis
+        - Answer choice language that reveals the trap
+
+        5. INOCULATION EXERCISES:
+        Generate 2 similar questions testing the SAME trap pattern:
+        
+        Exercise A: Similar fact pattern, same trap, different subject
+        Exercise B: Identical trap but with extra distractor to increase difficulty
+        
+        For each exercise, provide:
+        - Fact pattern (2-3 sentences)
+        - 4 answer choices (one correct, three featuring the same trap type)
+        - Explanation emphasizing the trap recognition
+
+        6. REMEDIATION PRIORITY:
+        - Severity: [High/Medium/Low] - How commonly is this trap tested?
+        - Difficulty: [Hard/Medium/Easy] - How subtle is the distinction?
+        - Impact: [Critical/Important/Helpful] - Point value if mastered
+        
+        7. CROSS-REFERENCE:
+        What related concepts should student review to strengthen understanding?
+        (List 2-3 specific doctrine names with brief explanation of connection)
+
+        Make analysis laser-focused on preventing THIS specific error in future questions.
+        Use precise legal terminology. Include MBE examiner perspective.
+        """
+
+        system = """You are an expert in MBE question construction and cognitive error analysis.
+        You understand:
+        - How NCBE examiners craft plausible but incorrect distractors
+        - Common cognitive biases that trap even strong students
+        - Pattern recognition techniques from championship test-takers
+        - Neuroscience of error correction and skill acquisition
+        
+        Your analysis should be:
+        - Brutally specific (no generic advice)
+        - Action-oriented (concrete steps, not vague suggestions)
+        - Pattern-focused (teachable recognition cues)
+        - Immediately applicable (student can use on next question)
+        
+        For property servitudes, emphasize IRIS framework violations and notice type confusions.
+        Highlight early-sale trap and intent requirement misunderstandings."""
+
+        messages = [
+            {"role": "system", "content": system},
+            {"role": "user", "content": analysis_prompt},
+        ]
+
+        response = (
+            self.client.chat.completions.create(
+                model=self.model, messages=messages, temperature=0.2, max_tokens=2000
+            )
+            .choices[0]
+            .message.content
+        )
+
+        # Extract trap type for tracking
+        trap_type = self._identify_trap_type(response)
+        self.error_patterns[trap_type] += 1
+
+        # Save to remediation history
+        remediation_entry = {
+            "timestamp": datetime.now().isoformat(),
+            "question_stem": question[:100],  # First 100 chars
+            "correct": correct_answer,
+            "selected": student_answer,
+            "trap_type": trap_type,
+            "analysis": response,
+        }
+        self.remediation_history.append(remediation_entry)
+
+        return {
+            "trap_type": trap_type,
+            "full_analysis": response,
+            "error_count_this_trap": self.error_patterns[trap_type],
+            "remediation_exercises": self._extract_exercises(response),
+        }
+
+    def _identify_trap_type(self, analysis: str) -> str:
+        """Extract the primary trap type from analysis."""
+        analysis_lower = analysis.lower()
+
+        # Check for specific trap keywords
+        for trap_name, description in self.COMMON_MBE_TRAPS.items():
+            if trap_name.replace("_", " ") in analysis_lower:
+                return trap_name
+
+        # Default
+        return "general_error"
+
+    def _extract_exercises(self, analysis: str) -> List[Dict]:
+        """Extract remediation exercises from analysis response."""
+        exercises = []
+
+        # Simple extraction - would be enhanced with actual parsing
+        if "Exercise A:" in analysis:
+            exercises.append({"type": "inoculation_a", "content": "See full analysis"})
+        if "Exercise B:" in analysis:
+            exercises.append({"type": "inoculation_b", "content": "See full analysis"})
+
+        return exercises
+
+    def get_personalized_trap_report(self) -> Dict:
+        """Generate report of student's most frequent error patterns."""
+
+        if not self.error_patterns:
+            return {
+                "message": "No errors analyzed yet. Complete some questions to build your error profile.",
+                "recommendations": [],
+            }
+
+        # Rank traps by frequency
+        ranked_traps = sorted(self.error_patterns.items(), key=lambda x: x[1], reverse=True)
+
+        top_traps = ranked_traps[:5]
+
+        recommendations = []
+        for trap_name, count in top_traps:
+            trap_desc = self.COMMON_MBE_TRAPS.get(trap_name, "Unknown error pattern")
+            recommendations.append(
+                {
+                    "trap": trap_name.replace("_", " ").title(),
+                    "description": trap_desc,
+                    "frequency": count,
+                    "remediation": self._get_trap_remediation(trap_name),
+                }
+            )
+
+        return {
+            "total_errors_analyzed": len(self.remediation_history),
+            "unique_trap_types": len(self.error_patterns),
+            "most_common_traps": recommendations,
+            "improvement_focus": recommendations[0]["trap"] if recommendations else "N/A",
+        }
+
+    def _get_trap_remediation(self, trap_name: str) -> str:
+        """Get specific remediation advice for a trap type."""
+
+        remediation_map = {
+            "temporal_misdirection": "Create a timeline for each question. Mark critical time points BEFORE analyzing elements.",
+            "burden_shifting": "Write 'P must prove:' and 'D must prove:' at top of scratch paper for every question.",
+            "similar_doctrine_confusion": "Make a comparison chart of similar doctrines. Review daily until automatic.",
+            "incomplete_element_analysis": "Use finger count - touch one finger per element. Must satisfy ALL before selecting answer.",
+            "jurisdiction_error": "Circle any '[MBE Split]' markers. Default to MAJORITY rule unless question specifies jurisdiction.",
+            "procedural_vs_substantive": "Ask: 'Is this about HOW (procedure) or WHAT (substance)?' Circle answer before proceeding.",
+            "scope_creep": "Underline the exact scope language in the rule. Don't extend beyond explicit boundaries.",
+            "policy_over_law": "Remember: MBE tests LAW, not fairness. If answer feels 'right' but isn't in rule = WRONG.",
+            "notice_trap": "Property questions: Write 'A/R/I?' for Actual/Record/Inquiry notice types. Check all three.",
+            "early_bird_trap": "Common scheme questions: Early sale ≠ automatic exemption. Check IRIS (Intent + Notice + Restrictive + Same).",
+            "intent_trap": "Developer's intent for ALL lots required. If some lots exempt = no common scheme.",
+            "remedy_confusion": "Circle 'law' or 'equity' based on facts. Law = $$, Equity = injunction. Servitudes = equity.",
+        }
+
+        return remediation_map.get(trap_name, "Review the specific rule and create a checklist.")
+
+    def save_error_log(self, filepath: Path = ERROR_LOG) -> None:
+        """Save error analysis history to file for tracking over time."""
+        try:
+            with open(filepath, "a", encoding="utf-8") as f:
+                for entry in self.remediation_history:
+                    f.write(json.dumps(entry) + "\n")
+
+            print(f"💾 Error log saved: {len(self.remediation_history)} analyses")
+            self.remediation_history.clear()  # Clear after saving
+        except OSError as e:
+            print(f"⚠️  Could not save error log: {e}")
+
+
 # ---------- Main Tutor Class ----------
 
 
@@ -1997,6 +2255,8 @@ class BarTutorV3:
         self.collaborative = CollaborativeStudy()
 
         self.analytics = AdvancedAnalytics(self.tracker, self.flashcards)
+
+        self.mistake_analyzer = MBEMistakeAnalyzer(self.client, self.model)
 
         self.current_subject = "Mixed/Other"
 
