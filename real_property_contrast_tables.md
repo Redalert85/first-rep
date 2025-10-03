@@ -38,6 +38,17 @@
 | **Exam Trap** | Requiring horizontal privity for servitudes | Thinking damages available for servitudes |
 | **1-liner Hypo** | Promise not to build; successor sues for breach → Real covenant; damages | Same promise; court enforces against successor → Equitable servitude; injunction |
 
+### COMMON SCHEME (IMPLIED EQUITABLE SERVITUDE) VS EXPRESS COVENANT
+
+| Element | Common Scheme Servitude | Express Covenant |
+|---------|------------------------|------------------|
+| **Source** | Subdivision plan + IRIS factors (Intent, Restrictive promise, Notice, Same scheme) | Written promise recorded in deed |
+| **Notice Needed** | Actual, record, or inquiry (patterns, signage, plat map) | Actual/record via deed itself |
+| **Who Is Bound** | All lots in scheme (even early sales) if IRIS satisfied | Only parties and successors with notice/privity |
+| **Remedy** | Injunction to stop non-conforming use | Damages (real covenant) or injunction (servitude) |
+| **Exam Trap** | Assuming Lot 1 is free because deed silent | Forgetting to check for common restrictions in subdivision |
+| **1-liner Hypo** | Lot sold first, deed silent, but street of "Residential Only" homes → Clinic barred | Deed says "residential only" → Express covenant; enforceable |
+
 ---
 
 ## CONCURRENT OWNERSHIP COMPARISON

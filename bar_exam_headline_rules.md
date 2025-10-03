@@ -7,8 +7,8 @@
 ## 2. CONVEYANCING & RECORDING
 **Rule (22 words):** Recording statutes protect bona fide purchasers; race-notice is majority rule, requiring timely recordation without actual or inquiry notice of prior competing interests.
 
-## 3. EASEMENTS, SERVITUDES & LICENSES
-**Rule (20 words):** Easements create rights to use another's land; appurtenant easements run with land, in gross are personal; licenses are revocable permissions.
+## 3. EASEMENTS, SERVITUDES & COMMON SCHEMES
+**Rule (25 words):** Easements grant use rights; equitable servitudes impose negative promises; common schemes bind all subdivision lots where intent, restrictive language, and actual, record, or inquiry notice align.
 
 ## 4. CONCURRENT OWNERSHIP
 **Rule (20 words):** Joint tenancy requires four unities; tenancy in common has no survivorship; tenancy by entirety protects marital property from separate creditors.

@@ -105,6 +105,21 @@
 □ Burden runs: intent + notice + touch & concern + privity
 □ Benefit runs: same elements
 □ Equity: court enforcement vs. damages
+□ IRIS for implied servitude: Intent, Restrictive promise, Inquiry/actual/record notice, Same scheme
+
+---
+
+## COMMON SCHEME QUICK CHECK (Implied Equitable Servitudes)
+
+□ Developer marketed uniform plan or recorded map?
+□ Intended restriction on **all** lots (not just a few)?
+□ Restriction is negative (limits use vs. grants rights)?
+□ Buyer had **actual** notice? (read documents, told by seller)
+□ Buyer had **record** notice? (restriction recorded in chain or plat)
+□ Buyer had **inquiry** notice? (neighborhood signage, identical homes)
+□ Any lots exempted or scheme abandoned? (changed conditions defense)
+□ Remedy sought = injunction to stop offending use?
+□ Defenses considered (changed conditions, laches, waiver)?
 
 ---
 

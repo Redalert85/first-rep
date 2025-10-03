@@ -40,11 +40,20 @@ Is it a covenant/servitude?
 │   └── Privity present?
 │       ├── Real covenant? → Vertical privity required
 │       └── Equitable servitude? → No privity needed
+│           └── Common scheme implied? → Apply IRIS (Intent, Restrictive promise, Inquiry/actual/record notice, Same scheme)
 └── NO: Is it an easement?
     ├── Appurtenant easement? → YES → Runs with dominant estate
     ├── In gross easement? → NO → Doesn't run (personal)
     └── License? → NO → Revocable, doesn't run
 ```
+
+**IRIS Reminder:**
+- **I**ntent to impose restriction on all lots
+- **R**estrictive (negative) promise
+- **I**nquiry/actual/record notice to successor
+- **S**ame plan for subdivision
+
+If all elements satisfied → Implied equitable servitude; remedy = injunction.
 
 **Quick Rules:**
 - Real covenants: Intent + Notice + Touch & Concern + Vertical Privity
@@ -96,6 +105,27 @@ How was easement created?
 - Implied: Strict necessity required
 - Prescription: HATE elements (Hostile, Actual, exclusive, continuous)
 - Estoppel: Promise + reliance + inequity to deny
+
+---
+
+## 11. COMMON SCHEME / EQUITABLE SERVITUDE FLOW
+
+```
+Common plan or marketing? → NO → No implied servitude
+                              YES → Intent for ALL lots?
+                                        │
+                                        ├── NO → No scheme
+                                        └── YES → Restriction negative?
+                                                  │
+                                                  ├── NO → Covenant only
+                                                  └── YES → Notice to successor?
+                                                        ├── Actual → Enforceable
+                                                        ├── Record → Enforceable
+                                                        ├── Inquiry (uniform use) → Enforceable
+                                                        └── None → No servitude
+```
+
+**Remedy:** Injunction stopping violating use.
 
 ---
 

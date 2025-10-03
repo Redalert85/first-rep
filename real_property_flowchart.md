@@ -40,11 +40,20 @@ Is it a covenant/servitude?
 │   └── Privity present?
 │       ├── Real covenant? → Vertical privity required
 │       └── Equitable servitude? → No privity needed
+│       └── Common scheme implied? → Run IRIS test (Intent, Restrictive, Inquiry/record/actual notice, Same scheme)
 └── NO: Is it an easement?
     ├── Appurtenant easement? → YES → Runs with dominant estate
     ├── In gross easement? → NO → Doesn't run (personal)
     └── License? → NO → Revocable, doesn't run
 ```
+
+**IRIS Quick Check for Implied Servitudes:**
+- **I**ntent to bind all lots?
+- **R**estrictive promise (negative use)?
+- **I**nquiry/actual/record notice to successor?
+- **S**ame scheme across subdivision?
+
+If all boxes checked → enforce via injunction.
 
 **Quick Rules:**
 - Real covenants: Intent + Notice + Touch & Concern + Vertical Privity
@@ -96,6 +105,27 @@ How was easement created?
 - Implied: Strict necessity required
 - Prescription: HATE elements (Hostile, Actual, exclusive, continuous)
 - Estoppel: Promise + reliance + inequity to deny
+
+---
+
+## 11. COMMON SCHEME SERVITUDE ANALYSIS
+
+```
+Was there a common development plan?
+├── NO → No implied servitude
+└── YES → Continue
+    ├── Intent to restrict ALL lots? → NO → No scheme
+    └── YES
+        ├── Restriction negative (limits use)? → NO → Covenant only
+        └── YES
+            ├── Successor had notice?
+            │   ├── Actual notice? → YES → Enforce servitude
+            │   ├── Record notice? → YES → Enforce servitude
+            │   └── Inquiry notice (uniform appearance)? → YES → Enforce servitude
+            └── NO → Buyer takes free of restriction
+```
+
+**Outcome:** If IRIS satisfied → Equitable servitude implied; remedy = injunction.
 
 ---
 

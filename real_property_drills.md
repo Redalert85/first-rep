@@ -96,7 +96,17 @@ D) Get neither; covenant doesn't run
 **Why C is right:** Real covenants provide damages; equitable servitudes provide injunctions.
 **Why B is closest wrong:** Depends on whether it's real covenant or equitable servitude.
 
-### 10. ZONING - SPOT ZONING
+### 10. COMMON SCHEME - IMPLIED SERVITUDE
+Developer sells Lot 1 without restrictions, then records plan and sells remaining lots with "residential only" covenants. Lot 1's successor opens a medical clinic despite knowing the neighborhood plan.
+A) Clinic allowed because Lot 1 deed silent
+B) Clinic allowed unless zoning also prohibits it
+C) Clinic barred if buyer had notice of common scheme
+D) Clinic barred only if developer still owns another lot
+
+**Why C is right:** Intent + restrictive promise + notice (IRIS) imply an equitable servitude even for early lots.
+**Why A is closest wrong:** Silence in deed doesn't defeat common scheme when buyer had notice.
+
+### 11. ZONING - SPOT ZONING
 City rezones single parcel from residential to commercial, increasing value. Valid?
 A) Invalid; spot zoning requires comprehensive plan
 B) Valid; increases property value
@@ -106,7 +116,7 @@ D) Valid if follows procedures
 **Why A is right:** Spot zoning (single parcel change) invalid unless part of comprehensive zoning plan.
 **Why D is closest wrong:** Procedural regularity doesn't cure spot zoning defect.
 
-### 11. EASEMENT TERMINATION - ABANDONMENT
+### 12. EASEMENT TERMINATION - ABANDONMENT
 Dominant owner stops using easement for 20 years, plants garden over path. Servient owner:
 A) May block path; easement abandoned
 B) Cannot block; 20 years insufficient
@@ -116,7 +126,7 @@ D) Cannot block; intent to abandon missing
 **Why A is right:** Non-use + affirmative acts (garden) + intent = abandonment terminates easement.
 **Why C is closest wrong:** Garden is adverse use, but abandonment doesn't require separate adverse possession.
 
-### 12. RECORDING - WILD DEEDS
+### 13. RECORDING - WILD DEEDS
 O conveys to A but deed never delivered. A records anyway. O conveys to B who records. Winner:
 A) A wins; recorded first
 B) B wins; bona fide purchaser
@@ -126,7 +136,7 @@ D) Neither; both deeds invalid
 **Why B is right:** Undelivered deed is wild/invalid; doesn't provide constructive notice.
 **Why A is closest wrong:** Recording wild deed doesn't perfect title or provide notice.
 
-### 13. CONCURRENT - TENANCY BY ENTIRETY
+### 14. CONCURRENT - TENANCY BY ENTIRETY
 Husband and Wife own home as tenants by entirety. Husband's creditor gets judgment. Can creditor:
 A) Force partition sale
 B) Attach husband's interest only
@@ -136,7 +146,7 @@ D) Do nothing; entirety protects marital property
 **Why D is right:** Tenancy by entirety protects against separate creditor claims during marriage.
 **Why C is closest wrong:** Creditor cannot reach entirety property during marriage.
 
-### 14. LL-T - RETALIATORY EVICTION
+### 15. LL-T - RETALIATORY EVICTION
 Tenant complains about building code violations. Landlord serves 30-day notice to vacate. Valid?
 A) Valid; landlord can terminate anytime
 B) Invalid; retaliatory eviction prohibited
@@ -146,7 +156,7 @@ D) Invalid only if tenant withholds rent
 **Why B is right:** Retaliatory eviction for exercising tenant rights (complaining) is illegal.
 **Why C is closest wrong:** Order doesn't matter; retaliation itself invalidates eviction.
 
-### 15. MORTGAGES - DUE-ON-SALE CLAUSE
+### 16. MORTGAGES - DUE-ON-SALE CLAUSE
 Mortgage contains due-on-sale clause. Borrower transfers property to trust for tax benefits. Valid trigger?
 A) Valid; transfer of ownership
 B) Invalid; not arms-length sale
@@ -222,6 +232,13 @@ Original covenant promises "no commercial use." Successor buys with actual knowl
 **Rule:** Equitable servitudes require intent, notice, touch & concern; actual knowledge satisfies notice.
 **Key Fact:** Buyer had actual knowledge of restriction; no recording required for servitudes.
 **Outcome:** Servitude enforceable against successor; actual notice substitutes for recording.
+
+### 10. COMMON SCHEME ANALYSIS
+Lot 1 deed silent, but subdivision brochures and recorded plat say "single-family residential." Lot 1 buyer installs a drive-thru coffee kiosk.
+
+**Rule:** Implied equitable servitudes require IRIS: Intent, Restrictive promise, Inquiry/actual/record notice, Same plan.
+**Key Fact:** Marketing + recorded plat supply notice; restriction is negative.
+**Outcome:** Injunction granted forcing kiosk closure; equitable servitude implied.
 
 ### 10. ZONING - VARIANCE
 Property owner seeks variance to build garage closer to lot line than zoning allows.
