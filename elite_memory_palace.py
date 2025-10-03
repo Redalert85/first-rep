@@ -70,6 +70,13 @@ class SystemConfig:
     championship_mode: bool = False
     vr_export_enabled: bool = True
 
+    def __post_init__(self):
+        """Validate configuration on initialization"""
+        if any(d <= 0 for d in self.dimensions):
+            raise ValueError("All dimensions must be positive")
+        if self.max_locations_per_palace < 1:
+            raise ValueError("Must allow at least 1 location per palace")
+
 
 @dataclass
 class ElitePalaceLocation:
