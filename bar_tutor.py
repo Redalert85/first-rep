@@ -2771,6 +2771,15 @@ class BarTutorV3:
 
         self.issue_spotter = IssueSpottingTrainer(self.client, self.model)
 
+        # Initialize elite memory system with error handling
+        try:
+            from elite_memory_palace import EliteMemoryPalaceSystem
+            self.elite_system = EliteMemoryPalaceSystem("Bar Exam Champion")
+            print("✅ Elite memory system loaded successfully")
+        except Exception as e:
+            print(f"⚠️  Elite memory system unavailable: {e}")
+            self.elite_system = None
+
         self.current_subject = "Mixed/Other"
 
         self.session_start = datetime.now()
