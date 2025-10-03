@@ -2225,6 +2225,516 @@ class MBEMistakeAnalyzer:
             print(f"⚠️  Could not save error log: {e}")
 
 
+# ---------- Issue-Spotting Training System ----------
+
+
+class IssueSpottingTrainer:
+    """
+    Develops systematic issue identification from fact patterns.
+
+    Trains students to scan fact patterns in <30 seconds and identify all
+    legal issues using structured scanning protocols and trigger word recognition.
+    """
+
+    TRIGGER_WORD_LIBRARY = {
+        "temporal": [
+            "immediately",
+            "reasonable time",
+            "promptly",
+            "delay",
+            "ten years",
+            "continuous",
+            "interrupted",
+            "within",
+            "after",
+            "before",
+        ],
+        "relational": [
+            "employee",
+            "independent contractor",
+            "agent",
+            "partner",
+            "stranger",
+            "invitee",
+            "licensee",
+            "trespasser",
+            "buyer",
+            "seller",
+        ],
+        "transactional": [
+            "conveyed",
+            "granted",
+            "sold",
+            "leased",
+            "mortgaged",
+            "promised",
+            "agreed",
+            "offered",
+            "accepted",
+            "recorded",
+        ],
+        "status": ["minor", "incompetent", "intoxicated", "corporation", "LLC", "partnership"],
+        "property_descriptors": [
+            "appurtenant",
+            "in gross",
+            "joint",
+            "common",
+            "fee simple",
+            "life estate",
+            "leasehold",
+            "subdivision",
+            "covenant",
+        ],
+        "qualifiers": [
+            "hostile",
+            "actual",
+            "exclusive",
+            "continuous",
+            "open",
+            "notorious",
+            "adverse",
+            "good faith",
+            "bad faith",
+            "bona fide",
+        ],
+    }
+
+    def __init__(self, client: OpenAI, model: str = DEFAULT_MODEL):
+        self.client = client
+        self.model = model
+        self.spotting_history = []
+        self.trigger_word_hits = defaultdict(int)
+
+    def train_systematic_scanning(self, fact_pattern: str) -> str:
+        """
+        Teaches students to scan fact patterns systematically for issues.
+
+        Returns comprehensive training analysis with step-by-step scanning protocol.
+        """
+
+        training_prompt = f"""
+        Train systematic issue-spotting for this fact pattern:
+        
+        {fact_pattern}
+        
+        ## SCANNING PROTOCOL (teach this systematic approach)
+        
+        ### Step 1: TEMPORAL SCAN (5 seconds)
+        Look for: dates, time periods, sequences, deadlines, durations
+        Found: [List every temporal fact with significance]
+        Raised issues: [What legal issue each temporal fact raises]
+        Example: "10 years" → adverse possession? statute of limitations? RAP analysis?
+        
+        ### Step 2: PARTY SCAN (5 seconds)
+        Identify: all parties and their legal relationships
+        Found: [List all parties with relationship descriptors]
+        Raised issues: [What each relationship implies legally]
+        Example: "employee" → respondeat superior? scope of employment? workers comp?
+        
+        ### Step 3: TRANSACTION SCAN (5 seconds)
+        Identify: all legal acts (conveyances, promises, torts, crimes)
+        Found: [List all transactions/acts chronologically]
+        Raised issues: [What each transaction raises]
+        Example: "conveyed Lot 1" → deed validity? recording act? chain of title?
+        
+        ### Step 4: PROPERTY SCAN (if applicable) (5 seconds)
+        Identify: all property interests and restrictions described
+        Found: [List all interests with ownership types]
+        Raised issues: [What each interest/restriction raises]
+        Example: "residential only covenant" → runs with land? notice? IRIS common scheme?
+        
+        ### Step 5: QUALIFIER SCAN (5 seconds)
+        Identify: adjectives/adverbs modifying actions or status
+        Found: [List all qualifiers with what they modify]
+        Raised issues: [What each qualifier raises]
+        Example: "hostile possession" → adverse possession elements? HATE checklist?
+        
+        ### Step 6: RED HERRING IDENTIFICATION (5 seconds)
+        What facts are mentioned but likely don't raise testable issues?
+        Found: [List likely irrelevant facts]
+        Why irrelevant: [Brief explanation]
+        Example: "sunny day" → atmospheric detail, not legally significant
+        
+        ## ISSUE HIERARCHY (10 seconds)
+        Organize identified issues in logical analytical order:
+        
+        TIER 1 - Threshold Issues (must address first):
+        - Jurisdiction/standing/justiciability
+        - Statute of limitations/laches
+        - Subject matter constraints
+        
+        TIER 2 - Formation/Validity Issues:
+        - Creation of legal relationship
+        - Required elements/formalities
+        - Defects in formation
+        
+        TIER 3 - Performance/Breach Issues:
+        - Duties and obligations
+        - Breach or violation
+        - Causation and damages
+        
+        TIER 4 - Remedy Issues:
+        - Available remedies (law vs. equity)
+        - Measure of damages
+        - Injunctive relief requirements
+        
+        TIER 5 - Defense/Affirmative Issues:
+        - Defenses available
+        - Affirmative claims
+        - Counterclaims
+        
+        ## PREDICTED QUESTION FOCUS (5 seconds)
+        Based on issues spotted, the question will likely ask about:
+        
+        Primary Issue: [Most legally complex/ambiguous issue identified]
+        Why This Issue: [Facts are contested/elements borderline/rule has exceptions here]
+        Answer Will Turn On: [Specific fact or element that determines outcome]
+        
+        MBE Strategy: [What to focus on when answering - 1 sentence]
+        
+        TOTAL TARGET TIME: 45 seconds for complete systematic scan
+        CHAMPIONSHIP TIME: 30 seconds with practice
+        
+        ## TEACHING ANNOTATIONS:
+        - Mark each trigger word found in fact pattern with [TRIGGER: category]
+        - Highlight facts that raise multiple issues
+        - Note facts that appear relevant but aren't (examiner misdirection)
+        - Provide "speed cues" for instant recognition on similar patterns
+        
+        This protocol should become automatic with practice. Students drill until
+        they complete this scan in <30 seconds with 95% issue-capture accuracy.
+        
+        For property servitudes, ensure IRIS framework (Intent/Restrictive/Notice/Same scheme)
+        triggers on subdivision + restrictions patterns.
+        """
+
+        system = """You are an expert in issue-spotting pedagogy and MBE fact pattern construction.
+        You understand:
+        - How examiners layer multiple issues into compact fact patterns
+        - Trigger words that signal specific legal doctrines
+        - Red herrings designed to waste student time
+        - Systematic scanning methods used by top scorers
+        
+        Train students to develop muscle memory for issue-spotting through:
+        - Explicit trigger word recognition
+        - Hierarchical issue organization
+        - Time-bounded scanning drills
+        - Pattern recognition automation
+        
+        Be extremely specific about WHERE in the fact pattern each issue appears and
+        WHAT specific words/phrases triggered the issue identification.
+        
+        For property law, emphasize IRIS mnemonic for common scheme issues."""
+
+        messages = [
+            {"role": "system", "content": system},
+            {"role": "user", "content": training_prompt},
+        ]
+
+        response = (
+            self.client.chat.completions.create(
+                model=self.model, messages=messages, temperature=0.2, max_tokens=2000
+            )
+            .choices[0]
+            .message.content
+        )
+
+        # Track trigger words found
+        self._update_trigger_stats(fact_pattern)
+
+        return response
+
+    def issue_spotting_speed_drill(self, subject: str, num_patterns: int = 20) -> Dict:
+        """
+        Rapid-fire drill: see fact pattern, identify issues in <30 seconds.
+
+        Returns performance statistics and improvement recommendations.
+        """
+
+        print("\n⚡ ISSUE-SPOTTING SPEED DRILL")
+        print("=" * 60)
+        print(f"Subject: {subject}")
+        print("Goal: Identify all issues in <30 seconds per pattern")
+        print("Press Enter after reading each fact pattern to see issues...\n")
+
+        patterns = self._generate_fact_patterns(subject, num_patterns)
+
+        results = []
+
+        for i, pattern in enumerate(patterns, 1):
+            print(f"\n{'='*60}")
+            print(f"Pattern {i}/{num_patterns}")
+            print("-" * 60)
+            print(pattern["facts"])
+            print("\n" + "-" * 60)
+            print("What issues are raised? (Think, then press Enter)")
+
+            input("Press Enter when ready to see issues... ")
+
+            start_time = time.time()
+
+            print("\nPOSSIBLE ISSUES:")
+            for idx, issue in enumerate(pattern["possible_issues"], 1):
+                print(f"  {idx}. {issue}")
+
+            print(f"\nACTUAL ISSUES IN THIS PATTERN: {pattern['actual_issues']}")
+
+            response_time = time.time() - start_time
+
+            user_input = input("\nDid you spot all issues? (y/n): ").strip().lower()
+
+            if user_input != "y":
+                missed_input = input(
+                    "Which issues did you miss? (comma-separated numbers): "
+                ).strip()
+                if missed_input:
+                    missed = [
+                        pattern["possible_issues"][int(x.strip()) - 1]
+                        for x in missed_input.split(",")
+                        if x.strip().isdigit()
+                    ]
+                else:
+                    missed = []
+            else:
+                missed = []
+
+            correct = len(missed) == 0
+
+            if correct:
+                print("✓ Perfect issue-spotting!")
+            else:
+                print(f"\n✗ Missed {len(missed)} issue(s)")
+                print(f"\nEXPLANATION: {pattern['explanation']}")
+                print("\nTRIGGER WORDS YOU SHOULD HAVE CAUGHT:")
+                for trigger in pattern.get("trigger_words", []):
+                    print(
+                        f"  • '{trigger}' → signals {pattern['trigger_meanings'].get(trigger, 'legal issue')}"
+                    )
+
+            results.append(
+                {
+                    "pattern_num": i,
+                    "correct": correct,
+                    "time": response_time,
+                    "missed_count": len(missed),
+                    "missed_issues": missed,
+                }
+            )
+
+        return self._analyze_spotting_performance(results)
+
+    def _generate_fact_patterns(self, subject: str, num_patterns: int) -> List[Dict]:
+        """Generate practice fact patterns for issue-spotting drills."""
+
+        # Simplified implementation - would call LLM to generate varied patterns
+        # For now, return template-based patterns
+
+        property_patterns = [
+            {
+                "facts": "Developer subdivided 20 acres into 10 lots. First deed to Buyer A contained no restrictions. Developer then sold remaining 9 lots with deeds stating 'residential use only.' All deeds were recorded. Buyer A now operates a law office from the property.",
+                "possible_issues": [
+                    "Recording act issue",
+                    "Equitable servitude/common scheme",
+                    "Zoning violation",
+                    "Adverse possession",
+                    "Easement by necessity",
+                ],
+                "actual_issues": [2],  # Common scheme is the key issue
+                "explanation": "This tests IRIS common scheme doctrine. Intent to restrict all lots + restrictive promise + notice (record/inquiry from 9 recorded deeds) + same scheme = equitable servitude binds Lot 1 despite silent deed.",
+                "trigger_words": ["subdivided", "residential use only", "recorded"],
+                "trigger_meanings": {
+                    "subdivided": "common scheme analysis",
+                    "residential use only": "restrictive covenant/servitude",
+                    "recorded": "notice to successors",
+                },
+            },
+            {
+                "facts": "Owner conveyed Blackacre 'to A for life, then to B if B graduates law school.' A is 70 years old. B is 25 and in law school.",
+                "possible_issues": [
+                    "Life estate creation",
+                    "Contingent remainder vs. executory interest",
+                    "Rule Against Perpetuities",
+                    "Waste by life tenant",
+                    "Partition rights",
+                ],
+                "actual_issues": [1, 2, 3],
+                "explanation": "Life estate to A. Future interest to B is contingent remainder (condition must be met). RAP applies to contingent remainder - will B graduate within 21 years of A's death? Likely yes, so valid.",
+                "trigger_words": ["for life", "then to", "if"],
+                "trigger_meanings": {
+                    "for life": "life estate",
+                    "then to": "future interest (remainder)",
+                    "if": "contingent interest (condition)",
+                },
+            },
+        ]
+
+        # Return requested number (cycling through templates if needed)
+        return (property_patterns * ((num_patterns // len(property_patterns)) + 1))[:num_patterns]
+
+    def _analyze_spotting_performance(self, results: List[Dict]) -> Dict:
+        """Analyze speed drill performance and provide recommendations."""
+
+        total = len(results)
+        perfect_count = sum(1 for r in results if r["correct"])
+        avg_time = sum(r["time"] for r in results) / total if total > 0 else 0
+        avg_missed = sum(r["missed_count"] for r in results) / total if total > 0 else 0
+
+        accuracy = (perfect_count / total * 100) if total > 0 else 0
+
+        print("\n" + "=" * 60)
+        print("DRILL PERFORMANCE ANALYSIS")
+        print("=" * 60)
+        print(f"Accuracy: {accuracy:.1f}% ({perfect_count}/{total} perfect)")
+        print(f"Average Time: {avg_time:.1f} seconds per pattern")
+        print(f"Average Missed: {avg_missed:.1f} issues per pattern")
+
+        # Performance feedback
+        if accuracy >= 90 and avg_time <= 30:
+            grade = "🏆 ELITE"
+            feedback = "Championship-level issue-spotting! Ready for full-speed MBE."
+        elif accuracy >= 80 and avg_time <= 45:
+            grade = "✅ STRONG"
+            feedback = "Solid performance. Focus on speed - aim for <30 seconds."
+        elif accuracy >= 70:
+            grade = "📈 DEVELOPING"
+            feedback = "Good foundation. Practice trigger word recognition daily."
+        else:
+            grade = "🔨 BUILDING"
+            feedback = (
+                "Keep drilling. Review trigger word library and use finger-counting for issues."
+            )
+
+        print(f"\nGrade: {grade}")
+        print(f"Feedback: {feedback}")
+
+        # Recommendations
+        recommendations = []
+
+        if avg_time > 30:
+            recommendations.append(
+                "Speed: Practice trigger word flash cards 10 min/day to automate recognition"
+            )
+
+        if accuracy < 90:
+            recommendations.append(
+                "Accuracy: Review missed patterns and create personal 'trap cards' for each miss"
+            )
+
+        if avg_missed > 0.5:
+            recommendations.append(
+                "Completeness: Use 6-step scanning protocol (temporal→party→transaction→property→qualifier→red herring)"
+            )
+
+        if recommendations:
+            print("\n💡 RECOMMENDATIONS:")
+            for i, rec in enumerate(recommendations, 1):
+                print(f"  {i}. {rec}")
+
+        return {
+            "accuracy": accuracy,
+            "average_time": avg_time,
+            "average_missed": avg_missed,
+            "grade": grade,
+            "recommendations": recommendations,
+        }
+
+    def _update_trigger_stats(self, fact_pattern: str) -> None:
+        """Track which trigger words appear in fact patterns."""
+
+        fact_lower = fact_pattern.lower()
+
+        for category, words in self.TRIGGER_WORD_LIBRARY.items():
+            for word in words:
+                if word in fact_lower:
+                    self.trigger_word_hits[f"{category}:{word}"] += 1
+
+    def get_trigger_word_report(self) -> Dict:
+        """Generate report of most common trigger words encountered."""
+
+        if not self.trigger_word_hits:
+            return {"message": "No patterns analyzed yet.", "top_triggers": []}
+
+        ranked = sorted(self.trigger_word_hits.items(), key=lambda x: x[1], reverse=True)
+
+        top_triggers = [
+            {"trigger": trigger.split(":")[1], "category": trigger.split(":")[0], "count": count}
+            for trigger, count in ranked[:15]
+        ]
+
+        return {
+            "total_patterns_analyzed": len(self.spotting_history),
+            "unique_triggers_found": len(self.trigger_word_hits),
+            "top_trigger_words": top_triggers,
+            "most_common_category": max(
+                (
+                    (cat, sum(1 for t in self.trigger_word_hits if t.startswith(cat + ":")))
+                    for cat in self.TRIGGER_WORD_LIBRARY.keys()
+                ),
+                key=lambda x: x[1],
+                default=("none", 0),
+            )[0],
+        }
+
+    def create_custom_drill(self, subject: str, focus_issues: List[str]) -> str:
+        """
+        Generate custom drill focused on specific issues student is missing.
+
+        Args:
+            subject: MBE subject area
+            focus_issues: Specific issues student needs practice with
+
+        Returns:
+            AI-generated custom drill with fact patterns emphasizing focus issues
+        """
+
+        prompt = f"""
+        Create a custom issue-spotting drill for:
+        
+        SUBJECT: {subject}
+        FOCUS ISSUES: {', '.join(focus_issues)}
+        
+        Generate 5 fact patterns (each 3-4 sentences) that will train recognition of these issues.
+        
+        For each pattern:
+        1. Include subtle trigger words for the focus issues
+        2. Add 1-2 red herrings to test discrimination
+        3. Layer multiple issues (student must spot focus issue among others)
+        4. Vary difficulty: patterns 1-2 (obvious), 3-4 (moderate), 5 (subtle)
+        
+        For each pattern provide:
+        - Fact pattern
+        - All issues raised (numbered list)
+        - Trigger words that should have signaled each issue
+        - Explanation of why red herrings are irrelevant
+        
+        For property patterns with servitudes/covenants, ensure IRIS framework is testable:
+        - Intent language ("developer intended all lots...")
+        - Restrictive promise ("residential only," "no commercial")
+        - Notice facts (recorded plan, uniform neighborhood, actual knowledge)
+        - Same scheme evidence (number of lots, uniformity, marketing materials)
+        
+        Make these challenging but teachable - each should reinforce the focus issues.
+        """
+
+        system = """You are an expert legal educator specializing in issue-spotting pedagogy.
+        Create fact patterns that teach pattern recognition through deliberate practice.
+        Include explicit teaching annotations explaining what should trigger issue identification.
+        
+        For property law, integrate IRIS mnemonic trigger words."""
+
+        messages = [{"role": "system", "content": system}, {"role": "user", "content": prompt}]
+
+        response = (
+            self.client.chat.completions.create(
+                model=self.model, messages=messages, temperature=0.3, max_tokens=2000
+            )
+            .choices[0]
+            .message.content
+        )
+
+        return response
+
+
 # ---------- Main Tutor Class ----------
 
 
@@ -2257,6 +2767,8 @@ class BarTutorV3:
         self.analytics = AdvancedAnalytics(self.tracker, self.flashcards)
 
         self.mistake_analyzer = MBEMistakeAnalyzer(self.client, self.model)
+
+        self.issue_spotter = IssueSpottingTrainer(self.client, self.model)
 
         self.current_subject = "Mixed/Other"
 
