@@ -4664,21 +4664,35 @@ class BarTutorV3:
 
                 print(f"{'='*40}")
 
-                print(f"Current accuracy: {prediction['current_accuracy']:.1f}%")
+                if "prediction" in prediction and prediction["prediction"] == "Insufficient data":
 
-                print(f"Target accuracy: {prediction['target_accuracy']}%")
+                    print("\n⚠️  Insufficient performance data for prediction.")
 
-                print(f"Days remaining: {prediction['days_remaining']}")
+                    print("💡 Complete some practice questions to build your analytics:")
 
-                print(f"Daily improvement needed: {prediction['daily_improvement_needed']:.2f}%")
+                    print("   - Option 3: Adaptive Quiz")
 
-                print(f"On track: {'Yes' if prediction['on_track'] else 'No'}")
+                    print("   - Option 4: Flashcard Review")
 
-                print(f"Recommended daily cards: {prediction['recommended_daily_cards']}")
+                    print("   - Option 16/17: Memory Palace Practice")
 
-                if prediction["focus_subjects"]:
+                else:
 
-                    print(f"Focus subjects: {', '.join(prediction['focus_subjects'])}")
+                    print(f"Current accuracy: {prediction['current_accuracy']:.1f}%")
+
+                    print(f"Target accuracy: {prediction['target_accuracy']}%")
+
+                    print(f"Days remaining: {prediction['days_remaining']}")
+
+                    print(f"Daily improvement needed: {prediction['daily_improvement_needed']:.2f}%")
+
+                    print(f"On track: {'Yes' if prediction['on_track'] else 'No'}")
+
+                    print(f"Recommended daily cards: {prediction['recommended_daily_cards']}")
+
+                    if prediction.get("focus_subjects"):
+
+                        print(f"Focus subjects: {', '.join(prediction['focus_subjects'])}")
 
             except ValueError:
 
