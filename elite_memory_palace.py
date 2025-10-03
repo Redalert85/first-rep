@@ -26,6 +26,10 @@ from dataclasses import dataclass, field
 from datetime import datetime, timedelta
 from typing import Any, Dict, List, Optional, Protocol, Set, Tuple, Union
 
+# Type aliases for improved code clarity and documentation
+Position3D = Tuple[float, float, float]  # (x, y, z) coordinates
+BoundingBox3D = Tuple[float, float, float, float, float, float]  # (min_x, max_x, min_y, max_y, min_z, max_z)
+
 # Configure logging
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
@@ -42,9 +46,9 @@ class MemoryEncoder(Protocol):
 
 
 class SpatialIndex(Protocol):
-    def add_location(self, location_id: str, position: Tuple[float, float, float]) -> None: ...
+    def add_location(self, location_id: str, position: Position3D) -> None: ...
     def find_nearest(
-        self, position: Tuple[float, float, float], k: int = 5
+        self, position: Position3D, k: int = 5
     ) -> List[Tuple[str, float]]: ...
     def remove_location(self, location_id: str) -> None: ...
 
@@ -1551,7 +1555,7 @@ class ContentNode:
     category: str
     difficulty: float
     semantic_embedding: List[float] = field(default_factory=list)
-    position: Tuple[float, float, float] = field(default=(0, 0, 0))
+    position: Position3D = field(default=(0, 0, 0))
     connections: Set[str] = field(default_factory=set)
 
 
@@ -3038,7 +3042,7 @@ class OptimizedSpatialIndex:
         self.size = 0
         self._node_cache = {}  # LRU cache for frequently accessed nodes
 
-    def add_location(self, location_id: str, position: Tuple[float, float, float]) -> None:
+    def add_location(self, location_id: str, position: Position3D) -> None:
         """Add location with O(log n) complexity"""
         bbox = self._point_to_bbox(position)
         entry = SpatialEntry(location_id, bbox, position)
@@ -3054,7 +3058,7 @@ class OptimizedSpatialIndex:
             self._node_cache.clear()
 
     def find_nearest(
-        self, position: Tuple[float, float, float], k: int = 5
+        self, position: Position3D, k: int = 5
     ) -> List[Tuple[str, float]]:
         """Find k nearest neighbors with O(log n + k) complexity"""
         if self.root is None:
@@ -3295,7 +3299,7 @@ class CompressedLocationStorage:
         self,
         location_id: str,
         content: str,
-        position: Tuple[float, float, float],
+        position: Position3D,
         bizarreness: float,
         emotional: float,
         sensory_encoding: Dict[str, Any],
@@ -3361,7 +3365,7 @@ class CompressedLocationStorage:
         }
 
     def bulk_query_by_position(
-        self, min_pos: Tuple[float, float, float], max_pos: Tuple[float, float, float]
+        self, min_pos: Position3D, max_pos: Position3D
     ) -> List[str]:
         """Bulk spatial query - 3x faster than individual lookups"""
 
@@ -3670,7 +3674,7 @@ class EliteMemoryPalaceSystem:
         return palace
 
     def add_elite_location(
-        self, palace_id: str, content: str, position: Optional[Tuple[float, float, float]] = None
+        self, palace_id: str, content: str, position: Optional[Position3D] = None
     ) -> ElitePalaceLocation:
         """Add a location with elite multi-sensory encoding"""
 
