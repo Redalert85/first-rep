@@ -3245,10 +3245,21 @@ class CompressedLocationStorage:
         except ImportError:
             self.np = None
             logger.warning("NumPy not available - using fallback storage")
+
         # Columnar storage arrays
         self.location_ids: List[str] = []
         self.content_compressed: List[bytes] = []  # Compressed content
 
+        # Temporary lists for batched consolidation (avoid np.append() inefficiency)
+        self._temp_positions_x: List[float] = []
+        self._temp_positions_y: List[float] = []
+        self._temp_positions_z: List[float] = []
+        self._temp_bizarreness: List[float] = []
+        self._temp_emotional: List[float] = []
+        self._temp_timestamps: List[int] = []
+        self._temp_sensory: List[int] = []
+
+        # Consolidated numpy arrays (created periodically)
         if self.np is not None:
             self.positions_x = self.np.array([], dtype=self.np.float32)
             self.positions_y = self.np.array([], dtype=self.np.float32)
@@ -3274,6 +3285,9 @@ class CompressedLocationStorage:
         self.performance_buffer_size = 20
         self.performance_histories: Dict[str, "RingBuffer"] = {}
 
+        # Consolidation threshold (batch size before converting to numpy)
+        self.consolidation_threshold = 100
+
     def add_location(
         self,
         location_id: str,
@@ -3296,26 +3310,20 @@ class CompressedLocationStorage:
         self.location_ids.append(location_id)
         self.content_compressed.append(compressed_content)
 
-        # Resize arrays efficiently
-        if self.np is not None:
-            self.positions_x = self.np.append(self.positions_x, position[0])
-            self.positions_y = self.np.append(self.positions_y, position[1])
-            self.positions_z = self.np.append(self.positions_z, position[2])
-            self.bizarreness_factors = self.np.append(self.bizarreness_factors, bizarreness)
-            self.emotional_intensities = self.np.append(self.emotional_intensities, emotional)
-            self.creation_timestamps = self.np.append(
-                self.creation_timestamps, int(datetime.now().timestamp())
-            )
-            self.sensory_encodings = self.np.append(self.sensory_encodings, sensory_bits)
-        else:
-            # Fallback to list append
-            self.positions_x.append(position[0])
-            self.positions_y.append(position[1])
-            self.positions_z.append(position[2])
-            self.bizarreness_factors.append(bizarreness)
-            self.emotional_intensities.append(emotional)
-            self.creation_timestamps.append(int(datetime.now().timestamp()))
-            self.sensory_encodings.append(sensory_bits)
+        # Use temporary lists for efficient batching (avoid np.append() inefficiency)
+        current_time = int(datetime.now().timestamp())
+
+        self._temp_positions_x.append(position[0])
+        self._temp_positions_y.append(position[1])
+        self._temp_positions_z.append(position[2])
+        self._temp_bizarreness.append(bizarreness)
+        self._temp_emotional.append(emotional)
+        self._temp_timestamps.append(current_time)
+        self._temp_sensory.append(sensory_bits)
+
+        # Consolidate to numpy arrays periodically for optimal performance
+        if len(self._temp_positions_x) >= self.consolidation_threshold:
+            self._consolidate_temp_data()
 
         # Update index mapping
         self.id_to_index[location_id] = index
@@ -3329,6 +3337,9 @@ class CompressedLocationStorage:
         """Retrieve location with decompression"""
         if location_id not in self.id_to_index:
             return None
+
+        # Ensure any temporary data is consolidated before access
+        self.force_consolidation()
 
         index = self.id_to_index[location_id]
 
@@ -3350,6 +3361,9 @@ class CompressedLocationStorage:
         self, min_pos: Tuple[float, float, float], max_pos: Tuple[float, float, float]
     ) -> List[str]:
         """Bulk spatial query - 3x faster than individual lookups"""
+
+        # Ensure any temporary data is consolidated before querying
+        self.force_consolidation()
 
         if self.np is not None:
             # Vectorized filtering using numpy
@@ -3439,6 +3453,45 @@ class CompressedLocationStorage:
             unpacked[channel] = value
 
         return unpacked
+
+    def _consolidate_temp_data(self) -> None:
+        """Consolidate temporary lists to numpy arrays for optimal performance"""
+        if self.np is None or len(self._temp_positions_x) == 0:
+            return
+
+        # Convert temporary lists to numpy arrays with appropriate dtypes
+        temp_positions_x = self.np.array(self._temp_positions_x, dtype=self.np.float32)
+        temp_positions_y = self.np.array(self._temp_positions_y, dtype=self.np.float32)
+        temp_positions_z = self.np.array(self._temp_positions_z, dtype=self.np.float32)
+        temp_bizarreness = self.np.array(self._temp_bizarreness, dtype=self.np.float32)
+        temp_emotional = self.np.array(self._temp_emotional, dtype=self.np.float32)
+        temp_timestamps = self.np.array(self._temp_timestamps, dtype=self.np.int64)
+        temp_sensory = self.np.array(self._temp_sensory, dtype=self.np.uint64)
+
+        # Concatenate with existing arrays (efficient for large arrays)
+        self.positions_x = self.np.concatenate([self.positions_x, temp_positions_x])
+        self.positions_y = self.np.concatenate([self.positions_y, temp_positions_y])
+        self.positions_z = self.np.concatenate([self.positions_z, temp_positions_z])
+        self.bizarreness_factors = self.np.concatenate([self.bizarreness_factors, temp_bizarreness])
+        self.emotional_intensities = self.np.concatenate([self.emotional_intensities, temp_emotional])
+        self.creation_timestamps = self.np.concatenate([self.creation_timestamps, temp_timestamps])
+        self.sensory_encodings = self.np.concatenate([self.sensory_encodings, temp_sensory])
+
+        # Clear temporary lists
+        self._temp_positions_x.clear()
+        self._temp_positions_y.clear()
+        self._temp_positions_z.clear()
+        self._temp_bizarreness.clear()
+        self._temp_emotional.clear()
+        self._temp_timestamps.clear()
+        self._temp_sensory.clear()
+
+        logger.debug(f"Consolidated {len(temp_positions_x)} locations to numpy arrays")
+
+    def force_consolidation(self) -> None:
+        """Force consolidation of any remaining temporary data"""
+        if len(self._temp_positions_x) > 0:
+            self._consolidate_temp_data()
 
 
 class RingBuffer:
