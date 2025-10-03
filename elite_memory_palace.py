@@ -916,9 +916,14 @@ class AdaptiveNeuroplasticityEngine:
         return min(0.4, boost)  # Cap at 40% boost
 
     def optimize_consolidation_timing(
-        self, location: "ElitePalaceLocation", current_time: datetime
+        self,
+        location: Union[ElitePalaceLocation, Dict[str, Any]],
+        current_time: datetime
     ) -> Dict[str, Any]:
         """Calculate optimal consolidation timing (compatibility method)"""
+        # Handle both ElitePalaceLocation objects and dict representations
+        # (location parameter accepted for API consistency and future enhancements)
+
         # Simplified version for compatibility
         next_review = current_time + timedelta(hours=8)  # Default to sleep consolidation
 
