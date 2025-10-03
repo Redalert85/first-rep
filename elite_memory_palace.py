@@ -20,6 +20,7 @@ import json
 import logging
 import math
 import random
+import time
 from collections import defaultdict, deque
 from dataclasses import dataclass, field
 from datetime import datetime, timedelta
@@ -3362,6 +3363,9 @@ class CompressedLocationStorage:
     ) -> List[str]:
         """Bulk spatial query - 3x faster than individual lookups"""
 
+        # Track performance
+        start_time = time.time()
+
         # Ensure any temporary data is consolidated before querying
         self.force_consolidation()
 
@@ -3383,6 +3387,10 @@ class CompressedLocationStorage:
                     and min_pos[2] <= self.positions_z[i] <= max_pos[2]
                 ):
                     indices.append(i)
+
+        # Track performance
+        duration = time.time() - start_time
+        self._track_performance('spatial_query', duration)
 
         return [self.location_ids[i] for i in indices]
 
@@ -3610,6 +3618,16 @@ class EliteMemoryPalaceSystem:
 
         # Cognitive profiles for personalization
         self.cognitive_profiles: Dict[str, "CognitiveProfile"] = {}
+
+        # Performance tracking for optimization
+        self._performance_metrics = {
+            'spatial_queries': 0,
+            'avg_query_time': 0.0,
+            'cache_hits': 0,
+            'cache_misses': 0,
+            'total_operations': 0,
+            'avg_operation_time': 0.0
+        }
 
         logger.info(f"🚀 Elite Memory Palace System '{name}' - DATA OPTIMIZED")
         logger.info("   📊 Spatial Indexing: R-tree O(log n) queries")
@@ -4411,6 +4429,44 @@ class EliteMemoryPalaceSystem:
             "Watch for exceptions to the rule",
             "Remember the specific requirements",
         ]
+
+    def _track_performance(self, operation: str, duration: float):
+        """Track system performance for optimization"""
+        self._performance_metrics[f'{operation}_count'] = \
+            self._performance_metrics.get(f'{operation}_count', 0) + 1
+        self._performance_metrics[f'{operation}_time'] = \
+            self._performance_metrics.get(f'{operation}_time', 0.0) + duration
+
+        # Update global metrics
+        self._performance_metrics['total_operations'] += 1
+        self._performance_metrics['avg_operation_time'] = \
+            (self._performance_metrics['avg_operation_time'] * (self._performance_metrics['total_operations'] - 1) + duration) / \
+            self._performance_metrics['total_operations']
+
+    def get_performance_metrics(self) -> Dict[str, Any]:
+        """Get current performance metrics for analysis"""
+        metrics = self._performance_metrics.copy()
+
+        # Calculate averages for operations that have been tracked
+        for key, value in metrics.items():
+            if key.endswith('_count') and key != 'total_operations':
+                operation = key.replace('_count', '')
+                time_key = f'{operation}_time'
+                if time_key in metrics and metrics[key] > 0:
+                    metrics[f'{operation}_avg_time'] = metrics[time_key] / metrics[key]
+
+        return metrics
+
+    def reset_performance_metrics(self):
+        """Reset performance metrics (useful for testing or fresh sessions)"""
+        self._performance_metrics = {
+            'spatial_queries': 0,
+            'avg_query_time': 0.0,
+            'cache_hits': 0,
+            'cache_misses': 0,
+            'total_operations': 0,
+            'avg_operation_time': 0.0
+        }
 
 
 # ============================================================================
