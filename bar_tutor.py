@@ -4775,11 +4775,13 @@ class BarTutorV3:
 
             print("  16. Real Property Memory Agent  → Dedicated MBE Property palace guide")
 
+            print("  17. Constitutional Law Memory Agent → Federal power & rights palace guide")
+
             print("  0. Exit")
 
             print("─" * 60)
 
-            choice = input("\nSelect mode (0-16): ").strip()
+            choice = input("\nSelect mode (0-17): ").strip()
 
             try:
 
@@ -4859,9 +4861,13 @@ class BarTutorV3:
 
                     self._real_property_memory_palace_agent()
 
+                elif choice_num == 17:
+
+                    self._constitutional_law_memory_palace_agent()
+
                 else:
 
-                    print("Invalid choice. Please select 0-16.")
+                    print("Invalid choice. Please select 0-17.")
 
             except ValueError:
 
@@ -6435,6 +6441,233 @@ class BarTutorV3:
                 "mnemonic": "FIX: Fastened, Intent permanent, eXtent of damage",
             },
         }
+
+    def _constitutional_law_memory_palace_agent(self):
+        """Elite memory palace experience for Constitutional Law"""
+
+        print("\n🏛️ ELITE CONSTITUTIONAL LAW MEMORY AGENT")
+        print("=" * 65)
+
+        # Ensure elite system
+        if not getattr(self, "elite_system", None):
+            try:
+                from elite_memory_palace import EliteMemoryPalaceSystem, SensoryChannel  # type: ignore
+
+                self.elite_system = EliteMemoryPalaceSystem("Bar Exam Champion")
+                self.sensory_channel_cls = SensoryChannel
+                print("✅ Elite memory system loaded successfully")
+            except Exception as exc:  # pragma: no cover
+                print(f"⚠️  Elite memory system unavailable: {exc}")
+                self.elite_system = None
+                return
+
+        # Create or fetch Con Law palace
+        palace_name = "Constitutional Law Mastery"
+        existing_palace = next(
+            (palace for palace in self.elite_system.palaces.values() if palace["name"] == palace_name),
+            None,
+        )
+
+        if existing_palace:
+            palace = existing_palace
+            print(f"🏰 Using existing palace: {palace_name}")
+        else:
+            palace = self.elite_system.create_elite_palace(
+                palace_name, "Constitutional Law", layout_type="constitutional_hall", dimensions=(60, 60, 12)
+            )
+            print(f"🏰 Created new palace: {palace_name}")
+
+        palace_id = palace["id"]
+
+        # Define constitutional law nodes
+        conlaw_nodes = [
+            {
+                "title": "Judicial Power & Justiciability",
+                "content": (
+                    "SCRAM Justiciability: Standing (injury, causation, redress), Case/Controversy, Ripeness, Advisory opinions (no), Mootness."
+                    " Political Question factors: textual commitment + no standards."
+                ),
+                "mnemonic": "SCRAM triangle with injury/causation/redress",
+            },
+            {
+                "title": "Federal Legislative Power",
+                "content": (
+                    "Commerce Clause three rings: Channels, Instrumentalities, Substantial Effects (economic aggregation)."
+                    " Necessary & Proper enables implementation. Spending/TAX limits: general welfare, clear, related, non-coercive."
+                ),
+                "mnemonic": "Circus tent with three rings labeled Channels/Instrumentalities/Effects."
+            },
+            {
+                "title": "Executive Power & Separation",
+                "content": (
+                    "Youngstown tiers, appointment/removal power, commander-in-chief. No line-item veto; executive agreements vs treaties."
+                ),
+                "mnemonic": "Three-tiered podium with President balancing Congress/Court."
+            },
+            {
+                "title": "Federalism & State Power",
+                "content": (
+                    "Anti-commandeering (NY v. US, Printz), 10th Amendment reserve. Supremacy and preemption, dormant Commerce balancing."
+                ),
+                "mnemonic": "State capitols resisting federal puppet strings."
+            },
+            {
+                "title": "Individual Rights Framework",
+                "content": (
+                    "Incorporation via 14th DP. Due Process (procedural/substantive). Equal Protection tiers: strict (race), intermediate (gender), rational."
+                ),
+                "mnemonic": "SIREN spotlighting scrutiny levels."
+            },
+            {
+                "title": "First Amendment Speech",
+                "content": (
+                    "Content-based strict scrutiny, symbolic speech (O'Brien test), public forum doctrine, commercial speech intermediate."
+                ),
+                "mnemonic": "Megaphone with strict/intermediate levers."
+            },
+            {
+                "title": "Religion Clauses",
+                "content": (
+                    "Establishment (Lemon/endorsement/coercion), Free Exercise (neutral vs targeted laws, strict scrutiny)."
+                ),
+                "mnemonic": "Balance scale between church and state with Lemon wedges."
+            },
+            {
+                "title": "Criminal Procedure Overview",
+                "content": (
+                    "Fourth Amendment SWEAR (Search, Warrant, Exceptions, Arrest, Reasonable expectation); Fifth Miranda CRISP; exclusionary rule limits."
+                ),
+                "mnemonic": "Police badge shaped like SWEAR acronym."
+            },
+        ]
+
+        # Populate palace locations if they are not present
+        existing_locations = list(self.elite_system.palaces[palace_id]["locations"].values())
+
+        for node in conlaw_nodes:
+            if any(node["title"] in getattr(loc, "content", "") for loc in existing_locations):
+                continue
+
+            location_text = f"{node['title']}: {node['content']}"
+            location = self.elite_system.add_elite_location(palace_id, location_text)
+
+            if node.get("mnemonic"):
+                location.sensory_matrix["mnemonic_device"] = node["mnemonic"]
+
+            existing_locations.append(location)
+
+        print("\n✅ Constitutional law palace prepared! Let's explore.")
+
+        while True:
+            print("\n⚖️  Constitutional Law Menu")
+            print("1. Guided palace tour")
+            print("2. Focused topic drill")
+            print("3. Memory palace question practice")
+            print("4. Generate flashcards for weak areas")
+            print("5. Export palace summary")
+            print("0. Return to main menu")
+
+            choice = input("Select option: ").strip()
+
+            if choice == "0":
+                break
+            elif choice == "1":
+                self._guided_conlaw_tour(conlaw_nodes, palace_id)
+            elif choice == "2":
+                self._conlaw_focus_drill(conlaw_nodes, palace_id)
+            elif choice == "3":
+                self._conlaw_question_practice(conlaw_nodes, palace_id)
+            elif choice == "4":
+                self._generate_conlaw_flashcards(conlaw_nodes)
+            elif choice == "5":
+                self._export_conlaw_palace(palace_id, palace_name)
+            else:
+                print("❌ Invalid choice.")
+
+    def _guided_conlaw_tour(self, nodes, palace_id):
+        print("\n🚶 Guided tour through Constitutional Law palace")
+        for node in nodes:
+            print("\n" + "-" * 60)
+            print(f"📍 {node['title']}")
+            print(node['content'])
+            if node.get("mnemonic"):
+                print(f"🎵 Mnemonic: {node['mnemonic']}")
+            input("Press Enter to reinforce this location...")
+
+    def _conlaw_focus_drill(self, nodes, palace_id):
+        print("\n🎯 Focused drill")
+        for idx, node in enumerate(nodes, 1):
+            print(f"{idx}. {node['title']}")
+        choice = input("Select topic: ").strip()
+        try:
+            index = int(choice) - 1
+            node = nodes[index]
+        except (ValueError, IndexError):
+            print("❌ Invalid selection")
+            return
+
+        print(f"\n📘 Deep dive: {node['title']}")
+        print(node['content'])
+
+        if "SCRAM" in node['content']:
+            print("\nQuiz: Identify each element of standing.")
+            response = input("List them separated by commas: ")
+            expected = {"injury", "causation", "redress"}
+            if expected.issubset({part.strip().lower() for part in response.split(',')}):
+                print("✅ Correct!")
+            else:
+                print("⚠️  Remember: Injury, causation, redressability, plus case or controversy.")
+
+    def _conlaw_question_practice(self, nodes, palace_id):
+        print("\n📝 Constitutional Law practice question")
+        questions = [
+            {
+                "prompt": "Citizen sues alleging Congress lacks authority to regulate purely intrastate non-economic activity. What case controls?",
+                "answer": "United States v. Lopez"
+            },
+            {
+                "prompt": "What are the requirements for conditional federal spending to be valid?",
+                "answer": "General welfare, clearly stated, related to federal interest, not coercive."
+            },
+            {
+                "prompt": "Name two exceptions to mootness.",
+                "answer": "Capable of repetition yet evading review; voluntary cessation; class actions."  # type: ignore
+            }
+        ]
+
+        for q in questions:
+            print(f"\n❓ {q['prompt']}")
+            input("Your answer: ")
+            print(f"✅ Model answer: {q['answer']}")
+
+    def _generate_conlaw_flashcards(self, nodes):
+        print("\n🃏 Generating Constitutional Law flashcards")
+        created = 0
+        for node in nodes:
+            question = f"Explain {node['title']}"
+            answer = node['content']
+            card = FlashcardEntry(
+                id=generate_id("conlaw"),
+                subject="Constitutional Law",
+                topic=node['title'],
+                question=question,
+                answer=answer,
+                created=datetime.now().isoformat(),
+            )
+            self.store.save_flashcard(card)
+            created += 1
+        print(f"✅ Created {created} flashcards. Use Flashcard Review mode to drill them.")
+
+    def _export_conlaw_palace(self, palace_id, palace_name):
+        """Export palace summary for review."""
+        if not self.elite_system:
+            print("⚠️  Elite system not available")
+            return
+        export = self.elite_system.export_palace_to_vr(palace_id)
+        filename = f"conlaw_palace_{datetime.now().strftime('%Y%m%d_%H%M%S')}.json"
+        with open(filename, "w", encoding="utf-8") as f:
+            json.dump(export, f, indent=2)
+        print(f"✅ Exported {palace_name} palace to {filename}")
 
 
 # ---------- Elite MBE Preparation System (Integrated) ----------
