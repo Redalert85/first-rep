@@ -1226,13 +1226,14 @@ class AdvancedPerformanceAnalyzer:
             self._train_initial_models()
 
             self.advanced_mode = True
-            logger.info("✅ Advanced ML performance analyzer loaded")
+            logger.info("Advanced ML performance analyzer initialized")
 
         except ImportError as e:
             # Fallback to statistical analysis
             self.advanced_mode = False
             self.learning_curve_analyzer = LearningCurveAnalyzer()
-            logger.info(f"⚠️  Advanced ML libraries not available ({e}), using statistical analysis")
+            logger.warning("Advanced ML libraries not available, using statistical analysis")
+            logger.debug(f"Import error details: {e}")
 
     def _train_initial_models(self):
         """Train models with synthetic data for initial functionality"""
@@ -1616,10 +1617,11 @@ class NetworkXGraphAnalyzer:
 
             self.nx = nx
             self.advanced_mode = True
-            logger.info("✅ NetworkX graph analyzer loaded")
-        except ImportError:
+            logger.info("NetworkX graph analyzer initialized")
+        except ImportError as e:
             self.advanced_mode = False
-            logger.info("⚠️  NetworkX not available, using fallback graph analysis")
+            logger.warning("NetworkX not available, using fallback graph analysis")
+            logger.debug(f"NetworkX import error: {e}")
 
     def analyze_centrality(self, graph: ContentGraph) -> Dict[str, float]:
         """Calculate node centrality measures"""
@@ -3629,20 +3631,18 @@ class EliteMemoryPalaceSystem:
             'avg_operation_time': 0.0
         }
 
-        logger.info(f"🚀 Elite Memory Palace System '{name}' - DATA OPTIMIZED")
-        logger.info("   📊 Spatial Indexing: R-tree O(log n) queries")
-        logger.info("   💾 Memory Storage: Columnar compression (47% reduction)")
-        logger.info(
-            f"   🧠 AI Enhanced Encoder: {'Advanced mode' if self.ai_encoder.advanced_mode else 'Fallback mode'}"
-        )
-        logger.info("   🧪 Adaptive Neuroplasticity: Enhanced retention prediction")
-        logger.info(
-            f"   📈 Performance Analyzer: {'Advanced ML mode' if self.performance_analyzer.advanced_mode else 'Statistical mode'}"
-        )
-        logger.info(
-            f"   🗺️ Spatial Intelligence: {'Advanced Graph mode' if self.spatial_intelligence.graph_analyzer.advanced_mode else 'Fallback mode'}"
-        )
-        logger.info("   🌈 Multi-Modal Integration: Cross-sensory coherence optimization")
+        # System initialization complete
+        logger.info(f"Elite Memory Palace System '{name}' initialized successfully")
+
+        # Log system capabilities at debug level for detailed diagnostics
+        logger.debug("System capabilities: "
+                    f"Spatial={'Advanced' if hasattr(self.spatial_index, 'r_tree') else 'Basic'}, "
+                    f"Storage={'Compressed' if self.np is not None else 'Basic'}, "
+                    f"AI={'Advanced' if self.ai_encoder.advanced_mode else 'Fallback'}, "
+                    f"Neuro={'Enhanced' if self.neuro_optimizer else 'Basic'}, "
+                    f"Analysis={'ML' if self.performance_analyzer.advanced_mode else 'Statistical'}, "
+                    f"Graph={'NetworkX' if self.spatial_intelligence.graph_analyzer.advanced_mode else 'Fallback'}, "
+                    f"MultiModal={'Active' if self.multi_modal_system else 'Inactive'}")
 
     def create_elite_palace(
         self,
