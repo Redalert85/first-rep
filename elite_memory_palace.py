@@ -981,7 +981,7 @@ class AnalysisResult:
     anomalies_detected: bool
     learning_velocity: float
     recommendations: List[str]
-    confidence_interval: tuple[float, float]
+    confidence_interval: Tuple[float, float]
 
 
 class LearningCurveAnalyzer:
@@ -1488,7 +1488,7 @@ class AdvancedPerformanceAnalyzer:
 
         return recommendations[:5]  # Limit to 5 recommendations
 
-    def _calculate_confidence_interval(self, features: List[float]) -> tuple[float, float]:
+    def _calculate_confidence_interval(self, features: List[float]) -> Tuple[float, float]:
         """Calculate confidence interval for performance prediction"""
         if not self.advanced_mode:
             # Simple statistical confidence interval
