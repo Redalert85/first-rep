@@ -1315,34 +1315,43 @@ class AdvancedPerformanceAnalyzer:
 
     async def _advanced_analysis(self, session: RecallSession) -> AnalysisResult:
         """Advanced ML-based analysis"""
-        # Feature extraction from session data
-        features = self._extract_session_features(session)
+        try:
+            features = self._extract_session_features(session)
+            if not features or len(features) < 5:
+                raise ValueError("Insufficient feature data for analysis")
 
-        # Predict performance trends
-        predicted_performance = float(self.performance_model.predict([features])[0])
+            # Validate feature values are numeric and finite
+            if not all(isinstance(f, (int, float)) and math.isfinite(f) for f in features):
+                raise ValueError("Invalid feature data - non-numeric or infinite values detected")
 
-        # Identify performance anomalies
-        anomaly_score = self.anomaly_detector.predict([features])[0]
-        anomalies_detected = anomaly_score == -1
+            # Predict performance trends
+            predicted_performance = float(self.performance_model.predict([features])[0])
 
-        # Analyze learning curve progression
-        learning_insights = self.learning_curve_analyzer.analyze(session.user_history)
+            # Identify performance anomalies
+            anomaly_score = self.anomaly_detector.predict([features])[0]
+            anomalies_detected = anomaly_score == -1
 
-        # Generate adaptive recommendations
-        recommendations = self._generate_recommendations(
-            features, predicted_performance, learning_insights
-        )
+            # Analyze learning curve progression
+            learning_insights = self.learning_curve_analyzer.analyze(session.user_history)
 
-        # Calculate confidence interval
-        confidence_interval = self._calculate_confidence_interval(features)
+            # Generate adaptive recommendations
+            recommendations = self._generate_recommendations(
+                features, predicted_performance, learning_insights
+            )
 
-        return AnalysisResult(
-            performance_score=predicted_performance,
-            anomalies_detected=anomalies_detected,
-            learning_velocity=learning_insights.velocity,
-            recommendations=recommendations,
-            confidence_interval=confidence_interval,
-        )
+            # Calculate confidence interval
+            confidence_interval = self._calculate_confidence_interval(features)
+
+            return AnalysisResult(
+                performance_score=predicted_performance,
+                anomalies_detected=anomalies_detected,
+                learning_velocity=learning_insights.velocity,
+                recommendations=recommendations,
+                confidence_interval=confidence_interval,
+            )
+        except Exception as e:
+            logger.error(f"Advanced analysis failed: {e}")
+            return await self._statistical_analysis(session)
 
     async def _statistical_analysis(self, session: RecallSession) -> AnalysisResult:
         """Fallback statistical analysis without ML"""
