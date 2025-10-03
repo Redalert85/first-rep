@@ -4223,25 +4223,22 @@ class EliteMemoryPalaceSystem:
             "sleep_consolidation": "Sleep transforms fragile short-term memories into stable long-term storage",
         }
 
-    def export_palace_to_vr(self, palace_id: str, filename: str = None) -> str:
-        """
-        Export palace data to VR-compatible format by palace ID.
-
-        Args:
-            palace_id: ID of the palace to export
-            filename: Optional filename to save VR data
-
-        Returns:
-            JSON string containing VR-compatible palace data
-        """
-        # Retrieve palace data by ID
+    def export_palace_to_vr(self, palace_id: str, filename: str = None) -> Dict[str, Any]:
+        """Export palace to VR-ready format"""
         if palace_id not in self.palaces:
-            raise ValueError(f"Palace '{palace_id}' not found")
+            return {"error": "Palace not found"}
 
         palace = self.palaces[palace_id]
 
         # Call the standalone export function with the palace data
-        return export_palace_to_vr(palace, filename)
+        vr_json = export_palace_to_vr(palace, filename)
+
+        # Parse the JSON string back to dict for consistency
+        try:
+            import json
+            return json.loads(vr_json)
+        except json.JSONDecodeError:
+            return {"error": "Failed to parse VR export data"}
 
     # Helper methods
 
