@@ -868,7 +868,7 @@ class FlashcardManager:
 
         cards.sort(
             key=lambda x: (
-                datetime.fromisoformat(x.get("next_review", x["created"])),
+            datetime.fromisoformat(x.get("next_review", x["created"])),
                 ["Foundational", "Intermediate", "Advanced", "Expert"].index(
                     x.get("difficulty", "Intermediate")
                 ),
@@ -1340,11 +1340,11 @@ class CardFilteringSystem:
 
     def search_cards(
         self,
-        query: str = None,
-        tags: List[str] = None,
-        date_from: datetime = None,
-        date_to: datetime = None,
-        min_ease: float = None,
+                     query: str = None,
+                     tags: List[str] = None,
+                     date_from: datetime = None,
+                     date_to: datetime = None,
+                     min_ease: float = None,
         max_ease: float = None,
     ) -> List[Dict]:
         """Advanced search with multiple filters"""
@@ -3499,7 +3499,7 @@ class BarTutorV3:
             .message.content
         )
 
-    # ---------- Main Entry Point ----------
+# ---------- Main Entry Point ----------
 
     def print_analytics_dashboard(self):
         """Display comprehensive performance analytics"""
@@ -3892,8 +3892,8 @@ class BarTutorV3:
 
         response = (
             self.client.chat.completions.create(
-                model=self.model,
-                messages=messages,
+            model=self.model,
+            messages=messages,
                 temperature=0.1,  # Low temperature for consistency
             )
             .choices[0]
@@ -4656,7 +4656,7 @@ class BarTutorV3:
 
                 target_date = datetime.fromisoformat(target_date_str)
 
-                prediction = self.tracker.predict_readiness(target_date)
+                prediction = self.analytics.predict_readiness(target_date)
 
                 print(f"\n{'='*40}")
 
@@ -4887,7 +4887,7 @@ class BarTutorV3:
         print("🔬 Neuroscience-optimized with 99.9% recall guarantee")
 
         print("⚡ Competition-ready: 100+ items/minute with 95% accuracy")
-
+        
         # Import and initialize elite system
         try:
             import importlib.util
@@ -5113,7 +5113,7 @@ class BarTutorV3:
             print("🏆 ELITE MEMORY PALACE - Championship Training Menu")
 
             print("=" * 65)
-
+            
             if self.elite_system:
                 print("CHAMPIONSHIP MODE ACTIVE ⚡")
                 print("-" * 65)
@@ -5135,7 +5135,7 @@ class BarTutorV3:
             print("8. ❓ Help & Technique Guide")
 
             print("9. 📖 Study All Topics Systematically")
-
+            
             if self.elite_system:
                 print("\n🥇 CHAMPIONSHIP FEATURES:")
                 print("10. 🚀 Championship Speed Training (100+ items/min)")
@@ -5188,23 +5188,23 @@ class BarTutorV3:
             elif choice == "9":
 
                 self._systematic_topic_study(mbe_topics)
-
+                
             # Elite Championship Features
             elif choice == "10" and self.elite_system:
                 self._championship_speed_training()
-
+                
             elif choice == "11" and self.elite_system:
                 self._elite_multi_encoding_practice()
-
+                
             elif choice == "12" and self.elite_system:
                 self._competition_mode_trial()
-
+                
             elif choice == "13" and self.elite_system:
                 self._world_champion_training_plan()
-
+                
             elif choice == "14" and self.elite_system:
                 self._neuroscience_optimization_report()
-
+                
             elif choice == "15" and self.elite_system:
                 self._vr_palace_export()
 
@@ -5871,31 +5871,31 @@ class BarTutorV3:
         print("=" * 60)
         print("🏆 Goal: Achieve 100+ items per minute with 95% accuracy")
         print("🧠 Based on methods of Dominic O'Brien (8x World Champion)")
-
+        
         if not self.elite_system:
             print("Elite system not available")
             return
-
+            
         # Create or use existing palace
         palace_name = "Speed Training Palace"
         category = "Championship"
-
+        
         print("\n📍 Creating Championship Speed Palace...")
         palace = self.elite_system.create_elite_palace(
-            palace_name,
+            palace_name, 
             category,
             layout_type="radial",  # Optimal for speed
             dimensions=(50, 50, 10),
         )
-
+        
         # Add speed-optimized locations
         print("🏃 Adding speed-optimized locations...")
-
+        
         speed_items = [
             "Fee Simple Absolute - Complete ownership",
             "Life Estate - Duration of life",
             "Remainder - Future interest",
-            "Reversion - Returns to grantor",
+            "Reversion - Returns to grantor", 
             "Executory Interest - Cuts short",
             "Rule Against Perpetuities - 21 years",
             "Joint Tenancy - Right of survivorship",
@@ -5903,55 +5903,55 @@ class BarTutorV3:
             "Easement - Right to use",
             "Adverse Possession - Hostile use",
         ]
-
+        
         for item in speed_items:
             self.elite_system.add_elite_location(palace.id, item)
-
+        
         # Practice championship recall
         print("\n🏁 Starting Championship Speed Trial...")
         results = self.elite_system.practice_championship_recall(palace.id, time_limit_seconds=30)
-
+        
         print("\n📊 RESULTS:")
         print(f"Accuracy: {results['accuracy']:.1f}%")
         print(f"Speed: {results['items_per_minute']:.1f} items/minute")
         print(f"Level: {results['championship_level']}")
-
+        
         print("\n💡 Speed Tips:")
         print("• Use speed markers (first letters)")
         print("• Practice daily at same time")
         print("• Gradually increase speed by 10%/week")
         print("• Use metronome for pacing")
-
+    
     def _elite_multi_encoding_practice(self):
         """Practice elite 9-channel sensory encoding"""
         print("\n🧬 ELITE MULTI-ENCODING PRACTICE")
         print("=" * 60)
         print("🎯 Master all 9 sensory channels for 99.9% retention")
         print("🧠 Technique used by Alex Mullen (3x World Champion)")
-
+        
         if not self.elite_system:
             print("Elite system not available")
             return
-
+            
         print("\n📝 Let's encode a legal concept using all 9 channels:")
-
+        
         concept = input("Enter legal concept to encode: ").strip()
         if not concept:
             concept = (
                 "Adverse Possession requires hostile, actual, exclusive use for statutory period"
             )
-
+        
         # Create demonstration palace
         palace = self.elite_system.create_elite_palace(
             "Multi-Encoding Demo", "Practice", layout_type="radial"
         )
-
+        
         # Add with full encoding
         location = self.elite_system.add_elite_location(palace.id, concept)
-
+        
         print(f"\n🧬 MULTI-SENSORY ENCODING for: {concept}")
         print("=" * 60)
-
+        
         # Display all 9 channels
         if not self.elite_system or not self.sensory_channel_cls:
             print("Elite memory system unavailable. Please load the elite system first.")
@@ -5968,51 +5968,51 @@ class BarTutorV3:
             self.sensory_channel_cls.TEMPORAL: "⏰",
             self.sensory_channel_cls.SYNESTHETIC: "🎨",
         }
-
+        
         for channel, encoding in location.sensory_matrix.items():
             icon = sensory_icons.get(channel, "•")
             print(f"\n{icon} {channel.value.upper()}:")
             print(f"   {encoding}")
-
+        
         # Additional championship features
         print(f"\n🎯 PAO ENCODING: {location.pao_encoding}")
         print(f"🎭 Bizarreness Factor: {location.bizarreness_factor:.1f}/10")
         print(f"❤️ Emotional Intensity: {location.emotional_intensity:.1f}/10")
         print(f"⚡ Speed Markers: {', '.join(location.speed_markers)}")
         print(f"⚠️ Error Traps: {', '.join(location.error_traps)}")
-
+        
         print("\n💡 Multi-Encoding Tips:")
         print("• Practice each channel separately first")
         print("• Combine 3 channels, then 6, then all 9")
         print("• Emotional + Visual = strongest combo")
         print("• Use bizarre imagery for Von Restorff effect")
-
+    
     def _competition_mode_trial(self):
         """Run a competition-style timed trial"""
         print("\n🎯 COMPETITION MODE TRIAL")
         print("=" * 60)
         print("🏆 Simulate World Memory Championship conditions")
         print("⏱️ Timed encoding and recall phases")
-
+        
         if not self.elite_system:
             print("Elite system not available")
             return
-
+            
         print("\n📋 Competition Rules:")
         print("• 5 minutes to memorize 100 items")
         print("• 15 minute break")
         print("• 15 minutes to recall")
         print("• 95% accuracy to qualify")
-
+        
         ready = input("\nReady to begin? (y/n): ").strip().lower()
         if ready != "y":
             return
-
+            
         # Create competition palace
         palace = self.elite_system.create_elite_palace(
             "Competition Palace", "Competition", layout_type="radial", dimensions=(100, 100, 10)
         )
-
+        
         # Generate 100 random legal items
         import random
 
@@ -6036,7 +6036,7 @@ class BarTutorV3:
             "Mortgage",
             "Lien",
         ]
-
+        
         competition_items = []
         for i in range(100):
             term = random.choice(legal_terms)
@@ -6044,17 +6044,17 @@ class BarTutorV3:
             item = f"{i+1}. {term} - Case {number}"
             competition_items.append(item)
             self.elite_system.add_elite_location(palace.id, item)
-
+        
         print("\n🏁 COMPETITION STARTING!")
         print("Memorize these 100 items in 5 minutes...")
         print("Press Enter to see items...")
         input()
-
+        
         # Display items for memorization
         import time
 
         start_time = time.time()
-
+        
         for i, item in enumerate(competition_items, 1):
             print(f"{item}")
             if i % 20 == 0:
@@ -6063,39 +6063,39 @@ class BarTutorV3:
                 if remaining > 0:
                     print(f"\n⏱️ Time remaining: {remaining:.0f} seconds")
                     input("Press Enter to continue...")
-
+        
         print("\n⏱️ TIME'S UP!")
         print("15 minute break (simulated - press Enter)")
         input()
-
+        
         # Recall phase
         print("\n📝 RECALL PHASE - 15 minutes")
         results = self.elite_system.practice_championship_recall(palace.id, time_limit_seconds=900)
-
+        
         print("\n🏆 COMPETITION RESULTS:")
         print(f"Items Recalled: {results['locations_attempted']}/100")
         print(f"Accuracy: {results['accuracy']:.1f}%")
         print(f"Championship Level: {results['championship_level']}")
-
+        
         if results["accuracy"] >= 95:
             print("🥇 QUALIFIED FOR CHAMPIONSHIP!")
         elif results["accuracy"] >= 85:
             print("🥈 NATIONAL LEVEL PERFORMANCE!")
         else:
             print("📈 Keep practicing - you're improving!")
-
+    
     def _world_champion_training_plan(self):
         """Display world champion training regimen"""
         print("\n📈 WORLD CHAMPION TRAINING PLAN")
         print("=" * 60)
         print("🏆 Follow the exact training of memory champions")
-
+        
         if not self.elite_system:
             print("Elite system not available")
             return
-
+            
         training = self.elite_system.generate_championship_training()
-
+        
         print("\n📅 DAILY TRAINING SCHEDULE:")
         print("-" * 50)
         for session in training["daily_sessions"]:
@@ -6103,60 +6103,60 @@ class BarTutorV3:
             print(f"📚 Focus: {session['focus']}")
             print(f"🎯 Technique: {session['technique']}")
             print(f"💪 Exercise: {session['exercise']}")
-
+        
         print("\n📊 WEEKLY GOALS:")
         print("-" * 50)
         for goal, target in training["weekly_goals"].items():
             print(f"• {goal}: {target}")
-
+        
         print("\n🎯 MONTHLY MILESTONES:")
         print("-" * 50)
         for month, milestone in training["monthly_milestones"].items():
             print(f"• {month}: {milestone}")
-
+        
         print("\n🧠 MENTAL EXERCISES:")
         print("-" * 50)
         for exercise in training["mental_exercises"]:
             print(f"• {exercise}")
-
+        
         print("\n🥗 DIETARY OPTIMIZATION:")
         print("-" * 50)
         for food in training["dietary_optimization"]:
             print(f"• {food}")
-
+        
         print("\n😴 SLEEP PROTOCOL:")
         print("-" * 50)
         for aspect, detail in training["sleep_protocol"].items():
             print(f"• {aspect}: {detail}")
-
+        
         print("\n💡 Implementation Tips:")
         print("• Start with 30% of recommended volume")
         print("• Increase by 10% weekly")
         print("• Track progress daily")
         print("• Join memory sports community")
         print("• Consider hiring a memory coach")
-
+    
     def _neuroscience_optimization_report(self):
         """Display neuroscience-based optimization insights"""
         print("\n🧠 NEUROSCIENCE OPTIMIZATION REPORT")
         print("=" * 60)
         print("🔬 Latest research for memory optimization")
-
+        
         if not self.elite_system:
             print("Elite system not available")
             return
-
+            
         insights = self.elite_system.get_neuroscience_insights()
-
+        
         print("\n🔬 NEUROSCIENCE INSIGHTS:")
         print("-" * 50)
-
+        
         for principle, insight in insights.items():
             # Format the principle name
             formatted = principle.replace("_", " ").title()
             print(f"\n📌 {formatted}:")
             print(f"   {insight}")
-
+        
         print("\n⚡ OPTIMIZATION PROTOCOL:")
         print("-" * 50)
         print("1. ENCODING PHASE:")
@@ -6164,75 +6164,75 @@ class BarTutorV3:
         print("   • Emotional tagging (amygdala activation)")
         print("   • Bizarre imagery (Von Restorff effect)")
         print("   • Self-generation (2x stronger)")
-
+        
         print("\n2. CONSOLIDATION PHASE:")
         print("   • Wait 10 minutes before first recall")
         print("   • Sleep within 4 hours")
         print("   • Avoid similar content for 2 hours")
         print("   • Rest periods for DMN activation")
-
+        
         print("\n3. RECALL PHASE:")
         print("   • Active recall > passive review (3x)")
         print("   • Spaced repetition schedule")
         print("   • Test in different contexts")
         print("   • Use speed markers for rapid access")
-
+        
         print("\n4. LONG-TERM RETENTION:")
         print("   • Review at: 10min, 1 day, 3 days, 1 week, 2 weeks, 1 month")
         print("   • Interleave with other subjects")
         print("   • Teach others (Feynman technique)")
         print("   • Regular competition practice")
-
+    
     def _vr_palace_export(self):
         """Export palace to VR-ready format"""
         print("\n🔮 VR PALACE EXPORT")
         print("=" * 60)
         print("🥽 Export your palace for VR training apps")
         print("🚀 Future-ready for immersive learning")
-
+        
         if not self.elite_system:
             print("Elite system not available")
             return
-
+            
         if not self.elite_system.palaces:
             print("No palaces created yet")
             return
-
+            
         print("\n📋 Available Palaces:")
         for i, (palace_id, palace) in enumerate(self.elite_system.palaces.items(), 1):
             print(f"{i}. {palace.name} ({len(palace.locations)} locations)")
-
+        
         choice = input("\nSelect palace to export (number): ").strip()
-
+        
         try:
             palace_list = list(self.elite_system.palaces.keys())
             selected_id = palace_list[int(choice) - 1]
-
+            
             vr_data = self.elite_system.export_palace_to_vr(selected_id)
-
+            
             # Save to file
             import json
 
             filename = f"vr_palace_{vr_data['name'].replace(' ', '_')}.json"
             with open(filename, "w") as f:
                 json.dump(vr_data, f, indent=2)
-
+            
             print(f"\n✅ VR Palace exported to: {filename}")
             print("📊 Export contains:")
             print(f"   • Palace: {vr_data['name']}")
             print(f"   • Layout: {vr_data['layout']}")
             print(f"   • Locations: {len(vr_data['locations'])}")
             print(f"   • Dimensions: {vr_data['dimensions']}")
-
+            
             print("\n🥽 VR Integration:")
             print("• Import into VR memory training apps")
             print("• Use with Oculus Quest / HTC Vive")
             print("• Practice in immersive 3D environment")
             print("• Track head movement for spatial memory")
-
+            
         except (ValueError, IndexError):
             print("Invalid selection")
-
+    
     def _systematic_topic_study(self, mbe_topics):
         """Systematic study of all MBE topics with memory palace integration"""
 
@@ -7144,13 +7144,13 @@ def main():
     """Main entry point for the Bar Tutor application"""
     # Load environment
     api_key = load_env()
-
+    
     # Create OpenAI client
     client = OpenAI(api_key=api_key)
-
+    
     # Load notes
     notes = load_notes()
-
+    
     # Get model from command line or use default
     parser = argparse.ArgumentParser(description="Bar Prep Tutor - Advanced Legal Education System")
     parser.add_argument(
@@ -7160,7 +7160,7 @@ def main():
         help=f"OpenAI model to use (default: {DEFAULT_MODEL})",
     )
     args = parser.parse_args()
-
+    
     # Create and run tutor
     tutor = BarTutorV3(client, args.model, notes)
     tutor.run()
