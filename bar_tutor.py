@@ -5655,7 +5655,7 @@ class BarTutorV3:
 
             avg_mastery = total_mastery / len(perf_data) if perf_data else 0
 
-            print(f"Average mastery: {avg_mastery:.2f}")
+            print(f"\nAverage Mastery: {avg_mastery:.2f}")
 
             print(
                 f"🤖 Agent: {'Excellent progress!' if avg_mastery >= 0.8 else 'Keep practicing!' if avg_mastery >= 0.6 else 'Focus on building your palace!'}"
@@ -5762,7 +5762,7 @@ class BarTutorV3:
 
             avg_mastery = total_mastery / len(perf_data)
 
-            print(f"Average mastery: {avg_mastery:.2f}")
+            print(f"\nAverage Mastery: {avg_mastery:.2f}")
 
             if avg_mastery >= 0.9:
 
