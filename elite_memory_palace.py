@@ -3659,12 +3659,36 @@ class EliteMemoryPalaceSystem:
         # Log system capabilities at debug level for detailed diagnostics
         logger.debug("System capabilities: "
                     f"Spatial={'Advanced' if hasattr(self.spatial_index, 'r_tree') else 'Basic'}, "
-                    f"Storage={'Compressed' if self.np is not None else 'Basic'}, "
+                    f"Storage={'Compressed' if hasattr(self.compressed_storage, 'np') and self.compressed_storage.np is not None else 'Basic'}, "
                     f"AI={'Advanced' if self.ai_encoder.advanced_mode else 'Fallback'}, "
                     f"Neuro={'Enhanced' if self.neuro_optimizer else 'Basic'}, "
                     f"Analysis={'ML' if self.performance_analyzer.advanced_mode else 'Statistical'}, "
                     f"Graph={'NetworkX' if self.spatial_intelligence.graph_analyzer.advanced_mode else 'Fallback'}, "
                     f"MultiModal={'Active' if self.multi_modal_system else 'Inactive'}")
+
+    def __enter__(self):
+        """Context manager entry"""
+        return self
+
+    def __exit__(self, exc_type, exc_val, exc_tb):
+        """Cleanup resources on context exit"""
+        # Clear spatial index
+        if hasattr(self.spatial_index, 'clear'):
+            self.spatial_index.clear()
+
+        # Clear session history
+        self.session_history.clear()
+
+        # Clear performance metrics
+        self.reset_performance_metrics()
+
+        # Clear cognitive profiles
+        self.cognitive_profiles.clear()
+
+        # Clear palaces (optional - could be expensive)
+        # self.palaces.clear()  # Uncomment if memory cleanup needed
+
+        logger.info(f"Cleaned up resources for '{self.name}'")
 
     def create_elite_palace(
         self,
