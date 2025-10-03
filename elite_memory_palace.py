@@ -4223,6 +4223,26 @@ class EliteMemoryPalaceSystem:
             "sleep_consolidation": "Sleep transforms fragile short-term memories into stable long-term storage",
         }
 
+    def export_palace_to_vr(self, palace_id: str, filename: str = None) -> str:
+        """
+        Export palace data to VR-compatible format by palace ID.
+
+        Args:
+            palace_id: ID of the palace to export
+            filename: Optional filename to save VR data
+
+        Returns:
+            JSON string containing VR-compatible palace data
+        """
+        # Retrieve palace data by ID
+        if palace_id not in self.palaces:
+            raise ValueError(f"Palace '{palace_id}' not found")
+
+        palace = self.palaces[palace_id]
+
+        # Call the standalone export function with the palace data
+        return export_palace_to_vr(palace, filename)
+
     # Helper methods
 
     def _generate_optimal_position(self, palace: Dict) -> Tuple[float, float, float]:
