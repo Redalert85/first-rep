@@ -571,7 +571,7 @@ class NeuroplasticityOptimizer:
 
     def optimize_consolidation_timing(
         self, location: ElitePalaceLocation, last_review: datetime
-    ) -> Dict[str, datetime]:
+    ) -> Dict[str, Any]:
         """
         Optimize consolidation timing based on neuroplasticity windows
         """
