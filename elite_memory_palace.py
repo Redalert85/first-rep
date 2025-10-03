@@ -3657,7 +3657,12 @@ class EliteMemoryPalaceSystem:
         """Add a location with elite multi-sensory encoding"""
 
         if palace_id not in self.palaces:
-            raise ValueError(f"Palace {palace_id} not found")
+            available = list(self.palaces.keys())[:3]
+            raise ValueError(
+                f"Palace '{palace_id}' not found. "
+                f"Available palaces: {available if available else 'none created yet'}. "
+                f"Use create_elite_palace() to create a new palace."
+            )
 
         palace = self.palaces[palace_id]
 
@@ -3739,7 +3744,12 @@ class EliteMemoryPalaceSystem:
         """Run championship-level recall practice session with neuroplasticity tracking and ML analysis"""
 
         if palace_id not in self.palaces:
-            raise ValueError(f"Palace {palace_id} not found")
+            available = list(self.palaces.keys())[:3]
+            raise ValueError(
+                f"Palace '{palace_id}' not found. "
+                f"Available palaces: {available if available else 'none created yet'}. "
+                f"Use create_elite_palace() to create a new palace."
+            )
 
         palace = self.palaces[palace_id]
         locations = list(palace["locations"].values())
@@ -3902,7 +3912,12 @@ class EliteMemoryPalaceSystem:
     def optimize_palace_layout(self, palace_id: str) -> Dict[str, Any]:
         """Optimize palace layout using spatial intelligence for better memory performance"""
         if palace_id not in self.palaces:
-            return {"error": "Palace not found"}
+            available = list(self.palaces.keys())[:3]
+            return {
+                "error": "Palace not found",
+                "available_palaces": available if available else [],
+                "suggestion": "Use create_elite_palace() to create a new palace first"
+            }
 
         palace = self.palaces[palace_id]
         locations = list(palace["locations"].values())
@@ -4005,7 +4020,12 @@ class EliteMemoryPalaceSystem:
     def analyze_palace_topology(self, palace_id: str) -> Dict[str, Any]:
         """Analyze the topological properties of a palace"""
         if palace_id not in self.palaces:
-            return {"error": "Palace not found"}
+            available = list(self.palaces.keys())[:3]
+            return {
+                "error": "Palace not found",
+                "available_palaces": available if available else [],
+                "suggestion": "Use create_elite_palace() to create a new palace first"
+            }
 
         palace = self.palaces[palace_id]
         locations = list(palace["locations"].values())
@@ -4116,7 +4136,12 @@ class EliteMemoryPalaceSystem:
     def get_consolidation_schedule(self, location_id: str, palace_id: str) -> Dict[str, Any]:
         """Get neuroplasticity-optimized consolidation schedule for a location"""
         if palace_id not in self.palaces:
-            return {"error": "Palace not found"}
+            available = list(self.palaces.keys())[:3]
+            return {
+                "error": "Palace not found",
+                "available_palaces": available if available else [],
+                "suggestion": "Use create_elite_palace() to create a new palace first"
+            }
 
         palace = self.palaces[palace_id]
         if location_id not in palace["locations"]:
@@ -4170,7 +4195,12 @@ class EliteMemoryPalaceSystem:
     def get_multi_modal_encoding(self, location_id: str, palace_id: str) -> Dict[str, Any]:
         """Get multi-modal sensory encoding for a location"""
         if palace_id not in self.palaces:
-            return {"error": "Palace not found"}
+            available = list(self.palaces.keys())[:3]
+            return {
+                "error": "Palace not found",
+                "available_palaces": available if available else [],
+                "suggestion": "Use create_elite_palace() to create a new palace first"
+            }
 
         palace = self.palaces[palace_id]
         if location_id not in palace["locations"]:
@@ -4293,7 +4323,12 @@ class EliteMemoryPalaceSystem:
     def export_palace_to_vr(self, palace_id: str, filename: str = None) -> Dict[str, Any]:
         """Export palace to VR-ready format"""
         if palace_id not in self.palaces:
-            return {"error": "Palace not found"}
+            available = list(self.palaces.keys())[:3]
+            return {
+                "error": "Palace not found",
+                "available_palaces": available if available else [],
+                "suggestion": "Use create_elite_palace() to create a new palace first"
+            }
 
         palace = self.palaces[palace_id]
 
