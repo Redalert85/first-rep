@@ -156,12 +156,59 @@ Incorporate equitable servitudes and common scheme doctrine from MBE practice qu
 
 ---
 
+## 🆕 New Advanced Features
+
+### 1. **Enhanced First-Principles Analysis**
+**5-Layer MBE Framework:**
+- Layer 1: Irreducible elements with burdens of proof
+- Layer 2: Historical foundations and key cases
+- Layer 3: Logical architecture (major/minor premises)
+- Layer 4: Jurisdictional variations with [MBE Split] markers
+- Layer 5: IF-THEN decision trees + 3 contrasting hypos
+
+**Features:**
+- Auto-detects property servitudes and injects IRIS guidance
+- Saves analyses to `notes/` directory with timestamps
+- Includes "GOLDEN RULE" summary for instant recall
+- Emphasizes MBE trap patterns and 90-second speed strategies
+
+### 2. **MBEMistakeAnalyzer**
+**Cognitive Error Analysis System:**
+- 12 trap categories (temporal, burden, doctrine confusion, policy-over-law, etc.)
+- Property-specific traps: notice_trap, early_bird_trap, intent_trap, remedy_confusion
+- 7-part diagnostic framework per wrong answer
+- Tracks error patterns over time for personalized remediation
+- Generates inoculation exercises (2 similar questions per trap)
+- Brutally specific correction protocols ("When you see X, ALWAYS...")
+- Auto-saves to `error_log.jsonl` for longitudinal tracking
+
+### 3. **IssueSpottingTrainer**  
+**Systematic Scanning Protocol:**
+- 6-step systematic scan (30-45 seconds target):
+  1. Temporal scan → dates, periods, SOL
+  2. Party scan → relationships, roles, duties
+  3. Transaction scan → legal acts chronologically
+  4. Property scan → interests, restrictions, IRIS
+  5. Qualifier scan → hostile, actual, bona fide
+  6. Red herring identification → filter noise
+
+**Features:**
+- Trigger word library (60+ words across 6 categories)
+- Speed drill mode with performance grading (Elite/Strong/Developing/Building)
+- Trigger word analytics and frequency tracking
+- Custom drill generator for weak areas
+- Issue hierarchy organization (5 tiers: threshold → formation → breach → remedy → defense)
+- Built-in property hypos featuring IRIS common scheme patterns
+
+---
+
 ## 📝 Git History
 
 ```
 dc88c2b - Refactor: Clean lint issues and format Python modules
-5e0edb9 - docs: Integrate IRIS common scheme doctrine across all property study materials
-[next]  - feat: Add enhanced_first_principles_analysis with 5-layer MBE framework
+5e0edb9 - docs: Integrate IRIS common scheme doctrine across all property materials
+9a8b2d4 - feat: Add MBEMistakeAnalyzer class for cognitive error analysis
+0bdfd32 - feat: Add IssueSpottingTrainer for systematic fact pattern analysis
 ```
 
 ---
