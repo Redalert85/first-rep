@@ -4656,7 +4656,7 @@ class BarTutorV3:
 
                 target_date = datetime.fromisoformat(target_date_str)
 
-                prediction = self.analytics.predict_readiness(target_date)
+                prediction = self.tracker.predict_readiness(target_date)
 
                 print(f"\n{'='*40}")
 
