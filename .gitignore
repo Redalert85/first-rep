@@ -1,9 +1,9 @@
-# Byte-compiled / optimized / DLL files
+# Python bytecode / caches
 __pycache__/
 *.py[cod]
 *$py.class
 
-# Environments & local config
+# Virtual env & local config
 .venv/
 .env
 
@@ -15,7 +15,7 @@ htmlcov/
 # macOS
 .DS_Store
 
-# Editor (keep these two if you want to share debug/run configs)
+# Editor (keep shared run/debug configs)
 .vscode/*
 !.vscode/settings.json
 !.vscode/launch.json
