@@ -1,0 +1,26 @@
+[
+  {
+    "subject": "conlaw",
+    "subtype": "TPM/Permits",
+    "tested_rule": "Traditional public forum + unbridled discretion standard",
+    "fact_pattern": "The City of Riverton requires permits for demonstrations in its traditional public park. The ordinance instructs the parks director to grant a permit unless the event would be 'inappropriate or disruptive,' without further standards. Harper applies to hold a political rally; the director denies the permit citing 'appropriateness' concerns and offers no alternative. A facial challenge is brought under the First Amendment. The timeline, roles, and governing standards are undisputed; the dispute turns on the precise doctrinal element.",
+    "options": {
+      "A": "Constitutional because time, place, and manner restrictions are valid if the city cites disruption.",
+      "B": "Constitutional because time, place, and manner restrictions are valid if the city cites disruption.",
+      "C": "Constitutional if applied uniformly regardless of viewpoint, even without standards.",
+      "D": "Unconstitutional: the ordinance grants unbridled discretion in a traditional public forum and lacks narrow, objective criteria."
+    },
+    "answer": "D",
+    "why_correct": "Permit schemes in traditional public forums must have narrow, objective, and definite standards to constrain discretion. Vague terms like 'inappropriate' vest unbridled discretion and are facially invalid.",
+    "why_others_wrong": {
+      "A": "Content-neutral TPM rules must be guided by objective standards; 'disruption' without criteria is insufficient.",
+      "C": "Uniform application does not cure unbridled discretion.",
+      "D": "Facial invalidity arises from standardless discretion; no need to prove actual viewpoint bias."
+    },
+    "trap_type": [
+      "overbreadth",
+      "wrong standard"
+    ],
+    "difficulty": "HARD"
+  }
+]

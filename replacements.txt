@@ -1,0 +1,2 @@
+# format: find<tab>replace
+sk-proj-OLD-LEAKED-KEY-START...END	***REDACTED***

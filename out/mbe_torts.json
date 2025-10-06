@@ -1,0 +1,122 @@
+[
+  {
+    "subject": "torts",
+    "subtype": "Negligence per se",
+    "tested_rule": "Warnings don't replace remediation; ordinance may set standard",
+    "fact_pattern": "At a street food fair, vendor Rowan displays a prominent 'Caution: Wet Area' sign near a drink station. A local ordinance requires vendors to keep walking surfaces 'reasonably dry' and to 'promptly remedy spills.' Multiple cups spill during a rush; Rowan does not mop for ten minutes, and a patron slips and fractures a wrist. The defense offers evidence of full compliance with industry best-practice signage. The plaintiff sues in negligence. The timeline, roles, and governing standards are undisputed; the dispute turns on the precise doctrinal element.",
+    "options": {
+      "A": "No liability because compliance with industry custom defeats negligence.",
+      "B": "No liability because compliance with industry custom defeats negligence.",
+      "C": "No liability because the sign shifts the risk to patrons who proceed.",
+      "D": "Liability is likely: warnings don't replace the duty to remediate; ordinance noncompliance supports negligence (possibly per se)."
+    },
+    "answer": "D",
+    "why_correct": "Custom evidence is not conclusive; statutory/ordinance standards can establish duty/breach. Failure to clean promptly is the breach.",
+    "why_others_wrong": {
+      "A": "Custom is relevant but not dispositive.",
+      "C": "Assumption of risk requires knowing, voluntary encounter of a specific risk; signage alone is insufficient.",
+      "D": "Constructive notice can suffice; their own station created the hazard."
+    },
+    "trap_type": [
+      "overbreadth",
+      "wrong standard"
+    ],
+    "difficulty": "HARD"
+  },
+  {
+    "subject": "torts",
+    "subtype": "Negligence per se",
+    "tested_rule": "Warnings don't replace remediation; ordinance may set standard",
+    "fact_pattern": "At a street food fair, vendor Cameron displays a prominent 'Caution: Wet Area' sign near a drink station. A local ordinance requires vendors to keep walking surfaces 'reasonably dry' and to 'promptly remedy spills.' Multiple cups spill during a rush; Cameron does not mop for ten minutes, and a patron slips and fractures a wrist. The defense offers evidence of full compliance with industry best-practice signage. The plaintiff sues in negligence. The timeline, roles, and governing standards are undisputed; the dispute turns on the precise doctrinal element.",
+    "options": {
+      "A": "Liability is likely: warnings don't replace the duty to remediate; ordinance noncompliance supports negligence (possibly per se).",
+      "B": "No liability because compliance with industry custom defeats negligence.",
+      "C": "No liability because the sign shifts the risk to patrons who proceed.",
+      "D": "No liability unless the patron proves the vendor actually knew of each individual spill."
+    },
+    "answer": "A",
+    "why_correct": "Custom evidence is not conclusive; statutory/ordinance standards can establish duty/breach. Failure to clean promptly is the breach.",
+    "why_others_wrong": {
+      "A": "Custom is relevant but not dispositive.",
+      "C": "Assumption of risk requires knowing, voluntary encounter of a specific risk; signage alone is insufficient.",
+      "D": "Constructive notice can suffice; their own station created the hazard."
+    },
+    "trap_type": [
+      "overbreadth",
+      "wrong standard"
+    ],
+    "difficulty": "HARD"
+  },
+  {
+    "subject": "torts",
+    "subtype": "Negligence per se",
+    "tested_rule": "Warnings don't replace remediation; ordinance may set standard",
+    "fact_pattern": "At a street food fair, vendor Sam displays a prominent 'Caution: Wet Area' sign near a drink station. A local ordinance requires vendors to keep walking surfaces 'reasonably dry' and to 'promptly remedy spills.' Multiple cups spill during a rush; Sam does not mop for ten minutes, and a patron slips and fractures a wrist. The defense offers evidence of full compliance with industry best-practice signage. The plaintiff sues in negligence. The timeline, roles, and governing standards are undisputed; the dispute turns on the precise doctrinal element.",
+    "options": {
+      "A": "Liability is likely: warnings don't replace the duty to remediate; ordinance noncompliance supports negligence (possibly per se).",
+      "B": "No liability because compliance with industry custom defeats negligence.",
+      "C": "No liability because the sign shifts the risk to patrons who proceed.",
+      "D": "No liability unless the patron proves the vendor actually knew of each individual spill."
+    },
+    "answer": "A",
+    "why_correct": "Custom evidence is not conclusive; statutory/ordinance standards can establish duty/breach. Failure to clean promptly is the breach.",
+    "why_others_wrong": {
+      "A": "Custom is relevant but not dispositive.",
+      "C": "Assumption of risk requires knowing, voluntary encounter of a specific risk; signage alone is insufficient.",
+      "D": "Constructive notice can suffice; their own station created the hazard."
+    },
+    "trap_type": [
+      "overbreadth",
+      "wrong standard"
+    ],
+    "difficulty": "HARD"
+  },
+  {
+    "subject": "torts",
+    "subtype": "Negligence per se",
+    "tested_rule": "Warnings don't replace remediation; ordinance may set standard",
+    "fact_pattern": "At a street food fair, vendor Skyler displays a prominent 'Caution: Wet Area' sign near a drink station. A local ordinance requires vendors to keep walking surfaces 'reasonably dry' and to 'promptly remedy spills.' Multiple cups spill during a rush; Skyler does not mop for ten minutes, and a patron slips and fractures a wrist. The defense offers evidence of full compliance with industry best-practice signage. The plaintiff sues in negligence. The timeline, roles, and governing standards are undisputed; the dispute turns on the precise doctrinal element.",
+    "options": {
+      "A": "No liability because compliance with industry custom defeats negligence.",
+      "B": "No liability because compliance with industry custom defeats negligence.",
+      "C": "Liability is likely: warnings don't replace the duty to remediate; ordinance noncompliance supports negligence (possibly per se).",
+      "D": "No liability because the sign shifts the risk to patrons who proceed."
+    },
+    "answer": "C",
+    "why_correct": "Custom evidence is not conclusive; statutory/ordinance standards can establish duty/breach. Failure to clean promptly is the breach.",
+    "why_others_wrong": {
+      "A": "Custom is relevant but not dispositive.",
+      "C": "Assumption of risk requires knowing, voluntary encounter of a specific risk; signage alone is insufficient.",
+      "D": "Constructive notice can suffice; their own station created the hazard."
+    },
+    "trap_type": [
+      "overbreadth",
+      "wrong standard"
+    ],
+    "difficulty": "HARD"
+  },
+  {
+    "subject": "torts",
+    "subtype": "Negligence per se",
+    "tested_rule": "Warnings don't replace remediation; ordinance may set standard",
+    "fact_pattern": "At a street food fair, vendor Sam displays a prominent 'Caution: Wet Area' sign near a drink station. A local ordinance requires vendors to keep walking surfaces 'reasonably dry' and to 'promptly remedy spills.' Multiple cups spill during a rush; Sam does not mop for ten minutes, and a patron slips and fractures a wrist. The defense offers evidence of full compliance with industry best-practice signage. The plaintiff sues in negligence. The timeline, roles, and governing standards are undisputed; the dispute turns on the precise doctrinal element.",
+    "options": {
+      "A": "No liability because compliance with industry custom defeats negligence.",
+      "B": "No liability because compliance with industry custom defeats negligence.",
+      "C": "Liability is likely: warnings don't replace the duty to remediate; ordinance noncompliance supports negligence (possibly per se).",
+      "D": "No liability because the sign shifts the risk to patrons who proceed."
+    },
+    "answer": "C",
+    "why_correct": "Custom evidence is not conclusive; statutory/ordinance standards can establish duty/breach. Failure to clean promptly is the breach.",
+    "why_others_wrong": {
+      "A": "Custom is relevant but not dispositive.",
+      "C": "Assumption of risk requires knowing, voluntary encounter of a specific risk; signage alone is insufficient.",
+      "D": "Constructive notice can suffice; their own station created the hazard."
+    },
+    "trap_type": [
+      "overbreadth",
+      "wrong standard"
+    ],
+    "difficulty": "HARD"
+  }
+]

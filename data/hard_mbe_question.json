@@ -1,0 +1,21 @@
+{
+  "subject": "Constitutional Law",
+  "subtype": "rule application",
+  "tested_rule": "Gender-based classifications are subject to intermediate scrutiny under equal protection analysis, requiring that the classification serve an important governmental interest and that the means chosen are substantially related to achieving that interest.",
+  "fact_pattern": "The state of Riverton enacted a statute requiring female state employees to retire at age 60, while male state employees must retire at age 65. The stated purpose of the law was to address historical wage disparities between men and women in the state workforce. Prior to the enactment, women earned 78 cents for every dollar earned by men in comparable positions. The state legislature found that allowing women to work longer would help close this wage gap by giving them more time to accumulate seniority and higher-paying positions. The statute applies to all state employees hired after its effective date, including teachers, administrative staff, and corrections officers. A group of recently hired female teachers, all under age 35, challenged the law as violating equal protection. They argued that the classification lacks a sufficient justification and perpetuates stereotypes about women's roles in the workplace. The state defended by presenting statistical evidence showing that the wage gap persists and that extended work time for women would increase their lifetime earnings by an average of 12%.",
+  "options": {
+    "A": "The statute violates equal protection because gender classifications are subject to strict scrutiny, and the state failed to show the classification is narrowly tailored to a compelling interest.",
+    "B": "The statute violates equal protection because, although gender classifications receive intermediate scrutiny, the state's interest in addressing wage disparities is not important enough to justify different retirement ages.",
+    "C": "The statute is constitutional because gender classifications receive only rational basis review when they benefit the disadvantaged group.",
+    "D": "The statute is constitutional because intermediate scrutiny is satisfied by a legitimate interest and a rational relationship between the classification and that interest."
+  },
+  "answer": "B",
+  "why_correct": "Gender-based classifications are subject to intermediate scrutiny, not strict scrutiny or rational basis. While addressing wage disparities may be an important governmental interest, the means chosen—different retirement ages—are not substantially related to achieving that interest, as retirement age has no direct connection to closing wage gaps through seniority accumulation.",
+  "why_others_wrong": {
+    "A": "Gender classifications are not subject to strict scrutiny; they receive intermediate scrutiny, making this analysis incorrect.",
+    "C": "Gender classifications are subject to intermediate scrutiny, not rational basis review, regardless of whether they benefit a disadvantaged group.",
+    "D": "Intermediate scrutiny requires an important governmental interest and a substantial relationship between the classification and that interest, not merely a legitimate interest and rational relationship."
+  },
+  "trap_type": ["overbreadth", "wrong standard", "timing"],
+  "difficulty": "HARD"
+}

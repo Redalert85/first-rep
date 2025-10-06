@@ -168,8 +168,8 @@ class AIEnhancedEncoder:
             if sentence_spec is None or transformers_spec is None:
                 raise ImportError
 
-            from sentence_transformers import SentenceTransformer
-            from transformers import pipeline
+            from sentence_transformers import SentenceTransformer  # type: ignore
+            from transformers import pipeline  # type: ignore
 
             self.embedding_model = SentenceTransformer("paraphrase-MiniLM-L6-v2")
             self.semantic_pipeline = pipeline("text2text-generation", model="google/flan-t5-small")
@@ -178,8 +178,8 @@ class AIEnhancedEncoder:
             torch_spec = importlib.util.find_spec("torch")
 
             if diffusion_spec and torch_spec:
-                import torch
-                from diffusers import StableDiffusionPipeline
+                import torch  # type: ignore
+                from diffusers import StableDiffusionPipeline  # type: ignore
 
                 self.visual_pipeline = StableDiffusionPipeline.from_pretrained(
                     "CompVis/stable-diffusion-v1-4", torch_dtype=torch.float16
@@ -1237,7 +1237,7 @@ class AdvancedPerformanceAnalyzer:
         """Initialize ML models with graceful fallback"""
         try:
             # Try to import advanced ML libraries
-            from sklearn.ensemble import IsolationForest, RandomForestRegressor
+            from sklearn.ensemble import IsolationForest, RandomForestRegressor  # type: ignore
 
             # Initialize ML models
             self.performance_model = RandomForestRegressor(n_estimators=100, random_state=42)
@@ -1265,7 +1265,7 @@ class AdvancedPerformanceAnalyzer:
             if importlib.util.find_spec("numpy") is None:
                 raise ImportError
 
-            import numpy as np
+            import numpy as np  # type: ignore
 
             # Generate synthetic training data
             np.random.seed(42)
@@ -1635,7 +1635,7 @@ class NetworkXGraphAnalyzer:
     def __init__(self):
         self.advanced_mode = False
         try:
-            import networkx as nx
+            import networkx as nx  # type: ignore
 
             self.nx = nx
             self.advanced_mode = True
@@ -3264,7 +3264,7 @@ class CompressedLocationStorage:
     def __init__(self):
         # Import numpy for columnar arrays (fallback if not available)
         try:
-            import numpy as np
+            import numpy as np  # type: ignore
 
             self.np = np
         except ImportError:

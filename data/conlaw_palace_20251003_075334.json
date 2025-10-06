@@ -1,0 +1,181 @@
+{
+  "palace": {
+    "name": "Constitutional Law Mastery",
+    "dimensions": [
+      60,
+      60,
+      12
+    ],
+    "layout": "constitutional_hall"
+  },
+  "locations": [
+    {
+      "id": "2997d4b4",
+      "position": [
+        30,
+        30,
+        6
+      ],
+      "content": "Judicial Power & Justiciability: SCRAM Justiciability: Standing (injury, causation, redress), Case/Controversy, Ripeness, Advisory opinions (no), Mootness. Political Question factors: textual commitment + no standards.",
+      "sensory_hints": {
+        "visual": "See Judicial Power & Jus in vivid detail",
+        "auditory": "Hear the sound of Judicial Power ",
+        "kinesthetic": "Feel the texture of Judicial Power & J",
+        "olfactory": "Smell associated with Judicial Power ",
+        "gustatory": "Taste reminding of Judicial Power ",
+        "emotional": "Emotional response to Judicial Power ",
+        "spatial": "Spatial arrangement of Judicial Power ",
+        "temporal": "Time flow of Judicial Power ",
+        "synesthetic": "Multi-sensory blend of Judicial Power ",
+        "mnemonic_device": "SCRAM triangle with injury/causation/redress"
+      }
+    },
+    {
+      "id": "734eace0",
+      "position": [
+        55.450312701220824,
+        10.847027805711217,
+        4.962218959662042
+      ],
+      "content": "Federal Legislative Power: Commerce Clause three rings: Channels, Instrumentalities, Substantial Effects (economic aggregation). Necessary & Proper enables implementation. Spending/TAX limits: general welfare, clear, related, non-coercive.",
+      "sensory_hints": {
+        "visual": "See Federal Legislative  in vivid detail",
+        "auditory": "Hear the sound of Federal Legisla",
+        "kinesthetic": "Feel the texture of Federal Legislativ",
+        "olfactory": "Smell associated with Federal Legisla",
+        "gustatory": "Taste reminding of Federal Legisla",
+        "emotional": "Emotional response to Federal Legisla",
+        "spatial": "Spatial arrangement of Federal Legisla",
+        "temporal": "Time flow of Federal Legisla",
+        "synesthetic": "Multi-sensory blend of Federal Legisla",
+        "mnemonic_device": "Circus tent with three rings labeled Channels/Instrumentalities/Effects."
+      }
+    },
+    {
+      "id": "8311f28c",
+      "position": [
+        14.00868995173995,
+        4.816589373159932,
+        3.9582298919956904
+      ],
+      "content": "Executive Power & Separation: Youngstown tiers, appointment/removal power, commander-in-chief. No line-item veto; executive agreements vs treaties.",
+      "sensory_hints": {
+        "visual": "See Executive Power & Se in vivid detail",
+        "auditory": "Hear the sound of Executive Power",
+        "kinesthetic": "Feel the texture of Executive Power & ",
+        "olfactory": "Smell associated with Executive Power",
+        "gustatory": "Taste reminding of Executive Power",
+        "emotional": "Emotional response to Executive Power",
+        "spatial": "Spatial arrangement of Executive Power",
+        "temporal": "Time flow of Executive Power",
+        "synesthetic": "Multi-sensory blend of Executive Power",
+        "mnemonic_device": "Three-tiered podium with President balancing Congress/Court."
+      }
+    },
+    {
+      "id": "7bc7855e",
+      "position": [
+        38.28090139562127,
+        14.422974040477692,
+        5.898358647903015
+      ],
+      "content": "Federalism & State Power: Anti-commandeering (NY v. US, Printz), 10th Amendment reserve. Supremacy and preemption, dormant Commerce balancing.",
+      "sensory_hints": {
+        "visual": "See Federalism & State P in vivid detail",
+        "auditory": "Hear the sound of Federalism & St",
+        "kinesthetic": "Feel the texture of Federalism & State",
+        "olfactory": "Smell associated with Federalism & St",
+        "gustatory": "Taste reminding of Federalism & St",
+        "emotional": "Emotional response to Federalism & St",
+        "spatial": "Spatial arrangement of Federalism & St",
+        "temporal": "Time flow of Federalism & St",
+        "synesthetic": "Multi-sensory blend of Federalism & St",
+        "mnemonic_device": "State capitols resisting federal puppet strings."
+      }
+    },
+    {
+      "id": "ccc58eb6",
+      "position": [
+        8.480716729986186,
+        52.94646534050385,
+        5.584317672562788
+      ],
+      "content": "Individual Rights Framework: Incorporation via 14th DP. Due Process (procedural/substantive). Equal Protection tiers: strict (race), intermediate (gender), rational.",
+      "sensory_hints": {
+        "visual": "See Individual Rights Fr in vivid detail",
+        "auditory": "Hear the sound of Individual Righ",
+        "kinesthetic": "Feel the texture of Individual Rights ",
+        "olfactory": "Smell associated with Individual Righ",
+        "gustatory": "Taste reminding of Individual Righ",
+        "emotional": "Emotional response to Individual Righ",
+        "spatial": "Spatial arrangement of Individual Righ",
+        "temporal": "Time flow of Individual Righ",
+        "synesthetic": "Multi-sensory blend of Individual Righ",
+        "mnemonic_device": "SIREN spotlighting scrutiny levels."
+      }
+    },
+    {
+      "id": "13b23b02",
+      "position": [
+        18.730433412047073,
+        9.520273636452847,
+        6.059636275115569
+      ],
+      "content": "First Amendment Speech: Content-based strict scrutiny, symbolic speech (O'Brien test), public forum doctrine, commercial speech intermediate.",
+      "sensory_hints": {
+        "visual": "See First Amendment Spee in vivid detail",
+        "auditory": "Hear the sound of First Amendment",
+        "kinesthetic": "Feel the texture of First Amendment Sp",
+        "olfactory": "Smell associated with First Amendment",
+        "gustatory": "Taste reminding of First Amendment",
+        "emotional": "Emotional response to First Amendment",
+        "spatial": "Spatial arrangement of First Amendment",
+        "temporal": "Time flow of First Amendment",
+        "synesthetic": "Multi-sensory blend of First Amendment",
+        "mnemonic_device": "Megaphone with strict/intermediate levers."
+      }
+    },
+    {
+      "id": "32c7b289",
+      "position": [
+        15.937233572438414,
+        15.605610016781068,
+        2.96760370470061
+      ],
+      "content": "Religion Clauses: Establishment (Lemon/endorsement/coercion), Free Exercise (neutral vs targeted laws, strict scrutiny).",
+      "sensory_hints": {
+        "visual": "See Religion Clauses: Es in vivid detail",
+        "auditory": "Hear the sound of Religion Clause",
+        "kinesthetic": "Feel the texture of Religion Clauses: ",
+        "olfactory": "Smell associated with Religion Clause",
+        "gustatory": "Taste reminding of Religion Clause",
+        "emotional": "Emotional response to Religion Clause",
+        "spatial": "Spatial arrangement of Religion Clause",
+        "temporal": "Time flow of Religion Clause",
+        "synesthetic": "Multi-sensory blend of Religion Clause",
+        "mnemonic_device": "Balance scale between church and state with Lemon wedges."
+      }
+    },
+    {
+      "id": "d7fbbecc",
+      "position": [
+        57.16831301784376,
+        28.13031261396774,
+        4.734904369273503
+      ],
+      "content": "Criminal Procedure Overview: Fourth Amendment SWEAR (Search, Warrant, Exceptions, Arrest, Reasonable expectation); Fifth Miranda CRISP; exclusionary rule limits.",
+      "sensory_hints": {
+        "visual": "See Criminal Procedure O in vivid detail",
+        "auditory": "Hear the sound of Criminal Proced",
+        "kinesthetic": "Feel the texture of Criminal Procedure",
+        "olfactory": "Smell associated with Criminal Proced",
+        "gustatory": "Taste reminding of Criminal Proced",
+        "emotional": "Emotional response to Criminal Proced",
+        "spatial": "Spatial arrangement of Criminal Proced",
+        "temporal": "Time flow of Criminal Proced",
+        "synesthetic": "Multi-sensory blend of Criminal Proced",
+        "mnemonic_device": "Police badge shaped like SWEAR acronym."
+      }
+    }
+  ]
+}

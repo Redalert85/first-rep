@@ -1,0 +1,58 @@
+[
+  {
+    "subject": "Constitutional Law",
+    "subtype": "rule application",
+    "tested_rule": "Equal protection analysis applies strict scrutiny to fundamental rights and suspect classifications, intermediate scrutiny to gender and legitimacy classifications, and rational basis to all other classifications.",
+    "fact_pattern": "The state enacted a law prohibiting unmarried couples from jointly adopting children, while allowing married couples and single individuals to adopt. The law's stated purpose was to promote traditional family structures and provide children with stable two-parent households with both maternal and maternal figures. A same-sex couple and an unmarried heterosexual couple challenged the law as violating equal protection. Both couples are otherwise qualified adoptive parents with stable relationships, suitable homes, and financial security. The same-sex couple argued that the law discriminates based on sexual orientation, which should receive strict scrutiny. The heterosexual couple argued that the law discriminates based on marital status, which should receive rational basis review. The state presented evidence showing that children raised by married couples have better outcomes than those raised by unmarried couples, citing studies on family stability and child development. The law has been in effect for 15 years and has reduced adoptions by unmarried couples by 40%.",
+    "options": {
+      "A": "The law violates equal protection because classifications based on sexual orientation receive strict scrutiny, and the state failed to show the classification is narrowly tailored.",
+      "B": "The law violates equal protection because classifications based on marital status receive intermediate scrutiny, and the state failed to show the classification substantially relates to an important interest.",
+      "C": "The law is constitutional because classifications based on marital status receive only rational basis review, which is satisfied by the state's legitimate interest in child welfare.",
+      "D": "The law is constitutional because the state's interest in promoting traditional families justifies the classification under intermediate scrutiny."
+    },
+    "answer": "B",
+    "why_correct": "Marital status classifications receive intermediate scrutiny, requiring an important governmental interest substantially related to the classification. While promoting child welfare may be important, prohibiting all unmarried couples from adopting is not substantially related to that interest, as many unmarried couples provide stable homes.",
+    "why_others_wrong": {
+      "A": "Sexual orientation classifications do not automatically receive strict scrutiny; the analysis here centers on marital status discrimination.",
+      "C": "Marital status classifications receive intermediate scrutiny, not rational basis, when they burden fundamental rights like family formation.",
+      "D": "Intermediate scrutiny requires substantial relation to an important interest, not just any legitimate justification."
+    },
+    "trap_type": [
+      "wrong standard",
+      "overbreadth",
+      "timing"
+    ],
+    "difficulty": "HARD",
+    "concept": "equal protection scrutiny levels vs. fundamental rights",
+    "id": "33a3c9d1",
+    "question_number": 1
+  },
+  {
+    "subject": "Constitutional Law",
+    "subtype": "rule application",
+    "tested_rule": "Equal protection analysis applies strict scrutiny to fundamental rights and suspect classifications, intermediate scrutiny to gender and legitimacy classifications, and rational basis to all other classifications.",
+    "fact_pattern": "The state enacted a law prohibiting unmarried couples from jointly adopting children, while allowing married couples and single individuals to adopt. The law's stated purpose was to promote traditional family structures and provide children with stable two-parent households with both maternal and maternal figures. A same-sex couple and an unmarried heterosexual couple challenged the law as violating equal protection. Both couples are otherwise qualified adoptive parents with stable relationships, suitable homes, and financial security. The same-sex couple argued that the law discriminates based on sexual orientation, which should receive strict scrutiny. The heterosexual couple argued that the law discriminates based on marital status, which should receive rational basis review. The state presented evidence showing that children raised by married couples have better outcomes than those raised by unmarried couples, citing studies on family stability and child development. The law has been in effect for 15 years and has reduced adoptions by unmarried couples by 40%.",
+    "options": {
+      "A": "The law violates equal protection because classifications based on sexual orientation receive strict scrutiny, and the state failed to show the classification is narrowly tailored.",
+      "B": "The law violates equal protection because classifications based on marital status receive intermediate scrutiny, and the state failed to show the classification substantially relates to an important interest.",
+      "C": "The law is constitutional because classifications based on marital status receive only rational basis review, which is satisfied by the state's legitimate interest in child welfare.",
+      "D": "The law is constitutional because the state's interest in promoting traditional families justifies the classification under intermediate scrutiny."
+    },
+    "answer": "B",
+    "why_correct": "Marital status classifications receive intermediate scrutiny, requiring an important governmental interest substantially related to the classification. While promoting child welfare may be important, prohibiting all unmarried couples from adopting is not substantially related to that interest, as many unmarried couples provide stable homes.",
+    "why_others_wrong": {
+      "A": "Sexual orientation classifications do not automatically receive strict scrutiny; the analysis here centers on marital status discrimination.",
+      "C": "Marital status classifications receive intermediate scrutiny, not rational basis, when they burden fundamental rights like family formation.",
+      "D": "Intermediate scrutiny requires substantial relation to an important interest, not just any legitimate justification."
+    },
+    "trap_type": [
+      "wrong standard",
+      "overbreadth",
+      "timing"
+    ],
+    "difficulty": "HARD",
+    "concept": "equal protection scrutiny levels vs. fundamental rights",
+    "id": "baad70e3",
+    "question_number": 2
+  }
+]

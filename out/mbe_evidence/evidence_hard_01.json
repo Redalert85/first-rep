@@ -1,0 +1,28 @@
+{
+  "subject": "Evidence",
+  "subtype": "exception",
+  "tested_rule": "Character evidence is inadmissible to prove propensity under Rule 404(b), but admissible for other purposes such as motive, opportunity, intent, preparation, plan, knowledge, identity, or absence of mistake.",
+  "fact_pattern": "In a prosecution for burglary, the defendant was charged with breaking into a warehouse and stealing electronics. The state sought to introduce evidence that the defendant had previously been convicted of three burglaries in the past five years, all involving theft of electronic equipment from commercial buildings. The defendant objected, arguing that this evidence would show his propensity to commit burglaries. The state responded that the evidence was admissible to show the defendant's knowledge of burglary techniques, intent to commit the charged burglary, and absence of mistake in selecting the target. The prior burglaries involved similar methods: the defendant used a pry bar to break locks, disabled security cameras, and targeted high-value electronics sections. At trial, a fingerprint expert testified that the defendant's fingerprints were found on the pry bar used in the charged burglary.",
+  "options": {
+    "A": "The evidence is inadmissible because it shows propensity to commit burglaries, which violates Rule 404(b).",
+    "B": "The evidence is admissible because it shows the defendant's knowledge of burglary methods, intent, and absence of mistake, satisfying Rule 404(b) exceptions.",
+    "C": "The evidence is inadmissible because the prior burglaries occurred more than two years ago, making them too remote under Rule 403.",
+    "D": "The evidence is admissible because the defendant's fingerprints connect him to the crime, making character evidence irrelevant."
+  },
+  "answer": "B",
+  "why_correct": "Rule 404(b) prohibits character evidence to show propensity, but allows it for other purposes including motive, opportunity, intent, preparation, plan, knowledge, identity, or absence of mistake. The evidence shows the defendant's specialized knowledge of burglary techniques, intent to commit the charged crime, and absence of mistake in targeting electronics.",
+  "why_others_wrong": {
+    "A": "While propensity evidence is generally inadmissible, Rule 404(b) contains specific exceptions for other purposes beyond propensity.",
+    "C": "Rule 403 requires exclusion if prejudice substantially outweighs probative value, but remoteness alone doesn't make evidence inadmissible under Rule 404(b).",
+    "D": "The fingerprint evidence is admissible under Rule 404(b) exceptions, not because it independently proves the crime."
+  },
+  "trap_type": [
+    "overbreadth",
+    "wrong standard",
+    "timing"
+  ],
+  "difficulty": "HARD",
+  "concept": "character evidence under 404(b) vs. propensity inference",
+  "id": "771a5f3c",
+  "question_number": 1
+}
