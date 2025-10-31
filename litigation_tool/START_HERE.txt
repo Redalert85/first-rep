@@ -43,14 +43,17 @@ I've created a complete Iowa Legal Document Generator in this directory.
    - Proper Iowa R. Civ. P. citations
    - Iowa vs. Federal auto-detection
 
-✅ Black Letter Law Database (28 Rules - EXPANDED!)
-   - Torts: Negligence elements, duty, causation
-   - Contracts: Formation, offer, consideration
-   - Civil Procedure: Iowa vs. Federal standards
-   - Evidence: Hearsay, relevance, character evidence
-   - Criminal Law: Murder, manslaughter, attempt, conspiracy, self-defense
-   - Constitutional Law: First Amendment, Fourth Amendment, Equal Protection
-   - Property: Estates, adverse possession, landlord-tenant, easements
+✅ Black Letter Law Database (44 Rules - MASSIVELY EXPANDED!)
+   - Torts: Negligence elements, duty, causation (3 rules)
+   - Contracts: Formation, offer, consideration (3 rules)
+   - Civil Procedure: Iowa vs. Federal standards (2 rules)
+   - Evidence: Hearsay, relevance, character evidence (6 rules)
+   - Criminal Law: Murder, manslaughter, attempt, conspiracy, self-defense (5 rules)
+   - Constitutional Law: 20 RULES covering all major constitutional provisions!
+     • 14th Amendment (Due Process, Equal Protection, Incorporation)
+     • 11th Amendment (Sovereign Immunity)
+     • Commerce Clause, Necessary & Proper, Taxing/Spending, Executive Power
+   - Property: Estates, adverse possession, landlord-tenant, easements (5 rules)
 
 ✅ Iowa Deadline Calculator
    - 60-day discovery cutoff (Iowa R. Civ. P. 1.507)
@@ -78,7 +81,7 @@ litigation_tool/
 │   └── black_letter_law.py    ← Legal database (272 lines)
 │
 └── data/
-    └── black_letter_law.json  ← 28 legal rules across 7 subjects
+    └── black_letter_law.json  ← 44 legal rules across 7 subjects
 
 ────────────────────────────────────────────────────────────────────────────
 
@@ -199,10 +202,21 @@ Contracts           Formation                       3 rules
 Civil Procedure     Pleading standards              2 rules
 Evidence            Hearsay, Relevance              6 rules
 Criminal Law        Homicide, Inchoate, Defenses    5 rules
-Constitutional Law  1st/4th Amendment, Equal Prot.  4 rules
+Constitutional Law  All major constitutional law!   20 rules
 Property            Estates, Adv.Poss., L/T         5 rules
 
-TOTAL: 28 rules across 7 subjects
+TOTAL: 44 rules across 7 subjects
+
+Constitutional Law Topics (20 rules):
+  • 14th Amendment (Due Process, Equal Protection, Incorporation)
+  • 11th Amendment (Sovereign Immunity, Abrogation)
+  • Commerce Clause (Congressional power, Limits, Dormant)
+  • Necessary and Proper Clause (Standard, Limits)
+  • Taxing and Spending Powers (Taxing power, Dole test)
+  • Executive Power (Youngstown, Foreign Affairs, Limits)
+  • 1st Amendment (Free Speech, Unprotected Speech)
+  • 4th Amendment (Warrantless Searches)
+  • Equal Protection (Scrutiny Levels)
 
 ────────────────────────────────────────────────────────────────────────────
 

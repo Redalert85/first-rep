@@ -139,7 +139,7 @@ print(f"Negligence elements: {neg.elements}")
 ## 📊 Black Letter Law Database
 
 **Expanded Database:**
-- **28 rules** across **7 subjects**
+- **44 rules** across **7 subjects**
 - Subjects: Torts, Contracts, Civil Procedure, Evidence, Criminal Law, Constitutional Law, Property
 - All rules include elements, citations, and notes
 
@@ -172,10 +172,15 @@ print(f"Negligence elements: {neg.elements}")
    - Conspiracy
    - Self-defense
 
-6. **Constitutional Law** (4 rules)
-   - First Amendment (content-based restrictions, unprotected speech)
-   - Fourth Amendment (warrantless search exceptions)
-   - Equal Protection (levels of scrutiny)
+6. **Constitutional Law** (20 rules)
+   - **14th Amendment** - Due Process (procedural, substantive), Equal Protection, Incorporation
+   - **11th Amendment** - Sovereign Immunity, Congressional abrogation
+   - **1st Amendment** - Content-based restrictions, unprotected speech
+   - **4th Amendment** - Warrantless search exceptions
+   - **Commerce Clause** - Three categories, limits, Dormant Commerce Clause
+   - **Necessary and Proper Clause** - McCulloch standard, limits
+   - **Taxing and Spending Powers** - Taxing power, conditional spending (Dole test)
+   - **Executive Power** - Youngstown framework, foreign affairs, limits
 
 7. **Property** (5 rules)
    - Fee simple absolute & defeasible fees
