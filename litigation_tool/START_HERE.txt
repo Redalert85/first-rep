@@ -43,17 +43,14 @@ I've created a complete Iowa Legal Document Generator in this directory.
    - Proper Iowa R. Civ. P. citations
    - Iowa vs. Federal auto-detection
 
-✅ Black Letter Law Database (44 Rules - MASSIVELY EXPANDED!)
-   - Torts: Negligence elements, duty, causation (3 rules)
-   - Contracts: Formation, offer, consideration (3 rules)
-   - Civil Procedure: Iowa vs. Federal standards (2 rules)
-   - Evidence: Hearsay, relevance, character evidence (6 rules)
-   - Criminal Law: Murder, manslaughter, attempt, conspiracy, self-defense (5 rules)
-   - Constitutional Law: 20 RULES covering all major constitutional provisions!
-     • 14th Amendment (Due Process, Equal Protection, Incorporation)
-     • 11th Amendment (Sovereign Immunity)
-     • Commerce Clause, Necessary & Proper, Taxing/Spending, Executive Power
-   - Property: Estates, adverse possession, landlord-tenant, easements (5 rules)
+✅ Black Letter Law Database (79 Rules - COMPREHENSIVE COVERAGE!)
+   - Torts: 8 rules (Negligence, Battery, Assault, False Imprisonment, IIED, Strict Liability)
+   - Contracts: 8 rules (Formation, Statute of Frauds, Parol Evidence, Breach, Damages, Promissory Estoppel)
+   - Civil Procedure: 7 rules (Personal/Subject Matter Jurisdiction, Pleading, Summary Judgment, Discovery, Class Actions)
+   - Evidence: 11 rules (Hearsay, Relevance, Character, Impeachment, Habit, Authentication, Policy Exclusions)
+   - Criminal Law: 10 rules (Murder, Manslaughter, Felony Murder, Burglary, Robbery, Larceny, Attempt, Conspiracy, Self-Defense, Accomplice Liability)
+   - Constitutional Law: 25 rules (5th/6th/14th/11th/1st/4th Amendments, Commerce, Executive, Taxing/Spending, Necessary & Proper)
+   - Property: 10 rules (Estates, Recording Acts, Marketable Title, Servitudes, Covenants, Adverse Possession, Easements, Fixtures)
 
 ✅ Iowa Deadline Calculator
    - 60-day discovery cutoff (Iowa R. Civ. P. 1.507)
@@ -81,7 +78,7 @@ litigation_tool/
 │   └── black_letter_law.py    ← Legal database (272 lines)
 │
 └── data/
-    └── black_letter_law.json  ← 44 legal rules across 7 subjects
+    └── black_letter_law.json  ← 79 legal rules across 7 subjects
 
 ────────────────────────────────────────────────────────────────────────────
 
@@ -195,28 +192,26 @@ for name, date in deadlines.items():
 
 🎓 Current Database:
 
-Subject             Topics                          Rules
-──────────────────  ───────────────────────────     ─────
-Torts               Negligence                      3 rules
-Contracts           Formation                       3 rules
-Civil Procedure     Pleading standards              2 rules
-Evidence            Hearsay, Relevance              6 rules
-Criminal Law        Homicide, Inchoate, Defenses    5 rules
-Constitutional Law  All major constitutional law!   20 rules
-Property            Estates, Adv.Poss., L/T         5 rules
+Subject             Topics                                              Rules
+──────────────────  ─────────────────────────────────────────────────   ─────
+Torts               Negligence, Intentional Torts, Strict Liability     8 rules
+Contracts           Formation, Interpretation, Breach, Remedies         8 rules
+Civil Procedure     Jurisdiction, Pleading, Discovery, Joinder          7 rules
+Evidence            Hearsay, Relevance, Character, Impeachment, Auth    11 rules
+Criminal Law        Homicide, Property Crimes, Inchoate, Parties        10 rules
+Constitutional Law  All major constitutional provisions!                25 rules
+Property            Estates, Conveyancing, Servitudes, Adv.Poss.        10 rules
 
-TOTAL: 44 rules across 7 subjects
+TOTAL: 79 rules across 7 subjects (690% growth from original 10 rules!)
 
-Constitutional Law Topics (20 rules):
-  • 14th Amendment (Due Process, Equal Protection, Incorporation)
-  • 11th Amendment (Sovereign Immunity, Abrogation)
-  • Commerce Clause (Congressional power, Limits, Dormant)
-  • Necessary and Proper Clause (Standard, Limits)
-  • Taxing and Spending Powers (Taxing power, Dole test)
-  • Executive Power (Youngstown, Foreign Affairs, Limits)
-  • 1st Amendment (Free Speech, Unprotected Speech)
-  • 4th Amendment (Warrantless Searches)
-  • Equal Protection (Scrutiny Levels)
+Top Coverage Areas:
+  • Constitutional Law: 25 rules (5th/6th/14th Amendments, Commerce, Executive)
+  • Evidence: 11 rules (FRE comprehensive coverage)
+  • Criminal Law: 10 rules (Homicide, property crimes, accomplice liability)
+  • Property: 10 rules (Recording acts, servitudes, estates)
+  • Torts: 8 rules (Negligence + intentional torts + strict liability)
+  • Contracts: 8 rules (Formation to remedies, including defenses)
+  • Civil Procedure: 7 rules (Jurisdiction, discovery, class actions)
 
 ────────────────────────────────────────────────────────────────────────────
 

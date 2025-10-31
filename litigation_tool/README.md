@@ -138,55 +138,67 @@ print(f"Negligence elements: {neg.elements}")
 
 ## 📊 Black Letter Law Database
 
-**Expanded Database:**
-- **44 rules** across **7 subjects**
+**Comprehensive Database:**
+- **79 rules** across **7 subjects**
 - Subjects: Torts, Contracts, Civil Procedure, Evidence, Criminal Law, Constitutional Law, Property
 - All rules include elements, citations, and notes
+- **Growth: From 10 original rules to 79 (690% growth!)**
 
 **Available Rules:**
 
-1. **Torts** (3 rules)
-   - Negligence elements
-   - Duty of reasonable care
-   - Causation (actual & proximate)
+### 1. **Torts** (8 rules)
+- **Negligence** (3 rules): Elements, duty of reasonable care, causation
+- **Intentional Torts** (4 rules): Battery, assault, false imprisonment, IIED
+- **Strict Liability** (1 rule): Abnormally dangerous activities
 
-2. **Contracts** (3 rules)
-   - Contract formation elements
-   - Valid offer
-   - Consideration
+### 2. **Contracts** (8 rules)
+- **Formation** (5 rules): Elements, offer, consideration, Statute of Frauds (MY LEGS), promissory estoppel
+- **Interpretation** (1 rule): Parol evidence rule
+- **Performance & Breach** (1 rule): Material vs. minor breach, anticipatory repudiation
+- **Remedies** (1 rule): Expectation damages (Hadley v. Baxendale)
 
-3. **Civil Procedure** (2 rules)
-   - FRCP 12(b)(6) standard (Twombly/Iqbal)
-   - Iowa notice pleading (1.421)
+### 3. **Civil Procedure** (7 rules)
+- **Jurisdiction** (2 rules): Personal jurisdiction (minimum contacts), subject matter jurisdiction (diversity, federal question)
+- **Pleading** (2 rules): FRCP 12(b)(6) Twombly/Iqbal, Iowa notice pleading
+- **Pretrial** (1 rule): Summary judgment (FRCP 56)
+- **Discovery** (1 rule): Scope and proportionality (FRCP 26)
+- **Joinder** (1 rule): Class actions (FRCP 23)
 
-4. **Evidence** (6 rules)
-   - Hearsay rule & exceptions
-   - Relevance (FRE 401)
-   - Character evidence propensity rule
-   - Excited utterance, present sense impression, statement against interest
+### 4. **Evidence** (11 rules)
+- **Hearsay** (4 rules): Hearsay rule, present sense impression, excited utterance, statement against interest
+- **Relevance** (4 rules): FRE 401, character evidence (FRE 404), subsequent remedial measures (FRE 407), compromise offers (FRE 408)
+- **Character Evidence** (1 rule): Habit (FRE 406)
+- **Impeachment** (1 rule): Prior inconsistent statements
+- **Authentication** (1 rule): FRE 901/902
 
-5. **Criminal Law** (5 rules)
-   - Murder elements (malice aforethought)
-   - Voluntary manslaughter (heat of passion)
-   - Criminal attempt
-   - Conspiracy
-   - Self-defense
+### 5. **Criminal Law** (10 rules)
+- **Homicide** (3 rules): Murder (malice aforethought), voluntary manslaughter, felony murder (BARRK)
+- **Property Crimes** (3 rules): Burglary, robbery, larceny/theft
+- **Inchoate Crimes** (2 rules): Attempt (substantial step), conspiracy
+- **Defenses** (1 rule): Self-defense
+- **Parties** (1 rule): Accomplice liability
 
-6. **Constitutional Law** (20 rules)
-   - **14th Amendment** - Due Process (procedural, substantive), Equal Protection, Incorporation
-   - **11th Amendment** - Sovereign Immunity, Congressional abrogation
-   - **1st Amendment** - Content-based restrictions, unprotected speech
-   - **4th Amendment** - Warrantless search exceptions
-   - **Commerce Clause** - Three categories, limits, Dormant Commerce Clause
-   - **Necessary and Proper Clause** - McCulloch standard, limits
-   - **Taxing and Spending Powers** - Taxing power, conditional spending (Dole test)
-   - **Executive Power** - Youngstown framework, foreign affairs, limits
+### 6. **Constitutional Law** (25 rules)
+- **14th Amendment** (4 rules): Procedural due process (Mathews), substantive due process (Glucksberg), incorporation, discriminatory intent (Arlington Heights)
+- **11th Amendment** (2 rules): Sovereign immunity (Ex parte Young), congressional abrogation
+- **5th Amendment** (2 rules): Self-incrimination (Miranda), Takings Clause (Penn Central)
+- **6th Amendment** (2 rules): Right to counsel (Gideon), Confrontation Clause (Crawford)
+- **1st Amendment** (3 rules): Content-based restrictions, unprotected speech, Religion Clauses (Establishment/Free Exercise)
+- **4th Amendment** (1 rule): Warrantless search exceptions
+- **Commerce Clause** (3 rules): Three categories (Lopez), limits (NFIB), Dormant Commerce Clause (Pike)
+- **Necessary and Proper Clause** (2 rules): McCulloch standard, limits
+- **Taxing and Spending Powers** (2 rules): Taxing power (NFIB), conditional spending (Dole)
+- **Executive Power** (3 rules): Youngstown framework, foreign affairs, limits
+- **Equal Protection** (1 rule): Levels of scrutiny
 
-7. **Property** (5 rules)
-   - Fee simple absolute & defeasible fees
-   - Adverse possession (COAH)
-   - Implied warranty of habitability
-   - Easements (necessity vs. implication)
+### 7. **Property** (10 rules)
+- **Estates** (2 rules): Fee simple absolute, defeasible fees (determinable vs. condition subsequent)
+- **Conveyancing** (2 rules): Recording acts (notice/race/race-notice), marketable title
+- **Servitudes** (2 rules): Equitable servitudes, real covenants (privity requirements)
+- **Adverse Possession** (1 rule): COAH elements
+- **Landlord-Tenant** (1 rule): Implied warranty of habitability
+- **Easements** (1 rule): By necessity vs. by implication
+- **Personal vs. Real Property** (1 rule): Fixtures (annexation/adaptation/intent)
 
 ---
 
