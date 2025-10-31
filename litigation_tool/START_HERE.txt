@@ -43,11 +43,14 @@ I've created a complete Iowa Legal Document Generator in this directory.
    - Proper Iowa R. Civ. P. citations
    - Iowa vs. Federal auto-detection
 
-✅ Black Letter Law Database (10 Rules)
+✅ Black Letter Law Database (28 Rules - EXPANDED!)
    - Torts: Negligence elements, duty, causation
    - Contracts: Formation, offer, consideration
    - Civil Procedure: Iowa vs. Federal standards
-   - Evidence: Hearsay rules
+   - Evidence: Hearsay, relevance, character evidence
+   - Criminal Law: Murder, manslaughter, attempt, conspiracy, self-defense
+   - Constitutional Law: First Amendment, Fourth Amendment, Equal Protection
+   - Property: Estates, adverse possession, landlord-tenant, easements
 
 ✅ Iowa Deadline Calculator
    - 60-day discovery cutoff (Iowa R. Civ. P. 1.507)
@@ -75,7 +78,7 @@ litigation_tool/
 │   └── black_letter_law.py    ← Legal database (272 lines)
 │
 └── data/
-    └── black_letter_law.json  ← 10 legal rules (auto-created)
+    └── black_letter_law.json  ← 28 legal rules across 7 subjects
 
 ────────────────────────────────────────────────────────────────────────────
 
@@ -194,9 +197,12 @@ Subject             Topics                          Rules
 Torts               Negligence                      3 rules
 Contracts           Formation                       3 rules
 Civil Procedure     Pleading standards              2 rules
-Evidence            Hearsay                         2 rules
+Evidence            Hearsay, Relevance              6 rules
+Criminal Law        Homicide, Inchoate, Defenses    5 rules
+Constitutional Law  1st/4th Amendment, Equal Prot.  4 rules
+Property            Estates, Adv.Poss., L/T         5 rules
 
-TOTAL: 10 rules across 4 subjects
+TOTAL: 28 rules across 7 subjects
 
 ────────────────────────────────────────────────────────────────────────────
 

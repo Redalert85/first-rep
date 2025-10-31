@@ -138,29 +138,50 @@ print(f"Negligence elements: {neg.elements}")
 
 ## 📊 Black Letter Law Database
 
-**Current Database:**
-- **10 rules** across **4 subjects**
-- Subjects: Torts, Contracts, Civil Procedure, Evidence
+**Expanded Database:**
+- **28 rules** across **7 subjects**
+- Subjects: Torts, Contracts, Civil Procedure, Evidence, Criminal Law, Constitutional Law, Property
 - All rules include elements, citations, and notes
 
 **Available Rules:**
-1. **Torts**
+
+1. **Torts** (3 rules)
    - Negligence elements
    - Duty of reasonable care
    - Causation (actual & proximate)
 
-2. **Contracts**
+2. **Contracts** (3 rules)
    - Contract formation elements
    - Valid offer
    - Consideration
 
-3. **Civil Procedure**
+3. **Civil Procedure** (2 rules)
    - FRCP 12(b)(6) standard (Twombly/Iqbal)
    - Iowa notice pleading (1.421)
 
-4. **Evidence**
-   - Hearsay rule
-   - Present sense impression exception
+4. **Evidence** (6 rules)
+   - Hearsay rule & exceptions
+   - Relevance (FRE 401)
+   - Character evidence propensity rule
+   - Excited utterance, present sense impression, statement against interest
+
+5. **Criminal Law** (5 rules)
+   - Murder elements (malice aforethought)
+   - Voluntary manslaughter (heat of passion)
+   - Criminal attempt
+   - Conspiracy
+   - Self-defense
+
+6. **Constitutional Law** (4 rules)
+   - First Amendment (content-based restrictions, unprotected speech)
+   - Fourth Amendment (warrantless search exceptions)
+   - Equal Protection (levels of scrutiny)
+
+7. **Property** (5 rules)
+   - Fee simple absolute & defeasible fees
+   - Adverse possession (COAH)
+   - Implied warranty of habitability
+   - Easements (necessity vs. implication)
 
 ---
 
