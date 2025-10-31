@@ -139,66 +139,71 @@ print(f"Negligence elements: {neg.elements}")
 ## 📊 Black Letter Law Database
 
 **Comprehensive Database:**
-- **79 rules** across **7 subjects**
+- **114 rules** across **7 subjects** and **57 topics**
 - Subjects: Torts, Contracts, Civil Procedure, Evidence, Criminal Law, Constitutional Law, Property
 - All rules include elements, citations, and notes
-- **Growth: From 10 original rules to 79 (690% growth!)**
+- **Growth: From 10 original rules to 114 (1,040% growth!)**
 
 **Available Rules:**
 
-### 1. **Torts** (8 rules)
-- **Negligence** (3 rules): Elements, duty of reasonable care, causation
-- **Intentional Torts** (4 rules): Battery, assault, false imprisonment, IIED
-- **Strict Liability** (1 rule): Abnormally dangerous activities
-
-### 2. **Contracts** (8 rules)
-- **Formation** (5 rules): Elements, offer, consideration, Statute of Frauds (MY LEGS), promissory estoppel
-- **Interpretation** (1 rule): Parol evidence rule
-- **Performance & Breach** (1 rule): Material vs. minor breach, anticipatory repudiation
-- **Remedies** (1 rule): Expectation damages (Hadley v. Baxendale)
-
-### 3. **Civil Procedure** (7 rules)
-- **Jurisdiction** (2 rules): Personal jurisdiction (minimum contacts), subject matter jurisdiction (diversity, federal question)
-- **Pleading** (2 rules): FRCP 12(b)(6) Twombly/Iqbal, Iowa notice pleading
-- **Pretrial** (1 rule): Summary judgment (FRCP 56)
-- **Discovery** (1 rule): Scope and proportionality (FRCP 26)
-- **Joinder** (1 rule): Class actions (FRCP 23)
-
-### 4. **Evidence** (11 rules)
-- **Hearsay** (4 rules): Hearsay rule, present sense impression, excited utterance, statement against interest
-- **Relevance** (4 rules): FRE 401, character evidence (FRE 404), subsequent remedial measures (FRE 407), compromise offers (FRE 408)
-- **Character Evidence** (1 rule): Habit (FRE 406)
-- **Impeachment** (1 rule): Prior inconsistent statements
-- **Authentication** (1 rule): FRE 901/902
-
-### 5. **Criminal Law** (10 rules)
-- **Homicide** (3 rules): Murder (malice aforethought), voluntary manslaughter, felony murder (BARRK)
-- **Property Crimes** (3 rules): Burglary, robbery, larceny/theft
-- **Inchoate Crimes** (2 rules): Attempt (substantial step), conspiracy
-- **Defenses** (1 rule): Self-defense
-- **Parties** (1 rule): Accomplice liability
-
-### 6. **Constitutional Law** (25 rules)
-- **14th Amendment** (4 rules): Procedural due process (Mathews), substantive due process (Glucksberg), incorporation, discriminatory intent (Arlington Heights)
-- **11th Amendment** (2 rules): Sovereign immunity (Ex parte Young), congressional abrogation
-- **5th Amendment** (2 rules): Self-incrimination (Miranda), Takings Clause (Penn Central)
-- **6th Amendment** (2 rules): Right to counsel (Gideon), Confrontation Clause (Crawford)
-- **1st Amendment** (3 rules): Content-based restrictions, unprotected speech, Religion Clauses (Establishment/Free Exercise)
-- **4th Amendment** (1 rule): Warrantless search exceptions
-- **Commerce Clause** (3 rules): Three categories (Lopez), limits (NFIB), Dormant Commerce Clause (Pike)
+### 1. **Constitutional Law** (30 rules)
+- **1st Amendment** (6 rules): Freedom of speech (content-based/neutral), freedom of press, assembly/petition, unprotected speech, Religion Clauses
+- **4th Amendment** (2 rules): Warrantless searches, reasonable expectation of privacy (Katz)
+- **5th Amendment** (3 rules): Self-incrimination (Miranda), double jeopardy, Takings Clause
+- **6th Amendment** (2 rules): Right to counsel, Confrontation Clause
+- **14th Amendment** (4 rules): Procedural due process, substantive due process, incorporation, discriminatory intent
+- **11th Amendment** (2 rules): Sovereign immunity, congressional abrogation
+- **Commerce Clause** (3 rules): Three categories (Lopez), limits, Dormant Commerce Clause
 - **Necessary and Proper Clause** (2 rules): McCulloch standard, limits
-- **Taxing and Spending Powers** (2 rules): Taxing power (NFIB), conditional spending (Dole)
+- **Taxing/Spending Powers** (2 rules): Taxing power, conditional spending
 - **Executive Power** (3 rules): Youngstown framework, foreign affairs, limits
 - **Equal Protection** (1 rule): Levels of scrutiny
 
-### 7. **Property** (10 rules)
-- **Estates** (2 rules): Fee simple absolute, defeasible fees (determinable vs. condition subsequent)
-- **Conveyancing** (2 rules): Recording acts (notice/race/race-notice), marketable title
-- **Servitudes** (2 rules): Equitable servitudes, real covenants (privity requirements)
+### 2. **Evidence** (16 rules)
+- **Hearsay** (9 rules): Hearsay rule, present sense impression (803(1)), excited utterance (803(2)), then-existing condition (803(3)), medical diagnosis (803(4)), past recollection recorded (803(5)), statement against interest
+- **Relevance** (4 rules): FRE 401, character evidence, subsequent remedial measures, compromise offers
+- **Character/Habit** (1 rule): Habit evidence
+- **Impeachment** (1 rule): Prior inconsistent statements
+- **Authentication** (1 rule): FRE 901/902
+
+### 3. **Criminal Law** (15 rules)
+- **Homicide** (3 rules): Murder (malice aforethought), voluntary manslaughter, felony murder (BARRK)
+- **Property Crimes** (4 rules): Burglary, robbery, larceny, false pretenses
+- **Inchoate Crimes** (4 rules): Attempt, solicitation, conspiracy, assault
+- **Defenses** (1 rule): Self-defense
+- **Parties** (1 rule): Accomplice liability
+
+### 4. **Property** (15 rules)
+- **Estates** (2 rules): Fee simple absolute, defeasible fees
+- **Future Interests** (1 rule): Rule Against Perpetuities (RAP)
+- **Conveyancing** (2 rules): Recording acts, marketable title
+- **Servitudes** (2 rules): Equitable servitudes, real covenants
+- **Easements** (3 rules): Creation, termination, by necessity vs. implication
 - **Adverse Possession** (1 rule): COAH elements
-- **Landlord-Tenant** (1 rule): Implied warranty of habitability
-- **Easements** (1 rule): By necessity vs. by implication
-- **Personal vs. Real Property** (1 rule): Fixtures (annexation/adaptation/intent)
+- **Landlord-Tenant** (3 rules): Types of tenancies, duties/remedies, implied warranty of habitability
+- **Personal vs. Real Property** (1 rule): Fixtures
+
+### 5. **Torts** (13 rules)
+- **Negligence** (3 rules): Elements, duty of reasonable care, causation
+- **Intentional Torts** (7 rules): Battery, assault, false imprisonment, IIED, trespass to land, trespass to chattels, conversion
+- **Dignitary Torts** (2 rules): Defamation (libel/slander), invasion of privacy (four torts)
+- **Strict Liability** (1 rule): Abnormally dangerous activities
+
+### 6. **Contracts** (13 rules)
+- **Formation** (7 rules): Elements, offer/acceptance, consideration, Statute of Frauds (MY LEGS), promissory estoppel, modification (CL vs. UCC)
+- **Third Party Rights** (2 rules): Third party beneficiaries, assignment/delegation
+- **Interpretation** (1 rule): Parol evidence rule
+- **Performance & Breach** (1 rule): Material vs. minor breach
+- **Remedies** (2 rules): Expectation damages, specific performance
+
+### 7. **Civil Procedure** (12 rules)
+- **Jurisdiction** (2 rules): Personal jurisdiction (minimum contacts), subject matter jurisdiction
+- **Pleading** (4 rules): Rule 8 requirements (Twombly/Iqbal), Rule 11 sanctions, Iowa notice pleading
+- **Joinder** (2 rules): Joinder of claims/parties, counterclaims/cross-claims
+- **Pretrial** (1 rule): Summary judgment (FRCP 56)
+- **Discovery** (1 rule): Scope and proportionality
+- **Class Actions** (1 rule): FRCP 23
+- **Former Adjudication** (1 rule): Res judicata (claim preclusion)
 
 ---
 
