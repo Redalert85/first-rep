@@ -1,0 +1,1455 @@
+[
+  {
+    "concept_id": "prof_resp_communication_detailed",
+    "name": "Communication with Client",
+    "subject": "professional_responsibility",
+    "category": "ESSAY",
+    "difficulty": 3,
+    "rule_statement": "Lawyer must reasonably inform client of status, respond to requests, explain matters for informed decisions, and communicate settlement offers promptly",
+    "elements": [
+      "Keep informed",
+      "Respond to requests",
+      "Explain for decisions",
+      "Prompt settlement communication"
+    ],
+    "exceptions": [],
+    "policy_rationales": [],
+    "common_traps": [
+      "Not informing of settlement offers",
+      "Not explaining enough",
+      "Missing scope decisions"
+    ],
+    "mnemonic": null,
+    "prerequisites": [],
+    "exam_frequency": "medium",
+    "iowa_specific": false
+  },
+  {
+    "concept_id": "prof_resp_declining_terminating",
+    "name": "Declining & Terminating Representation",
+    "subject": "professional_responsibility",
+    "category": "ESSAY",
+    "difficulty": 3,
+    "rule_statement": "Must decline if rules violation; may withdraw for legitimate reasons; court approval if litigation; protect client interests",
+    "elements": [
+      "Mandatory withdrawal",
+      "Permissive withdrawal",
+      "Court approval",
+      "Protect interests"
+    ],
+    "exceptions": [],
+    "policy_rationales": [],
+    "common_traps": [
+      "No court permission in litigation",
+      "Not giving notice",
+      "Not returning property"
+    ],
+    "mnemonic": null,
+    "prerequisites": [],
+    "exam_frequency": "medium",
+    "iowa_specific": false
+  },
+  {
+    "concept_id": "prof_resp_safekeeping_detailed",
+    "name": "Safekeeping Property",
+    "subject": "professional_responsibility",
+    "category": "ESSAY",
+    "difficulty": 3,
+    "rule_statement": "Separate account required; maintain records; prompt delivery; accounting on request; disputed funds kept separate",
+    "elements": [
+      "Separate account (IOLTA)",
+      "Complete records",
+      "Prompt delivery",
+      "Accounting"
+    ],
+    "exceptions": [],
+    "policy_rationales": [],
+    "common_traps": [
+      "Commingling",
+      "Using client funds temporarily",
+      "Not separating disputed funds"
+    ],
+    "mnemonic": null,
+    "prerequisites": [],
+    "exam_frequency": "medium",
+    "iowa_specific": true
+  },
+  {
+    "concept_id": "prof_resp_advertising_detailed",
+    "name": "Advertising & Solicitation Rules",
+    "subject": "professional_responsibility",
+    "category": "ESSAY",
+    "difficulty": 3,
+    "rule_statement": "May advertise if truthful; no live solicitation if significant pecuniary motive; specialization limits",
+    "elements": [
+      "Advertising permitted if truthful",
+      "No false/misleading",
+      "Solicitation restrictions",
+      "Specialization rules"
+    ],
+    "exceptions": [],
+    "policy_rationales": [],
+    "common_traps": [
+      "All solicitation prohibited",
+      "In-person to accident victims",
+      "Claiming specialization without certification"
+    ],
+    "mnemonic": null,
+    "prerequisites": [],
+    "exam_frequency": "medium",
+    "iowa_specific": false
+  },
+  {
+    "concept_id": "prof_resp_impartiality_detailed",
+    "name": "Impartiality of Tribunal",
+    "subject": "professional_responsibility",
+    "category": "ESSAY",
+    "difficulty": 3,
+    "rule_statement": "No ex parte with judge; no improper jury influence; maintain decorum; no prejudicial conduct",
+    "elements": [
+      "No ex parte with judge",
+      "No improper jury influence",
+      "Maintain decorum",
+      "No prejudicial conduct"
+    ],
+    "exceptions": [],
+    "policy_rationales": [],
+    "common_traps": [
+      "Ex parte exceptions",
+      "Gifts to judges",
+      "Lawyer-judge commentary"
+    ],
+    "mnemonic": null,
+    "prerequisites": [],
+    "exam_frequency": "medium",
+    "iowa_specific": false
+  },
+  {
+    "concept_id": "prof_resp_trial_publicity_detailed",
+    "name": "Trial Publicity Rules",
+    "subject": "professional_responsibility",
+    "category": "ESSAY",
+    "difficulty": 3,
+    "rule_statement": "Cannot make statements with substantial likelihood of materially prejudicing proceeding; safe harbor statements permitted",
+    "elements": [
+      "Substantial likelihood test",
+      "Material prejudice",
+      "Criminal heightened",
+      "Safe harbor"
+    ],
+    "exceptions": [],
+    "policy_rationales": [],
+    "common_traps": [
+      "Public record info permitted",
+      "Heightened in criminal",
+      "First Amendment balance"
+    ],
+    "mnemonic": null,
+    "prerequisites": [],
+    "exam_frequency": "low",
+    "iowa_specific": false
+  },
+  {
+    "concept_id": "prof_resp_judges_detailed",
+    "name": "Judge & Former Judge Rules",
+    "subject": "professional_responsibility",
+    "category": "ESSAY",
+    "difficulty": 3,
+    "rule_statement": "Judge must maintain independence, avoid impropriety appearance; former judge cannot represent in matter participated",
+    "elements": [
+      "Independence",
+      "Impartiality",
+      "Disqualification",
+      "Former judge limits"
+    ],
+    "exceptions": [],
+    "policy_rationales": [],
+    "common_traps": [
+      "Former judge prior matter",
+      "Appearance of impropriety",
+      "Report misconduct duty"
+    ],
+    "mnemonic": null,
+    "prerequisites": [],
+    "exam_frequency": "low",
+    "iowa_specific": false
+  },
+  {
+    "concept_id": "prof_resp_law_firms_detailed",
+    "name": "Law Firm Responsibilities",
+    "subject": "professional_responsibility",
+    "category": "ESSAY",
+    "difficulty": 3,
+    "rule_statement": "Partners/supervisors ensure compliance; subordinates follow rules; firm-wide measures required; conflicts imputed",
+    "elements": [
+      "Supervisory duties",
+      "Subordinate duties",
+      "Firm measures",
+      "Conflict imputation"
+    ],
+    "exceptions": [],
+    "policy_rationales": [],
+    "common_traps": [
+      "Subordinate still liable",
+      "Screening laterals",
+      "Firm name restrictions"
+    ],
+    "mnemonic": null,
+    "prerequisites": [],
+    "exam_frequency": "medium",
+    "iowa_specific": false
+  },
+  {
+    "concept_id": "prof_resp_unauthorized_practice",
+    "name": "Unauthorized Practice of Law",
+    "subject": "professional_responsibility",
+    "category": "ESSAY",
+    "difficulty": 3,
+    "rule_statement": "Lawyer cannot practice where not admitted; cannot assist non-lawyer in unauthorized practice; multijurisdictional practice rules",
+    "elements": [
+      "Admission requirements",
+      "No assisting non-lawyers",
+      "MJP exceptions",
+      "Pro hac vice"
+    ],
+    "exceptions": [],
+    "policy_rationales": [],
+    "common_traps": [
+      "MJP exceptions",
+      "Temporary practice",
+      "Assisting UPL"
+    ],
+    "mnemonic": null,
+    "prerequisites": [],
+    "exam_frequency": "medium",
+    "iowa_specific": false
+  },
+  {
+    "concept_id": "prof_resp_sale_law_practice",
+    "name": "Sale of Law Practice",
+    "subject": "professional_responsibility",
+    "category": "ESSAY",
+    "difficulty": 3,
+    "rule_statement": "May sell practice if: entire practice or area sold, written client notice, fees not increased",
+    "elements": [
+      "Entire practice or area",
+      "Written notice",
+      "No fee increase",
+      "Client consent"
+    ],
+    "exceptions": [],
+    "policy_rationales": [],
+    "common_traps": [
+      "Must sell entire area",
+      "Client can reject",
+      "Cannot increase fees"
+    ],
+    "mnemonic": null,
+    "prerequisites": [],
+    "exam_frequency": "low",
+    "iowa_specific": false
+  },
+  {
+    "concept_id": "prof_resp_reporting_misconduct",
+    "name": "Reporting Professional Misconduct",
+    "subject": "professional_responsibility",
+    "category": "ESSAY",
+    "difficulty": 3,
+    "rule_statement": "Lawyer must report other lawyer's violations raising substantial question about honesty, trustworthiness, fitness",
+    "elements": [
+      "Must report violations",
+      "Substantial question test",
+      "Confidentiality exceptions",
+      "Self-reporting"
+    ],
+    "exceptions": [],
+    "policy_rationales": [],
+    "common_traps": [
+      "Confidentiality not absolute",
+      "Substantial question threshold",
+      "Judge misconduct reporting"
+    ],
+    "mnemonic": null,
+    "prerequisites": [],
+    "exam_frequency": "medium",
+    "iowa_specific": false
+  },
+  {
+    "concept_id": "prof_resp_disciplinary_procedures",
+    "name": "Disciplinary Procedures",
+    "subject": "professional_responsibility",
+    "category": "ESSAY",
+    "difficulty": 3,
+    "rule_statement": "State supreme court inherent authority; disciplinary board investigates; sanctions range from private reprimand to disbarment",
+    "elements": [
+      "Supreme court authority",
+      "Investigation process",
+      "Sanctions range",
+      "Reciprocal discipline"
+    ],
+    "exceptions": [],
+    "policy_rationales": [],
+    "common_traps": [
+      "Inherent authority",
+      "Burden of proof",
+      "Reciprocal discipline rules"
+    ],
+    "mnemonic": null,
+    "prerequisites": [],
+    "exam_frequency": "low",
+    "iowa_specific": true
+  },
+  {
+    "concept_id": "prof_resp_multijurisdictional",
+    "name": "Multijurisdictional Practice",
+    "subject": "professional_responsibility",
+    "category": "ESSAY",
+    "difficulty": 4,
+    "rule_statement": "May practice temporarily if: related to admitted practice, arbitration/mediation, reasonably related to practice, pro hac vice",
+    "elements": [
+      "Temporary practice exceptions",
+      "Related to home practice",
+      "Pro hac vice",
+      "Systematic presence prohibited"
+    ],
+    "exceptions": [],
+    "policy_rationales": [],
+    "common_traps": [
+      "Cannot establish office",
+      "Related to home practice",
+      "Temporary only"
+    ],
+    "mnemonic": null,
+    "prerequisites": [],
+    "exam_frequency": "medium",
+    "iowa_specific": false
+  },
+  {
+    "concept_id": "prof_resp_litigation_conduct",
+    "name": "Conduct in Litigation",
+    "subject": "professional_responsibility",
+    "category": "ESSAY",
+    "difficulty": 3,
+    "rule_statement": "Must not: abuse discovery, fail to disclose controlling authority, falsify evidence, make frivolous claims",
+    "elements": [
+      "No discovery abuse",
+      "Disclose adverse authority",
+      "No false evidence",
+      "No frivolous claims"
+    ],
+    "exceptions": [],
+    "policy_rationales": [],
+    "common_traps": [
+      "Adverse authority in controlling jurisdiction",
+      "Discovery proportionality",
+      "Good faith extensions OK"
+    ],
+    "mnemonic": null,
+    "prerequisites": [],
+    "exam_frequency": "high",
+    "iowa_specific": false
+  },
+  {
+    "concept_id": "prof_resp_transactions_with_client",
+    "name": "Business Transactions with Clients",
+    "subject": "professional_responsibility",
+    "category": "ESSAY",
+    "difficulty": 4,
+    "rule_statement": "Cannot enter business transaction unless: terms fair and reasonable, disclosed in writing, client has independent counsel opportunity, client consents in writing",
+    "elements": [
+      "Fair and reasonable",
+      "Written disclosure",
+      "Independent counsel opportunity",
+      "Written consent"
+    ],
+    "exceptions": [],
+    "policy_rationales": [],
+    "common_traps": [
+      "All four required",
+      "Full disclosure needed",
+      "Independent counsel chance"
+    ],
+    "mnemonic": "FICO: Fair, Independent counsel, Consent, Opportunity",
+    "prerequisites": [],
+    "exam_frequency": "high",
+    "iowa_specific": false
+  },
+  {
+    "concept_id": "prof_resp_literary_rights",
+    "name": "Literary & Media Rights",
+    "subject": "professional_responsibility",
+    "category": "ESSAY",
+    "difficulty": 3,
+    "rule_statement": "Cannot acquire literary or media rights to representation before conclusion; may contract for reasonable expenses of publication after conclusion",
+    "elements": [
+      "No rights before conclusion",
+      "May contract after",
+      "Reasonable expenses only",
+      "Avoid conflict"
+    ],
+    "exceptions": [],
+    "policy_rationales": [],
+    "common_traps": [
+      "Timing - must wait until conclusion",
+      "May negotiate after",
+      "Conflict of interest concern"
+    ],
+    "mnemonic": null,
+    "prerequisites": [],
+    "exam_frequency": "low",
+    "iowa_specific": false
+  },
+  {
+    "concept_id": "prof_resp_financial_assistance",
+    "name": "Financial Assistance to Client",
+    "subject": "professional_responsibility",
+    "category": "ESSAY",
+    "difficulty": 3,
+    "rule_statement": "Cannot provide financial assistance except: advance court costs and expenses, contingent on outcome; may pay costs for indigent client",
+    "elements": [
+      "May advance costs",
+      "Repayment contingent on outcome",
+      "May pay for indigent",
+      "No personal living expenses"
+    ],
+    "exceptions": [],
+    "policy_rationales": [],
+    "common_traps": [
+      "Cannot advance living expenses",
+      "Can advance litigation costs",
+      "Indigent exception"
+    ],
+    "mnemonic": null,
+    "prerequisites": [],
+    "exam_frequency": "medium",
+    "iowa_specific": false
+  },
+  {
+    "concept_id": "prof_resp_former_government_lawyer",
+    "name": "Former Government Lawyer",
+    "subject": "professional_responsibility",
+    "category": "ESSAY",
+    "difficulty": 4,
+    "rule_statement": "Cannot represent in matter personally and substantially participated in as government lawyer; screening can cure; cannot use confidential government information",
+    "elements": [
+      "Personally and substantially test",
+      "Screening available",
+      "No confidential info use",
+      "Negotiating employment"
+    ],
+    "exceptions": [],
+    "policy_rationales": [],
+    "common_traps": [
+      "Screening can cure conflict",
+      "Personal and substantial both required",
+      "Confidential info permanent bar"
+    ],
+    "mnemonic": null,
+    "prerequisites": [],
+    "exam_frequency": "medium",
+    "iowa_specific": false
+  },
+  {
+    "concept_id": "prof_resp_former_judge_arbitrator",
+    "name": "Former Judge or Arbitrator",
+    "subject": "professional_responsibility",
+    "category": "ESSAY",
+    "difficulty": 4,
+    "rule_statement": "Cannot represent anyone in matter participated in as judge, arbitrator, mediator, or other neutral; screening cannot cure",
+    "elements": [
+      "Cannot represent in prior matter",
+      "Participated as neutral",
+      "Screening cannot cure",
+      "Negotiating employment restriction"
+    ],
+    "exceptions": [],
+    "policy_rationales": [],
+    "common_traps": [
+      "Screening does NOT cure (unlike gov lawyer)",
+      "Participated in any capacity",
+      "Negotiating employment limits"
+    ],
+    "mnemonic": null,
+    "prerequisites": [],
+    "exam_frequency": "medium",
+    "iowa_specific": false
+  },
+  {
+    "concept_id": "prof_resp_imputed_conflicts",
+    "name": "Imputation of Conflicts",
+    "subject": "professional_responsibility",
+    "category": "ESSAY",
+    "difficulty": 4,
+    "rule_statement": "Lawyer conflicts imputed to all in firm unless: personal interest, former client with screening, former government lawyer with screening",
+    "elements": [
+      "General imputation rule",
+      "Personal interest exception",
+      "Former client screening",
+      "Government lawyer screening"
+    ],
+    "exceptions": [],
+    "policy_rationales": [],
+    "common_traps": [
+      "Three main exceptions",
+      "Screening procedures",
+      "Timely screening required"
+    ],
+    "mnemonic": "PFG: Personal, Former client, Government (exceptions to imputation)",
+    "prerequisites": [],
+    "exam_frequency": "high",
+    "iowa_specific": false
+  },
+  {
+    "concept_id": "prof_resp_nonlawyer_assistants",
+    "name": "Responsibilities for Nonlawyer Assistants",
+    "subject": "professional_responsibility",
+    "category": "ESSAY",
+    "difficulty": 3,
+    "rule_statement": "Lawyer responsible for nonlawyer assistants' conduct; must ensure compliance with professional rules; cannot delegate legal judgment",
+    "elements": [
+      "Supervisory responsibility",
+      "Ensure compliance",
+      "Cannot delegate legal judgment",
+      "Ethical violations imputed"
+    ],
+    "exceptions": [],
+    "policy_rationales": [],
+    "common_traps": [
+      "Lawyer still responsible",
+      "Cannot avoid by delegation",
+      "Must supervise adequately"
+    ],
+    "mnemonic": null,
+    "prerequisites": [],
+    "exam_frequency": "medium",
+    "iowa_specific": false
+  },
+  {
+    "concept_id": "prof_resp_fee_division",
+    "name": "Fee Division with Lawyers",
+    "subject": "professional_responsibility",
+    "category": "ESSAY",
+    "difficulty": 3,
+    "rule_statement": "May divide fee with another lawyer if: proportional to services or joint responsibility, client agrees in writing, total fee reasonable",
+    "elements": [
+      "Proportional or joint responsibility",
+      "Written client agreement",
+      "Total fee reasonable",
+      "No division with non-lawyer"
+    ],
+    "exceptions": [],
+    "policy_rationales": [],
+    "common_traps": [
+      "Proportion or responsibility both OK",
+      "Client must agree",
+      "Cannot divide with non-lawyer"
+    ],
+    "mnemonic": null,
+    "prerequisites": [],
+    "exam_frequency": "medium",
+    "iowa_specific": false
+  },
+  {
+    "concept_id": "prof_resp_aggregate_settlements",
+    "name": "Aggregate Settlements",
+    "subject": "professional_responsibility",
+    "category": "ESSAY",
+    "difficulty": 4,
+    "rule_statement": "Cannot participate in aggregate settlement unless each client gives informed consent in writing after disclosure of all material terms",
+    "elements": [
+      "Each client must consent",
+      "Informed consent",
+      "Written",
+      "Disclosure of all terms"
+    ],
+    "exceptions": [],
+    "policy_rationales": [],
+    "common_traps": [
+      "Every client must agree",
+      "Full disclosure required",
+      "Cannot coerce holdouts"
+    ],
+    "mnemonic": null,
+    "prerequisites": [],
+    "exam_frequency": "medium",
+    "iowa_specific": false
+  },
+  {
+    "concept_id": "prof_resp_limiting_liability",
+    "name": "Limiting Liability & Malpractice",
+    "subject": "professional_responsibility",
+    "category": "ESSAY",
+    "difficulty": 3,
+    "rule_statement": "Cannot prospectively limit malpractice liability unless client independently represented; may settle malpractice claim if client advised to seek independent counsel",
+    "elements": [
+      "No prospective limits without independent counsel",
+      "May settle if advised",
+      "Full disclosure required",
+      "Independent advice"
+    ],
+    "exceptions": [],
+    "policy_rationales": [],
+    "common_traps": [
+      "Prospective limits rare",
+      "Settlement requires advice",
+      "Independent counsel key"
+    ],
+    "mnemonic": null,
+    "prerequisites": [],
+    "exam_frequency": "low",
+    "iowa_specific": false
+  },
+  {
+    "concept_id": "prof_resp_sexual_relations",
+    "name": "Sexual Relations with Clients",
+    "subject": "professional_responsibility",
+    "category": "ESSAY",
+    "difficulty": 3,
+    "rule_statement": "Cannot have sexual relations with client unless consensual relationship existed before attorney-client relationship",
+    "elements": [
+      "Prohibited unless preexisting",
+      "Consent not defense",
+      "Exploitation concern",
+      "Impairs judgment"
+    ],
+    "exceptions": [],
+    "policy_rationales": [
+      "Prevent exploitation",
+      "Avoid conflicts",
+      "Protect judgment"
+    ],
+    "common_traps": [
+      "Preexisting relationship exception only",
+      "Consent insufficient",
+      "Judgment impairment"
+    ],
+    "mnemonic": null,
+    "prerequisites": [],
+    "exam_frequency": "low",
+    "iowa_specific": false
+  },
+  {
+    "concept_id": "prof_resp_appearance_of_impropriety",
+    "name": "Appearance of Impropriety",
+    "subject": "professional_responsibility",
+    "category": "ESSAY",
+    "difficulty": 3,
+    "rule_statement": "Lawyer should avoid even appearance of impropriety; upholds confidence in legal profession; aspirational standard",
+    "elements": [
+      "Avoid appearance",
+      "Public confidence",
+      "Aspirational",
+      "Reasonable person test"
+    ],
+    "exceptions": [],
+    "policy_rationales": [],
+    "common_traps": [
+      "Aspirational not enforceable alone",
+      "Reasonable person view",
+      "Supplements specific rules"
+    ],
+    "mnemonic": null,
+    "prerequisites": [],
+    "exam_frequency": "low",
+    "iowa_specific": false
+  },
+  {
+    "concept_id": "corp_promoter_liability",
+    "name": "Promoter Liability",
+    "subject": "corporations",
+    "category": "ESSAY",
+    "difficulty": 3,
+    "rule_statement": "Promoter liable on pre-incorporation contracts unless novation; corporation liable if adopts contract expressly or impliedly",
+    "elements": [
+      "Promoter personally liable",
+      "Corporation liable if adopts",
+      "Novation releases promoter",
+      "Implied adoption"
+    ],
+    "exceptions": [],
+    "policy_rationales": [],
+    "common_traps": [
+      "Both can be liable",
+      "Adoption doesn't release",
+      "Need novation for release"
+    ],
+    "mnemonic": null,
+    "prerequisites": [],
+    "exam_frequency": "high",
+    "iowa_specific": false
+  },
+  {
+    "concept_id": "corp_defective_incorporation",
+    "name": "Defective Incorporation",
+    "subject": "corporations",
+    "category": "ESSAY",
+    "difficulty": 3,
+    "rule_statement": "De facto corporation: good faith attempt, actual use; corporation by estoppel: held out as corporation, third party dealt as such",
+    "elements": [
+      "De facto corporation",
+      "Corporation by estoppel",
+      "Good faith attempt",
+      "Actual use"
+    ],
+    "exceptions": [],
+    "policy_rationales": [],
+    "common_traps": [
+      "Both doctrines exist",
+      "Protects from personal liability",
+      "Narrow application"
+    ],
+    "mnemonic": null,
+    "prerequisites": [],
+    "exam_frequency": "medium",
+    "iowa_specific": false
+  },
+  {
+    "concept_id": "corp_ultra_vires",
+    "name": "Ultra Vires Acts",
+    "subject": "corporations",
+    "category": "ESSAY",
+    "difficulty": 2,
+    "rule_statement": "Acts beyond corporate powers; generally enforceable but shareholders can enjoin, corporation can sue officers, state can dissolve",
+    "elements": [
+      "Beyond stated purpose",
+      "Generally enforceable",
+      "Limited remedies",
+      "Rare doctrine"
+    ],
+    "exceptions": [],
+    "policy_rationales": [],
+    "common_traps": [
+      "Contract still enforceable",
+      "Internal remedy",
+      "Rarely succeeds"
+    ],
+    "mnemonic": null,
+    "prerequisites": [],
+    "exam_frequency": "low",
+    "iowa_specific": false
+  },
+  {
+    "concept_id": "corp_subscriptions",
+    "name": "Stock Subscriptions",
+    "subject": "corporations",
+    "category": "ESSAY",
+    "difficulty": 3,
+    "rule_statement": "Pre-incorporation subscription irrevocable for six months unless otherwise provided; post-incorporation governed by contract law",
+    "elements": [
+      "Pre-incorporation irrevocable",
+      "Six month rule",
+      "Post-incorporation contract",
+      "Payment terms"
+    ],
+    "exceptions": [],
+    "policy_rationales": [],
+    "common_traps": [
+      "Pre vs post timing",
+      "Irrevocability period",
+      "Contract law post-incorporation"
+    ],
+    "mnemonic": null,
+    "prerequisites": [],
+    "exam_frequency": "low",
+    "iowa_specific": false
+  },
+  {
+    "concept_id": "corp_consideration_shares",
+    "name": "Consideration for Shares",
+    "subject": "corporations",
+    "category": "ESSAY",
+    "difficulty": 3,
+    "rule_statement": "Par value: must receive at least par; no-par: any consideration; watered stock: directors liable; good faith business judgment protects valuation",
+    "elements": [
+      "Par value minimum",
+      "No-par flexibility",
+      "Watered stock liability",
+      "Business judgment valuation"
+    ],
+    "exceptions": [],
+    "policy_rationales": [],
+    "common_traps": [
+      "Par vs no-par",
+      "Director liability watered stock",
+      "BJR protects valuation"
+    ],
+    "mnemonic": null,
+    "prerequisites": [],
+    "exam_frequency": "medium",
+    "iowa_specific": false
+  },
+  {
+    "concept_id": "corp_preemptive_rights",
+    "name": "Preemptive Rights",
+    "subject": "corporations",
+    "category": "ESSAY",
+    "difficulty": 3,
+    "rule_statement": "Shareholders may have right to purchase new shares to maintain proportional ownership; must be expressly granted in modern law",
+    "elements": [
+      "Maintain proportional ownership",
+      "Must be in articles",
+      "Pro rata purchase right",
+      "Exceptions exist"
+    ],
+    "exceptions": [],
+    "policy_rationales": [],
+    "common_traps": [
+      "Must be expressly granted",
+      "Not automatic",
+      "Exceptions for compensation"
+    ],
+    "mnemonic": null,
+    "prerequisites": [],
+    "exam_frequency": "low",
+    "iowa_specific": false
+  },
+  {
+    "concept_id": "corp_distributions_dividends",
+    "name": "Distributions & Dividends",
+    "subject": "corporations",
+    "category": "ESSAY",
+    "difficulty": 3,
+    "rule_statement": "Directors declare dividends using business judgment; unlawful if: insolvent, would cause insolvency, or exceeds statutory limits",
+    "elements": [
+      "Board discretion",
+      "Insolvency test",
+      "Statutory limits",
+      "Director liability"
+    ],
+    "exceptions": [],
+    "policy_rationales": [],
+    "common_traps": [
+      "Directors discretion wide",
+      "Insolvency prohibition",
+      "Directors personally liable"
+    ],
+    "mnemonic": null,
+    "prerequisites": [],
+    "exam_frequency": "medium",
+    "iowa_specific": false
+  },
+  {
+    "concept_id": "corp_inspection_rights",
+    "name": "Shareholder Inspection Rights",
+    "subject": "corporations",
+    "category": "ESSAY",
+    "difficulty": 3,
+    "rule_statement": "Shareholders have right to inspect books and records for proper purpose; shareholder list more readily available than detailed financial records",
+    "elements": [
+      "Proper purpose required",
+      "Shareholder list easier",
+      "Books and records harder",
+      "Advance notice"
+    ],
+    "exceptions": [],
+    "policy_rationales": [],
+    "common_traps": [
+      "Proper purpose test",
+      "Different standards for different records",
+      "Timing requirements"
+    ],
+    "mnemonic": null,
+    "prerequisites": [],
+    "exam_frequency": "medium",
+    "iowa_specific": false
+  },
+  {
+    "concept_id": "corp_meetings_notice",
+    "name": "Meetings & Notice Requirements",
+    "subject": "corporations",
+    "category": "ESSAY",
+    "difficulty": 2,
+    "rule_statement": "Annual shareholders meeting required; notice required with time, place, purpose if special; directors can act without meeting if unanimous written consent",
+    "elements": [
+      "Annual meeting required",
+      "Notice requirements",
+      "Special meeting purpose",
+      "Written consent alternative"
+    ],
+    "exceptions": [],
+    "policy_rationales": [],
+    "common_traps": [
+      "Notice timing",
+      "Special meeting purpose specificity",
+      "Unanimous consent option"
+    ],
+    "mnemonic": null,
+    "prerequisites": [],
+    "exam_frequency": "low",
+    "iowa_specific": false
+  },
+  {
+    "concept_id": "corp_quorum_voting",
+    "name": "Quorum & Voting Rules",
+    "subject": "corporations",
+    "category": "ESSAY",
+    "difficulty": 3,
+    "rule_statement": "Shareholders: majority of shares is quorum, majority of votes present wins; Directors: majority of directors is quorum, majority of votes present wins",
+    "elements": [
+      "Shareholder quorum",
+      "Director quorum",
+      "Vote requirements",
+      "Can modify in articles/bylaws"
+    ],
+    "exceptions": [],
+    "policy_rationales": [],
+    "common_traps": [
+      "Quorum vs voting",
+      "Can change by agreement",
+      "Present vs outstanding"
+    ],
+    "mnemonic": null,
+    "prerequisites": [],
+    "exam_frequency": "medium",
+    "iowa_specific": false
+  },
+  {
+    "concept_id": "corp_removal_directors",
+    "name": "Removal of Directors",
+    "subject": "corporations",
+    "category": "ESSAY",
+    "difficulty": 3,
+    "rule_statement": "Shareholders may remove with or without cause unless articles require cause; if cumulative voting, can remove only if votes sufficient to elect",
+    "elements": [
+      "Shareholder removal power",
+      "With or without cause",
+      "Cumulative voting protection",
+      "Articles can require cause"
+    ],
+    "exceptions": [],
+    "policy_rationales": [],
+    "common_traps": [
+      "Unless articles require cause",
+      "Cumulative voting protection",
+      "Only shareholders remove"
+    ],
+    "mnemonic": null,
+    "prerequisites": [],
+    "exam_frequency": "medium",
+    "iowa_specific": false
+  },
+  {
+    "concept_id": "corp_indemnification",
+    "name": "Indemnification of Directors/Officers",
+    "subject": "corporations",
+    "category": "ESSAY",
+    "difficulty": 4,
+    "rule_statement": "Mandatory if successful on merits; permissive if good faith and reasonable belief; prohibited if found liable to corporation",
+    "elements": [
+      "Mandatory if successful",
+      "Permissive if good faith",
+      "Prohibited if liable",
+      "Advancement of expenses"
+    ],
+    "exceptions": [],
+    "policy_rationales": [],
+    "common_traps": [
+      "Three categories",
+      "Successful = mandatory",
+      "Liable to corp = prohibited"
+    ],
+    "mnemonic": "MAP: Mandatory, Allowed, Prohibited",
+    "prerequisites": [],
+    "exam_frequency": "high",
+    "iowa_specific": false
+  },
+  {
+    "concept_id": "corp_close_corporations",
+    "name": "Close Corporations",
+    "subject": "corporations",
+    "category": "ESSAY",
+    "difficulty": 3,
+    "rule_statement": "Few shareholders, no public market, restrictions on transfer; may operate informally; special statutory provisions protect minority",
+    "elements": [
+      "Few shareholders",
+      "Transfer restrictions",
+      "Informal operation allowed",
+      "Minority protection"
+    ],
+    "exceptions": [],
+    "policy_rationales": [],
+    "common_traps": [
+      "Can dispense with formalities",
+      "Oppression remedies",
+      "Statutory protections"
+    ],
+    "mnemonic": null,
+    "prerequisites": [],
+    "exam_frequency": "medium",
+    "iowa_specific": false
+  },
+  {
+    "concept_id": "corp_shareholder_agreements",
+    "name": "Shareholder Agreements",
+    "subject": "corporations",
+    "category": "ESSAY",
+    "difficulty": 3,
+    "rule_statement": "May restrict transfers, provide for management, require arbitration; must not treat corporation as partnership or injure creditors",
+    "elements": [
+      "Voting agreements",
+      "Buy-sell provisions",
+      "Transfer restrictions",
+      "Management agreements"
+    ],
+    "exceptions": [],
+    "policy_rationales": [],
+    "common_traps": [
+      "Cannot sterilize board",
+      "Must protect creditors",
+      "Binding on parties only"
+    ],
+    "mnemonic": null,
+    "prerequisites": [],
+    "exam_frequency": "high",
+    "iowa_specific": false
+  },
+  {
+    "concept_id": "corp_oppression_freeze_out",
+    "name": "Oppression & Freeze-Out",
+    "subject": "corporations",
+    "category": "ESSAY",
+    "difficulty": 4,
+    "rule_statement": "Majority cannot squeeze out minority unfairly; remedies include buyout, dissolution, or damages; courts balance reasonable expectations",
+    "elements": [
+      "Oppressive conduct",
+      "Reasonable expectations",
+      "Buyout remedy",
+      "Dissolution alternative"
+    ],
+    "exceptions": [],
+    "policy_rationales": [
+      "Protect minority",
+      "Prevent abuse of control",
+      "Balance interests"
+    ],
+    "common_traps": [
+      "Reasonable expectations test",
+      "Equitable remedies",
+      "Close corporation context"
+    ],
+    "mnemonic": null,
+    "prerequisites": [],
+    "exam_frequency": "high",
+    "iowa_specific": false
+  },
+  {
+    "concept_id": "corp_dividends_preferred",
+    "name": "Preferred Stock Dividends",
+    "subject": "corporations",
+    "category": "ESSAY",
+    "difficulty": 3,
+    "rule_statement": "Preferred entitled to fixed dividend before common; cumulative unless stated non-cumulative; participating if so stated",
+    "elements": [
+      "Priority over common",
+      "Cumulative presumption",
+      "Participating possibility",
+      "Liquidation preference"
+    ],
+    "exceptions": [],
+    "policy_rationales": [],
+    "common_traps": [
+      "Cumulative unless stated otherwise",
+      "Arrears must be paid first",
+      "Participating rare"
+    ],
+    "mnemonic": null,
+    "prerequisites": [],
+    "exam_frequency": "medium",
+    "iowa_specific": false
+  },
+  {
+    "concept_id": "corp_redemption_repurchase",
+    "name": "Redemption & Share Repurchase",
+    "subject": "corporations",
+    "category": "ESSAY",
+    "difficulty": 3,
+    "rule_statement": "Corporation may repurchase shares if: not insolvent, adequate surplus; redemption rights if stated; insider trading concerns",
+    "elements": [
+      "Must have surplus",
+      "Insolvency test",
+      "Redemption vs repurchase",
+      "Insider trading risk"
+    ],
+    "exceptions": [],
+    "policy_rationales": [],
+    "common_traps": [
+      "Statutory requirements",
+      "Cannot make insolvent",
+      "Insider trading prohibition"
+    ],
+    "mnemonic": null,
+    "prerequisites": [],
+    "exam_frequency": "low",
+    "iowa_specific": false
+  },
+  {
+    "concept_id": "corp_sale_of_assets",
+    "name": "Sale of Substantially All Assets",
+    "subject": "corporations",
+    "category": "ESSAY",
+    "difficulty": 4,
+    "rule_statement": "Requires board and shareholder approval; not ordinary course of business; selling corporation continues to exist; buyers can assume liabilities",
+    "elements": [
+      "Substantially all assets",
+      "Board and shareholder vote",
+      "Continues to exist",
+      "Successor liability rules"
+    ],
+    "exceptions": [],
+    "policy_rationales": [],
+    "common_traps": [
+      "Substantially all test",
+      "Continues to exist",
+      "Not automatic successor liability"
+    ],
+    "mnemonic": null,
+    "prerequisites": [],
+    "exam_frequency": "high",
+    "iowa_specific": false
+  },
+  {
+    "concept_id": "corp_tender_offers",
+    "name": "Tender Offers",
+    "subject": "corporations",
+    "category": "ESSAY",
+    "difficulty": 3,
+    "rule_statement": "Offer to buy shares directly from shareholders; federal regulation; target board may defend; business judgment rule applies to defensive measures",
+    "elements": [
+      "Direct to shareholders",
+      "Federal securities law",
+      "Board defensive tactics",
+      "BJR applies"
+    ],
+    "exceptions": [],
+    "policy_rationales": [],
+    "common_traps": [
+      "Bypass board",
+      "Defensive measures reviewed",
+      "Unocal standard may apply"
+    ],
+    "mnemonic": null,
+    "prerequisites": [],
+    "exam_frequency": "medium",
+    "iowa_specific": false
+  },
+  {
+    "concept_id": "corp_proxy_fights",
+    "name": "Proxy Contests",
+    "subject": "corporations",
+    "category": "ESSAY",
+    "difficulty": 3,
+    "rule_statement": "Contest for board control via shareholder votes; federal proxy rules; corporation may reimburse incumbents; insurgents reimbursed if successful",
+    "elements": [
+      "Board control contest",
+      "Proxy solicitation rules",
+      "Reimbursement rules",
+      "Disclosure requirements"
+    ],
+    "exceptions": [],
+    "policy_rationales": [],
+    "common_traps": [
+      "Corporation can reimburse incumbents",
+      "Insurgents if successful",
+      "Federal regulation applies"
+    ],
+    "mnemonic": null,
+    "prerequisites": [],
+    "exam_frequency": "low",
+    "iowa_specific": false
+  },
+  {
+    "concept_id": "corp_hostile_takeovers",
+    "name": "Hostile Takeovers & Defensive Tactics",
+    "subject": "corporations",
+    "category": "ESSAY",
+    "difficulty": 4,
+    "rule_statement": "Target board may defend using business judgment; must show reasonable threat and proportionate response; cannot be entrenching",
+    "elements": [
+      "Unocal standard",
+      "Reasonable threat",
+      "Proportionate response",
+      "Enhanced scrutiny"
+    ],
+    "exceptions": [],
+    "policy_rationales": [],
+    "common_traps": [
+      "Enhanced scrutiny",
+      "Cannot be entrenching",
+      "Proportionality key"
+    ],
+    "mnemonic": "PRE: Proportionate, Reasonable threat, Enhanced scrutiny",
+    "prerequisites": [],
+    "exam_frequency": "high",
+    "iowa_specific": false
+  },
+  {
+    "concept_id": "corp_appraisal_rights",
+    "name": "Appraisal Rights",
+    "subject": "corporations",
+    "category": "ESSAY",
+    "difficulty": 4,
+    "rule_statement": "Dissenting shareholders entitled to fair value of shares in: mergers, sales of assets, amendments materially affecting rights",
+    "elements": [
+      "Fair value determination",
+      "Dissent and notice required",
+      "Exclusive remedy",
+      "Triggering events"
+    ],
+    "exceptions": [],
+    "policy_rationales": [],
+    "common_traps": [
+      "Must follow procedures exactly",
+      "Fair value not market value",
+      "Exclusive remedy if available"
+    ],
+    "mnemonic": null,
+    "prerequisites": [],
+    "exam_frequency": "high",
+    "iowa_specific": false
+  },
+  {
+    "concept_id": "corp_amendments_articles",
+    "name": "Amending Articles of Incorporation",
+    "subject": "corporations",
+    "category": "ESSAY",
+    "difficulty": 2,
+    "rule_statement": "Requires board approval and shareholder vote; certain amendments require class vote if materially affect class",
+    "elements": [
+      "Board approval",
+      "Shareholder vote",
+      "Class voting rights",
+      "Filing required"
+    ],
+    "exceptions": [],
+    "policy_rationales": [],
+    "common_traps": [
+      "Class vote for material changes to class",
+      "Filing makes effective",
+      "Broad board power"
+    ],
+    "mnemonic": null,
+    "prerequisites": [],
+    "exam_frequency": "low",
+    "iowa_specific": false
+  },
+  {
+    "concept_id": "corp_bylaws",
+    "name": "Bylaws",
+    "subject": "corporations",
+    "category": "ESSAY",
+    "difficulty": 2,
+    "rule_statement": "Internal operating rules; typically adopted/amended by board unless articles reserve to shareholders; cannot conflict with articles or statutes",
+    "elements": [
+      "Internal rules",
+      "Board typically amends",
+      "Cannot conflict with articles",
+      "Operating procedures"
+    ],
+    "exceptions": [],
+    "policy_rationales": [],
+    "common_traps": [
+      "Board power unless reserved",
+      "Hierarchy: statute > articles > bylaws",
+      "Cannot expand powers"
+    ],
+    "mnemonic": null,
+    "prerequisites": [],
+    "exam_frequency": "low",
+    "iowa_specific": false
+  },
+  {
+    "concept_id": "corp_limited_liability_company",
+    "name": "Limited Liability Companies (LLC)",
+    "subject": "corporations",
+    "category": "ESSAY",
+    "difficulty": 3,
+    "rule_statement": "Hybrid entity: corporate limited liability plus partnership flexibility; operating agreement governs; default rules vary by state",
+    "elements": [
+      "Limited liability",
+      "Pass-through taxation",
+      "Operating agreement",
+      "Flexible management"
+    ],
+    "exceptions": [],
+    "policy_rationales": [],
+    "common_traps": [
+      "Operating agreement controls",
+      "Default rules vary",
+      "Veil piercing still possible"
+    ],
+    "mnemonic": null,
+    "prerequisites": [],
+    "exam_frequency": "medium",
+    "iowa_specific": false
+  },
+  {
+    "concept_id": "corp_partnerships_general",
+    "name": "General Partnerships",
+    "subject": "corporations",
+    "category": "ESSAY",
+    "difficulty": 3,
+    "rule_statement": "Formation by agreement or co-ownership for profit; each partner agent; jointly and severally liable; equal sharing unless agreed",
+    "elements": [
+      "No formalities",
+      "Each partner agent",
+      "Unlimited liability",
+      "Equal sharing default"
+    ],
+    "exceptions": [],
+    "policy_rationales": [],
+    "common_traps": [
+      "Joint and several liability",
+      "Each partner can bind",
+      "No filing required"
+    ],
+    "mnemonic": null,
+    "prerequisites": [],
+    "exam_frequency": "medium",
+    "iowa_specific": false
+  },
+  {
+    "concept_id": "corp_limited_partnerships",
+    "name": "Limited Partnerships",
+    "subject": "corporations",
+    "category": "ESSAY",
+    "difficulty": 3,
+    "rule_statement": "General partners manage and liable; limited partners passive investors with liability limited to investment; filing required",
+    "elements": [
+      "GP manages and liable",
+      "LP limited liability",
+      "Filing required",
+      "LP cannot control"
+    ],
+    "exceptions": [],
+    "policy_rationales": [],
+    "common_traps": [
+      "LP control destroys limited liability",
+      "Must file certificate",
+      "GP fully liable"
+    ],
+    "mnemonic": null,
+    "prerequisites": [],
+    "exam_frequency": "medium",
+    "iowa_specific": false
+  },
+  {
+    "concept_id": "wills_capacity",
+    "name": "Testamentary Capacity",
+    "subject": "wills_trusts_estates",
+    "category": "ESSAY",
+    "difficulty": 3,
+    "rule_statement": "Testator must be 18+, understand nature of act, extent of property, natural objects of bounty, plan of disposition",
+    "elements": [
+      "Age 18+",
+      "Understand nature",
+      "Know property",
+      "Natural objects",
+      "Dispositional plan"
+    ],
+    "exceptions": [],
+    "policy_rationales": [],
+    "common_traps": [
+      "Lower standard than contractual",
+      "Lucid intervals count",
+      "Burden on contestants"
+    ],
+    "mnemonic": "PENDO: Property, Estate, Nature, Disposition, Objects",
+    "prerequisites": [],
+    "exam_frequency": "very_high",
+    "iowa_specific": false
+  },
+  {
+    "concept_id": "prof_resp_client_trust_account",
+    "name": "Client Trust Accounts (IOLTA)",
+    "subject": "professional_responsibility",
+    "category": "ESSAY",
+    "difficulty": 3,
+    "rule_statement": "Lawyer must maintain client funds in separate interest-bearing trust account; interest goes to state IOLTA program; strict record-keeping required; no commingling",
+    "elements": [
+      "Separate IOLTA account",
+      "Interest to bar foundation",
+      "Detailed records",
+      "No commingling",
+      "Prompt deposit"
+    ],
+    "exceptions": [],
+    "policy_rationales": [
+      "Protect client funds",
+      "Fund legal services for poor",
+      "Prevent misappropriation"
+    ],
+    "common_traps": [
+      "Cannot use for operating expenses",
+      "Strict accounting required",
+      "Interest belongs to bar program not client"
+    ],
+    "mnemonic": null,
+    "prerequisites": [],
+    "exam_frequency": "high",
+    "iowa_specific": true
+  },
+  {
+    "concept_id": "prof_resp_screening_procedures",
+    "name": "Screening Procedures for Conflicts",
+    "subject": "professional_responsibility",
+    "category": "ESSAY",
+    "difficulty": 4,
+    "rule_statement": "Timely screening can cure certain conflicts: former client matters with proper procedures, former government lawyers, former judges; requires timely implementation, written notice to affected parties, and certification of compliance",
+    "elements": [
+      "Timely implementation",
+      "Written notice to clients",
+      "No confidential info shared",
+      "Certification of compliance"
+    ],
+    "exceptions": [],
+    "policy_rationales": [
+      "Allow lawyer mobility",
+      "Protect client confidences",
+      "Balance interests"
+    ],
+    "common_traps": [
+      "Cannot cure current client conflicts",
+      "Timing is critical - must be prompt",
+      "Documentation essential",
+      "Former judge screening different from former government"
+    ],
+    "mnemonic": "SCREEN: Separate lawyer, Certification, Records of compliance, Ethics wall, Ensure no info shared, Notice to affected parties",
+    "prerequisites": [],
+    "exam_frequency": "medium",
+    "iowa_specific": false
+  },
+  {
+    "concept_id": "prof_resp_lawyers_as_witnesses",
+    "name": "Lawyer as Witness Rule",
+    "subject": "professional_responsibility",
+    "category": "ESSAY",
+    "difficulty": 3,
+    "rule_statement": "Lawyer shall not act as advocate in trial where lawyer likely to be necessary witness unless: testimony on uncontested matter, testimony on legal services and fees, or disqualification would cause substantial hardship to client",
+    "elements": [
+      "Advocate-witness prohibition",
+      "Necessary witness test",
+      "Three exceptions",
+      "Imputation rules differ"
+    ],
+    "exceptions": [
+      "Uncontested matter",
+      "Nature and value of legal services",
+      "Substantial hardship to client"
+    ],
+    "policy_rationales": [
+      "Avoid jury confusion",
+      "Prevent credibility issues",
+      "Separate advocate and witness roles"
+    ],
+    "common_traps": [
+      "Three narrow exceptions only",
+      "Likely to be necessary test",
+      "Imputation does NOT apply unless personal interest conflict",
+      "Other firm lawyers can continue"
+    ],
+    "mnemonic": "UFS: Uncontested, Fees/services, Substantial hardship (exceptions)",
+    "prerequisites": [],
+    "exam_frequency": "medium",
+    "iowa_specific": false
+  }
+]

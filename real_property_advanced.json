@@ -1,0 +1,137 @@
+[
+  {
+    "concept_id": "real_property_estates_and_future_interests",
+    "name": "ESTATES & FUTURE INTERESTS",
+    "subject": "real_property",
+    "rule_statement": "Present possessory estates include fee simple absolute, defeasible fees, and life estates; future interests include reversions, remainders, and executory interests that must satisfy RAP.",
+    "rule_word_count": 22,
+    "subtopics": [
+      "Fee Simple Absolute",
+      "Life Estates",
+      "Defeasible Fees",
+      "Future Interests",
+      "Rule Against Perpetuities (RAP)",
+      "Class Gifts"
+    ],
+    "story_method": "Imagine a medieval castle with a king who must decide succession. The KING has present possession (present estate), but he's planning for HEIRS (future interests). Some heirs get the castle automatica",
+    "mnemonic": "PREFUR",
+    "mnemonic_type": "rhythmic",
+    "kinesthetic_gesture": "Present Estate: Hold object in hands (you have it now); Future Interest: Point forward (coming later); Vested Remainder: Firm handshake (guaranteed)",
+    "ascii_visual": "PRESENT \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u25ba FUTURE\n  NOW         CONDITION      LATER\n  \ud83d\udc51          \u2753            \ud83d\udc51\ud83d\udc51\ud83d\udc51\nGRANTOR   \u2192   EVENT    \u2192   HEIRS\n(has it)     (maybe)      (might get)",
+    "micro_hypos": [
+      {
+        "number": 1,
+        "context": "Clean Family",
+        "scenario": "Grantor conveys \"to A for life, then to B.\"",
+        "answer": "A has life estate, B has vested remainder.",
+        "memory_hook": "Simple family succession - dad to son"
+      },
+      {
+        "number": 2,
+        "context": "Marriage Trap",
+        "scenario": "Grantor conveys \"to A so long as A never marries.\"",
+        "answer": "A has fee simple determinable; grantor retains possibility of reverter.",
+        "memory_hook": "Controlling parent - automatic loss if A marries"
+      },
+      {
+        "number": 3,
+        "context": "Kids Waiting",
+        "scenario": "\"To A for life, then to A's children.\"",
+        "answer": "A has life estate; children have contingent remainder.",
+        "memory_hook": "Kids wait to inherit, but only if they exist"
+      },
+      {
+        "number": 4,
+        "context": "Heirs Trick",
+        "scenario": "\"To A for life, then to A's heirs.\"",
+        "answer": "A has life estate; \"heirs\" creates reversion to grantor.",
+        "memory_hook": "\"Heirs\" is a magic word that means \"back to grantor\""
+      }
+    ],
+    "pitfalls": [
+      "AUTO vs. MANUAL: Determinable = AUTOmatic (like autopilot); Condition Subsequent = MANUAL reentry (like manual transmission)",
+      "REMAINDER RULE: Remainders are like train passengers - they wait for their turn, never jump ahead (never executory)",
+      "RAP TRAP: 21 years + lives in being = drinking age (21) + pregnancy (gestation)"
+    ],
+    "emoji": "\ud83c\udff0",
+    "difficulty": 3
+  },
+  {
+    "concept_id": "real_property_conveyancing_and_recording",
+    "name": "CONVEYANCING & RECORDING",
+    "subject": "real_property",
+    "rule_statement": "Recording statutes protect bona fide purchasers; race-notice is majority rule, requiring timely recordation without notice of prior interests.",
+    "rule_word_count": 20,
+    "subtopics": [
+      "Deed Types",
+      "Marketable Title",
+      "Title Insurance",
+      "After-Acquired Title",
+      "Recording Acts",
+      "Chain of Title"
+    ],
+    "story_method": null,
+    "mnemonic": "RACE to the Courthouse",
+    "mnemonic_type": "rhythmic",
+    "kinesthetic_gesture": "Actual Notice: \ud83d\udc40 Point to your eyes (you SAW it); Record Notice: \ud83d\udccb Hold up papers (it's RECORDED); Inquiry Notice: \ud83e\udd14 Tap your temple (reasonable person would ASK)",
+    "ascii_visual": "\ud83c\udfc3\u200d\u2642\ufe0fA \u2500\u2500\u2500\u2500\u25ba \ud83c\udfdb\ufe0f COURTHOUSE \u25c4\u2500\u2500\u2500\u2500 \ud83c\udfc3\u200d\u2642\ufe0fB\nBUYER A         RECORDING         BUYER B\n(knows nothing) SYSTEM           (saw A's deed)\n   \u2193                               \u2193\n  WINS!                          LOSES",
+    "micro_hypos": [
+      {
+        "number": 1,
+        "context": "Honest Race",
+        "scenario": "O conveys to A; A records. O then conveys to BFP who records without notice.",
+        "answer": "BFP wins under race-notice.",
+        "memory_hook": "Honest buyer wins the race to courthouse"
+      },
+      {
+        "number": 2,
+        "context": "Cheating Buyer",
+        "scenario": "O conveys to A; A doesn't record. O conveys to B who knows of A's interest.",
+        "answer": "A wins; B has notice.",
+        "memory_hook": "Cheater (B) gets disqualified for knowing"
+      },
+      {
+        "number": 3,
+        "context": "Full Protection",
+        "scenario": "Warranty deed covenants seisin, quiet enjoyment, warranty, further assurances.",
+        "answer": "Full protection against title defects.",
+        "memory_hook": "Warranty = full armor protection"
+      },
+      {
+        "number": 4,
+        "context": "Naked Risk",
+        "scenario": "Quitclaim deed transfers \"whatever interest I have.\"",
+        "answer": "No warranties, buyer takes risk.",
+        "memory_hook": "Quitclaim = naked deed (no protection)"
+      },
+      {
+        "number": 1,
+        "context": "Early Sale Trap",
+        "scenario": "Developer subdivides 10 lots, sells Lot 1 without restrictions, then sells remaining 9 lots with \"residential only\" restrictions. Later buyer of Lot 1 opens business.",
+        "answer": "If common scheme existed when Lot 1 was sold AND buyer had notice, restrictions bind Lot 1.",
+        "memory_hook": "Early bird still caught by the common scheme worm"
+      },
+      {
+        "number": 2,
+        "context": "Notice Test",
+        "scenario": "Buyer purchases lot with deed containing no restrictions, but sees \"Residential Only\" signs throughout subdivision and all neighboring houses are residential.",
+        "answer": "Inquiry notice sufficient to bind buyer to common scheme restrictions.",
+        "memory_hook": "Signs and patterns give notice - ignorance isn't bliss"
+      },
+      {
+        "number": 3,
+        "context": "Intent Proof",
+        "scenario": "Developer sells 5 of 10 lots with restrictions, keeps 5 unrestricted for potential commercial use.",
+        "answer": "No common scheme because developer didn't intend restrictions on ALL lots.",
+        "memory_hook": "Common scheme needs COMMON intent for all lots"
+      }
+    ],
+    "pitfalls": [
+      "BFP = Good Faith Penny: Bona fide purchaser needs good faith + value (even $1) + no notice",
+      "Chain Gang: Must examine entire chain of title, not just immediate grantor (like prison chain gang - all connected)",
+      "Triple Notice Threat: Actual (you know) + Constructive (recorded) + Inquiry (should have known)"
+    ],
+    "emoji": "\ud83d\udcdc",
+    "difficulty": 3
+  }
+]

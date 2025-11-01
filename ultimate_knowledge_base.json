@@ -1,0 +1,2114 @@
+[
+  {
+    "concept_id": "civil_procedure_jurisdiction_and_venue",
+    "name": "Jurisdiction & Venue",
+    "subject": "civil_procedure",
+    "difficulty": 3,
+    "rule_statement": "",
+    "elements": [
+      "Mnemonic",
+      "Traps"
+    ],
+    "policy_rationales": [],
+    "common_traps": [
+      "General vs specific jurisdiction",
+      "minimum contacts",
+      "domicile",
+      "amount-in-controversy aggregate",
+      "removal timing."
+    ],
+    "mnemonic": "PISSED",
+    "micro_hypos": [],
+    "source": "existing",
+    "exam_frequency": "medium"
+  },
+  {
+    "concept_id": "civil_procedure_pleadings_and_motions",
+    "name": "Pleadings & Motions",
+    "subject": "civil_procedure",
+    "difficulty": 3,
+    "rule_statement": "",
+    "elements": [
+      "Mnemonic",
+      "Traps"
+    ],
+    "policy_rationales": [],
+    "common_traps": [
+      "Twiqbal plausibility",
+      "relation back",
+      "waiver of defenses."
+    ],
+    "mnemonic": "CLAIMS",
+    "micro_hypos": [],
+    "source": "existing",
+    "exam_frequency": "medium"
+  },
+  {
+    "concept_id": "civil_procedure_joinder_and_discovery",
+    "name": "Joinder & Discovery",
+    "subject": "civil_procedure",
+    "difficulty": 3,
+    "rule_statement": "",
+    "elements": [
+      "Mnemonic",
+      "Traps"
+    ],
+    "policy_rationales": [],
+    "common_traps": [
+      "Compulsory counterclaims",
+      "indispensable parties",
+      "discovery sanctions."
+    ],
+    "mnemonic": "JEDI",
+    "micro_hypos": [],
+    "source": "existing",
+    "exam_frequency": "medium"
+  },
+  {
+    "concept_id": "civil_procedure_pretrial_and_trial",
+    "name": "Pretrial & Trial",
+    "subject": "civil_procedure",
+    "difficulty": 3,
+    "rule_statement": "",
+    "elements": [
+      "Mnemonic"
+    ],
+    "policy_rationales": [],
+    "common_traps": [],
+    "mnemonic": "LIMES",
+    "micro_hypos": [],
+    "source": "existing",
+    "exam_frequency": "medium"
+  },
+  {
+    "concept_id": "civil_procedure_judgments_and_preclusion",
+    "name": "Judgments & Preclusion",
+    "subject": "civil_procedure",
+    "difficulty": 3,
+    "rule_statement": "",
+    "elements": [
+      "Mnemonic",
+      "Traps"
+    ],
+    "policy_rationales": [],
+    "common_traps": [
+      "Same parties/privity",
+      "mutual vs non-mutual collateral estoppel",
+      "full faith and credit.\n\n#### Visuals"
+    ],
+    "mnemonic": "RICE",
+    "micro_hypos": [],
+    "source": "existing",
+    "exam_frequency": "medium"
+  },
+  {
+    "concept_id": "civil_procedure_subjectmatter_jurisdiction",
+    "name": "SUBJECT-MATTER JURISDICTION",
+    "subject": "civil_procedure",
+    "difficulty": 3,
+    "rule_statement": "Federal courts need subject-matter jurisdiction via federal question, diversity exceeding $75,000 with complete diversity, or supplemental claims sharing common nucleus with anchor.",
+    "elements": [
+      "Federal Question",
+      "Diversity",
+      "Supplemental Jurisdiction",
+      "Removal/Remand"
+    ],
+    "policy_rationales": [],
+    "common_traps": [],
+    "mnemonic": null,
+    "micro_hypos": [],
+    "source": "existing",
+    "exam_frequency": "medium"
+  },
+  {
+    "concept_id": "civil_procedure_personal_jurisdiction",
+    "name": "PERSONAL JURISDICTION",
+    "subject": "civil_procedure",
+    "difficulty": 3,
+    "rule_statement": "State court exercises personal jurisdiction where statute authorizes and Due Process satisfied through minimum contacts, purposeful availment, foreseeability, and fairness plus notice.",
+    "elements": [
+      "Long-Arm Statutes",
+      "Traditional Bases",
+      "Specific Jurisdiction",
+      "Fair Play Factors"
+    ],
+    "policy_rationales": [],
+    "common_traps": [],
+    "mnemonic": null,
+    "micro_hypos": [],
+    "source": "existing",
+    "exam_frequency": "medium"
+  },
+  {
+    "concept_id": "civil_procedure_subject_matter_jurisdiction__federal_question",
+    "name": "Subject Matter Jurisdiction - Federal Question",
+    "subject": "civil_procedure",
+    "difficulty": 3,
+    "rule_statement": "Claim arises under federal law",
+    "elements": [],
+    "policy_rationales": [],
+    "common_traps": [],
+    "mnemonic": null,
+    "micro_hypos": [],
+    "source": "auto-generated",
+    "exam_frequency": "medium"
+  },
+  {
+    "concept_id": "civil_procedure_subject_matter_jurisdiction__diversity",
+    "name": "Subject Matter Jurisdiction - Diversity",
+    "subject": "civil_procedure",
+    "difficulty": 3,
+    "rule_statement": "Complete diversity + $75K",
+    "elements": [],
+    "policy_rationales": [],
+    "common_traps": [],
+    "mnemonic": null,
+    "micro_hypos": [],
+    "source": "auto-generated",
+    "exam_frequency": "medium"
+  },
+  {
+    "concept_id": "civil_procedure_personal_jurisdiction__minimum_contacts",
+    "name": "Personal Jurisdiction - Minimum Contacts",
+    "subject": "civil_procedure",
+    "difficulty": 3,
+    "rule_statement": "Purposeful availment required",
+    "elements": [],
+    "policy_rationales": [],
+    "common_traps": [],
+    "mnemonic": null,
+    "micro_hypos": [],
+    "source": "auto-generated",
+    "exam_frequency": "medium"
+  },
+  {
+    "concept_id": "civil_procedure_personal_jurisdiction__fair_play",
+    "name": "Personal Jurisdiction - Fair Play",
+    "subject": "civil_procedure",
+    "difficulty": 3,
+    "rule_statement": "Burden, forum interest, efficiency",
+    "elements": [],
+    "policy_rationales": [],
+    "common_traps": [],
+    "mnemonic": null,
+    "micro_hypos": [],
+    "source": "auto-generated",
+    "exam_frequency": "medium"
+  },
+  {
+    "concept_id": "civil_procedure_service_of_process",
+    "name": "Service of Process",
+    "subject": "civil_procedure",
+    "difficulty": 3,
+    "rule_statement": "Proper notice required for jurisdiction",
+    "elements": [],
+    "policy_rationales": [],
+    "common_traps": [],
+    "mnemonic": null,
+    "micro_hypos": [],
+    "source": "auto-generated",
+    "exam_frequency": "medium"
+  },
+  {
+    "concept_id": "civil_procedure_pleading_standard__twombly",
+    "name": "Pleading Standard - Twombly",
+    "subject": "civil_procedure",
+    "difficulty": 3,
+    "rule_statement": "Plausible claim, not mere possibility",
+    "elements": [],
+    "policy_rationales": [],
+    "common_traps": [],
+    "mnemonic": null,
+    "micro_hypos": [],
+    "source": "auto-generated",
+    "exam_frequency": "medium"
+  },
+  {
+    "concept_id": "civil_procedure_summary_judgment",
+    "name": "Summary Judgment",
+    "subject": "civil_procedure",
+    "difficulty": 3,
+    "rule_statement": "No genuine dispute of material fact",
+    "elements": [],
+    "policy_rationales": [],
+    "common_traps": [],
+    "mnemonic": null,
+    "micro_hypos": [],
+    "source": "auto-generated",
+    "exam_frequency": "medium"
+  },
+  {
+    "concept_id": "real_property_estates_and_future_interests",
+    "name": "ESTATES & FUTURE INTERESTS",
+    "subject": "real_property",
+    "difficulty": 3,
+    "rule_statement": "Present estates include fee simple, life estates, and leaseholds; future interests vest in grantor or third parties subject to RAP, waste, and defeasibility doctrines.",
+    "elements": [
+      "Fee Estates",
+      "Life Estates",
+      "Future Interests",
+      "RAP Analysis"
+    ],
+    "policy_rationales": [],
+    "common_traps": [],
+    "mnemonic": null,
+    "micro_hypos": [],
+    "source": "existing",
+    "exam_frequency": "medium"
+  },
+  {
+    "concept_id": "real_property_conveyancing_and_recording",
+    "name": "CONVEYANCING & RECORDING",
+    "subject": "real_property",
+    "difficulty": 3,
+    "rule_statement": "Valid conveyance needs competent grantor, executed deed, delivery, and acceptance; recording acts protect bona fide purchasers without notice who record first depending on statute type.",
+    "elements": [
+      "Deed Formalities",
+      "Notice Types",
+      "Recording Acts",
+      "Chain Issues"
+    ],
+    "policy_rationales": [],
+    "common_traps": [],
+    "mnemonic": null,
+    "micro_hypos": [],
+    "source": "existing",
+    "exam_frequency": "medium"
+  },
+  {
+    "concept_id": "real_property_estates_and_future_interests",
+    "name": "ESTATES & FUTURE INTERESTS",
+    "subject": "real_property",
+    "difficulty": 3,
+    "rule_statement": "Present possessory estates include fee simple absolute, defeasible fees, and life estates; future interests include reversions, remainders, and executory interests that must satisfy RAP.",
+    "elements": [
+      "Fee Simple Absolute",
+      "Life Estates",
+      "Defeasible Fees",
+      "Future Interests",
+      "Rule Against Perpetuities (RAP)",
+      "Class Gifts"
+    ],
+    "policy_rationales": [],
+    "common_traps": [
+      "AUTO vs. MANUAL: Determinable = AUTOmatic (like autopilot); Condition Subsequent = MANUAL reentry (like manual transmission)",
+      "REMAINDER RULE: Remainders are like train passengers - they wait for their turn, never jump ahead (never executory)",
+      "RAP TRAP: 21 years + lives in being = drinking age (21) + pregnancy (gestation)"
+    ],
+    "mnemonic": "PREFUR",
+    "micro_hypos": [],
+    "source": "real_property_advanced",
+    "exam_frequency": "medium"
+  },
+  {
+    "concept_id": "real_property_conveyancing_and_recording",
+    "name": "CONVEYANCING & RECORDING",
+    "subject": "real_property",
+    "difficulty": 3,
+    "rule_statement": "Recording statutes protect bona fide purchasers; race-notice is majority rule, requiring timely recordation without notice of prior interests.",
+    "elements": [
+      "Deed Types",
+      "Marketable Title",
+      "Title Insurance",
+      "After-Acquired Title",
+      "Recording Acts",
+      "Chain of Title"
+    ],
+    "policy_rationales": [],
+    "common_traps": [
+      "BFP = Good Faith Penny: Bona fide purchaser needs good faith + value (even $1) + no notice",
+      "Chain Gang: Must examine entire chain of title, not just immediate grantor (like prison chain gang - all connected)",
+      "Triple Notice Threat: Actual (you know) + Constructive (recorded) + Inquiry (should have known)"
+    ],
+    "mnemonic": "RACE to the Courthouse",
+    "micro_hypos": [],
+    "source": "real_property_advanced",
+    "exam_frequency": "medium"
+  },
+  {
+    "concept_id": "real_property_easements_servitudes_and_licenses",
+    "name": "EASEMENTS, SERVITUDES & LICENSES",
+    "subject": "real_property",
+    "difficulty": 3,
+    "rule_statement": "Easements create rights to use another's land; appurtenant easements run with land, in gross are personal; licenses are revocable permissions.",
+    "elements": [
+      "Appurtenant Easements",
+      "Easements in Gross",
+      "Affirmative Easements",
+      "Negative Easements",
+      "Creation Methods",
+      "Termination",
+      "Scope of Rights"
+    ],
+    "policy_rationales": [],
+    "common_traps": [],
+    "mnemonic": "EASE",
+    "micro_hypos": [],
+    "source": "real_property_advanced",
+    "exam_frequency": "medium"
+  },
+  {
+    "concept_id": "real_property_concurrent_ownership",
+    "name": "CONCURRENT OWNERSHIP",
+    "subject": "real_property",
+    "difficulty": 3,
+    "rule_statement": "Joint tenancy requires four unities; tenancy in common has no survivorship; tenancy by entirety protects marital property from separate creditors.",
+    "elements": [
+      "Joint Tenancy",
+      "Tenancy in Common",
+      "Tenancy by Entirety",
+      "Severance",
+      "Partition",
+      "Creditor Rights"
+    ],
+    "policy_rationales": [],
+    "common_traps": [],
+    "mnemonic": "TIE",
+    "micro_hypos": [],
+    "source": "real_property_advanced",
+    "exam_frequency": "medium"
+  },
+  {
+    "concept_id": "real_property_landlordtenant_law",
+    "name": "LANDLORD-TENANT LAW",
+    "subject": "real_property",
+    "difficulty": 3,
+    "rule_statement": "Landlord must maintain habitable premises; tenant must pay rent; holdover becomes periodic tenancy; self-help eviction is illegal in most states.",
+    "elements": [
+      "Implied Warranty of Habitability",
+      "Quiet Enjoyment",
+      "Retaliatory Evictions",
+      "Security Deposits",
+      "Assignment vs. Sublease",
+      "Holdover Tenants"
+    ],
+    "policy_rationales": [],
+    "common_traps": [],
+    "mnemonic": "RENT",
+    "micro_hypos": [],
+    "source": "real_property_advanced",
+    "exam_frequency": "medium"
+  },
+  {
+    "concept_id": "real_property_mortgages_foreclosure_and_priority",
+    "name": "MORTGAGES, FORECLOSURE & PRIORITY",
+    "subject": "real_property",
+    "difficulty": 3,
+    "rule_statement": "Mortgage creates security interest; foreclosure terminates mortgagor's equity; purchase money mortgages have super-priority over later liens on same collateral.",
+    "elements": [
+      "Mortgage vs. Deed of Trust",
+      "Foreclosure Process",
+      "Deficiency Judgments",
+      "Due-on-Sale Clauses",
+      "Purchase Money Priority",
+      "Junior Liens"
+    ],
+    "policy_rationales": [],
+    "common_traps": [],
+    "mnemonic": "MORT",
+    "micro_hypos": [],
+    "source": "real_property_advanced",
+    "exam_frequency": "medium"
+  },
+  {
+    "concept_id": "real_property_zoning_and_takings",
+    "name": "ZONING & TAKINGS",
+    "subject": "real_property",
+    "difficulty": 3,
+    "rule_statement": "Zoning regulates land use; takings require just compensation; variance is exception to zoning rules for hardship; exactions must be roughly proportional.",
+    "elements": [
+      "Zoning Ordinances",
+      "Variances & Special Permits",
+      "Physical vs. Regulatory Takings",
+      "Exactions",
+      "Inverse Condemnation",
+      "Substantive Due Process"
+    ],
+    "policy_rationales": [],
+    "common_traps": [],
+    "mnemonic": "ZONE",
+    "micro_hypos": [],
+    "source": "real_property_advanced",
+    "exam_frequency": "medium"
+  },
+  {
+    "concept_id": "real_property_adverse_possession",
+    "name": "ADVERSE POSSESSION",
+    "subject": "real_property",
+    "difficulty": 3,
+    "rule_statement": "Hostile, actual, exclusive, continuous possession for statutory period perfects title; color of title reduces period to 7 years.",
+    "elements": [
+      "Elements Required",
+      "Color of Title",
+      "Tacking",
+      "Disabilities",
+      "Boundary Disputes",
+      "Government Immunity"
+    ],
+    "policy_rationales": [],
+    "common_traps": [],
+    "mnemonic": "HATE",
+    "micro_hypos": [],
+    "source": "real_property_advanced",
+    "exam_frequency": "medium"
+  },
+  {
+    "concept_id": "real_property_fixtures",
+    "name": "FIXTURES",
+    "subject": "real_property",
+    "difficulty": 3,
+    "rule_statement": "Personal property becomes real property when permanently attached with intent to improve the realty; trade fixtures remain personal property.",
+    "elements": [
+      "FIX Test",
+      "Trade Fixtures",
+      "Mortgage Rights",
+      "Severance",
+      "Agricultural Fixtures",
+      "Building Materials"
+    ],
+    "policy_rationales": [],
+    "common_traps": [],
+    "mnemonic": "FIX",
+    "micro_hypos": [],
+    "source": "real_property_advanced",
+    "exam_frequency": "medium"
+  },
+  {
+    "concept_id": "real_property_easement_by_necessity",
+    "name": "Easement by Necessity",
+    "subject": "real_property",
+    "difficulty": 3,
+    "rule_statement": "Implied easement when landlocked",
+    "elements": [],
+    "policy_rationales": [],
+    "common_traps": [],
+    "mnemonic": null,
+    "micro_hypos": [],
+    "source": "auto-generated",
+    "exam_frequency": "medium"
+  },
+  {
+    "concept_id": "real_property_easement_by_prescription",
+    "name": "Easement by Prescription",
+    "subject": "real_property",
+    "difficulty": 3,
+    "rule_statement": "Open, notorious, continuous adverse use",
+    "elements": [],
+    "policy_rationales": [],
+    "common_traps": [],
+    "mnemonic": null,
+    "micro_hypos": [],
+    "source": "auto-generated",
+    "exam_frequency": "medium"
+  },
+  {
+    "concept_id": "real_property_covenant__touch_and_concern",
+    "name": "Covenant - Touch and Concern",
+    "subject": "real_property",
+    "difficulty": 3,
+    "rule_statement": "Burden/benefit must relate to land use",
+    "elements": [],
+    "policy_rationales": [],
+    "common_traps": [],
+    "mnemonic": null,
+    "micro_hypos": [],
+    "source": "auto-generated",
+    "exam_frequency": "medium"
+  },
+  {
+    "concept_id": "criminal_law_elements_of_crimes",
+    "name": "Elements of Crimes",
+    "subject": "criminal_law",
+    "difficulty": 3,
+    "rule_statement": "Every offense needs a voluntary act (or qualifying omission), the requisite mental state, concurrence, and causation.",
+    "elements": [
+      "Rule",
+      "Actus Reus",
+      "Mens Rea (MPC hierarchy)",
+      "Concurrence",
+      "Causation",
+      "Mnemonics",
+      "Visual",
+      "Traps",
+      "Micro-Hypos"
+    ],
+    "policy_rationales": [],
+    "common_traps": [
+      "Specific vs general intent (intoxication defenses)",
+      "transferred intent limited to same crime",
+      "medical negligence generally foreseeable",
+      "strict liability defeats mistake defenses."
+    ],
+    "mnemonic": null,
+    "micro_hypos": [],
+    "source": "existing",
+    "exam_frequency": "medium"
+  },
+  {
+    "concept_id": "criminal_law_homicide_offenses",
+    "name": "Homicide Offenses",
+    "subject": "criminal_law",
+    "difficulty": 3,
+    "rule_statement": "Murder = unlawful killing with malice aforethought (intent to kill, intent to seriously injure, depraved heart, felony murder). Manslaughter lacks malice.",
+    "elements": [
+      "Rule",
+      "Hierarchy",
+      "Felony Murder",
+      "Mnemonics",
+      "Traps",
+      "Micro-Hypos"
+    ],
+    "policy_rationales": [],
+    "common_traps": [
+      "Instant premeditation allowed; deadly weapon inference; felony-murder merger; cooling-off defeats voluntary manslaughter; police/victim killings not felony murder (agency theory)."
+    ],
+    "mnemonic": null,
+    "micro_hypos": [],
+    "source": "existing",
+    "exam_frequency": "medium"
+  },
+  {
+    "concept_id": "criminal_law_other_crimes_against_persons",
+    "name": "Other Crimes Against Persons",
+    "subject": "criminal_law",
+    "difficulty": 3,
+    "rule_statement": "",
+    "elements": [
+      "Battery",
+      "Assault",
+      "Kidnapping",
+      "False Imprisonment",
+      "Rape",
+      "Mnemonic",
+      "Traps",
+      "Micro-Hypos"
+    ],
+    "policy_rationales": [],
+    "common_traps": [
+      "Battery requires only intent to touch; assault has two theories; kidnapping needs substantial movement; mistake of age no defense to statutory rape."
+    ],
+    "mnemonic": "BARK",
+    "micro_hypos": [],
+    "source": "existing",
+    "exam_frequency": "medium"
+  },
+  {
+    "concept_id": "criminal_law_property_crimes",
+    "name": "Property Crimes",
+    "subject": "criminal_law",
+    "difficulty": 3,
+    "rule_statement": "",
+    "elements": [
+      "Larceny",
+      "Robbery",
+      "Embezzlement",
+      "False Pretenses",
+      "Burglary",
+      "Mnemonic",
+      "Traps",
+      "Micro-Hypos"
+    ],
+    "policy_rationales": [],
+    "common_traps": [
+      "Intent at time of taking (larceny); assaultive felonies merge; force must accompany taking for robbery; burglary intent must pre-exist entry."
+    ],
+    "mnemonic": "LREF",
+    "micro_hypos": [],
+    "source": "existing",
+    "exam_frequency": "medium"
+  },
+  {
+    "concept_id": "criminal_law_inchoate_crimes",
+    "name": "Inchoate Crimes",
+    "subject": "criminal_law",
+    "difficulty": 3,
+    "rule_statement": "",
+    "elements": [
+      "Solicitation",
+      "Conspiracy",
+      "Attempt",
+      "Mnemonics",
+      "Traps",
+      "Micro-Hypos"
+    ],
+    "policy_rationales": [],
+    "common_traps": [
+      "Solicitation complete without acceptance; conspiracy survives completed offense; attempt always specific intent; abandonment defense limited (MPC)."
+    ],
+    "mnemonic": null,
+    "micro_hypos": [],
+    "source": "existing",
+    "exam_frequency": "medium"
+  },
+  {
+    "concept_id": "criminal_law_accomplice_and_accessory_liability",
+    "name": "Accomplice & Accessory Liability",
+    "subject": "criminal_law",
+    "difficulty": 3,
+    "rule_statement": "",
+    "elements": [
+      "Accomplice",
+      "Accessory After the Fact",
+      "Principal",
+      "Mnemonics",
+      "Traps",
+      "Micro-Hypos"
+    ],
+    "policy_rationales": [],
+    "common_traps": [
+      "Mere presence insufficient; dual intent requirement; accomplice liability remains even if principal acquitted; accessory after fact not liable for underlying offense."
+    ],
+    "mnemonic": null,
+    "micro_hypos": [],
+    "source": "existing",
+    "exam_frequency": "medium"
+  },
+  {
+    "concept_id": "criminal_law_defenses",
+    "name": "Defenses",
+    "subject": "criminal_law",
+    "difficulty": 3,
+    "rule_statement": "",
+    "elements": [
+      "Self-Defense",
+      "Defense of Others/Property/Necessity",
+      "Duress",
+      "Intoxication",
+      "Insanity Tests",
+      "Infancy",
+      "Entrapment",
+      "Mistake",
+      "Mnemonics",
+      "Traps"
+    ],
+    "policy_rationales": [],
+    "common_traps": [
+      "Duress unavailable for murder; voluntary intoxication limited; entrapment fails if predisposed; mistaking age no defense to statutory rape."
+    ],
+    "mnemonic": null,
+    "micro_hypos": [],
+    "source": "existing",
+    "exam_frequency": "medium"
+  },
+  {
+    "concept_id": "criminal_law_mens_rea_and_homicide",
+    "name": "MENS REA & HOMICIDE",
+    "subject": "criminal_law",
+    "difficulty": 3,
+    "rule_statement": "Criminal liability requires actus reus with mens rea of purpose, knowledge, recklessness, or negligence; homicide classifications depend on malice aforethought, intent, depraved heart, felony murder.",
+    "elements": [
+      "Mens Rea Levels",
+      "Murder",
+      "Manslaughter",
+      "Defenses"
+    ],
+    "policy_rationales": [],
+    "common_traps": [],
+    "mnemonic": null,
+    "micro_hypos": [],
+    "source": "existing",
+    "exam_frequency": "medium"
+  },
+  {
+    "concept_id": "criminal_law_actus_reus",
+    "name": "Actus Reus",
+    "subject": "criminal_law",
+    "difficulty": 3,
+    "rule_statement": "Voluntary act or omission with legal duty",
+    "elements": [],
+    "policy_rationales": [],
+    "common_traps": [],
+    "mnemonic": null,
+    "micro_hypos": [],
+    "source": "auto-generated",
+    "exam_frequency": "medium"
+  },
+  {
+    "concept_id": "criminal_law_mens_rea__purpose",
+    "name": "Mens Rea - Purpose",
+    "subject": "criminal_law",
+    "difficulty": 3,
+    "rule_statement": "Conscious objective to cause result",
+    "elements": [],
+    "policy_rationales": [],
+    "common_traps": [],
+    "mnemonic": null,
+    "micro_hypos": [],
+    "source": "auto-generated",
+    "exam_frequency": "medium"
+  },
+  {
+    "concept_id": "criminal_law_mens_rea__knowledge",
+    "name": "Mens Rea - Knowledge",
+    "subject": "criminal_law",
+    "difficulty": 3,
+    "rule_statement": "Awareness of conduct and circumstances",
+    "elements": [],
+    "policy_rationales": [],
+    "common_traps": [],
+    "mnemonic": null,
+    "micro_hypos": [],
+    "source": "auto-generated",
+    "exam_frequency": "medium"
+  },
+  {
+    "concept_id": "criminal_law_felony_murder",
+    "name": "Felony Murder",
+    "subject": "criminal_law",
+    "difficulty": 3,
+    "rule_statement": "Killing during inherently dangerous felony",
+    "elements": [],
+    "policy_rationales": [],
+    "common_traps": [],
+    "mnemonic": null,
+    "micro_hypos": [],
+    "source": "auto-generated",
+    "exam_frequency": "medium"
+  },
+  {
+    "concept_id": "criminal_law_voluntary_manslaughter",
+    "name": "Voluntary Manslaughter",
+    "subject": "criminal_law",
+    "difficulty": 3,
+    "rule_statement": "Intentional killing with adequate provocation",
+    "elements": [],
+    "policy_rationales": [],
+    "common_traps": [],
+    "mnemonic": null,
+    "micro_hypos": [],
+    "source": "auto-generated",
+    "exam_frequency": "medium"
+  },
+  {
+    "concept_id": "criminal_law_larceny",
+    "name": "Larceny",
+    "subject": "criminal_law",
+    "difficulty": 3,
+    "rule_statement": "Trespassory taking and carrying away with intent to steal",
+    "elements": [],
+    "policy_rationales": [],
+    "common_traps": [],
+    "mnemonic": null,
+    "micro_hypos": [],
+    "source": "auto-generated",
+    "exam_frequency": "medium"
+  },
+  {
+    "concept_id": "criminal_procedure_fourth_amendment",
+    "name": "Fourth Amendment",
+    "subject": "criminal_procedure",
+    "difficulty": 3,
+    "rule_statement": "",
+    "elements": [
+      "Traps"
+    ],
+    "policy_rationales": [],
+    "common_traps": [
+      "Standing (expectation of privacy)",
+      "private search doctrine",
+      "warrant particularity",
+      "good-faith exception limits."
+    ],
+    "mnemonic": null,
+    "micro_hypos": [],
+    "source": "existing",
+    "exam_frequency": "medium"
+  },
+  {
+    "concept_id": "criminal_procedure_exclusionary_rule",
+    "name": "Exclusionary Rule",
+    "subject": "criminal_procedure",
+    "difficulty": 3,
+    "rule_statement": "",
+    "elements": [
+      "Mnemonic",
+      "Traps"
+    ],
+    "policy_rationales": [],
+    "common_traps": [
+      "Impeachment use",
+      "Miranda violations (non-Miranda statements may be used for impeachment)",
+      "attenuation factors."
+    ],
+    "mnemonic": "FISSURE",
+    "micro_hypos": [],
+    "source": "existing",
+    "exam_frequency": "medium"
+  },
+  {
+    "concept_id": "criminal_procedure_fifth_amendment",
+    "name": "Fifth Amendment",
+    "subject": "criminal_procedure",
+    "difficulty": 3,
+    "rule_statement": "",
+    "elements": [
+      "Traps"
+    ],
+    "policy_rationales": [],
+    "common_traps": [
+      "Ambiguous requests",
+      "re-initiation by suspect",
+      "public-safety exception",
+      "invocation vs waiver."
+    ],
+    "mnemonic": null,
+    "micro_hypos": [],
+    "source": "existing",
+    "exam_frequency": "medium"
+  },
+  {
+    "concept_id": "criminal_procedure_sixth_amendment",
+    "name": "Sixth Amendment",
+    "subject": "criminal_procedure",
+    "difficulty": 3,
+    "rule_statement": "",
+    "elements": [
+      "Mnemonic",
+      "Traps"
+    ],
+    "policy_rationales": [],
+    "common_traps": [
+      "Offense-specific attachment",
+      "deliberate elicitation",
+      "Massiah",
+      "confrontation clause exceptions.\n\n#### Micro-Hypos"
+    ],
+    "mnemonic": "PACED",
+    "micro_hypos": [],
+    "source": "existing",
+    "exam_frequency": "medium"
+  },
+  {
+    "concept_id": "criminal_procedure_search_seizure_statements",
+    "name": "SEARCH, SEIZURE, STATEMENTS",
+    "subject": "criminal_procedure",
+    "difficulty": 3,
+    "rule_statement": "Fourth Amendment protects reasonable expectations of privacy; warrants need probable cause and particularity; exclusionary rule suppressed violations; Fifth and Sixth regulate interrogation, counsel, identifications.",
+    "elements": [
+      "Standing",
+      "Warrant Exceptions",
+      "Exclusionary Limits",
+      "Interrogations"
+    ],
+    "policy_rationales": [],
+    "common_traps": [],
+    "mnemonic": null,
+    "micro_hypos": [],
+    "source": "existing",
+    "exam_frequency": "medium"
+  },
+  {
+    "concept_id": "criminal_procedure_standing__fourth_amendment",
+    "name": "Standing - Fourth Amendment",
+    "subject": "criminal_procedure",
+    "difficulty": 3,
+    "rule_statement": "Reasonable expectation of privacy required",
+    "elements": [],
+    "policy_rationales": [],
+    "common_traps": [],
+    "mnemonic": null,
+    "micro_hypos": [],
+    "source": "auto-generated",
+    "exam_frequency": "medium"
+  },
+  {
+    "concept_id": "criminal_procedure_probable_cause",
+    "name": "Probable Cause",
+    "subject": "criminal_procedure",
+    "difficulty": 3,
+    "rule_statement": "Fair probability evidence of crime exists",
+    "elements": [],
+    "policy_rationales": [],
+    "common_traps": [],
+    "mnemonic": null,
+    "micro_hypos": [],
+    "source": "auto-generated",
+    "exam_frequency": "medium"
+  },
+  {
+    "concept_id": "criminal_procedure_search_incident_to_arrest",
+    "name": "Search Incident to Arrest",
+    "subject": "criminal_procedure",
+    "difficulty": 3,
+    "rule_statement": "Contemporaneous search of person and wingspan",
+    "elements": [],
+    "policy_rationales": [],
+    "common_traps": [],
+    "mnemonic": null,
+    "micro_hypos": [],
+    "source": "auto-generated",
+    "exam_frequency": "medium"
+  },
+  {
+    "concept_id": "criminal_procedure_automobile_exception",
+    "name": "Automobile Exception",
+    "subject": "criminal_procedure",
+    "difficulty": 3,
+    "rule_statement": "Warrantless search with probable cause and mobility",
+    "elements": [],
+    "policy_rationales": [],
+    "common_traps": [],
+    "mnemonic": null,
+    "micro_hypos": [],
+    "source": "auto-generated",
+    "exam_frequency": "medium"
+  },
+  {
+    "concept_id": "criminal_procedure_plain_view_doctrine",
+    "name": "Plain View Doctrine",
+    "subject": "criminal_procedure",
+    "difficulty": 3,
+    "rule_statement": "Seizure if lawfully present and incriminating evident",
+    "elements": [],
+    "policy_rationales": [],
+    "common_traps": [],
+    "mnemonic": null,
+    "micro_hypos": [],
+    "source": "auto-generated",
+    "exam_frequency": "medium"
+  },
+  {
+    "concept_id": "criminal_procedure_miranda_custody",
+    "name": "Miranda Custody",
+    "subject": "criminal_procedure",
+    "difficulty": 3,
+    "rule_statement": "Reasonable person would not feel free to leave",
+    "elements": [],
+    "policy_rationales": [],
+    "common_traps": [],
+    "mnemonic": null,
+    "micro_hypos": [],
+    "source": "auto-generated",
+    "exam_frequency": "medium"
+  },
+  {
+    "concept_id": "criminal_procedure_miranda_invocation",
+    "name": "Miranda Invocation",
+    "subject": "criminal_procedure",
+    "difficulty": 3,
+    "rule_statement": "Unambiguous request for counsel or silence",
+    "elements": [],
+    "policy_rationales": [],
+    "common_traps": [],
+    "mnemonic": null,
+    "micro_hypos": [],
+    "source": "auto-generated",
+    "exam_frequency": "medium"
+  },
+  {
+    "concept_id": "criminal_procedure_sixth_amendment_attachment",
+    "name": "Sixth Amendment Attachment",
+    "subject": "criminal_procedure",
+    "difficulty": 3,
+    "rule_statement": "Right to counsel attaches at formal charges",
+    "elements": [],
+    "policy_rationales": [],
+    "common_traps": [],
+    "mnemonic": null,
+    "micro_hypos": [],
+    "source": "auto-generated",
+    "exam_frequency": "medium"
+  },
+  {
+    "concept_id": "criminal_procedure_deliberate_elicitation",
+    "name": "Deliberate Elicitation",
+    "subject": "criminal_procedure",
+    "difficulty": 3,
+    "rule_statement": "Officers cannot elicit statements after charges",
+    "elements": [],
+    "policy_rationales": [],
+    "common_traps": [],
+    "mnemonic": null,
+    "micro_hypos": [],
+    "source": "auto-generated",
+    "exam_frequency": "medium"
+  },
+  {
+    "concept_id": "torts_intentional_torts",
+    "name": "Intentional Torts",
+    "subject": "torts",
+    "difficulty": 3,
+    "rule_statement": "Battery, assault, false imprisonment, IIED require volitional acts with intent or substantial certainty.",
+    "elements": [
+      "Rule",
+      "Mnemonic",
+      "Traps",
+      "Micro-Hypos"
+    ],
+    "policy_rationales": [],
+    "common_traps": [
+      "Transferred intent",
+      "consent scope",
+      "shopkeeper\u2019s privilege limits",
+      "extreme/outrageous threshold for IIED."
+    ],
+    "mnemonic": "BAFI\u00b2",
+    "micro_hypos": [],
+    "source": "existing",
+    "exam_frequency": "medium"
+  },
+  {
+    "concept_id": "torts_negligence",
+    "name": "Negligence",
+    "subject": "torts",
+    "difficulty": 3,
+    "rule_statement": "Duty, breach (reasonable person or custom), actual/ proximate cause, damages.",
+    "elements": [
+      "Rule",
+      "Mnemonic",
+      "Traps",
+      "Micro-Hypos"
+    ],
+    "policy_rationales": [],
+    "common_traps": [
+      "Duty to unforeseeable plaintiffs (Cardozo vs Andrews)",
+      "res ipsa limits",
+      "superseding vs intervening causes",
+      "pure economic loss (no recovery)."
+    ],
+    "mnemonic": "DBCD",
+    "micro_hypos": [],
+    "source": "existing",
+    "exam_frequency": "medium"
+  },
+  {
+    "concept_id": "torts_strict_liability_and_products",
+    "name": "Strict Liability & Products",
+    "subject": "torts",
+    "difficulty": 3,
+    "rule_statement": "Strict liability for abnormally dangerous activities, wild animals; product claims under strict, negligence, warranty theories.",
+    "elements": [
+      "Rule",
+      "Mnemonic",
+      "Traps",
+      "Micro-Hypos"
+    ],
+    "policy_rationales": [],
+    "common_traps": [
+      "Product misuse vs foreseeable misuse",
+      "learned intermediary (pharma)",
+      "design vs manufacturing defects tests."
+    ],
+    "mnemonic": "ADAMS",
+    "micro_hypos": [],
+    "source": "existing",
+    "exam_frequency": "medium"
+  },
+  {
+    "concept_id": "torts_defamation_and_privacy",
+    "name": "Defamation & Privacy",
+    "subject": "torts",
+    "difficulty": 3,
+    "rule_statement": "False statements harming reputation; public concern triggers constitutional actual-fault requirements.",
+    "elements": [
+      "Rule",
+      "Mnemonic",
+      "Traps",
+      "Micro-Hypos"
+    ],
+    "policy_rationales": [],
+    "common_traps": [
+      "Opinions vs fact",
+      "public vs private figures (actual malice vs negligence)",
+      "privacy tort distinctions (intrusion",
+      "false light",
+      "appropriation"
+    ],
+    "mnemonic": "PDPF",
+    "micro_hypos": [],
+    "source": "existing",
+    "exam_frequency": "medium"
+  },
+  {
+    "concept_id": "torts_economic_and_dignitary",
+    "name": "Economic & Dignitary",
+    "subject": "torts",
+    "difficulty": 3,
+    "rule_statement": "Intentional interference, fraudulent misrepresentation, malicious prosecution.",
+    "elements": [
+      "Rule",
+      "Traps"
+    ],
+    "policy_rationales": [],
+    "common_traps": [
+      "Economic harm requirements",
+      "privilege defenses",
+      "probable cause in malicious prosecution."
+    ],
+    "mnemonic": null,
+    "micro_hypos": [],
+    "source": "existing",
+    "exam_frequency": "medium"
+  },
+  {
+    "concept_id": "torts_vicarious_liability_and_damages",
+    "name": "Vicarious Liability & Damages",
+    "subject": "torts",
+    "difficulty": 3,
+    "rule_statement": "Employers liable for employees acting in scope; punitive damages limited; joint & several vs several depending on jurisdiction.",
+    "elements": [
+      "Rule",
+      "Traps"
+    ],
+    "policy_rationales": [],
+    "common_traps": [
+      "Frolic vs detour",
+      "independent contractor exceptions",
+      "collateral source rule variations.\n\n#### Visuals"
+    ],
+    "mnemonic": null,
+    "micro_hypos": [],
+    "source": "existing",
+    "exam_frequency": "medium"
+  },
+  {
+    "concept_id": "torts_negligence_elements",
+    "name": "NEGLIGENCE ELEMENTS",
+    "subject": "torts",
+    "difficulty": 3,
+    "rule_statement": "Negligence requires duty owed, breach by unreasonable conduct, actual and proximate causation, and damages; defenses include comparative fault, assumption of risk, statutes.",
+    "elements": [
+      "Duty",
+      "Breach",
+      "Causation",
+      "Defenses"
+    ],
+    "policy_rationales": [],
+    "common_traps": [],
+    "mnemonic": null,
+    "micro_hypos": [],
+    "source": "existing",
+    "exam_frequency": "medium"
+  },
+  {
+    "concept_id": "torts_strict_liability_and_products_liability",
+    "name": "STRICT LIABILITY & PRODUCTS LIABILITY",
+    "subject": "torts",
+    "difficulty": 3,
+    "rule_statement": "Strict liability covers abnormally dangerous activities, wild animals, and product defects proven through manufacturing, design, or warning failure where foreseeable plaintiffs suffer harm.",
+    "elements": [
+      "Abnormally Dangerous",
+      "Products Liability",
+      "Defenses",
+      "Warranties"
+    ],
+    "policy_rationales": [],
+    "common_traps": [],
+    "mnemonic": null,
+    "micro_hypos": [],
+    "source": "existing",
+    "exam_frequency": "medium"
+  },
+  {
+    "concept_id": "torts_duty_of_care",
+    "name": "Duty of Care",
+    "subject": "torts",
+    "difficulty": 3,
+    "rule_statement": "Defendant owes duty when conduct creates foreseeable risk",
+    "elements": [],
+    "policy_rationales": [],
+    "common_traps": [],
+    "mnemonic": null,
+    "micro_hypos": [],
+    "source": "auto-generated",
+    "exam_frequency": "medium"
+  },
+  {
+    "concept_id": "torts_breach__standard_of_care",
+    "name": "Breach - Standard of Care",
+    "subject": "torts",
+    "difficulty": 3,
+    "rule_statement": "Reasonable person standard; custom evidence relevant",
+    "elements": [],
+    "policy_rationales": [],
+    "common_traps": [],
+    "mnemonic": null,
+    "micro_hypos": [],
+    "source": "auto-generated",
+    "exam_frequency": "medium"
+  },
+  {
+    "concept_id": "torts_actual_causation",
+    "name": "Actual Causation",
+    "subject": "torts",
+    "difficulty": 3,
+    "rule_statement": "But-for test; substantial factor for multiple causes",
+    "elements": [],
+    "policy_rationales": [],
+    "common_traps": [],
+    "mnemonic": null,
+    "micro_hypos": [],
+    "source": "auto-generated",
+    "exam_frequency": "medium"
+  },
+  {
+    "concept_id": "torts_proximate_cause",
+    "name": "Proximate Cause",
+    "subject": "torts",
+    "difficulty": 3,
+    "rule_statement": "Foreseeable consequences; no superseding intervening causes",
+    "elements": [],
+    "policy_rationales": [],
+    "common_traps": [],
+    "mnemonic": null,
+    "micro_hypos": [],
+    "source": "auto-generated",
+    "exam_frequency": "medium"
+  },
+  {
+    "concept_id": "torts_intentional_torts__battery",
+    "name": "Intentional Torts - Battery",
+    "subject": "torts",
+    "difficulty": 3,
+    "rule_statement": "Intentional harmful or offensive contact",
+    "elements": [],
+    "policy_rationales": [],
+    "common_traps": [],
+    "mnemonic": null,
+    "micro_hypos": [],
+    "source": "auto-generated",
+    "exam_frequency": "medium"
+  },
+  {
+    "concept_id": "torts_strict_liability__animals",
+    "name": "Strict Liability - Animals",
+    "subject": "torts",
+    "difficulty": 3,
+    "rule_statement": "Owners strictly liable for wild animals",
+    "elements": [],
+    "policy_rationales": [],
+    "common_traps": [],
+    "mnemonic": null,
+    "micro_hypos": [],
+    "source": "auto-generated",
+    "exam_frequency": "medium"
+  },
+  {
+    "concept_id": "evidence_relevance",
+    "name": "Relevance",
+    "subject": "evidence",
+    "difficulty": 3,
+    "rule_statement": "",
+    "elements": [
+      "Mnemonic",
+      "Traps",
+      "Preliminary Questions (FRE 104)",
+      "Limiting Instructions (FRE 105)",
+      "Rule of Completeness (FRE 106)"
+    ],
+    "policy_rationales": [],
+    "common_traps": [
+      "Subsequent remedial measures",
+      "settlements",
+      "offers to pay medical expenses",
+      "character evidence in civil vs criminal."
+    ],
+    "mnemonic": "403 Balance",
+    "micro_hypos": [],
+    "source": "existing",
+    "exam_frequency": "medium"
+  },
+  {
+    "concept_id": "evidence_character_evidence",
+    "name": "Character Evidence",
+    "subject": "evidence",
+    "difficulty": 3,
+    "rule_statement": "",
+    "elements": [
+      "Mnemonic"
+    ],
+    "policy_rationales": [],
+    "common_traps": [],
+    "mnemonic": "CRIME",
+    "micro_hypos": [],
+    "source": "existing",
+    "exam_frequency": "medium"
+  },
+  {
+    "concept_id": "evidence_hearsay",
+    "name": "Hearsay",
+    "subject": "evidence",
+    "difficulty": 3,
+    "rule_statement": "",
+    "elements": [
+      "Mnemonic",
+      "Key Exceptions",
+      "Traps"
+    ],
+    "policy_rationales": [],
+    "common_traps": [
+      "Double hearsay",
+      "testimonial statements confronting (Crawford)",
+      "former testimony requirements."
+    ],
+    "mnemonic": "HEARSAY",
+    "micro_hypos": [],
+    "source": "existing",
+    "exam_frequency": "medium"
+  },
+  {
+    "concept_id": "evidence_witnesses_and_impeachment",
+    "name": "Witnesses & Impeachment",
+    "subject": "evidence",
+    "difficulty": 3,
+    "rule_statement": "",
+    "elements": [
+      "Mnemonic",
+      "Traps"
+    ],
+    "policy_rationales": [],
+    "common_traps": [
+      "Collateral matters",
+      "prior consistent vs inconsistent statements",
+      "confrontation Clause for testimonial hearsay."
+    ],
+    "mnemonic": "PC FARMS",
+    "micro_hypos": [],
+    "source": "existing",
+    "exam_frequency": "medium"
+  },
+  {
+    "concept_id": "evidence_privileges_and_policy",
+    "name": "Privileges & Policy",
+    "subject": "evidence",
+    "difficulty": 3,
+    "rule_statement": "",
+    "elements": [
+      "Mnemonic",
+      "Traps",
+      "Best Evidence Flex",
+      "Digital Authentication",
+      "Updated Prior Consistent Statements",
+      "Privilege Waiver (FRE 502)"
+    ],
+    "policy_rationales": [],
+    "common_traps": [
+      "Spousal privileges scope",
+      "waiver by presence of third parties",
+      "work-product doctrine.\n\n#### Visuals"
+    ],
+    "mnemonic": "CLAPS",
+    "micro_hypos": [],
+    "source": "existing",
+    "exam_frequency": "medium"
+  },
+  {
+    "concept_id": "evidence_relevance_and_character",
+    "name": "RELEVANCE & CHARACTER",
+    "subject": "evidence",
+    "difficulty": 3,
+    "rule_statement": "Evidence must be relevant, probative value not outweighed by unfair prejudice; character evidence limited except for habit, impeachment, or cases placing character at issue.",
+    "elements": [
+      "Rule 403",
+      "Character Evidence",
+      "Other Acts",
+      "Impeachment"
+    ],
+    "policy_rationales": [],
+    "common_traps": [],
+    "mnemonic": null,
+    "micro_hypos": [],
+    "source": "existing",
+    "exam_frequency": "medium"
+  },
+  {
+    "concept_id": "evidence_hearsay_and_exceptions",
+    "name": "HEARSAY & EXCEPTIONS",
+    "subject": "evidence",
+    "difficulty": 3,
+    "rule_statement": "Hearsay is out-of-court statement offered for truth, inadmissible absent exemption or exception such as opposing party statements, present sense impression, excited utterance, business records.",
+    "elements": [
+      "Non-Hearsay Uses",
+      "Exemptions",
+      "Unavailable Declarant",
+      "Reliability Exceptions"
+    ],
+    "policy_rationales": [],
+    "common_traps": [],
+    "mnemonic": null,
+    "micro_hypos": [],
+    "source": "existing",
+    "exam_frequency": "medium"
+  },
+  {
+    "concept_id": "evidence_hearsay_definition",
+    "name": "Hearsay Definition",
+    "subject": "evidence",
+    "difficulty": 3,
+    "rule_statement": "Out-of-court statement offered for truth",
+    "elements": [],
+    "policy_rationales": [],
+    "common_traps": [],
+    "mnemonic": null,
+    "micro_hypos": [],
+    "source": "auto-generated",
+    "exam_frequency": "medium"
+  },
+  {
+    "concept_id": "evidence_present_sense_impression",
+    "name": "Present Sense Impression",
+    "subject": "evidence",
+    "difficulty": 3,
+    "rule_statement": "Statement describing event while perceiving it",
+    "elements": [],
+    "policy_rationales": [],
+    "common_traps": [],
+    "mnemonic": null,
+    "micro_hypos": [],
+    "source": "auto-generated",
+    "exam_frequency": "medium"
+  },
+  {
+    "concept_id": "evidence_excited_utterance",
+    "name": "Excited Utterance",
+    "subject": "evidence",
+    "difficulty": 3,
+    "rule_statement": "Statement under stress of startling event",
+    "elements": [],
+    "policy_rationales": [],
+    "common_traps": [],
+    "mnemonic": null,
+    "micro_hypos": [],
+    "source": "auto-generated",
+    "exam_frequency": "medium"
+  },
+  {
+    "concept_id": "evidence_business_records",
+    "name": "Business Records",
+    "subject": "evidence",
+    "difficulty": 3,
+    "rule_statement": "Records kept in regular course of business",
+    "elements": [],
+    "policy_rationales": [],
+    "common_traps": [],
+    "mnemonic": null,
+    "micro_hypos": [],
+    "source": "auto-generated",
+    "exam_frequency": "medium"
+  },
+  {
+    "concept_id": "evidence_character_evidence__criminal",
+    "name": "Character Evidence - Criminal",
+    "subject": "evidence",
+    "difficulty": 3,
+    "rule_statement": "Defendant may open door to character evidence",
+    "elements": [],
+    "policy_rationales": [],
+    "common_traps": [],
+    "mnemonic": null,
+    "micro_hypos": [],
+    "source": "auto-generated",
+    "exam_frequency": "medium"
+  },
+  {
+    "concept_id": "evidence_impeachment__prior_inconsistent",
+    "name": "Impeachment - Prior Inconsistent",
+    "subject": "evidence",
+    "difficulty": 3,
+    "rule_statement": "Prior statements to attack credibility",
+    "elements": [],
+    "policy_rationales": [],
+    "common_traps": [],
+    "mnemonic": null,
+    "micro_hypos": [],
+    "source": "auto-generated",
+    "exam_frequency": "medium"
+  },
+  {
+    "concept_id": "evidence_authentication",
+    "name": "Authentication",
+    "subject": "evidence",
+    "difficulty": 3,
+    "rule_statement": "Evidence must be authenticated before admission",
+    "elements": [],
+    "policy_rationales": [],
+    "common_traps": [],
+    "mnemonic": null,
+    "micro_hypos": [],
+    "source": "auto-generated",
+    "exam_frequency": "medium"
+  },
+  {
+    "concept_id": "contracts_formation",
+    "name": "Formation",
+    "subject": "contracts",
+    "difficulty": 3,
+    "rule_statement": "",
+    "elements": [
+      "Mnemonic",
+      "Traps",
+      "Micro-Hypos"
+    ],
+    "policy_rationales": [],
+    "common_traps": [
+      "Advertisements (invitations)",
+      "UCC firm offers",
+      "mailbox rule twists",
+      "option contracts",
+      "pre-existing duty rule."
+    ],
+    "mnemonic": "FOCI",
+    "micro_hypos": [],
+    "source": "existing",
+    "exam_frequency": "medium"
+  },
+  {
+    "concept_id": "contracts_terms_and_interpretation",
+    "name": "Terms & Interpretation",
+    "subject": "contracts",
+    "difficulty": 3,
+    "rule_statement": "Common law mirror-image; UCC gap fillers; parol evidence.",
+    "elements": [
+      "Rule",
+      "Traps"
+    ],
+    "policy_rationales": [],
+    "common_traps": [
+      "Battle of forms",
+      "parol evidence exceptions (ambiguity",
+      "fraud)",
+      "course of performance hierarchy."
+    ],
+    "mnemonic": null,
+    "micro_hypos": [],
+    "source": "existing",
+    "exam_frequency": "medium"
+  },
+  {
+    "concept_id": "contracts_performance_and_breach",
+    "name": "Performance & Breach",
+    "subject": "contracts",
+    "difficulty": 3,
+    "rule_statement": "Common law substantial performance vs material breach; UCC perfect tender.",
+    "elements": [
+      "Rule",
+      "Traps"
+    ],
+    "policy_rationales": [],
+    "common_traps": [
+      "Anticipatory repudiation (reasonable assurances)",
+      "divisible contracts",
+      "condition precedent vs subsequent."
+    ],
+    "mnemonic": null,
+    "micro_hypos": [],
+    "source": "existing",
+    "exam_frequency": "medium"
+  },
+  {
+    "concept_id": "contracts_remedies",
+    "name": "Remedies",
+    "subject": "contracts",
+    "difficulty": 3,
+    "rule_statement": "",
+    "elements": [
+      "Mnemonic",
+      "Traps"
+    ],
+    "policy_rationales": [],
+    "common_traps": [
+      "Foreseeability (Hadley)",
+      "mitigation duties",
+      "liquidated damages (reasonable estimate",
+      "not penalty)."
+    ],
+    "mnemonic": "ERRS",
+    "micro_hypos": [],
+    "source": "existing",
+    "exam_frequency": "medium"
+  },
+  {
+    "concept_id": "contracts_defenses",
+    "name": "Defenses",
+    "subject": "contracts",
+    "difficulty": 3,
+    "rule_statement": "",
+    "elements": [
+      "Mnemonic",
+      "Traps"
+    ],
+    "policy_rationales": [],
+    "common_traps": [
+      "SOF partial performance exceptions",
+      "mutual mistake vs unilateral",
+      "impossibility vs frustration."
+    ],
+    "mnemonic": "STUPID",
+    "micro_hypos": [],
+    "source": "existing",
+    "exam_frequency": "medium"
+  },
+  {
+    "concept_id": "contracts_thirdparty_rights",
+    "name": "Third-Party Rights",
+    "subject": "contracts",
+    "difficulty": 3,
+    "rule_statement": "Assignments, delegations, third-party beneficiaries.",
+    "elements": [
+      "Rule",
+      "Traps"
+    ],
+    "policy_rationales": [],
+    "common_traps": [
+      "Revocation of gratuitous assignments",
+      "delegation of special skills",
+      "vesting of third-party rights."
+    ],
+    "mnemonic": null,
+    "micro_hypos": [],
+    "source": "existing",
+    "exam_frequency": "medium"
+  },
+  {
+    "concept_id": "contracts_ucc_delivery_title_and_risk_of_loss",
+    "name": "UCC Delivery, Title & Risk of Loss",
+    "subject": "contracts",
+    "difficulty": 3,
+    "rule_statement": "",
+    "elements": [
+      "Hierarchy",
+      "Shipment vs Destination",
+      "No Carrier",
+      "Casualty to Identified Goods",
+      "Entrustment & Voidable Title",
+      "Traps",
+      "Micro-Hypos"
+    ],
+    "policy_rationales": [],
+    "common_traps": [
+      "Breach always keeps risk on breaching party; \u201cFOB plant\u201d is shipment",
+      "not destination; merchant receipt requirement."
+    ],
+    "mnemonic": null,
+    "micro_hypos": [],
+    "source": "existing",
+    "exam_frequency": "medium"
+  },
+  {
+    "concept_id": "contracts_acceptance_rejection_and_revocation_ucc",
+    "name": "Acceptance, Rejection & Revocation (UCC)",
+    "subject": "contracts",
+    "difficulty": 3,
+    "rule_statement": "",
+    "elements": [
+      "Acceptance",
+      "Rejection",
+      "Revocation of Acceptance",
+      "Adequate Assurances",
+      "Traps",
+      "Micro-Hypos"
+    ],
+    "policy_rationales": [],
+    "common_traps": [
+      "Using goods extensively after discovering defect can bar revocation; COD shipments limit inspection rights."
+    ],
+    "mnemonic": null,
+    "micro_hypos": [],
+    "source": "existing",
+    "exam_frequency": "medium"
+  },
+  {
+    "concept_id": "contracts_excuse_impossibility_impracticability_frustration",
+    "name": "Excuse: Impossibility, Impracticability, Frustration",
+    "subject": "contracts",
+    "difficulty": 3,
+    "rule_statement": "",
+    "elements": [
+      "Impossibility / Impracticability",
+      "Partial Impracticability",
+      "Frustration of Purpose",
+      "Traps",
+      "Micro-Hypos"
+    ],
+    "policy_rationales": [],
+    "common_traps": [
+      "Mere increased cost insufficient unless extreme; assuming price fluctuation risk defeats excuse."
+    ],
+    "mnemonic": null,
+    "micro_hypos": [],
+    "source": "existing",
+    "exam_frequency": "medium"
+  },
+  {
+    "concept_id": "contracts_modification_accord_and_satisfaction_novation",
+    "name": "Modification, Accord & Satisfaction, Novation",
+    "subject": "contracts",
+    "difficulty": 3,
+    "rule_statement": "",
+    "elements": [
+      "Modification",
+      "Accord & Satisfaction",
+      "Novation",
+      "Traps",
+      "Micro-Hypos"
+    ],
+    "policy_rationales": [],
+    "common_traps": [
+      "Modification of firm offer beyond three months requires fresh consideration; distinguishing novation from assignment/delegation."
+    ],
+    "mnemonic": null,
+    "micro_hypos": [],
+    "source": "existing",
+    "exam_frequency": "medium"
+  },
+  {
+    "concept_id": "contracts_warranties_ucc_and_common",
+    "name": "Warranties (UCC & Common)",
+    "subject": "contracts",
+    "difficulty": 3,
+    "rule_statement": "",
+    "elements": [
+      "Express",
+      "Implied Warranty of Merchantability",
+      "Implied Warranty of Fitness",
+      "Disclaimers",
+      "Limitations",
+      "Privity & Tort Overlap",
+      "Traps",
+      "Micro-Hypos",
+      "Visuals"
+    ],
+    "policy_rationales": [],
+    "common_traps": [
+      "Statements of opinion/puffery not express warranties; \u201cas is\u201d doesn\u2019t negate express warranties; limitations failing essential purpose open door to full UCC remedies."
+    ],
+    "mnemonic": null,
+    "micro_hypos": [],
+    "source": "existing",
+    "exam_frequency": "medium"
+  },
+  {
+    "concept_id": "contracts_offer_acceptance_consideration",
+    "name": "OFFER, ACCEPTANCE, CONSIDERATION",
+    "subject": "contracts",
+    "difficulty": 3,
+    "rule_statement": "Valid contract needs offer showing commitment, acceptance mirroring material terms, and consideration or substitute reliance creating bargained-for exchange with mutual assent and capacity.",
+    "elements": [
+      "Offer Dynamics",
+      "Acceptance Mechanics",
+      "Consideration",
+      "Formation Defenses"
+    ],
+    "policy_rationales": [],
+    "common_traps": [],
+    "mnemonic": null,
+    "micro_hypos": [],
+    "source": "existing",
+    "exam_frequency": "medium"
+  },
+  {
+    "concept_id": "contracts_performance_breach_remedies",
+    "name": "PERFORMANCE, BREACH, REMEDIES",
+    "subject": "contracts",
+    "difficulty": 3,
+    "rule_statement": "Performance judged by strict compliance for non-UCC or perfect tender under Article 2; material breach excuses; remedies include expectation, reliance, restitution, specific performance.",
+    "elements": [
+      "Conditions",
+      "Material Breach",
+      "UCC Obligations",
+      "Remedies"
+    ],
+    "policy_rationales": [],
+    "common_traps": [],
+    "mnemonic": null,
+    "micro_hypos": [],
+    "source": "existing",
+    "exam_frequency": "medium"
+  },
+  {
+    "concept_id": "contracts_formation__foci_checklist",
+    "name": "FORMATION \u2013 FOCI CHECKLIST",
+    "subject": "contracts",
+    "difficulty": 3,
+    "rule_statement": "",
+    "elements": [],
+    "policy_rationales": [],
+    "common_traps": [
+      "Option contracts (need consideration unless UCC firm offer \u2264 3 months, signed by merchant).",
+      "Mailbox rule exceptions: option, improperly addressed, rejection before acceptance.",
+      "Illusory promises not enforceable."
+    ],
+    "mnemonic": "FOCI",
+    "micro_hypos": [],
+    "source": "contracts_study_guide.md",
+    "exam_frequency": "medium"
+  },
+  {
+    "concept_id": "constitutional_law_judicial_power_and_justiciability",
+    "name": "Judicial Power & Justiciability",
+    "subject": "constitutional_law",
+    "difficulty": 3,
+    "rule_statement": "Case-or-controversy requirement demands standing (injury, causation, redressability), ripeness, and absence of mootness or political questions.",
+    "elements": [
+      "Rule",
+      "Mnemonic",
+      "Visual",
+      "Traps",
+      "Micro-Hypos"
+    ],
+    "policy_rationales": [],
+    "common_traps": [
+      "Taxpayer standing (usually none)",
+      "generalized grievances",
+      "mootness exceptions (e.g.",
+      "pregnancy)",
+      "political-question doctrine."
+    ],
+    "mnemonic": "SCRAM",
+    "micro_hypos": [],
+    "source": "existing",
+    "exam_frequency": "medium"
+  },
+  {
+    "concept_id": "constitutional_law_federal_legislative_power",
+    "name": "Federal Legislative Power",
+    "subject": "constitutional_law",
+    "difficulty": 3,
+    "rule_statement": "Congress operates within enumerated powers; Commerce Clause covers channels, instrumentalities, and substantial economic effects; Necessary & Proper clause implements enumerated powers.",
+    "elements": [
+      "Rule",
+      "Mnemonic",
+      "Traps",
+      "Micro-Hypos"
+    ],
+    "policy_rationales": [],
+    "common_traps": [
+      "Intrastate non-economic activity (Lopez)",
+      "attenuated chains under substantial-effects theory",
+      "anti-commandeering (New York v. US)",
+      "coercive spending conditions."
+    ],
+    "mnemonic": "Can People Truly Win Now?",
+    "micro_hypos": [],
+    "source": "existing",
+    "exam_frequency": "medium"
+  },
+  {
+    "concept_id": "constitutional_law_executive_power",
+    "name": "Executive Power",
+    "subject": "constitutional_law",
+    "difficulty": 3,
+    "rule_statement": "Presidential power peaks with congressional authorization, declines in twilight zones, bottomed out when defying Congress.",
+    "elements": [
+      "Rule",
+      "Mnemonic",
+      "Traps",
+      "Micro-Hypos"
+    ],
+    "policy_rationales": [],
+    "common_traps": [
+      "Executive agreements = binding without Senate",
+      "removal limits for independent agencies",
+      "pardon excludes impeachment",
+      "line-item veto unconstitutional."
+    ],
+    "mnemonic": "VETO PACT",
+    "micro_hypos": [],
+    "source": "existing",
+    "exam_frequency": "medium"
+  },
+  {
+    "concept_id": "constitutional_law_federalism_and_state_power",
+    "name": "Federalism & State Power",
+    "subject": "constitutional_law",
+    "difficulty": 3,
+    "rule_statement": "Tenth Amendment reserves unenumerated powers; Supremacy Clause preempts conflicts; dormant Commerce Clause prevents discriminatory burdens; states cannot tax the federal government.",
+    "elements": [
+      "Rule",
+      "Mnemonic",
+      "Traps",
+      "Micro-Hypos"
+    ],
+    "policy_rationales": [],
+    "common_traps": [
+      "Facial neutrality with discriminatory effect",
+      "Article IV Privileges & Immunities limited to citizens",
+      "federal commandeering of states",
+      "market-participant exception boundaries."
+    ],
+    "mnemonic": "DORM ROOM",
+    "micro_hypos": [],
+    "source": "existing",
+    "exam_frequency": "medium"
+  },
+  {
+    "concept_id": "constitutional_law_individual_rights",
+    "name": "Individual Rights",
+    "subject": "constitutional_law",
+    "difficulty": 3,
+    "rule_statement": "Procedural DP requires notice + hearing for life/liberty/property; substantive DP protects fundamental rights via strict scrutiny, otherwise rational basis.",
+    "elements": [
+      "Rule",
+      "Mnemonic",
+      "Traps",
+      "Micro-Hypos"
+    ],
+    "policy_rationales": [],
+    "common_traps": [
+      "At-will employment lacks property interest",
+      "stigma-plus requirement",
+      "emergency exceptions for hearings",
+      "undue burden standard for abortion (not strict scrutiny)."
+    ],
+    "mnemonic": "MR. FIG CAP",
+    "micro_hypos": [],
+    "source": "existing",
+    "exam_frequency": "medium"
+  },
+  {
+    "concept_id": "constitutional_law_equal_protection",
+    "name": "Equal Protection",
+    "subject": "constitutional_law",
+    "difficulty": 3,
+    "rule_statement": "Classification triggers scrutiny: suspect (strict), quasi-suspect (intermediate), others (rational basis); fundamental rights also trigger strict scrutiny.",
+    "elements": [
+      "Rule",
+      "Mnemonic",
+      "Traps",
+      "Micro-Hypos"
+    ],
+    "policy_rationales": [],
+    "common_traps": [
+      "Need discriminatory intent",
+      "federal alienage uses rational basis",
+      "affirmative action strict scrutiny",
+      "wealth/age non-suspect."
+    ],
+    "mnemonic": "RAN GIL",
+    "micro_hypos": [],
+    "source": "existing",
+    "exam_frequency": "medium"
+  },
+  {
+    "concept_id": "constitutional_law_first_amendment",
+    "name": "First Amendment",
+    "subject": "constitutional_law",
+    "difficulty": 3,
+    "rule_statement": "Content-based regulations = strict scrutiny; content-neutral TPM = intermediate; unprotected categories include incitement, obscenity, fighting words, true threats, child pornography.",
+    "elements": [
+      "Rule",
+      "Mnemonic",
+      "Traps",
+      "Micro-Hypos"
+    ],
+    "policy_rationales": [],
+    "common_traps": [
+      "Incitement requires imminence",
+      "fighting words must be face-to-face",
+      "prior restraint presumption",
+      "viewpoint discrimination fatal."
+    ],
+    "mnemonic": "FOCI",
+    "micro_hypos": [],
+    "source": "existing",
+    "exam_frequency": "medium"
+  },
+  {
+    "concept_id": "constitutional_law_federal_powers_and_supremacy",
+    "name": "FEDERAL POWERS & SUPREMACY",
+    "subject": "constitutional_law",
+    "difficulty": 3,
+    "rule_statement": "Congress legislates through enumerated powers, Necessary and Proper Clause, Commerce channels or substantial effects, while Supremacy Clause preempts conflicting state actions within enumerated sphere.",
+    "elements": [
+      "Enumerated Powers",
+      "Commerce Authority",
+      "Preemption",
+      "Tenth Amendment Limits"
+    ],
+    "policy_rationales": [],
+    "common_traps": [],
+    "mnemonic": null,
+    "micro_hypos": [],
+    "source": "existing",
+    "exam_frequency": "medium"
+  },
+  {
+    "concept_id": "constitutional_law_individual_rights_and_scrutiny",
+    "name": "INDIVIDUAL RIGHTS & SCRUTINY",
+    "subject": "constitutional_law",
+    "difficulty": 3,
+    "rule_statement": "Government action triggering individual rights receives strict, intermediate, or rational basis scrutiny depending on classification or burden, requiring tailored means and adequate governmental objectives.",
+    "elements": [
+      "State Action",
+      "Fundamental Rights",
+      "Equal Protection",
+      "Speech Regulation"
+    ],
+    "policy_rationales": [],
+    "common_traps": [],
+    "mnemonic": null,
+    "micro_hypos": [],
+    "source": "existing",
+    "exam_frequency": "medium"
+  },
+  {
+    "concept_id": "constitutional_law_commerce_clause__channels",
+    "name": "Commerce Clause - Channels",
+    "subject": "constitutional_law",
+    "difficulty": 3,
+    "rule_statement": "Congress can regulate channels of commerce",
+    "elements": [],
+    "policy_rationales": [],
+    "common_traps": [],
+    "mnemonic": null,
+    "micro_hypos": [],
+    "source": "auto-generated",
+    "exam_frequency": "medium"
+  },
+  {
+    "concept_id": "constitutional_law_commerce_clause__instrumentalities",
+    "name": "Commerce Clause - Instrumentalities",
+    "subject": "constitutional_law",
+    "difficulty": 3,
+    "rule_statement": "Regulation of instrumentalities",
+    "elements": [],
+    "policy_rationales": [],
+    "common_traps": [],
+    "mnemonic": null,
+    "micro_hypos": [],
+    "source": "auto-generated",
+    "exam_frequency": "medium"
+  },
+  {
+    "concept_id": "constitutional_law_commerce_clause__substantial_effects",
+    "name": "Commerce Clause - Substantial Effects",
+    "subject": "constitutional_law",
+    "difficulty": 3,
+    "rule_statement": "Economic activity affecting commerce",
+    "elements": [],
+    "policy_rationales": [],
+    "common_traps": [],
+    "mnemonic": null,
+    "micro_hypos": [],
+    "source": "auto-generated",
+    "exam_frequency": "medium"
+  },
+  {
+    "concept_id": "constitutional_law_necessary_and_proper",
+    "name": "Necessary and Proper",
+    "subject": "constitutional_law",
+    "difficulty": 3,
+    "rule_statement": "Means rationally related to enumerated power",
+    "elements": [],
+    "policy_rationales": [],
+    "common_traps": [],
+    "mnemonic": null,
+    "micro_hypos": [],
+    "source": "auto-generated",
+    "exam_frequency": "medium"
+  },
+  {
+    "concept_id": "constitutional_law_dormant_commerce_clause",
+    "name": "Dormant Commerce Clause",
+    "subject": "constitutional_law",
+    "difficulty": 3,
+    "rule_statement": "States cannot discriminate against interstate commerce",
+    "elements": [],
+    "policy_rationales": [],
+    "common_traps": [],
+    "mnemonic": null,
+    "micro_hypos": [],
+    "source": "auto-generated",
+    "exam_frequency": "medium"
+  }
+]
