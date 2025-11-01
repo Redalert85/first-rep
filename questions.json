@@ -1,0 +1,75 @@
+[
+  {
+    "subject": "Contracts",
+    "type": "mcq",
+    "question": "A offers to sell his car to B for $5,000. B accepts. What is the legal status of their agreement?",
+    "choices": [
+      "A valid contract exists.",
+      "No contract exists because there is no consideration.",
+      "No contract exists because the price is too low.",
+      "No contract exists because the parties did not sign anything."
+    ],
+    "answer": 0,
+    "feedback": [
+      "Correct! All contract elements are present: offer, acceptance, and consideration.",
+      "Incorrect. Consideration is present—the price is the consideration.",
+      "Incorrect. The law doesn't require a minimum price for a contract.",
+      "Incorrect. Contracts can be valid even if nothing is signed, unless required by the Statute of Frauds."
+    ],
+    "explanation": "A valid contract exists because there was an offer, acceptance, and consideration (the price)."
+  },
+  {
+    "subject": "Torts",
+    "type": "mcq",
+    "question": "Which of the following is a defense to battery?",
+    "choices": [
+      "Consent",
+      "Negligence",
+      "Duress",
+      "Strict liability"
+    ],
+    "answer": 0,
+    "feedback": [
+      "Correct! Consent is a recognized defense to battery.",
+      "Incorrect. Negligence is not a defense to battery.",
+      "Incorrect. Duress can be a defense to criminal liability, not battery.",
+      "Incorrect. Strict liability is not a defense; it's a liability standard."
+    ],
+    "explanation": "Consent is a defense to battery."
+  },
+  {
+    "subject": "Criminal Law",
+    "type": "essay",
+    "question": "Discuss whether a defendant who accidentally kills someone during a lawful act is guilty of homicide.",
+    "grading_keywords": ["mens rea", "actus reus", "lawful act", "criminal negligence", "involuntary manslaughter"],
+    "explanation": "For homicide, the prosecution must prove that the defendant caused the death of another human being. Mens rea (criminal intent) is required for most homicides. If the killing was truly accidental during a lawful act and not due to criminal negligence, the defendant may not be guilty of homicide. However, if their actions were reckless or grossly negligent, they could be guilty of involuntary manslaughter.",
+    "sample_answer": "A defendant who accidentally kills during a lawful act may not be guilty of homicide unless their actions involved criminal negligence. To be convicted, there must be both actus reus (the act of killing) and mens rea (intent or recklessness). If the act was lawful and not reckless, the defendant is not criminally liable. If the act was lawful but reckless or grossly negligent, involuntary manslaughter may apply."
+  },
+  {
+    "subject": "Constitutional Law",
+    "type": "mcq",
+    "question": "Which amendment protects against unreasonable searches and seizures?",
+    "choices": [
+      "First Amendment",
+      "Fourth Amendment",
+      "Fifth Amendment",
+      "Eighth Amendment"
+    ],
+    "answer": 1,
+    "feedback": [
+      "Incorrect. The First Amendment covers speech, religion, and assembly.",
+      "Correct! The Fourth Amendment protects against unreasonable searches and seizures.",
+      "Incorrect. The Fifth Amendment covers due process and self-incrimination.",
+      "Incorrect. The Eighth Amendment covers cruel and unusual punishment."
+    ],
+    "explanation": "The Fourth Amendment protects against unreasonable searches and seizures."
+  },
+  {
+    "subject": "Evidence",
+    "type": "essay",
+    "question": "Explain the hearsay rule and its exceptions.",
+    "grading_keywords": ["hearsay", "out of court statement", "truth of the matter", "exceptions", "declarant", "admissible"],
+    "explanation": "Hearsay is an out of court statement offered to prove the truth of the matter asserted. Hearsay is generally inadmissible unless it falls within an exception (e.g., present sense impression, excited utterance, business records). The rationale is that such statements are unreliable unless certain conditions are met.",
+    "sample_answer": "The hearsay rule excludes out of court statements offered for the truth of the matter asserted, unless an exception applies. Common exceptions include present sense impression, excited utterance, and business records. Statements by a declarant in court are generally admissible, while those made outside are not unless an exception applies."
+  }
+]
