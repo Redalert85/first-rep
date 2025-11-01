@@ -6,6 +6,7 @@ __pycache__/
 # Virtual env & local config
 .venv/
 .env
+venv/
 
 # Testing / coverage
 .pytest_cache/
@@ -19,3 +20,11 @@ htmlcov/
 .vscode/*
 !.vscode/settings.json
 !.vscode/launch.json
+
+# Web app runtime files
+data/sessions/
+data/users/
+*.log
+web/backend/venv/
+web/frontend/node_modules/
+web/frontend/dist/
