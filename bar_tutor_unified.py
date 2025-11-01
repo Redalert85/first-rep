@@ -3860,10 +3860,7 @@ class LegalKnowledgeGraph:
     def get_subject_concepts(self, subject: str) -> List[KnowledgeNode]:
         """Get all concepts for subject"""
         return [n for n in self.nodes.values() if n.subject == subject]
-    def get_subject_concepts(self, subject: str) -> List[KnowledgeNode]:    def get_subject_concepts(self, subject: str) -> List[KnowledgeNode]:
-        """Get all concepts for subject"""
-        return [n for n in self.nodes.values() if n.subject == subject]
-    
+
     def get_concept(self, concept_id: str) -> Optional[KnowledgeNode]:
         """Get specific concept"""
         return self.nodes.get(concept_id)
