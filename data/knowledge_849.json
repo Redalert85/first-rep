@@ -1,7 +1,7 @@
 {
   "metadata": {
     "version": "3.0",
-    "total_concepts": 849,
+    "total_concepts": 899,
     "subjects": [
       "civil_procedure",
       "constitutional_law",
@@ -7843,6 +7843,1840 @@
         "answer": "A",
         "why": "",
         "source": "generated",
+        "exam_frequency": "medium"
+      },
+      {
+        "concept_id": "evidence_hearsay_present_sense",
+        "name": "Present Sense Impression (803(1))",
+        "subject": "evidence",
+        "difficulty": 4,
+        "rule_statement": "Statement describing event made while declarant perceiving event or immediately thereafter",
+        "elements": [
+          "Describing event",
+          "While perceiving or immediately after",
+          "No time for fabrication"
+        ],
+        "policy_rationales": [
+          "No time to fabricate",
+          "Corroborated by event itself",
+          "Contemporaneous observation"
+        ],
+        "common_traps": [
+          "Confusing with excited utterance",
+          "Missing \"immediately\" requirement",
+          "Thinking any description qualifies"
+        ],
+        "teach": "PRESENT SENSE = Describing what you see RIGHT NOW. No time to lie.",
+        "question": "Witness testifies: \"As car ran red light, passenger said 'That car just ran the light!'\" Hearsay exception?",
+        "choices": {
+          "A": "Yes-present sense",
+          "B": "Yes-excited utterance",
+          "C": "No-hearsay",
+          "D": "No-no exception"
+        },
+        "answer": "A",
+        "why": "Statement describing event while/immediately after perceiving = present sense impression (803(1))",
+        "source": "expanded",
+        "exam_frequency": "high"
+      },
+      {
+        "concept_id": "evidence_hearsay_excited_utterance",
+        "name": "Excited Utterance (803(2))",
+        "subject": "evidence",
+        "difficulty": 4,
+        "rule_statement": "Statement relating to startling event made while under stress of excitement caused by event",
+        "elements": [
+          "Startling event",
+          "Statement relates to event",
+          "Made while under stress of excitement"
+        ],
+        "policy_rationales": [
+          "Stress prevents fabrication",
+          "Spontaneous reaction",
+          "Trustworthy due to emotional state"
+        ],
+        "common_traps": [
+          "Requiring immediate statement (can be later if still excited)",
+          "Confusing with present sense",
+          "Missing startling event requirement"
+        ],
+        "teach": "EXCITED UTTERANCE = Startling event + still excited when speaking. Adrenaline = no lying.",
+        "question": "2 hours after accident, victim (still shaking/crying) says \"He ran the light!\" Exception?",
+        "choices": {
+          "A": "Yes-still excited",
+          "B": "Yes-present sense",
+          "C": "No-too late",
+          "D": "No-not startling"
+        },
+        "answer": "A",
+        "why": "Time doesn't matter if still under stress of excitement. Still shaking = still excited.",
+        "source": "expanded",
+        "exam_frequency": "high"
+      },
+      {
+        "concept_id": "evidence_hearsay_state_of_mind",
+        "name": "State of Mind Exception (803(3))",
+        "subject": "evidence",
+        "difficulty": 5,
+        "rule_statement": "Statement of declarant's then-existing mental/emotional/physical condition",
+        "elements": [
+          "Then-existing condition",
+          "Not memory/belief about past",
+          "Declarant's own state"
+        ],
+        "exceptions": [
+          "Cannot prove fact remembered/believed (Hillmon doctrine limits)"
+        ],
+        "policy_rationales": [
+          "People know their own mental state",
+          "Hard to fake emotions",
+          "Necessity"
+        ],
+        "common_traps": [
+          "Using past statements about mental state",
+          "Thinking it proves past acts",
+          "Missing \"then-existing\" requirement"
+        ],
+        "teach": "STATE OF MIND = \"I feel X right now\" OK. \"I felt X yesterday\" NOT OK.",
+        "question": "Will contest. Statement \"I intend to leave all to charity\" admissible for intent?",
+        "choices": {
+          "A": "Yes-then-existing intent",
+          "B": "Yes-state of mind",
+          "C": "No-hearsay",
+          "D": "No-past belief"
+        },
+        "answer": "A",
+        "why": "Then-existing intent admissible under 803(3). Intent to do future act = state of mind.",
+        "source": "expanded",
+        "exam_frequency": "very high"
+      },
+      {
+        "concept_id": "evidence_hearsay_medical_diagnosis",
+        "name": "Statements for Medical Diagnosis (803(4))",
+        "subject": "evidence",
+        "difficulty": 4,
+        "rule_statement": "Statements made for medical diagnosis/treatment describing symptoms, cause, or source",
+        "elements": [
+          "Made for medical diagnosis/treatment",
+          "Reasonably pertinent to diagnosis/treatment",
+          "Declarant believes for treatment"
+        ],
+        "policy_rationales": [
+          "People don't lie to their doctors",
+          "Necessity for treatment",
+          "Reliable motivation"
+        ],
+        "common_traps": [
+          "Including fault statements (inadmissible)",
+          "Missing treatment purpose",
+          "Thinking any statement to doctor qualifies"
+        ],
+        "teach": "MEDICAL STATEMENTS = To get treated right, you tell truth. But NOT fault/blame.",
+        "question": "Patient tells doctor: \"My husband hit me.\" Admissible for medical diagnosis?",
+        "choices": {
+          "A": "Yes-all statements",
+          "B": "Yes-if pertinent",
+          "C": "No-fault",
+          "D": "No-hearsay"
+        },
+        "answer": "B",
+        "why": "Source of injury pertinent to diagnosis/treatment. \"Who\" matters for domestic violence treatment.",
+        "source": "expanded",
+        "exam_frequency": "high"
+      },
+      {
+        "concept_id": "evidence_hearsay_business_records",
+        "name": "Business Records Exception (803(6))",
+        "subject": "evidence",
+        "difficulty": 4,
+        "rule_statement": "Record of regularly conducted activity, made at/near time by person with knowledge, kept in regular course",
+        "elements": [
+          "Record of act/event/condition",
+          "Made at/near time",
+          "By person with knowledge",
+          "Regular business practice",
+          "Foundation testimony"
+        ],
+        "exceptions": [
+          "Opponent can show untrustworthiness",
+          "Prepared for litigation may be excluded"
+        ],
+        "policy_rationales": [
+          "Business relies on accuracy",
+          "Regular practice ensures reliability",
+          "Necessity"
+        ],
+        "common_traps": [
+          "Missing foundation witness",
+          "Including opinions beyond business scope",
+          "Forgetting litigation exclusion"
+        ],
+        "teach": "BUSINESS RECORDS = Regular + routine + reliable. Need foundation witness.",
+        "question": "Hospital record of patient vitals. Nurse who recorded it unavailable. Admissible?",
+        "choices": {
+          "A": "Yes-business record",
+          "B": "Yes-if foundation",
+          "C": "No-hearsay",
+          "D": "No-nurse unavailable"
+        },
+        "answer": "B",
+        "why": "Business record if foundation laid (custodian can testify about regular practice). Recorder need not testify.",
+        "source": "expanded",
+        "exam_frequency": "very high"
+      },
+      {
+        "concept_id": "evidence_hearsay_public_records",
+        "name": "Public Records Exception (803(8))",
+        "subject": "evidence",
+        "difficulty": 4,
+        "rule_statement": "Public office record of activities, matters observed if duty to report, or factual findings",
+        "elements": [
+          "Public office record",
+          "Activities OR observations OR factual findings",
+          "If observations: duty to report"
+        ],
+        "exceptions": [
+          "Police reports in criminal cases against defendant",
+          "Untrustworthy records excluded"
+        ],
+        "policy_rationales": [
+          "Public officials presumed reliable",
+          "Duty to report accurately",
+          "Necessity"
+        ],
+        "common_traps": [
+          "Using police reports against criminal defendant",
+          "Missing duty to report",
+          "Confusing with business records"
+        ],
+        "teach": "PUBLIC RECORDS = Government records reliable. BUT not police reports vs. criminal defendant.",
+        "question": "Prosecutor offers police report in criminal case. Admissible as public record?",
+        "choices": {
+          "A": "Yes-public record",
+          "B": "Yes-reliable",
+          "C": "No-803(8) bars",
+          "D": "No-hearsay"
+        },
+        "answer": "C",
+        "why": "803(8) specifically excludes law enforcement observations in criminal cases against defendant.",
+        "source": "expanded",
+        "exam_frequency": "high"
+      },
+      {
+        "concept_id": "evidence_hearsay_former_testimony",
+        "name": "Former Testimony (804(b)(1))",
+        "subject": "evidence",
+        "difficulty": 5,
+        "rule_statement": "Prior testimony given as witness, declarant unavailable, party had opportunity to cross-examine",
+        "elements": [
+          "Declarant unavailable (804(a))",
+          "Given as witness under oath",
+          "Prior proceeding",
+          "Party had opportunity/similar motive to cross-examine"
+        ],
+        "policy_rationales": [
+          "Oath ensures truthfulness",
+          "Cross-examination tested credibility",
+          "Necessity due to unavailability"
+        ],
+        "common_traps": [
+          "Missing unavailability requirement",
+          "Different party (need privity)",
+          "Missing similar motive to develop"
+        ],
+        "teach": "FORMER TESTIMONY = Previous sworn testimony + similar motive to cross. Need unavailability.",
+        "question": "Witness testified at preliminary hearing. Now unavailable. Admissible in trial?",
+        "choices": {
+          "A": "Yes-if similar motive",
+          "B": "Yes-prior testimony",
+          "C": "No-different proceeding",
+          "D": "No-hearsay"
+        },
+        "answer": "A",
+        "why": "Former testimony admissible if party (or predecessor) had similar motive to develop testimony.",
+        "source": "expanded",
+        "exam_frequency": "medium"
+      },
+      {
+        "concept_id": "evidence_hearsay_dying_declaration",
+        "name": "Dying Declaration (804(b)(2))",
+        "subject": "evidence",
+        "difficulty": 4,
+        "rule_statement": "Statement under belief of imminent death concerning cause/circumstances of death",
+        "elements": [
+          "Declarant unavailable",
+          "Belief death imminent",
+          "Concerning cause/circumstances of death",
+          "Homicide case OR civil case"
+        ],
+        "exceptions": [
+          "Criminal cases: only homicide",
+          "Declarant need not actually die"
+        ],
+        "policy_rationales": [
+          "No one lies on deathbed",
+          "Person about to meet Maker tells truth",
+          "Necessity"
+        ],
+        "common_traps": [
+          "Thinking declarant must die",
+          "Using in non-homicide criminal cases",
+          "Missing imminent death belief"
+        ],
+        "teach": "DYING DECLARATION = \"I'm about to die, here's who killed me.\" Homicide or civil only.",
+        "question": "Shooting victim believes he's dying, says \"Joe shot me.\" Survives. Admissible in Joe's assault trial?",
+        "choices": {
+          "A": "Yes-dying declaration",
+          "B": "Yes-excited utterance",
+          "C": "No-not homicide",
+          "D": "No-survived"
+        },
+        "answer": "C",
+        "why": "Dying declaration only admissible in homicide prosecutions (or civil). Assault = not homicide.",
+        "source": "expanded",
+        "exam_frequency": "high"
+      },
+      {
+        "concept_id": "evidence_hearsay_statement_against_interest",
+        "name": "Statement Against Interest (804(b)(3))",
+        "subject": "evidence",
+        "difficulty": 5,
+        "rule_statement": "Statement against declarant's interest when made, declarant unavailable, reasonable person would not have made unless true",
+        "elements": [
+          "Declarant unavailable",
+          "Against interest when made (pecuniary/proprietary/penal)",
+          "Reasonable person wouldn't say unless true"
+        ],
+        "exceptions": [
+          "Statement exposing declarant to criminal liability needs corroboration"
+        ],
+        "policy_rationales": [
+          "People don't say things against their interest unless true",
+          "Reliability from self-damaging nature"
+        ],
+        "common_traps": [
+          "Confusing with party admission (no unavailability needed for admission)",
+          "Missing \"when made\" timing",
+          "Forgetting corroboration for criminal"
+        ],
+        "teach": "AGAINST INTEREST = \"This hurts me, but it's true.\" Need unavailability (unlike party admission).",
+        "question": "Unavailable declarant said \"I robbed the bank, not defendant.\" Admissible for defendant?",
+        "choices": {
+          "A": "Yes-if corroborated",
+          "B": "Yes-against interest",
+          "C": "No-hearsay",
+          "D": "No-self-serving"
+        },
+        "answer": "A",
+        "why": "Statement exposing declarant to criminal liability admissible if corroborating circumstances show trustworthiness.",
+        "source": "expanded",
+        "exam_frequency": "high"
+      },
+      {
+        "concept_id": "evidence_hearsay_forfeiture",
+        "name": "Forfeiture by Wrongdoing (804(b)(6))",
+        "subject": "evidence",
+        "difficulty": 4,
+        "rule_statement": "Party forfeits hearsay objection if wrongfully caused declarant's unavailability to prevent testimony",
+        "elements": [
+          "Declarant unavailable",
+          "Party's wrongdoing caused unavailability",
+          "Intent to prevent testimony"
+        ],
+        "policy_rationales": [
+          "Prevent party from benefiting from wrongdoing",
+          "Equity principle",
+          "Ensure justice"
+        ],
+        "common_traps": [
+          "Missing intent requirement",
+          "Thinking any unavailability works",
+          "Not recognizing as exception"
+        ],
+        "teach": "FORFEITURE = You killed witness to shut them up? You lose hearsay objection.",
+        "question": "Defendant murders witness to prevent testimony. Witness's prior statements admissible?",
+        "choices": {
+          "A": "Yes-forfeiture",
+          "B": "Yes-dying declaration",
+          "C": "No-hearsay",
+          "D": "No-still need exception"
+        },
+        "answer": "A",
+        "why": "Forfeiture by wrongdoing: party loses hearsay objection by wrongfully causing unavailability.",
+        "source": "expanded",
+        "exam_frequency": "medium"
+      },
+      {
+        "concept_id": "evidence_hearsay_residual",
+        "name": "Residual Exception (807)",
+        "subject": "evidence",
+        "difficulty": 5,
+        "rule_statement": "Hearsay with equivalent guarantees of trustworthiness, material to issue, best available evidence, notice given",
+        "elements": [
+          "Equivalent trustworthiness guarantees",
+          "More probative than other evidence",
+          "Justice best served",
+          "Notice to adverse party"
+        ],
+        "policy_rationales": [
+          "Catchall for reliable hearsay",
+          "Flexibility for unforeseen situations",
+          "Justice over technicality"
+        ],
+        "common_traps": [
+          "Using as first resort (it's last resort)",
+          "Missing notice requirement",
+          "Not showing equivalent trustworthiness"
+        ],
+        "teach": "RESIDUAL = Catchall for reliable hearsay not fitting other exceptions. Last resort only.",
+        "question": "Reliable hearsay not fitting 803/804. Can use residual exception without notice?",
+        "choices": {
+          "A": "Yes-if reliable",
+          "B": "Yes-catchall",
+          "C": "No-need notice",
+          "D": "No-never"
+        },
+        "answer": "C",
+        "why": "Residual exception requires pretrial notice to adverse party (or showing good cause for non-notice).",
+        "source": "expanded",
+        "exam_frequency": "low"
+      },
+      {
+        "concept_id": "evidence_hearsay_party_admission",
+        "name": "Party Admission (801(d)(2))",
+        "subject": "evidence",
+        "difficulty": 4,
+        "rule_statement": "Statement by party-opponent offered against that party (not hearsay by definition)",
+        "elements": [
+          "Statement by party",
+          "Offered against that party",
+          "No unavailability required"
+        ],
+        "exceptions": [
+          "Not hearsay, so no need for unavailability"
+        ],
+        "policy_rationales": [
+          "Party cannot complain about own statement",
+          "Adversarial system allows use against party"
+        ],
+        "common_traps": [
+          "Thinking it's an exception (it's not hearsay)",
+          "Confusing with statement against interest",
+          "Missing no unavailability needed"
+        ],
+        "teach": "PARTY ADMISSION = NOT hearsay. Your own words used against you. No unavailability needed.",
+        "question": "Plaintiff offers defendant's prior statement against defendant. Hearsay exception needed?",
+        "choices": {
+          "A": "Yes-admission exception",
+          "B": "Yes-against interest",
+          "C": "No-not hearsay",
+          "D": "No-unavailable"
+        },
+        "answer": "C",
+        "why": "Party admission is NOT hearsay by definition under 801(d)(2). No exception needed.",
+        "source": "expanded",
+        "exam_frequency": "very high"
+      },
+      {
+        "concept_id": "evidence_hearsay_coconspirator",
+        "name": "Co-Conspirator Statement (801(d)(2)(E))",
+        "subject": "evidence",
+        "difficulty": 5,
+        "rule_statement": "Statement by co-conspirator during and in furtherance of conspiracy",
+        "elements": [
+          "Statement by co-conspirator",
+          "During conspiracy",
+          "In furtherance of conspiracy",
+          "Party was member"
+        ],
+        "policy_rationales": [
+          "Conspirators act as agents",
+          "Statements part of criminal enterprise",
+          "Necessity in conspiracy cases"
+        ],
+        "common_traps": [
+          "Using statements after conspiracy ends",
+          "Casual conversations not \"in furtherance\"",
+          "Missing temporal requirement"
+        ],
+        "teach": "CO-CONSPIRATOR = During + in furtherance of conspiracy. NOT casual chit-chat.",
+        "question": "After arrest, co-conspirator says \"We robbed the bank.\" Admissible against defendant?",
+        "choices": {
+          "A": "Yes-co-conspirator",
+          "B": "Yes-admission",
+          "C": "No-after arrest",
+          "D": "No-hearsay"
+        },
+        "answer": "C",
+        "why": "After arrest = conspiracy ended. Must be during conspiracy and in furtherance.",
+        "source": "expanded",
+        "exam_frequency": "high"
+      },
+      {
+        "concept_id": "evidence_hearsay_ancient_documents",
+        "name": "Ancient Documents (803(16))",
+        "subject": "evidence",
+        "difficulty": 3,
+        "rule_statement": "Statement in document 20+ years old, authentic, in place expected if authentic",
+        "elements": [
+          "Document 20+ years old",
+          "Authentic on face",
+          "Found in place expected"
+        ],
+        "policy_rationales": [
+          "Old documents presumed reliable",
+          "Difficulty getting witnesses after 20 years",
+          "Practical necessity"
+        ],
+        "common_traps": [
+          "Thinking any old document qualifies",
+          "Missing authentication requirement",
+          "Not checking age"
+        ],
+        "teach": "ANCIENT DOCUMENTS = 20+ years old + looks real + found right place = reliable.",
+        "question": "25-year-old deed found in courthouse records. Admissible without foundation?",
+        "choices": {
+          "A": "Yes-ancient document",
+          "B": "Yes-public record",
+          "C": "No-need witness",
+          "D": "No-hearsay"
+        },
+        "answer": "A",
+        "why": "20+ years old, authentic on face, proper place = ancient document exception.",
+        "source": "expanded",
+        "exam_frequency": "low"
+      },
+      {
+        "concept_id": "evidence_hearsay_refreshing_recollection",
+        "name": "Refreshing Recollection vs. Recorded Recollection",
+        "subject": "evidence",
+        "difficulty": 5,
+        "rule_statement": "Refreshing: witness uses anything to jog memory. Recorded recollection: 803(5) exception for past recording",
+        "elements": [
+          "Refreshing: witness testifies from refreshed memory",
+          "Recorded: document admitted when witness still can't remember"
+        ],
+        "exceptions": [
+          "Refreshing: document not admitted, just used",
+          "Recorded: requires foundation (made when fresh, accurate, now can't remember)"
+        ],
+        "policy_rationales": [
+          "Allow witnesses to testify accurately",
+          "Recognize memory limitations",
+          "Preserve accurate contemporaneous records"
+        ],
+        "common_traps": [
+          "Confusing the two concepts",
+          "Thinking refreshing document comes in as evidence",
+          "Missing foundation for recorded recollection"
+        ],
+        "teach": "REFRESHING = Jog memory, doc stays out. RECORDED RECOLLECTION = Can't remember even after, doc comes in (803(5)).",
+        "question": "Witness looks at notes, now remembers. Notes admissible as evidence?",
+        "choices": {
+          "A": "Yes-recorded recollection",
+          "B": "Yes-refreshing",
+          "C": "No-just refreshing",
+          "D": "No-hearsay"
+        },
+        "answer": "C",
+        "why": "Refreshing recollection: witness testifies from memory, document not admitted.",
+        "source": "expanded",
+        "exam_frequency": "high"
+      },
+      {
+        "concept_id": "evidence_character_defendant_criminal",
+        "name": "Character Evidence - Criminal Defendant",
+        "subject": "evidence",
+        "difficulty": 4,
+        "rule_statement": "Defendant may offer evidence of pertinent good character trait; prosecution may rebut",
+        "elements": [
+          "Defendant opens door",
+          "Pertinent trait only",
+          "Reputation or opinion testimony",
+          "Prosecution may rebut"
+        ],
+        "policy_rationales": [
+          "Defendant needs protection",
+          "Relevant to propensity",
+          "Fair rebuttal for prosecution"
+        ],
+        "common_traps": [
+          "Thinking prosecution can start with character",
+          "Missing pertinent trait requirement",
+          "Allowing specific acts on direct"
+        ],
+        "teach": "DEFENDANT CHARACTER = Defendant opens door with good character. Prosecution can rebut. Reputation/opinion only.",
+        "question": "Can prosecution start case by proving defendant's bad character for violence?",
+        "choices": {
+          "A": "Yes-propensity",
+          "B": "Yes-relevant",
+          "C": "No-defendant opens door",
+          "D": "No-never allowed"
+        },
+        "answer": "C",
+        "why": "Prosecution cannot initiate character evidence. Defendant must open door first (404(a)(2)(A)).",
+        "source": "expanded",
+        "exam_frequency": "very high"
+      },
+      {
+        "concept_id": "evidence_character_victim_criminal",
+        "name": "Character Evidence - Victim in Criminal Case",
+        "subject": "evidence",
+        "difficulty": 4,
+        "rule_statement": "Defendant may offer victim's pertinent character; prosecution may rebut and offer defendant's same trait",
+        "elements": [
+          "Defendant may offer victim character",
+          "Pertinent trait",
+          "Prosecution rebounds with defendant's same trait",
+          "Homicide: victim's peacefulness"
+        ],
+        "policy_rationales": [
+          "Self-defense claims need victim aggression evidence",
+          "Fair rebuttal for prosecution",
+          "Protect victims"
+        ],
+        "common_traps": [
+          "Missing \"same trait\" requirement for prosecution rebuttal",
+          "Forgetting homicide special rule",
+          "Allowing any trait"
+        ],
+        "teach": "VICTIM CHARACTER = Defense offers victim aggression \u2192 Prosecution offers defendant aggression (same trait).",
+        "question": "Self-defense case. Defense offers victim's violent character. Prosecution can offer defendant's what?",
+        "choices": {
+          "A": "Any bad character",
+          "B": "Violent character",
+          "C": "Nothing",
+          "D": "Dishonesty"
+        },
+        "answer": "B",
+        "why": "Prosecution may rebut with defendant's character for SAME TRAIT (violence here).",
+        "source": "expanded",
+        "exam_frequency": "high"
+      },
+      {
+        "concept_id": "evidence_character_404b",
+        "name": "Prior Bad Acts (404(b))",
+        "subject": "evidence",
+        "difficulty": 5,
+        "rule_statement": "Evidence of other crimes/wrongs inadmissible to prove propensity but admissible for MIMIC purposes",
+        "elements": [
+          "Not for propensity/character",
+          "MIMIC: Motive, Intent, Mistake (absence), Identity, Common plan"
+        ],
+        "exceptions": [
+          "Sexual assault/child molestation cases (414-415)",
+          "Notice requirement in criminal cases"
+        ],
+        "policy_rationales": [
+          "Propensity reasoning unfairly prejudicial",
+          "But other purposes probative",
+          "Balance probative vs. prejudicial"
+        ],
+        "common_traps": [
+          "Thinking prior acts always inadmissible",
+          "Missing MIMIC exceptions",
+          "Forgetting notice requirement"
+        ],
+        "teach": "PRIOR BAD ACTS = NO for propensity. YES for MIMIC (Motive Intent Mistake Identity Common plan).",
+        "question": "Prosecution offers defendant's prior robbery to show he's a robber in current robbery case. Admissible?",
+        "choices": {
+          "A": "Yes-relevant",
+          "B": "Yes-MIMIC",
+          "C": "No-propensity",
+          "D": "No-prejudicial"
+        },
+        "answer": "C",
+        "why": "To show \"he's a robber\" = propensity use. Inadmissible under 404(b).",
+        "source": "expanded",
+        "exam_frequency": "very high"
+      },
+      {
+        "concept_id": "evidence_character_methods",
+        "name": "Methods of Proving Character (405)",
+        "subject": "evidence",
+        "difficulty": 4,
+        "rule_statement": "Character proved by reputation/opinion; specific acts allowed on cross or if character is essential element",
+        "elements": [
+          "Reputation or opinion testimony",
+          "Specific acts on cross-examination only",
+          "Specific acts if essential element of claim"
+        ],
+        "policy_rationales": [
+          "Reputation/opinion less prejudicial",
+          "Specific acts too time-consuming",
+          "Cross needs testing grounds"
+        ],
+        "common_traps": [
+          "Allowing specific acts on direct (except essential element)",
+          "Confusing methods",
+          "Missing good faith basis for cross"
+        ],
+        "teach": "CHARACTER METHODS = Reputation/opinion on direct. Specific acts ONLY on cross (or if essential element).",
+        "question": "Direct examination of character witness. Can ask about specific good acts?",
+        "choices": {
+          "A": "Yes-if probative",
+          "B": "Yes-specific acts",
+          "C": "No-reputation/opinion only",
+          "D": "No-cross only"
+        },
+        "answer": "C",
+        "why": "Direct examination: reputation or opinion only. Specific acts allowed only on cross.",
+        "source": "expanded",
+        "exam_frequency": "high"
+      },
+      {
+        "concept_id": "evidence_character_habit",
+        "name": "Habit Evidence (406)",
+        "subject": "evidence",
+        "difficulty": 3,
+        "rule_statement": "Evidence of habit or routine practice admissible to prove conformity",
+        "elements": [
+          "Habit = specific response to repeated situation",
+          "Frequency and particularity",
+          "Admissible without corroboration"
+        ],
+        "policy_rationales": [
+          "Habits more reliable than character",
+          "Specific and regular",
+          "Probative value high"
+        ],
+        "common_traps": [
+          "Confusing habit with character",
+          "Not enough frequency",
+          "Thinking corroboration needed"
+        ],
+        "teach": "HABIT = Specific + regular + automatic. \"Always do X in situation Y.\" Admissible to prove conduct.",
+        "question": "\"Plaintiff always stops at that stop sign\" - admissible to show stopped on day in question?",
+        "choices": {
+          "A": "Yes-habit",
+          "B": "Yes-character",
+          "C": "No-propensity",
+          "D": "No-specific"
+        },
+        "answer": "A",
+        "why": "Specific regular behavior (always stops at same sign) = habit. Admissible under 406.",
+        "source": "expanded",
+        "exam_frequency": "medium"
+      },
+      {
+        "concept_id": "evidence_character_truthfulness_608",
+        "name": "Character for Truthfulness (608)",
+        "subject": "evidence",
+        "difficulty": 4,
+        "rule_statement": "Witness credibility may be attacked/supported by testimony about character for truthfulness",
+        "elements": [
+          "Reputation or opinion about truthfulness",
+          "Only after credibility attacked for support",
+          "Specific acts on cross with good faith basis"
+        ],
+        "policy_rationales": [
+          "Assess witness credibility",
+          "Reputation for lying matters",
+          "Limit to truthfulness trait"
+        ],
+        "common_traps": [
+          "Bolstering before attack",
+          "Using specific acts on direct",
+          "Missing good faith basis requirement"
+        ],
+        "teach": "TRUTHFULNESS = Attack credibility anytime. Support ONLY after attack. Reputation/opinion; specific acts on cross only.",
+        "question": "Can plaintiff support own witness's truthfulness before any attack?",
+        "choices": {
+          "A": "Yes-always",
+          "B": "Yes-if relevant",
+          "C": "No-only after attack",
+          "D": "No-never"
+        },
+        "answer": "C",
+        "why": "Cannot bolster witness credibility before credibility attacked (608(a)).",
+        "source": "expanded",
+        "exam_frequency": "high"
+      },
+      {
+        "concept_id": "evidence_character_conviction_609",
+        "name": "Impeachment by Conviction (609)",
+        "subject": "evidence",
+        "difficulty": 5,
+        "rule_statement": "Prior conviction admissible for impeachment if crime of dishonesty OR felony passing 403 balance",
+        "elements": [
+          "Crime of dishonesty: automatically admissible",
+          "Felony: balance probative vs. prejudicial (403)",
+          "Criminal defendant: reverse 403",
+          "10-year limit unless probative value substantially outweighs prejudice"
+        ],
+        "exceptions": [
+          "Pardon based on innocence",
+          "Juvenile convictions (limited)",
+          "Appeals pending (may use)"
+        ],
+        "policy_rationales": [
+          "Criminals less credible",
+          "Dishonesty crimes directly relevant",
+          "Balance prejudice to defendants"
+        ],
+        "common_traps": [
+          "Auto-admitting all felonies",
+          "Missing 10-year rule",
+          "Wrong 403 balance for criminal defendant"
+        ],
+        "teach": "CONVICTION IMPEACHMENT = Dishonesty crimes always. Felonies if pass 403 (reverse for crim defendant). 10-year limit.",
+        "question": "Criminal defendant testifies. 12-year-old felony conviction. Admissible to impeach?",
+        "choices": {
+          "A": "Yes-felony",
+          "B": "Yes-if probative",
+          "C": "No-10 year limit",
+          "D": "No-unless outweighs"
+        },
+        "answer": "D",
+        "why": "Convictions 10+ years old admissible ONLY if probative value substantially outweighs prejudice.",
+        "source": "expanded",
+        "exam_frequency": "very high"
+      },
+      {
+        "concept_id": "evidence_character_sexual_assault",
+        "name": "Character Evidence in Sexual Assault Cases (413-415)",
+        "subject": "evidence",
+        "difficulty": 4,
+        "rule_statement": "In sexual assault/child molestation cases, defendant's prior similar acts admissible for any purpose including propensity",
+        "elements": [
+          "Sexual assault or child molestation case",
+          "Prior offense of similar nature",
+          "Admissible for propensity",
+          "Notice requirement"
+        ],
+        "exceptions": [
+          "Special rules only for sexual offenses",
+          "Still subject to 403 balancing"
+        ],
+        "policy_rationales": [
+          "Pattern of sexual offenses highly probative",
+          "Protect victims",
+          "Recidivism rates high"
+        ],
+        "common_traps": [
+          "Applying to non-sexual crimes",
+          "Missing notice requirement",
+          "Forgetting still need 403 balance"
+        ],
+        "teach": "SEXUAL ASSAULT = Special rule. Prior similar acts admissible for propensity. Exception to general 404(b) rule.",
+        "question": "Rape prosecution. Evidence of defendant's prior rape 5 years ago. Admissible for propensity?",
+        "choices": {
+          "A": "Yes-413",
+          "B": "Yes-MIMIC",
+          "C": "No-404(b)",
+          "D": "No-too old"
+        },
+        "answer": "A",
+        "why": "Rule 413: prior sexual assault admissible for any purpose including propensity in sexual assault cases.",
+        "source": "expanded",
+        "exam_frequency": "medium"
+      },
+      {
+        "concept_id": "evidence_privilege_attorney_client",
+        "name": "Attorney-Client Privilege",
+        "subject": "evidence",
+        "difficulty": 4,
+        "rule_statement": "Confidential communications between attorney and client for legal advice privileged",
+        "elements": [
+          "Attorney-client relationship",
+          "Communication",
+          "Made in confidence",
+          "For purpose of legal advice"
+        ],
+        "exceptions": [
+          "Crime-fraud exception",
+          "Future crime/fraud",
+          "Waiver",
+          "Joint clients against each other"
+        ],
+        "policy_rationales": [
+          "Encourage full disclosure to attorney",
+          "Effective legal representation",
+          "Fundamental to adversary system"
+        ],
+        "common_traps": [
+          "Thinking covers facts",
+          "Missing crime-fraud exception",
+          "Forgetting waiver by disclosure to third party"
+        ],
+        "teach": "ATTORNEY-CLIENT = Confidential communications for legal advice. NOT facts, NOT future crimes.",
+        "question": "Client tells lawyer \"I plan to commit tax fraud.\" Privileged?",
+        "choices": {
+          "A": "Yes-privileged",
+          "B": "Yes-confidential",
+          "C": "No-crime-fraud",
+          "D": "No-not legal advice"
+        },
+        "answer": "C",
+        "why": "Crime-fraud exception: communications in furtherance of future crime/fraud not privileged.",
+        "source": "expanded",
+        "exam_frequency": "very high"
+      },
+      {
+        "concept_id": "evidence_privilege_work_product",
+        "name": "Work Product Doctrine",
+        "subject": "evidence",
+        "difficulty": 4,
+        "rule_statement": "Attorney's trial preparation materials protected from discovery absent substantial need",
+        "elements": [
+          "Prepared in anticipation of litigation",
+          "By attorney or representative",
+          "Core work product (mental impressions) strongly protected"
+        ],
+        "exceptions": [
+          "Substantial need + undue hardship to obtain equivalent",
+          "Core work product almost never discoverable"
+        ],
+        "policy_rationales": [
+          "Protect attorney's thought process",
+          "Prevent adversary free-riding",
+          "Zealous advocacy"
+        ],
+        "common_traps": [
+          "Confusing with attorney-client privilege",
+          "Thinking it's absolute",
+          "Missing \"anticipation of litigation\""
+        ],
+        "teach": "WORK PRODUCT = Attorney trial prep protected. Core mental impressions = super protected.",
+        "question": "Attorney's notes analyzing case strategy. Discoverable if opponent shows substantial need?",
+        "choices": {
+          "A": "Yes-substantial need",
+          "B": "Yes-work product",
+          "C": "No-core work product",
+          "D": "No-privileged"
+        },
+        "answer": "C",
+        "why": "Core work product (mental impressions, strategies) protected even with substantial need.",
+        "source": "expanded",
+        "exam_frequency": "high"
+      },
+      {
+        "concept_id": "evidence_privilege_spousal_immunity",
+        "name": "Spousal Immunity (Testimonial Privilege)",
+        "subject": "evidence",
+        "difficulty": 4,
+        "rule_statement": "Married person may refuse to testify against spouse in criminal case",
+        "elements": [
+          "Valid marriage at time of trial",
+          "Criminal case",
+          "Witness spouse holds privilege"
+        ],
+        "exceptions": [
+          "Crimes against spouse or children",
+          "Federal: witness spouse decides",
+          "Majority: defendant spouse decides"
+        ],
+        "policy_rationales": [
+          "Preserve marital harmony",
+          "Prevent forcing testimony against spouse",
+          "Family unit protection"
+        ],
+        "common_traps": [
+          "Applying to civil cases",
+          "Who holds privilege varies by jurisdiction",
+          "Forgetting \"at time of trial\" rule"
+        ],
+        "teach": "SPOUSAL IMMUNITY = Married now? Can refuse to testify against spouse (criminal only). Witness holds privilege.",
+        "question": "Husband charged with tax fraud. Wife witness to fraud. Must wife testify?",
+        "choices": {
+          "A": "Yes-relevant",
+          "B": "Yes-no privilege",
+          "C": "No-spousal immunity",
+          "D": "No-if choose not to"
+        },
+        "answer": "D",
+        "why": "Spousal immunity (testimonial privilege): witness spouse may refuse to testify in criminal case.",
+        "source": "expanded",
+        "exam_frequency": "high"
+      },
+      {
+        "concept_id": "evidence_privilege_marital_communications",
+        "name": "Marital Communications Privilege",
+        "subject": "evidence",
+        "difficulty": 4,
+        "rule_statement": "Confidential communications between spouses during valid marriage privileged",
+        "elements": [
+          "Confidential communication",
+          "During valid marriage",
+          "Both spouses hold privilege",
+          "Survives divorce"
+        ],
+        "exceptions": [
+          "Crimes against spouse/children",
+          "Not confidential if third party present"
+        ],
+        "policy_rationales": [
+          "Encourage marital communications",
+          "Protect intimacy",
+          "Preserve family unit"
+        ],
+        "common_traps": [
+          "Confusing with spousal immunity",
+          "Missing \"during marriage\" timing",
+          "Forgetting survives divorce"
+        ],
+        "teach": "MARITAL COMMUNICATIONS = Said during marriage in confidence? Privileged forever. Both spouses hold it.",
+        "question": "Husband told wife \"I committed fraud\" during marriage. Now divorced. Wife can testify?",
+        "choices": {
+          "A": "Yes-divorced",
+          "B": "Yes-crime",
+          "C": "No-marital privilege",
+          "D": "No-unless wife waives"
+        },
+        "answer": "C",
+        "why": "Marital communications privilege survives divorce. Communication during marriage protected.",
+        "source": "expanded",
+        "exam_frequency": "high"
+      },
+      {
+        "concept_id": "evidence_privilege_psychotherapist",
+        "name": "Psychotherapist-Patient Privilege",
+        "subject": "evidence",
+        "difficulty": 3,
+        "rule_statement": "Confidential communications to licensed psychotherapist for diagnosis/treatment privileged",
+        "elements": [
+          "Licensed psychotherapist",
+          "Confidential communication",
+          "For diagnosis/treatment",
+          "Patient holds privilege"
+        ],
+        "exceptions": [
+          "Patient-litigant exception",
+          "Dangerous patient",
+          "Court-ordered examination"
+        ],
+        "policy_rationales": [
+          "Effective mental health treatment",
+          "Encourage full disclosure",
+          "Protect privacy"
+        ],
+        "common_traps": [
+          "Applying to non-licensed counselors",
+          "Missing dangerous patient exception",
+          "Forgetting patient-litigant exception"
+        ],
+        "teach": "PSYCHOTHERAPIST = Mental health treatment confidential. Patient holds privilege.",
+        "question": "Patient sues for emotional distress, putting mental state at issue. Therapy communications privileged?",
+        "choices": {
+          "A": "Yes-privileged",
+          "B": "Yes-unless waived",
+          "C": "No-patient-litigant exception",
+          "D": "No-in suit"
+        },
+        "answer": "C",
+        "why": "Patient-litigant exception: by putting mental state at issue, patient waives psychotherapist privilege.",
+        "source": "expanded",
+        "exam_frequency": "medium"
+      },
+      {
+        "concept_id": "evidence_privilege_physician_patient",
+        "name": "Physician-Patient Privilege",
+        "subject": "evidence",
+        "difficulty": 3,
+        "rule_statement": "In some states, communications to physician for treatment privileged (not in federal law)",
+        "elements": [
+          "State privilege only (no federal)",
+          "Communication for treatment",
+          "Patient holds privilege"
+        ],
+        "exceptions": [
+          "Patient-litigant exception",
+          "Court-ordered examination",
+          "Many states don't recognize"
+        ],
+        "policy_rationales": [
+          "Encourage seeking treatment",
+          "Medical privacy",
+          "Effective healthcare"
+        ],
+        "common_traps": [
+          "Thinking exists in federal court",
+          "Confusing with psychotherapist privilege",
+          "Missing patient-litigant exception"
+        ],
+        "teach": "PHYSICIAN-PATIENT = State privilege only (NO federal privilege). Patient-litigant exception common.",
+        "question": "Federal court diversity case. State has physician-patient privilege. Applies in federal court?",
+        "choices": {
+          "A": "Yes-state privilege",
+          "B": "Yes-Erie",
+          "C": "No-federal rules",
+          "D": "Depends on 501"
+        },
+        "answer": "D",
+        "why": "FRE 501: state law privileges apply in diversity cases. Federal common law in federal question cases.",
+        "source": "expanded",
+        "exam_frequency": "medium"
+      },
+      {
+        "concept_id": "evidence_privilege_waiver",
+        "name": "Privilege Waiver",
+        "subject": "evidence",
+        "difficulty": 4,
+        "rule_statement": "Privilege waived by voluntary disclosure or by putting privileged matter at issue",
+        "elements": [
+          "Voluntary disclosure to third party",
+          "Putting matter at issue (patient-litigant)",
+          "Failure to claim privilege"
+        ],
+        "exceptions": [
+          "Inadvertent disclosure (may not waive if steps taken)",
+          "Partial disclosure may waive all on topic"
+        ],
+        "policy_rationales": [
+          "Cannot use privilege as shield and sword",
+          "Fairness",
+          "Prevent selective disclosure"
+        ],
+        "common_traps": [
+          "Thinking inadvertent disclosure always waives",
+          "Missing partial disclosure rule",
+          "Forgetting topic waiver"
+        ],
+        "teach": "PRIVILEGE WAIVER = Disclose to third party OR put at issue = lose privilege. Can't have it both ways.",
+        "question": "Client tells friend what lawyer said. Attorney-client privilege waived?",
+        "choices": {
+          "A": "Yes-disclosed",
+          "B": "Yes-third party",
+          "C": "No-friend not party",
+          "D": "No-still confidential"
+        },
+        "answer": "A",
+        "why": "Voluntary disclosure to third party waives attorney-client privilege. No longer confidential.",
+        "source": "expanded",
+        "exam_frequency": "high"
+      },
+      {
+        "concept_id": "evidence_expert_daubert",
+        "name": "Daubert Standard for Expert Testimony",
+        "subject": "evidence",
+        "difficulty": 5,
+        "rule_statement": "Expert testimony admissible if scientific knowledge will help trier of fact and reliable methodology",
+        "elements": [
+          "Qualified expert",
+          "Scientific/technical knowledge",
+          "Reliable methodology (Daubert factors)",
+          "Relevant/helpful to fact-finder"
+        ],
+        "exceptions": [
+          "Daubert factors not exclusive checklist",
+          "Judge has discretion"
+        ],
+        "policy_rationales": [
+          "Screen junk science",
+          "Ensure reliability",
+          "Help jury with complex matters"
+        ],
+        "common_traps": [
+          "Applying Frye in federal court",
+          "Thinking Daubert factors mandatory",
+          "Missing gatekeeper role"
+        ],
+        "teach": "DAUBERT = Federal standard. Reliable methodology + helpful = admissible. Judge is gatekeeper.",
+        "question": "Expert uses novel scientific method not peer-reviewed. Admissible under Daubert?",
+        "choices": {
+          "A": "Yes-if qualified",
+          "B": "Yes-novel OK",
+          "C": "No-need peer review",
+          "D": "Maybe-judge decides"
+        },
+        "answer": "D",
+        "why": "Peer review is one Daubert factor, not requirement. Judge has discretion as gatekeeper.",
+        "source": "expanded",
+        "exam_frequency": "high"
+      },
+      {
+        "concept_id": "evidence_expert_frye",
+        "name": "Frye Standard (General Acceptance)",
+        "subject": "evidence",
+        "difficulty": 4,
+        "rule_statement": "Scientific evidence admissible if methodology generally accepted in relevant scientific community",
+        "elements": [
+          "Scientific method",
+          "General acceptance in field",
+          "Relevant scientific community"
+        ],
+        "exceptions": [
+          "Some states still use Frye",
+          "Federal courts use Daubert"
+        ],
+        "policy_rationales": [
+          "Conservative approach",
+          "Rely on scientific consensus",
+          "Avoid novel methods"
+        ],
+        "common_traps": [
+          "Using in federal court (Daubert superseded)",
+          "Missing \"general acceptance\" requirement",
+          "Confusing with Daubert"
+        ],
+        "teach": "FRYE = Old standard. Generally accepted in scientific community? Some states still use.",
+        "question": "State court using Frye. Novel but reliable scientific method. Admissible?",
+        "choices": {
+          "A": "Yes-reliable",
+          "B": "Yes-Daubert",
+          "C": "No-not generally accepted",
+          "D": "No-novel"
+        },
+        "answer": "C",
+        "why": "Under Frye, must be generally accepted in scientific community. Novel = not accepted yet.",
+        "source": "expanded",
+        "exam_frequency": "medium"
+      },
+      {
+        "concept_id": "evidence_expert_702",
+        "name": "Expert Testimony Requirements (FRE 702)",
+        "subject": "evidence",
+        "difficulty": 4,
+        "rule_statement": "Expert may testify if qualified and testimony based on sufficient facts/data and reliable principles reliably applied",
+        "elements": [
+          "Expert qualified by knowledge/skill/experience/training/education",
+          "Help trier of fact",
+          "Sufficient facts/data",
+          "Reliable principles",
+          "Reliably applied"
+        ],
+        "policy_rationales": [
+          "Ensure expertise",
+          "Screen unreliable opinions",
+          "Help fact-finder"
+        ],
+        "common_traps": [
+          "Missing \"reliably applied\" requirement",
+          "Thinking qualification alone sufficient",
+          "Forgetting sufficient basis"
+        ],
+        "teach": "FRE 702 = Qualified + reliable principles reliably applied + helpful = admissible expert testimony.",
+        "question": "Doctor uses reliable medical principles but applies them incorrectly. Admissible under 702?",
+        "choices": {
+          "A": "Yes-qualified",
+          "B": "Yes-reliable principles",
+          "C": "No-not reliably applied",
+          "D": "No-not expert"
+        },
+        "answer": "C",
+        "why": "Must reliably APPLY principles, not just use reliable principles. Application matters.",
+        "source": "expanded",
+        "exam_frequency": "high"
+      },
+      {
+        "concept_id": "evidence_expert_703",
+        "name": "Bases of Expert Opinion (FRE 703)",
+        "subject": "evidence",
+        "difficulty": 4,
+        "rule_statement": "Expert may base opinion on facts/data reasonably relied upon by experts in field, even if inadmissible",
+        "elements": [
+          "Facts reasonably relied upon in field",
+          "May be inadmissible evidence",
+          "Probative value vs. prejudice (if disclosed to jury)"
+        ],
+        "policy_rationales": [
+          "Experts work with all information",
+          "Practical reality",
+          "Still protect jury from prejudice"
+        ],
+        "common_traps": [
+          "Thinking expert can only use admissible evidence",
+          "Admitting basis without 403 analysis",
+          "Missing disclosure limitations"
+        ],
+        "teach": "FRE 703 = Expert can use inadmissible evidence as basis if reasonably relied upon in field.",
+        "question": "Expert bases opinion on hearsay report. Can expert testify to opinion?",
+        "choices": {
+          "A": "Yes-if reliable",
+          "B": "Yes-if reasonably relied upon",
+          "C": "No-hearsay inadmissible",
+          "D": "No-need exception"
+        },
+        "answer": "B",
+        "why": "Expert can base opinion on inadmissible evidence if reasonably relied upon by experts in field.",
+        "source": "expanded",
+        "exam_frequency": "high"
+      },
+      {
+        "concept_id": "evidence_expert_704",
+        "name": "Opinion on Ultimate Issue (FRE 704)",
+        "subject": "evidence",
+        "difficulty": 3,
+        "rule_statement": "Expert may opine on ultimate issue except in criminal cases regarding defendant's mental state",
+        "elements": [
+          "Ultimate issue testimony allowed",
+          "Exception: criminal defendant mental state",
+          "Still must be helpful"
+        ],
+        "exceptions": [
+          "Cannot testify defendant had/lacked mental state in criminal case"
+        ],
+        "policy_rationales": [
+          "Help jury",
+          "Modern approach",
+          "But protect criminal defendants from dispositive expert testimony"
+        ],
+        "common_traps": [
+          "Thinking ultimate issue always barred",
+          "Missing criminal mental state exception",
+          "Confusing with 701"
+        ],
+        "teach": "FRE 704 = Expert CAN opine on ultimate issue (except criminal defendant mental state).",
+        "question": "Civil case. Can expert testify \"Defendant was negligent\"?",
+        "choices": {
+          "A": "Yes-ultimate issue OK",
+          "B": "Yes-helpful",
+          "C": "No-ultimate issue",
+          "D": "No-jury decides"
+        },
+        "answer": "A",
+        "why": "Ultimate issue testimony permitted under 704. Expert may opine on negligence in civil case.",
+        "source": "expanded",
+        "exam_frequency": "medium"
+      },
+      {
+        "concept_id": "evidence_expert_lay_opinion",
+        "name": "Lay vs. Expert Opinion (FRE 701 vs. 702)",
+        "subject": "evidence",
+        "difficulty": 4,
+        "rule_statement": "Lay opinion admissible if rationally based on perception and helpful; expert opinion for specialized knowledge",
+        "elements": [
+          "Lay (701): perception-based, not specialized knowledge",
+          "Expert (702): specialized knowledge needed",
+          "Lay: cannot be based on scientific/technical knowledge"
+        ],
+        "policy_rationales": [
+          "Allow common sense observations",
+          "Distinguish from expert testimony",
+          "Prevent disguised expert testimony"
+        ],
+        "common_traps": [
+          "Allowing lay witnesses to give expert opinions",
+          "Missing perception requirement for lay",
+          "Using 701 for specialized knowledge"
+        ],
+        "teach": "LAY OPINION (701) = What you saw/experienced. EXPERT (702) = Specialized knowledge needed.",
+        "question": "Lay witness: \"Car was going 70 mph.\" Admissible as lay opinion?",
+        "choices": {
+          "A": "Yes-lay opinion",
+          "B": "Yes-perception",
+          "C": "No-need expert",
+          "D": "No-speculation"
+        },
+        "answer": "A",
+        "why": "Speed estimation from observation = lay opinion (701). Rationally based on perception.",
+        "source": "expanded",
+        "exam_frequency": "high"
+      },
+      {
+        "concept_id": "evidence_impeachment_prior_inconsistent",
+        "name": "Prior Inconsistent Statement (613)",
+        "subject": "evidence",
+        "difficulty": 4,
+        "rule_statement": "Witness may be impeached by showing prior inconsistent statement if given opportunity to explain",
+        "elements": [
+          "Prior statement",
+          "Inconsistent with trial testimony",
+          "Witness given opportunity to explain",
+          "Extrinsic evidence allowed if opportunity given"
+        ],
+        "exceptions": [
+          "May use without opportunity if witness still available",
+          "Collateral matters - no extrinsic evidence"
+        ],
+        "policy_rationales": [
+          "Test credibility",
+          "Show witness unreliable",
+          "Fairness"
+        ],
+        "common_traps": [
+          "Thinking must confront before using",
+          "Using extrinsic evidence on collateral matters",
+          "Missing explain/deny opportunity"
+        ],
+        "teach": "PRIOR INCONSISTENT = Said X before, Y now? Shows unreliable. Give chance to explain.",
+        "question": "Impeach with prior statement. Must confront witness with statement first?",
+        "choices": {
+          "A": "Yes-always",
+          "B": "Yes-before extrinsic",
+          "C": "No-if opportunity given",
+          "D": "No-never required"
+        },
+        "answer": "C",
+        "why": "Need opportunity to explain but can give at any time. Modern rule allows extrinsic evidence if opportunity given.",
+        "source": "expanded",
+        "exam_frequency": "high"
+      },
+      {
+        "concept_id": "evidence_impeachment_bias",
+        "name": "Impeachment by Bias",
+        "subject": "evidence",
+        "difficulty": 3,
+        "rule_statement": "Witness may be impeached by showing bias, prejudice, or motive to lie",
+        "elements": [
+          "Bias/prejudice/motive",
+          "Always relevant to credibility",
+          "Extrinsic evidence allowed"
+        ],
+        "policy_rationales": [
+          "Central to credibility",
+          "Always probative",
+          "Constitutional right (Confrontation Clause)"
+        ],
+        "common_traps": [
+          "Thinking collateral matter rule applies to bias",
+          "Missing that bias always admissible",
+          "Confusing with character"
+        ],
+        "teach": "BIAS = Always relevant to impeach. NOT collateral. Can use extrinsic evidence.",
+        "question": "Witness is plaintiff's brother. Can cross-examine about relationship to show bias?",
+        "choices": {
+          "A": "Yes-bias relevant",
+          "B": "Yes-credibility",
+          "C": "No-collateral",
+          "D": "No-unfair"
+        },
+        "answer": "A",
+        "why": "Bias always relevant to credibility. Family relationship shows potential bias/motive.",
+        "source": "expanded",
+        "exam_frequency": "high"
+      },
+      {
+        "concept_id": "evidence_impeachment_sensory_deficiency",
+        "name": "Impeachment by Sensory/Mental Deficiency",
+        "subject": "evidence",
+        "difficulty": 3,
+        "rule_statement": "Witness may be impeached by showing deficiency in capacity to observe, remember, or relate",
+        "elements": [
+          "Sensory deficiency (sight, hearing)",
+          "Memory problems",
+          "Mental capacity",
+          "Drug/alcohol impairment"
+        ],
+        "policy_rationales": [
+          "Test ability to perceive and relate",
+          "Credibility fundamental",
+          "Jury needs to know limitations"
+        ],
+        "common_traps": [
+          "Thinking it attacks character",
+          "Missing specific vs. general capacity",
+          "Not distinguishing from bias"
+        ],
+        "teach": "SENSORY/MENTAL = Could witness see/hear/remember? Affects ability to testify accurately.",
+        "question": "Witness was drunk at time of observation. Can cross-examine about intoxication?",
+        "choices": {
+          "A": "Yes-affects perception",
+          "B": "Yes-credibility",
+          "C": "No-character",
+          "D": "No-unfair"
+        },
+        "answer": "A",
+        "why": "Intoxication at time of observation affects ability to perceive. Relevant to impeach.",
+        "source": "expanded",
+        "exam_frequency": "medium"
+      },
+      {
+        "concept_id": "evidence_impeachment_contradiction",
+        "name": "Impeachment by Contradiction",
+        "subject": "evidence",
+        "difficulty": 4,
+        "rule_statement": "Witness may be impeached by showing testimony contradicted by other evidence",
+        "elements": [
+          "Testimony contradicted",
+          "May use extrinsic evidence if not collateral",
+          "Collateral matters - no extrinsic evidence"
+        ],
+        "exceptions": [
+          "Bias always non-collateral",
+          "Conviction always non-collateral"
+        ],
+        "policy_rationales": [
+          "Show witness unreliable",
+          "Test credibility",
+          "Jury weighs evidence"
+        ],
+        "common_traps": [
+          "Using extrinsic evidence on collateral matters",
+          "Missing collateral matter rule",
+          "Confusing with prior inconsistent"
+        ],
+        "teach": "CONTRADICTION = Witness wrong about something? If not collateral, can prove up. If collateral, stuck with answer.",
+        "question": "Cross: \"Didn't you wear blue shirt?\" Witness: \"No, red.\" Can call second witness to prove blue shirt?",
+        "choices": {
+          "A": "Yes-contradiction",
+          "B": "Yes-extrinsic",
+          "C": "No-collateral",
+          "D": "No-irrelevant"
+        },
+        "answer": "C",
+        "why": "Shirt color = collateral matter (not relevant to case). Cannot use extrinsic evidence. Stuck with answer.",
+        "source": "expanded",
+        "exam_frequency": "high"
+      },
+      {
+        "concept_id": "evidence_impeachment_rehabilitation",
+        "name": "Rehabilitation of Witness",
+        "subject": "evidence",
+        "difficulty": 4,
+        "rule_statement": "After credibility attacked, witness may be rehabilitated by prior consistent statement or character for truthfulness",
+        "elements": [
+          "Credibility must be attacked first",
+          "Prior consistent statement if charge of recent fabrication/improper motive",
+          "Character for truthfulness if character attacked"
+        ],
+        "exceptions": [
+          "Cannot bolster before attack",
+          "Prior consistent must predate motive to fabricate"
+        ],
+        "policy_rationales": [
+          "Fair response to attack",
+          "Prevent preemptive bolstering",
+          "Allow correction of false impressions"
+        ],
+        "common_traps": [
+          "Bolstering before attack",
+          "Using prior consistent without fabrication charge",
+          "Missing predate requirement"
+        ],
+        "teach": "REHABILITATION = Credibility attacked? Can rehabilitate with prior consistent (if motive charged) or character.",
+        "question": "Witness impeached by prior inconsistent statement. Can rehabilitate with character evidence?",
+        "choices": {
+          "A": "Yes-impeached",
+          "B": "Yes-rehabilitate",
+          "C": "No-not character attack",
+          "D": "Depends"
+        },
+        "answer": "D",
+        "why": "Character for truthfulness only if character attacked. Prior inconsistent may not be character attack.",
+        "source": "expanded",
+        "exam_frequency": "medium"
+      },
+      {
+        "concept_id": "evidence_impeachment_religious_beliefs",
+        "name": "Religious Beliefs Inadmissible for Credibility (610)",
+        "subject": "evidence",
+        "difficulty": 2,
+        "rule_statement": "Cannot impeach or support credibility by evidence of religious beliefs or opinions",
+        "elements": [
+          "Religious beliefs",
+          "Cannot attack or support credibility",
+          "Absolute rule"
+        ],
+        "exceptions": [
+          "May show bias/interest if religion relevant to bias"
+        ],
+        "policy_rationales": [
+          "First Amendment",
+          "Religious freedom",
+          "Prevent prejudice"
+        ],
+        "common_traps": [
+          "Using religion to attack credibility",
+          "Confusing with bias exception",
+          "Thinking shows truthfulness"
+        ],
+        "teach": "RELIGIOUS BELIEFS = Cannot impeach or support credibility. Off limits under 610.",
+        "question": "Cross-examination: \"You're an atheist, correct?\" to attack credibility. Permissible?",
+        "choices": {
+          "A": "Yes-credibility",
+          "B": "Yes-relevant",
+          "C": "No-610 bars",
+          "D": "No-unless bias"
+        },
+        "answer": "C",
+        "why": "FRE 610 prohibits using religious beliefs (or lack thereof) to attack credibility.",
+        "source": "expanded",
+        "exam_frequency": "low"
+      },
+      {
+        "concept_id": "evidence_relevance_401",
+        "name": "Relevance Definition (FRE 401)",
+        "subject": "evidence",
+        "difficulty": 2,
+        "rule_statement": "Evidence relevant if it has any tendency to make fact more or less probable",
+        "elements": [
+          "Tendency to make fact more/less probable",
+          "Fact of consequence",
+          "Very low threshold"
+        ],
+        "policy_rationales": [
+          "Broad standard",
+          "Let all probative evidence in",
+          "403 screens prejudice"
+        ],
+        "common_traps": [
+          "Requiring high probative value",
+          "Confusing with 403",
+          "Thinking must prove fact"
+        ],
+        "teach": "RELEVANCE = ANY tendency to make fact more/less probable. Very low bar.",
+        "question": "Evidence makes fact 1% more probable. Relevant under 401?",
+        "choices": {
+          "A": "Yes-any tendency",
+          "B": "Yes-probative",
+          "C": "No-too little",
+          "D": "No-not significant"
+        },
+        "answer": "A",
+        "why": "ANY tendency sufficient for relevance. Even 1% probability increase = relevant under 401.",
+        "source": "expanded",
+        "exam_frequency": "high"
+      },
+      {
+        "concept_id": "evidence_403_balancing",
+        "name": "Exclusion for Unfair Prejudice (FRE 403)",
+        "subject": "evidence",
+        "difficulty": 4,
+        "rule_statement": "Court may exclude relevant evidence if probative value substantially outweighed by unfair prejudice",
+        "elements": [
+          "Evidence must be relevant",
+          "Unfair prejudice (not just damaging)",
+          "Substantially outweighs (high bar)",
+          "Confusion, waste of time also considered"
+        ],
+        "policy_rationales": [
+          "Balance probative vs. prejudicial",
+          "Ensure fair trial",
+          "Judicial efficiency"
+        ],
+        "common_traps": [
+          "Thinking \"substantially\" favors exclusion (it favors admission)",
+          "Confusing harmful with unfairly prejudicial",
+          "Missing discretionary nature"
+        ],
+        "teach": "FRE 403 = Probative value SUBSTANTIALLY outweighed by unfair prejudice? High bar to exclude.",
+        "question": "Gruesome photo relevant to injury. Prejudicial to defendant. Admissible?",
+        "choices": {
+          "A": "Yes-unless substantially outweighed",
+          "B": "Yes-relevant",
+          "C": "No-prejudicial",
+          "D": "No-gruesome"
+        },
+        "answer": "A",
+        "why": "High bar for 403 exclusion. Probative value must be SUBSTANTIALLY outweighed. Damaging \u2260 unfairly prejudicial.",
+        "source": "expanded",
+        "exam_frequency": "very high"
+      },
+      {
+        "concept_id": "evidence_authentication_901",
+        "name": "Authentication (FRE 901)",
+        "subject": "evidence",
+        "difficulty": 3,
+        "rule_statement": "Evidence must be authenticated by showing it is what proponent claims",
+        "elements": [
+          "Proponent shows what claimed",
+          "Sufficient evidence for jury to find authentic",
+          "Low threshold"
+        ],
+        "exceptions": [
+          "Self-authenticating documents (902)",
+          "Stipulation"
+        ],
+        "policy_rationales": [
+          "Ensure genuine",
+          "Foundation requirement",
+          "Prevent fraud"
+        ],
+        "common_traps": [
+          "Requiring absolute proof",
+          "Missing low threshold",
+          "Confusing with best evidence rule"
+        ],
+        "teach": "AUTHENTICATION = Show it's what you claim. Low bar - enough for jury to find authentic.",
+        "question": "Letter claimed written by defendant. How authenticate?",
+        "choices": {
+          "A": "Handwriting expert only",
+          "B": "Defendant admission only",
+          "C": "Any sufficient evidence",
+          "D": "Original required"
+        },
+        "answer": "C",
+        "why": "Authentication: any evidence sufficient to support finding it's what claimed. Multiple methods OK.",
+        "source": "expanded",
+        "exam_frequency": "high"
+      },
+      {
+        "concept_id": "evidence_best_evidence",
+        "name": "Best Evidence Rule (FRE 1002)",
+        "subject": "evidence",
+        "difficulty": 4,
+        "rule_statement": "Original document required to prove contents of writing, recording, or photograph",
+        "elements": [
+          "Proving contents",
+          "Writing, recording, or photograph",
+          "Original or duplicate unless excuse"
+        ],
+        "exceptions": [
+          "Duplicate admissible unless genuine question",
+          "Excuses: lost, destroyed, in opponent possession",
+          "Not needed if not proving contents"
+        ],
+        "policy_rationales": [
+          "Prevent fraud",
+          "Ensure accuracy",
+          "Incentivize preservation"
+        ],
+        "common_traps": [
+          "Applying when not proving contents",
+          "Thinking always need original (duplicate OK)",
+          "Missing exceptions"
+        ],
+        "teach": "BEST EVIDENCE = Proving contents of document? Need original or duplicate (unless excused).",
+        "question": "Witness testifies to what he saw at event. Event was photographed. Need photo?",
+        "choices": {
+          "A": "Yes-best evidence",
+          "B": "Yes-photo exists",
+          "C": "No-not proving contents",
+          "D": "No-witness enough"
+        },
+        "answer": "C",
+        "why": "Best evidence rule only applies when proving CONTENTS. Witness testifying to observation, not photo contents.",
+        "source": "expanded",
+        "exam_frequency": "high"
+      },
+      {
+        "concept_id": "evidence_subsequent_remedial",
+        "name": "Subsequent Remedial Measures (FRE 407)",
+        "subject": "evidence",
+        "difficulty": 4,
+        "rule_statement": "Evidence of repairs/changes after event inadmissible to prove negligence/defect but admissible for other purposes",
+        "elements": [
+          "Subsequent to event",
+          "Remedial measure",
+          "Inadmissible for negligence/defect",
+          "Admissible for: ownership, control, feasibility, impeachment"
+        ],
+        "policy_rationales": [
+          "Encourage repairs",
+          "Don't punish safety improvements",
+          "Public policy"
+        ],
+        "common_traps": [
+          "Thinking always inadmissible",
+          "Missing other purposes exceptions",
+          "Applying to strict liability"
+        ],
+        "teach": "SUBSEQUENT REMEDIAL = Fixed it after? Can't prove negligence/defect. BUT can prove control, feasibility, impeach.",
+        "question": "After accident, defendant fixed stairs. Admissible to prove owned stairs?",
+        "choices": {
+          "A": "Yes-ownership",
+          "B": "Yes-relevant",
+          "C": "No-subsequent remedial",
+          "D": "No-407 bars"
+        },
+        "answer": "A",
+        "why": "Subsequent remedial inadmissible for negligence/defect but admissible to prove ownership/control.",
+        "source": "expanded",
+        "exam_frequency": "high"
+      },
+      {
+        "concept_id": "evidence_settlement_negotiations",
+        "name": "Settlement Negotiations (FRE 408)",
+        "subject": "evidence",
+        "difficulty": 3,
+        "rule_statement": "Settlement offers and negotiations inadmissible to prove/disprove validity or amount of claim",
+        "elements": [
+          "Claim disputed",
+          "Settlement offer or negotiation",
+          "Inadmissible for liability/amount",
+          "Admissible for bias, undue delay, obstruction"
+        ],
+        "exceptions": [
+          "Can use for other purposes (bias, etc.)",
+          "Statements to government agencies not protected",
+          "Criminal cases: statements not protected"
+        ],
+        "policy_rationales": [
+          "Encourage settlement",
+          "Promote compromise",
+          "Free discussion"
+        ],
+        "common_traps": [
+          "Thinking statements protected in criminal cases",
+          "Missing \"disputed claim\" requirement",
+          "Forgetting bias exception"
+        ],
+        "teach": "SETTLEMENT = Can't use offers to prove liability/amount. Encourage compromise. Criminal \u2260 protected.",
+        "question": "Settlement offer in civil case. Admissible in later criminal case?",
+        "choices": {
+          "A": "Yes-different case",
+          "B": "Yes-not protected",
+          "C": "No-408 bars",
+          "D": "No-settlement"
+        },
+        "answer": "B",
+        "why": "408 protection only in case being compromised. Later criminal case = no protection.",
+        "source": "expanded",
+        "exam_frequency": "high"
+      },
+      {
+        "concept_id": "evidence_pleas",
+        "name": "Pleas and Plea Discussions (FRE 410)",
+        "subject": "evidence",
+        "difficulty": 4,
+        "rule_statement": "Withdrawn guilty pleas, nolo contendere pleas, and plea discussions inadmissible",
+        "elements": [
+          "Withdrawn guilty plea",
+          "Nolo contendere plea",
+          "Statements during plea discussions",
+          "Inadmissible against defendant"
+        ],
+        "exceptions": [
+          "Defendant may use own plea statements",
+          "Perjury/false statement prosecution",
+          "Fairness exception"
+        ],
+        "policy_rationales": [
+          "Encourage plea negotiations",
+          "Protect defendants",
+          "Promote resolution"
+        ],
+        "common_traps": [
+          "Thinking accepted guilty plea protected (it's not)",
+          "Missing prosecutor must be involved",
+          "Forgetting exceptions"
+        ],
+        "teach": "PLEA DISCUSSIONS = Withdrawn pleas + nolo + plea talks = inadmissible. Encourage negotiation.",
+        "question": "Defendant withdrew guilty plea. Can prosecution use plea in trial?",
+        "choices": {
+          "A": "Yes-admission",
+          "B": "Yes-relevant",
+          "C": "No-410 bars",
+          "D": "No-withdrawn"
+        },
+        "answer": "C",
+        "why": "FRE 410: withdrawn guilty pleas inadmissible. Encourage plea negotiations.",
+        "source": "expanded",
+        "exam_frequency": "medium"
+      },
+      {
+        "concept_id": "evidence_liability_insurance",
+        "name": "Liability Insurance (FRE 411)",
+        "subject": "evidence",
+        "difficulty": 3,
+        "rule_statement": "Evidence of liability insurance inadmissible to prove negligence or ability to pay but admissible for other purposes",
+        "elements": [
+          "Liability insurance",
+          "Inadmissible for negligence or ability to pay",
+          "Admissible for bias, ownership, control"
+        ],
+        "policy_rationales": [
+          "Encourage insurance",
+          "Prevent prejudice",
+          "Don't penalize responsible actors"
+        ],
+        "common_traps": [
+          "Thinking always inadmissible",
+          "Missing bias exception",
+          "Confusing with other policy exclusions"
+        ],
+        "teach": "LIABILITY INSURANCE = Can't prove negligence. BUT can prove bias, ownership, control.",
+        "question": "Witness works for defendant's insurer. Can cross-examine about employment to show bias?",
+        "choices": {
+          "A": "Yes-bias",
+          "B": "Yes-impeach",
+          "C": "No-411 bars",
+          "D": "No-insurance"
+        },
+        "answer": "A",
+        "why": "Liability insurance inadmissible for negligence but admissible to show bias of witness.",
+        "source": "expanded",
         "exam_frequency": "medium"
       }
     ],
