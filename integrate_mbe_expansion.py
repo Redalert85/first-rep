@@ -4,6 +4,7 @@ Integrate Full MBE Expansion into bar_tutor_unified.py
 Adds 70 concepts → Total: 182 concepts
 """
 
+from importlib import import_module
 from pathlib import Path
 import re
 
@@ -13,7 +14,7 @@ print("Adding 70 concepts → Target: 182 total")
 print("="*70)
 
 # Read files
-expansion_code = Path("mbe_full_expansion.py").read_text()
+expansion_code = import_module("mbe_full_expansion").get_snippet()
 tutor = Path("bar_tutor_unified.py").read_text()
 
 print("\n📖 Reading files...")

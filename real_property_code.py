@@ -1,113 +1,18 @@
-    def _initialize_real_property(self):
-        """Initialize real property - LAND BARON framework (9 concepts)"""
-        concepts = [
-            KnowledgeNode(
-                concept_id="real_property_estates_and_future_interests",
-                name="ESTATES & FUTURE INTERESTS",
-                subject="real_property",
-                difficulty=3,
-                rule_statement="Present possessory estates include fee simple absolute, defeasible fees, and life estates; future interests include reversions, remainders, and executory interests that must satisfy RAP.",
-                elements=['Fee Simple Absolute', 'Life Estates', 'Defeasible Fees', 'Future Interests', 'Rule Against Perpetuities (RAP)'],
-                policy_rationales=[],
-                common_traps=[
-                    "AUTO vs. MANUAL: Determinable = AUTOmatic (like autopilot); Condition Subsequent = MANUAL reentry (l",
-                    "REMAINDER RULE: Remainders are like train passengers - they wait for their turn, never jump ahead (n",
-                    "RAP TRAP: 21 years + lives in being = drinking age (21) + pregnancy (gestation)",
-                ],
-                # 🏰 Mnemonic (rhythmic): PREFUR
-            ),
-            KnowledgeNode(
-                concept_id="real_property_conveyancing_and_recording",
-                name="CONVEYANCING & RECORDING",
-                subject="real_property",
-                difficulty=3,
-                rule_statement="Recording statutes protect bona fide purchasers; race-notice is majority rule, requiring timely recordation without notice of prior interests.",
-                elements=['Deed Types', 'Marketable Title', 'Title Insurance', 'After-Acquired Title', 'Recording Acts'],
-                policy_rationales=[],
-                common_traps=[
-                    "BFP = Good Faith Penny: Bona fide purchaser needs good faith + value (even $1) + no notice",
-                    "Chain Gang: Must examine entire chain of title, not just immediate grantor (like prison chain gang -",
-                    "Triple Notice Threat: Actual (you know) + Constructive (recorded) + Inquiry (should have known)",
-                ],
-                # 📜 Mnemonic (acronym): RACE to the Courthouse
-            ),
-            KnowledgeNode(
-                concept_id="real_property_easements_servitudes_and_licenses",
-                name="EASEMENTS, SERVITUDES & LICENSES",
-                subject="real_property",
-                difficulty=3,
-                rule_statement="Easements create rights to use another's land; appurtenant easements run with land, in gross are personal; licenses are revocable permissions.",
-                elements=['Appurtenant Easements', 'Easements in Gross', 'Affirmative Easements', 'Negative Easements', 'Creation Methods'],
-                policy_rationales=[],
-                common_traps=[],
-                # 🛤️ Mnemonic (rhythmic): EASE
-            ),
-            KnowledgeNode(
-                concept_id="real_property_concurrent_ownership",
-                name="CONCURRENT OWNERSHIP",
-                subject="real_property",
-                difficulty=3,
-                rule_statement="Joint tenancy requires four unities; tenancy in common has no survivorship; tenancy by entirety protects marital property from separate creditors.",
-                elements=['Joint Tenancy', 'Tenancy in Common', 'Tenancy by Entirety', 'Severance', 'Partition'],
-                policy_rationales=[],
-                common_traps=[],
-                # 👥 Mnemonic (acronym): TIE
-            ),
-            KnowledgeNode(
-                concept_id="real_property_landlordtenant_law",
-                name="LANDLORD-TENANT LAW",
-                subject="real_property",
-                difficulty=3,
-                rule_statement="Landlord must maintain habitable premises; tenant must pay rent; holdover becomes periodic tenancy; self-help eviction is illegal in most states.",
-                elements=['Implied Warranty of Habitability', 'Quiet Enjoyment', 'Retaliatory Evictions', 'Security Deposits', 'Assignment vs. Sublease'],
-                policy_rationales=[],
-                common_traps=[],
-                # 🏠 Mnemonic (acronym): RENT
-            ),
-            KnowledgeNode(
-                concept_id="real_property_mortgages_foreclosure_and_priority",
-                name="MORTGAGES, FORECLOSURE & PRIORITY",
-                subject="real_property",
-                difficulty=3,
-                rule_statement="Mortgage creates security interest; foreclosure terminates mortgagor's equity; purchase money mortgages have super-priority over later liens on same collateral.",
-                elements=['Mortgage vs. Deed of Trust', 'Foreclosure Process', 'Deficiency Judgments', 'Due-on-Sale Clauses', 'Purchase Money Priority'],
-                policy_rationales=[],
-                common_traps=[],
-                # 🏦 Mnemonic (acronym): MORT
-            ),
-            KnowledgeNode(
-                concept_id="real_property_zoning_and_takings",
-                name="ZONING & TAKINGS",
-                subject="real_property",
-                difficulty=3,
-                rule_statement="Zoning regulates land use; takings require just compensation; variance is exception to zoning rules for hardship; exactions must be roughly proportional.",
-                elements=['Zoning Ordinances', 'Variances & Special Permits', 'Physical vs. Regulatory Takings', 'Exactions', 'Inverse Condemnation'],
-                policy_rationales=[],
-                common_traps=[],
-                # 🏛️ Mnemonic (acronym): ZONE
-            ),
-            KnowledgeNode(
-                concept_id="real_property_adverse_possession",
-                name="ADVERSE POSSESSION",
-                subject="real_property",
-                difficulty=3,
-                rule_statement="Hostile, actual, exclusive, continuous possession for statutory period perfects title; color of title reduces period to 7 years.",
-                elements=['Elements Required', 'Color of Title', 'Tacking', 'Disabilities', 'Boundary Disputes'],
-                policy_rationales=[],
-                common_traps=[],
-                # ⚔️ Mnemonic (acronym): HATE
-            ),
-            KnowledgeNode(
-                concept_id="real_property_fixtures",
-                name="FIXTURES",
-                subject="real_property",
-                difficulty=3,
-                rule_statement="Personal property becomes real property when permanently attached with intent to improve the realty; trade fixtures remain personal property.",
-                elements=['FIX Test', 'Trade Fixtures', 'Mortgage Rights', 'Severance', 'Agricultural Fixtures'],
-                policy_rationales=[],
-                common_traps=[],
-                # 🪑 Mnemonic (acronym): FIX
-            ),
-        ]
-        for node in concepts:
-            self.nodes[node.concept_id] = node
+"""Auto-generated snippet module.
+
+This module is produced by tooling and exposes a helper to retrieve the raw
+Python snippet needed when integrating expanded knowledge bases. Keeping the
+snippet in a plain string avoids import-time syntax errors while still letting
+integration scripts consume the data programmatically.
+"""
+from __future__ import annotations
+
+_SNIPPET = "    def _initialize_real_property(self):\n        \"\"\"Initialize real property - LAND BARON framework (9 concepts)\"\"\"\n        concepts = [\n            KnowledgeNode(\n                concept_id=\"real_property_estates_and_future_interests\",\n                name=\"ESTATES & FUTURE INTERESTS\",\n                subject=\"real_property\",\n                difficulty=3,\n                rule_statement=\"Present possessory estates include fee simple absolute, defeasible fees, and life estates; future interests include reversions, remainders, and executory interests that must satisfy RAP.\",\n                elements=['Fee Simple Absolute', 'Life Estates', 'Defeasible Fees', 'Future Interests', 'Rule Against Perpetuities (RAP)'],\n                policy_rationales=[],\n                common_traps=[\n                    \"AUTO vs. MANUAL: Determinable = AUTOmatic (like autopilot); Condition Subsequent = MANUAL reentry (l\",\n                    \"REMAINDER RULE: Remainders are like train passengers - they wait for their turn, never jump ahead (n\",\n                    \"RAP TRAP: 21 years + lives in being = drinking age (21) + pregnancy (gestation)\",\n                ],\n                # \ud83c\udff0 Mnemonic (rhythmic): PREFUR\n            ),\n            KnowledgeNode(\n                concept_id=\"real_property_conveyancing_and_recording\",\n                name=\"CONVEYANCING & RECORDING\",\n                subject=\"real_property\",\n                difficulty=3,\n                rule_statement=\"Recording statutes protect bona fide purchasers; race-notice is majority rule, requiring timely recordation without notice of prior interests.\",\n                elements=['Deed Types', 'Marketable Title', 'Title Insurance', 'After-Acquired Title', 'Recording Acts'],\n                policy_rationales=[],\n                common_traps=[\n                    \"BFP = Good Faith Penny: Bona fide purchaser needs good faith + value (even $1) + no notice\",\n                    \"Chain Gang: Must examine entire chain of title, not just immediate grantor (like prison chain gang -\",\n                    \"Triple Notice Threat: Actual (you know) + Constructive (recorded) + Inquiry (should have known)\",\n                ],\n                # \ud83d\udcdc Mnemonic (acronym): RACE to the Courthouse\n            ),\n            KnowledgeNode(\n                concept_id=\"real_property_easements_servitudes_and_licenses\",\n                name=\"EASEMENTS, SERVITUDES & LICENSES\",\n                subject=\"real_property\",\n                difficulty=3,\n                rule_statement=\"Easements create rights to use another's land; appurtenant easements run with land, in gross are personal; licenses are revocable permissions.\",\n                elements=['Appurtenant Easements', 'Easements in Gross', 'Affirmative Easements', 'Negative Easements', 'Creation Methods'],\n                policy_rationales=[],\n                common_traps=[],\n                # \ud83d\udee4\ufe0f Mnemonic (rhythmic): EASE\n            ),\n            KnowledgeNode(\n                concept_id=\"real_property_concurrent_ownership\",\n                name=\"CONCURRENT OWNERSHIP\",\n                subject=\"real_property\",\n                difficulty=3,\n                rule_statement=\"Joint tenancy requires four unities; tenancy in common has no survivorship; tenancy by entirety protects marital property from separate creditors.\",\n                elements=['Joint Tenancy', 'Tenancy in Common', 'Tenancy by Entirety', 'Severance', 'Partition'],\n                policy_rationales=[],\n                common_traps=[],\n                # \ud83d\udc65 Mnemonic (acronym): TIE\n            ),\n            KnowledgeNode(\n                concept_id=\"real_property_landlordtenant_law\",\n                name=\"LANDLORD-TENANT LAW\",\n                subject=\"real_property\",\n                difficulty=3,\n                rule_statement=\"Landlord must maintain habitable premises; tenant must pay rent; holdover becomes periodic tenancy; self-help eviction is illegal in most states.\",\n                elements=['Implied Warranty of Habitability', 'Quiet Enjoyment', 'Retaliatory Evictions', 'Security Deposits', 'Assignment vs. Sublease'],\n                policy_rationales=[],\n                common_traps=[],\n                # \ud83c\udfe0 Mnemonic (acronym): RENT\n            ),\n            KnowledgeNode(\n                concept_id=\"real_property_mortgages_foreclosure_and_priority\",\n                name=\"MORTGAGES, FORECLOSURE & PRIORITY\",\n                subject=\"real_property\",\n                difficulty=3,\n                rule_statement=\"Mortgage creates security interest; foreclosure terminates mortgagor's equity; purchase money mortgages have super-priority over later liens on same collateral.\",\n                elements=['Mortgage vs. Deed of Trust', 'Foreclosure Process', 'Deficiency Judgments', 'Due-on-Sale Clauses', 'Purchase Money Priority'],\n                policy_rationales=[],\n                common_traps=[],\n                # \ud83c\udfe6 Mnemonic (acronym): MORT\n            ),\n            KnowledgeNode(\n                concept_id=\"real_property_zoning_and_takings\",\n                name=\"ZONING & TAKINGS\",\n                subject=\"real_property\",\n                difficulty=3,\n                rule_statement=\"Zoning regulates land use; takings require just compensation; variance is exception to zoning rules for hardship; exactions must be roughly proportional.\",\n                elements=['Zoning Ordinances', 'Variances & Special Permits', 'Physical vs. Regulatory Takings', 'Exactions', 'Inverse Condemnation'],\n                policy_rationales=[],\n                common_traps=[],\n                # \ud83c\udfdb\ufe0f Mnemonic (acronym): ZONE\n            ),\n            KnowledgeNode(\n                concept_id=\"real_property_adverse_possession\",\n                name=\"ADVERSE POSSESSION\",\n                subject=\"real_property\",\n                difficulty=3,\n                rule_statement=\"Hostile, actual, exclusive, continuous possession for statutory period perfects title; color of title reduces period to 7 years.\",\n                elements=['Elements Required', 'Color of Title', 'Tacking', 'Disabilities', 'Boundary Disputes'],\n                policy_rationales=[],\n                common_traps=[],\n                # \u2694\ufe0f Mnemonic (acronym): HATE\n            ),\n            KnowledgeNode(\n                concept_id=\"real_property_fixtures\",\n                name=\"FIXTURES\",\n                subject=\"real_property\",\n                difficulty=3,\n                rule_statement=\"Personal property becomes real property when permanently attached with intent to improve the realty; trade fixtures remain personal property.\",\n                elements=['FIX Test', 'Trade Fixtures', 'Mortgage Rights', 'Severance', 'Agricultural Fixtures'],\n                policy_rationales=[],\n                common_traps=[],\n                # \ud83e\ude91 Mnemonic (acronym): FIX\n            ),\n        ]\n        for node in concepts:\n            self.nodes[node.concept_id] = node\n"
+
+
+def get_snippet() -> str:
+    """Return the raw Python snippet for integration scripts."""
+    return _SNIPPET
+
+
+__all__ = ["get_snippet"]

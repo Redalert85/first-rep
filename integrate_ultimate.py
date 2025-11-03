@@ -1,9 +1,10 @@
 #!/usr/bin/env python3
+from importlib import import_module
 from pathlib import Path
 import re
 
-# Read the ultimate knowledge base
-ultimate_code = Path("ultimate_knowledge_base.py").read_text()
+# Read the ultimate knowledge base snippet
+ultimate_code = import_module("ultimate_knowledge_base").get_snippet()
 
 # Read current tutor
 tutor = Path("bar_tutor_unified.py").read_text()

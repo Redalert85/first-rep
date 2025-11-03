@@ -2,6 +2,7 @@
 """
 Ultimate Integration v2 - Direct class replacement
 """
+from importlib import import_module
 from pathlib import Path
 import re
 
@@ -10,7 +11,7 @@ print("ULTIMATE INTEGRATION v2.0")
 print("="*70)
 
 # Read files
-ultimate_code = Path("ultimate_knowledge_base.py").read_text()
+ultimate_code = import_module("ultimate_knowledge_base").get_snippet()
 tutor = Path("bar_tutor_unified.py").read_text()
 
 print("\n📖 Reading files...")

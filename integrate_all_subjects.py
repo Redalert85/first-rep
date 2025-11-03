@@ -4,6 +4,7 @@ Integrate ALL subjects into bar_tutor_unified.py
 Final system: 180 MBE + 35 Essay = 215 total concepts
 """
 
+from importlib import import_module
 from pathlib import Path
 import re
 
@@ -13,7 +14,7 @@ print("Adding 35 Essay Subjects → Total: 215 concepts")
 print("="*70)
 
 # Read files
-essay_code = Path("essay_subjects.py").read_text()
+essay_code = import_module("essay_subjects").get_snippet()
 tutor = Path("bar_tutor_unified.py").read_text()
 
 print("\n📖 Reading files...")

@@ -2,11 +2,12 @@
 """
 Integrate Real Property concepts into bar_tutor_unified.py
 """
+from importlib import import_module
 from pathlib import Path
 import re
 
 # Read the generated Real Property code
-rp_code = Path("real_property_code.py").read_text()
+rp_code = import_module("real_property_code").get_snippet()
 
 # Read the main tutor file
 tutor = Path("bar_tutor_unified.py").read_text()

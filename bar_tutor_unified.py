@@ -23,16 +23,10 @@ from typing import Dict, List, Optional, Set, Tuple, Any, Union
 
 from dotenv import load_dotenv
 
-# Configure logging
-logging.basicConfig(
-    level=logging.INFO,
-    format='%(asctime)s - %(levelname)s - %(message)s',
-    handlers=[
-        logging.FileHandler('bar_tutor.log'),
-        logging.StreamHandler(sys.stdout)
-    ]
-)
-logger = logging.getLogger(__name__)
+from bar_tutor.config import get_logger
+
+
+logger = get_logger(__name__)
 
 # ==================== CONFIGURATION ====================
 
@@ -150,77 +144,43 @@ class LegalKnowledgeGraph:
 
     def _initialize_all_subjects(self):
         """Initialize all 14 subjects - Complete Iowa Bar (331 concepts: 180 MBE + 151 Essay)"""
-        # Core concepts (112)
-        self._initialize_contracts()
-        self._initialize_torts()
-        self._initialize_constitutional_law()
-        self._initialize_criminal_law()
-        self._initialize_criminal_procedure()
-        self._initialize_civil_procedure()
-        self._initialize_evidence()
-        self._initialize_real_property()
-        
-        # Full expansion (70 additional concepts)
-        self._add_contracts_expansion()
-        self._add_torts_expansion()
-        self._add_constitutional_law_expansion()
-        self._add_criminal_law_expansion()
-        self._add_criminal_procedure_expansion()
-        self._add_civil_procedure_expansion()
-        self._add_evidence_expansion()
-        self._add_real_property_expansion()
+        base_initializers = [
+            self._initialize_contracts,
+            self._initialize_torts,
+            self._initialize_constitutional_law,
+            self._initialize_criminal_law,
+            self._initialize_criminal_procedure,
+            self._initialize_civil_procedure,
+            self._initialize_evidence,
+            self._initialize_real_property,
+        ]
+        expansion_initializers = [
+            self._add_contracts_expansion,
+            self._add_torts_expansion,
+            self._add_constitutional_law_expansion,
+            self._add_criminal_law_expansion,
+            self._add_criminal_procedure_expansion,
+            self._add_civil_procedure_expansion,
+            self._add_evidence_expansion,
+            self._add_real_property_expansion,
+        ]
+        essay_initializers = [
+            self._initialize_professional_responsibility,
+            self._initialize_corporations,
+            self._initialize_wills_trusts_estates,
+            self._initialize_family_law,
+            self._initialize_secured_transactions,
+            self._initialize_iowa_procedure,
+        ]
 
-        # Essay Subjects (151 concepts)
-        self._initialize_professional_responsibility()
-        self._initialize_corporations()
-        self._initialize_wills_trusts_estates()
-        self._initialize_family_law()
-        self._initialize_secured_transactions()
-        self._initialize_iowa_procedure()
+        for initializer in base_initializers:
+            initializer()
 
+        for initializer in expansion_initializers:
+            initializer()
 
-        # Essay Subjects (151 concepts)
-        self._initialize_professional_responsibility()
-        self._initialize_corporations()
-        self._initialize_wills_trusts_estates()
-        self._initialize_family_law()
-        self._initialize_secured_transactions()
-        self._initialize_iowa_procedure()
-
-
-        # Essay Subjects (151 concepts)
-        self._initialize_professional_responsibility()
-        self._initialize_corporations()
-        self._initialize_wills_trusts_estates()
-        self._initialize_family_law()
-        self._initialize_secured_transactions()
-        self._initialize_iowa_procedure()
-
-
-        # Essay Subjects (151 concepts)
-        self._initialize_professional_responsibility()
-        self._initialize_corporations()
-        self._initialize_wills_trusts_estates()
-        self._initialize_family_law()
-        self._initialize_secured_transactions()
-        self._initialize_iowa_procedure()
-
-        
-        # Essay Subjects (35 concepts)
-        self._initialize_professional_responsibility()
-        self._initialize_corporations()
-        self._initialize_wills_trusts_estates()
-        self._initialize_family_law()
-        self._initialize_secured_transactions()
-        self._initialize_iowa_procedure()
-        
-        # Essay Subjects (35 concepts)
-        self._initialize_professional_responsibility()
-        self._initialize_corporations()
-        self._initialize_wills_trusts_estates()
-        self._initialize_family_law()
-        self._initialize_secured_transactions()
-        self._initialize_iowa_procedure()
+        for initializer in essay_initializers:
+            initializer()
 
 # Ultimate Expanded Knowledge Base - 112+ Concepts
 # Each subject has 14+ concepts at Real Property richness level
@@ -674,7 +634,7 @@ class LegalKnowledgeGraph:
                 elements=['Hierarchy', 'Shipment vs Destination', 'No Carrier', 'Casualty to Identified Goods', 'Entrustment & Voidable Title'],
                 policy_rationales=[],
                 common_traps=[
-                    "Breach always keeps risk on breaching party; “FOB plant” is shipment",
+                    "Breach always keeps risk on breaching party; ?FOB plant? is shipment",
                     "not destination; merchant receipt requirement.",
                 ],
             ),
@@ -723,7 +683,7 @@ class LegalKnowledgeGraph:
                 elements=['Express', 'Implied Warranty of Merchantability', 'Implied Warranty of Fitness', 'Disclaimers', 'Limitations'],
                 policy_rationales=[],
                 common_traps=[
-                    "Statements of opinion/puffery not express warranties; “as is” doesn’t negate express warranties; lim",
+                    "Statements of opinion/puffery not express warranties; ?as is? doesn?t negate express warranties; lim",
                 ],
             ),
             KnowledgeNode(
@@ -748,14 +708,14 @@ class LegalKnowledgeGraph:
             ),
             KnowledgeNode(
                 concept_id="contracts_formation__foci_checklist",
-                name="FORMATION – FOCI CHECKLIST",
+                name="FORMATION ? FOCI CHECKLIST",
                 subject="contracts",
                 difficulty=3,
                 rule_statement="",
                 elements=[],
                 policy_rationales=[],
                 common_traps=[
-                    "Option contracts (need consideration unless UCC firm offer ≤ 3 months, signed by merchant).",
+                    "Option contracts (need consideration unless UCC firm offer ? 3 months, signed by merchant).",
                     "Mailbox rule exceptions: option, improperly addressed, rejection before acceptance.",
                     "Illusory promises not enforceable.",
                 ],
@@ -1465,9 +1425,9 @@ class LegalKnowledgeGraph:
                 subject="civil_procedure",
                 difficulty=3,
                 rule_statement="Venue proper where defendant resides, events occurred, or property located; transfer for convenience or interest of justice",
-                elements=['Proper venue', '§1404(a) transfer', '§1406 improper venue transfer', 'Forum non conveniens'],
+                elements=['Proper venue', '?1404(a) transfer', '?1406 improper venue transfer', 'Forum non conveniens'],
                 policy_rationales=[],
-                common_traps=['Confusing venue with personal jurisdiction', 'Forgetting §1404(a) requires proper venue initially', "Missing that transferee court applies transferor's choice of law"],
+                common_traps=['Confusing venue with personal jurisdiction', 'Forgetting ?1404(a) requires proper venue initially', "Missing that transferee court applies transferor's choice of law"],
                 # Mnemonic: VET: Venue, Events, Transfer
             ),
             KnowledgeNode(
@@ -1548,7 +1508,7 @@ class LegalKnowledgeGraph:
                 rule_statement="Constitutional rights apply only to government action; private conduct becomes state action through public function, entanglement, or encouragement",
                 elements=['Public function test', 'Entanglement', 'Nexus/encouragement', 'Exclusive public function'],
                 policy_rationales=['Protect individual liberty from government overreach', 'Preserve private autonomy'],
-                common_traps=['Thinking all constitutional rights apply to private parties', 'Missing that public function must be traditionally exclusively governmental', 'Forgetting mere government regulation ≠ state action'],
+                common_traps=['Thinking all constitutional rights apply to private parties', 'Missing that public function must be traditionally exclusively governmental', 'Forgetting mere government regulation ? state action'],
             ),
             KnowledgeNode(
                 concept_id="constitutional_law_dormant_commerce_clause",
@@ -1633,7 +1593,7 @@ class LegalKnowledgeGraph:
             ),
             KnowledgeNode(
                 concept_id="contracts_battle_of_forms_detailed",
-                name="UCC §2-207 Battle of Forms",
+                name="UCC ?2-207 Battle of Forms",
                 subject="contracts",
                 difficulty=4,
                 rule_statement="Definite expression of acceptance forms contract even with additional terms; between merchants, additional terms included unless material alteration, expressly limited, or objection",
@@ -2031,7 +1991,7 @@ class LegalKnowledgeGraph:
             ),
             KnowledgeNode(
                 concept_id="real_property_profit_a_prendre",
-                name="Profit à Prendre",
+                name="Profit ? Prendre",
                 subject="real_property",
                 difficulty=3,
                 rule_statement="Right to enter land and remove resources like minerals, timber, or fish; similar to easement but includes right to take",
@@ -2246,7 +2206,7 @@ class LegalKnowledgeGraph:
                 rule_statement="Must not bring frivolous claims; must have good faith basis",
                 elements=['Non-frivolous basis', 'Good faith law change OK', 'Candor required', 'No false statements'],
                 policy_rationales=[],
-                common_traps=['Creative arguments OK if good faith', 'Criminal defense exception', 'Frivolous ≠ losing'],
+                common_traps=['Creative arguments OK if good faith', 'Criminal defense exception', 'Frivolous ? losing'],
             ),
         ]
         for node in concepts:
@@ -2421,7 +2381,7 @@ class LegalKnowledgeGraph:
                 rule_statement="Marital property divided equitably; separate retained; factors include contributions, duration, circumstances",
                 elements=['Marital vs separate', 'Equitable factors', 'Valuation date', 'Professional degrees'],
                 policy_rationales=[],
-                common_traps=['Equitable ≠ equal', 'Appreciation of separate may be marital', 'Pension benefits marital'],
+                common_traps=['Equitable ? equal', 'Appreciation of separate may be marital', 'Pension benefits marital'],
             ),
             KnowledgeNode(
                 concept_id="family_spousal_support",
@@ -2649,7 +2609,7 @@ class LegalKnowledgeGraph:
                 rule_statement="Must not bring frivolous claims; must have good faith basis",
                 elements=['Non-frivolous basis', 'Good faith law change OK', 'Candor required', 'No false statements'],
                 policy_rationales=[],
-                common_traps=['Creative arguments OK if good faith', 'Criminal defense exception', 'Frivolous ≠ losing'],
+                common_traps=['Creative arguments OK if good faith', 'Criminal defense exception', 'Frivolous ? losing'],
             ),
         ]
         for node in concepts:
@@ -2824,7 +2784,7 @@ class LegalKnowledgeGraph:
                 rule_statement="Marital property divided equitably; separate retained; factors include contributions, duration, circumstances",
                 elements=['Marital vs separate', 'Equitable factors', 'Valuation date', 'Professional degrees'],
                 policy_rationales=[],
-                common_traps=['Equitable ≠ equal', 'Appreciation of separate may be marital', 'Pension benefits marital'],
+                common_traps=['Equitable ? equal', 'Appreciation of separate may be marital', 'Pension benefits marital'],
             ),
             KnowledgeNode(
                 concept_id="family_spousal_support",
@@ -3061,9 +3021,9 @@ class LegalKnowledgeGraph:
                 common_traps=[
                     "Transferred intent",
                     "consent scope",
-                    "shopkeeper’s privilege limits",
+                    "shopkeeper?s privilege limits",
                 ],
-                # Mnemonic: BAFI²
+                # Mnemonic: BAFI?
             ),
             KnowledgeNode(
                 concept_id="torts_negligence",
@@ -8975,7 +8935,7 @@ class PerformanceTracker:
         print("By Subject:")
         for subject, data in sorted(stats.items()):
             pct = data["percentage"]
-            bar = "█" * int(pct/5) + "░" * (20 - int(pct/5))
+            bar = "?" * int(pct/5) + "?" * (20 - int(pct/5))
             print(f"{subject:25} {bar} {pct:5.1f}%")
         
         print("\n" + "="*70 + "\n")
