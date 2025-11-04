@@ -1,0 +1,84 @@
+IN THE IOWA DISTRICT COURT
+FOR WOODBURY COUNTY
+
+Jane Doe,
+    Plaintiff,
+
+vs.                                 Case No. LACV123456
+
+John Smith,
+    Defendant.
+
+MOTION TO DISMISS
+
+
+COMES NOW Defendant John Smith, by and through undersigned counsel, and respectfully moves this Court to dismiss Plaintiff's Complaint pursuant to Iowa R. Civ. P. 1.421, and in support states:
+
+I. INTRODUCTION
+
+Plaintiff's Complaint fails to state a claim upon which relief can be granted. The Complaint is deficient in the following respects:
+
+   • The Complaint fails to allege that Defendant owed Plaintiff any duty of care
+   • The Complaint contains no factual allegations of breach
+   • The Complaint fails to allege causation
+   • Damages are pled conclusorily without factual support
+
+For these reasons, the Complaint should be dismissed.
+
+II. LEGAL STANDARD
+
+A. Procedural Standard - Iowa R. Civ. P. 1.421
+
+A complaint must contain sufficient factual matter, accepted as true, to state a claim to relief that is plausible on its face. Plausibility requires more than mere possibility that defendant acted unlawfully.
+
+IMPORTANT: Iowa employs notice pleading and has NOT adopted the heightened federal Twombly/Iqbal plausibility standard.
+
+B. Substantive Law - Negligence Elements
+
+To state a claim for negligence, plaintiff must allege:
+   (1) Duty
+   (2) Breach
+   (3) Causation (actual and proximate)
+   (4) Damages
+
+To establish negligence, plaintiff must prove: (1) defendant owed plaintiff a duty of care; (2) defendant breached that duty; (3) the breach was the actual and proximate cause of plaintiff's injuries; and (4) plaintiff suffered damages.
+
+Here, the Complaint fails to adequately allege these elements, as detailed below.
+
+
+III. ARGUMENT
+
+The Complaint fails to establish the essential elements of negligence. As detailed above, negligence requires proof of: (1) duty; (2) breach; (3) causation; and (4) damages.
+
+A. No Duty Alleged
+
+The Complaint fails to allege that Defendant owed any duty of care to Plaintiff. Without a duty, there can be no negligence claim.
+
+B. No Breach Alleged
+
+Even if a duty existed, the Complaint contains no factual allegations showing that Defendant breached that duty. Conclusory allegations are insufficient.
+
+C. No Causation
+
+The Complaint fails to allege either actual cause (but-for causation) or proximate cause. There are no facts showing that Defendant's alleged conduct caused Plaintiff's alleged injuries.
+
+D. Damages
+
+The Complaint alleges only that Plaintiff suffered "damages" without any specific factual allegations regarding the nature or extent of those damages.
+
+Because Plaintiff has failed to plead each element of negligence, the Complaint must be dismissed.
+
+IV. CONCLUSION
+
+For the foregoing reasons, Defendant respectfully requests that this Court GRANT this Motion and DISMISS Plaintiff's Complaint.
+
+Respectfully submitted,
+
+_______________________________
+Attorney for Defendant
+[Attorney Name]
+[Bar Number]
+[Firm Name]
+[Address]
+[Phone]
+[Email]
