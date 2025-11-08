@@ -19,3 +19,6 @@ htmlcov/
 .vscode/*
 !.vscode/settings.json
 !.vscode/launch.json
+
+# User-generated databases
+*.db
