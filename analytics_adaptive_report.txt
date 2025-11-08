@@ -1,0 +1,267 @@
+================================================================================
+1. OVERALL PERFORMANCE REPORT
+================================================================================
+
+  Total Cards..................................................58
+  Due Cards Today..................................................58
+  Mastered Cards..................................................0 (0.0%)
+  Total Reviews..................................................0
+
+  ⚠️  No reviews recorded yet. Start studying to see performance metrics!
+  Study Days (Last 7 Days)..................................................0/7
+
+================================================================================
+2. SUBJECT-SPECIFIC BREAKDOWN
+================================================================================
+
+Civil Procedure
+  Status: STRONG
+  Total Cards: 5 | Due: 5 | Mastered: 0 (0.0%)
+  Average Ease Factor: 2.50
+  Distribution:
+    ● Proficient (2.5-3.0): 5
+
+Constitutional Law
+  Status: STRONG
+  Total Cards: 5 | Due: 5 | Mastered: 0 (0.0%)
+  Average Ease Factor: 2.50
+  Distribution:
+    ● Proficient (2.5-3.0): 5
+
+Contracts
+  Status: STRONG
+  Total Cards: 5 | Due: 5 | Mastered: 0 (0.0%)
+  Average Ease Factor: 2.50
+  Distribution:
+    ● Proficient (2.5-3.0): 5
+
+Criminal Law
+  Status: STRONG
+  Total Cards: 5 | Due: 5 | Mastered: 0 (0.0%)
+  Average Ease Factor: 2.50
+  Distribution:
+    ● Proficient (2.5-3.0): 5
+
+Criminal Procedure
+  Status: STRONG
+  Total Cards: 5 | Due: 5 | Mastered: 0 (0.0%)
+  Average Ease Factor: 2.50
+  Distribution:
+    ● Proficient (2.5-3.0): 5
+
+Evidence
+  Status: STRONG
+  Total Cards: 5 | Due: 5 | Mastered: 0 (0.0%)
+  Average Ease Factor: 2.50
+  Distribution:
+    ● Proficient (2.5-3.0): 5
+
+Real Property
+  Status: STRONG
+  Total Cards: 5 | Due: 5 | Mastered: 0 (0.0%)
+  Average Ease Factor: 2.50
+  Distribution:
+    ● Proficient (2.5-3.0): 5
+
+Torts
+  Status: STRONG
+  Total Cards: 5 | Due: 5 | Mastered: 0 (0.0%)
+  Average Ease Factor: 2.50
+  Distribution:
+    ● Proficient (2.5-3.0): 5
+
+Family Law
+  Status: STRONG
+  Total Cards: 4 | Due: 4 | Mastered: 0 (0.0%)
+  Average Ease Factor: 2.50
+  Distribution:
+    ● Proficient (2.5-3.0): 4
+
+Corporations
+  Status: STRONG
+  Total Cards: 3 | Due: 3 | Mastered: 0 (0.0%)
+  Average Ease Factor: 2.50
+  Distribution:
+    ● Proficient (2.5-3.0): 3
+
+Professional Responsibility
+  Status: STRONG
+  Total Cards: 3 | Due: 3 | Mastered: 0 (0.0%)
+  Average Ease Factor: 2.50
+  Distribution:
+    ● Proficient (2.5-3.0): 3
+
+Secured Transactions
+  Status: STRONG
+  Total Cards: 3 | Due: 3 | Mastered: 0 (0.0%)
+  Average Ease Factor: 2.50
+  Distribution:
+    ● Proficient (2.5-3.0): 3
+
+Wills, Trusts & Estates
+  Status: STRONG
+  Total Cards: 3 | Due: 3 | Mastered: 0 (0.0%)
+  Average Ease Factor: 2.50
+  Distribution:
+    ● Proficient (2.5-3.0): 3
+
+Iowa Procedure
+  Status: STRONG
+  Total Cards: 2 | Due: 2 | Mastered: 0 (0.0%)
+  Average Ease Factor: 2.50
+  Distribution:
+    ● Proficient (2.5-3.0): 2
+
+
+================================================================================
+3. SPACED REPETITION HEALTH
+================================================================================
+
+Interval Distribution:
+
+  New Cards (1 day)..................   58 █████
+  Early Learning (2-5 days)..........    0 
+  Reinforcing (6-14 days)............    0 
+  Solidifying (15-30 days)...........    0 
+  Mastered (30+ days)................    0 
+
+Ease Factor Distribution:
+
+  Very Difficult (< 1.5).............    0 
+  Difficult (1.5-2.0)................    0 
+  Moderate (2.0-2.5).................    0 
+  Good (2.5-3.0).....................   58 █████
+  Easy (3.0-3.5).....................    0 
+  Very Easy (≥ 3.5)..................    0 
+
+✓ No overdue cards!
+
+7-Day Review Forecast:
+
+  TODAY............... 2025-11-08    58 cards ███████████
+  Sunday.............. 2025-11-09     0 cards 
+  Monday.............. 2025-11-10     0 cards 
+  Tuesday............. 2025-11-11     0 cards 
+  Wednesday........... 2025-11-12     0 cards 
+  Thursday............ 2025-11-13     0 cards 
+  Friday.............. 2025-11-14     0 cards 
+
+================================================================================
+4. CONSTITUTIONAL LAW & EVIDENCE DEEP DIVE
+================================================================================
+
+CONSTITUTIONAL LAW
+
+  Total Cards: 5
+  Due Cards: 5
+  Average Ease: 2.50
+  Mastery: 0 (0.0%)
+
+  Topics:
+
+    • Commerce Clause
+      Cards: 1 | Due: 1 | Ease: 2.50 | Status: DUE
+    • Due Process
+      Cards: 1 | Due: 1 | Ease: 2.50 | Status: DUE
+    • Equal Protection
+      Cards: 1 | Due: 1 | Ease: 2.50 | Status: DUE
+    • First Amendment
+      Cards: 1 | Due: 1 | Ease: 2.50 | Status: DUE
+    • Judicial Review
+      Cards: 1 | Due: 1 | Ease: 2.50 | Status: DUE
+
+EVIDENCE
+
+  Total Cards: 5
+  Due Cards: 5
+  Average Ease: 2.50
+  Mastery: 0 (0.0%)
+
+  Topics:
+
+    • Authentication
+      Cards: 1 | Due: 1 | Ease: 2.50 | Status: DUE
+    • Character Evidence
+      Cards: 1 | Due: 1 | Ease: 2.50 | Status: DUE
+    • Expert Testimony
+      Cards: 1 | Due: 1 | Ease: 2.50 | Status: DUE
+    • Hearsay
+      Cards: 1 | Due: 1 | Ease: 2.50 | Status: DUE
+    • Hearsay Exceptions
+      Cards: 1 | Due: 1 | Ease: 2.50 | Status: DUE
+
+
+================================================================================
+5. STUDY RECOMMENDATIONS
+================================================================================
+
+Current State:
+
+  Total Cards in System: 58
+  Cards Due Now: 58
+
+🎯 FIRST-TIME SETUP RECOMMENDATIONS:
+
+Suggested Daily Review Targets:
+
+  Conservative (30 cards/day):
+    • Lower daily commitment, longer timeline
+    • Time to first pass: ~1 days
+    • Estimated daily time: ~60-90 minutes
+
+  Balanced (50 cards/day):
+    • Recommended for most students
+    • Time to first pass: ~1 days
+    • Estimated daily time: ~100-150 minutes
+
+  Aggressive (75 cards/day):
+    • For dedicated full-time study
+    • Time to first pass: ~0 days
+    • Estimated daily time: ~150-225 minutes
+
+Priority Study Order:
+
+  Phase 1: MBE Core Subjects
+    • Civil Procedure (5 cards)
+    • Constitutional Law (5 cards)
+    • Contracts (5 cards)
+    • Criminal Law (5 cards)
+    • Evidence (5 cards)
+    • Real Property (5 cards)
+    • Torts (5 cards)
+
+  Phase 2: Essay-Only Subjects
+    • Criminal Procedure (5 cards)
+    • Family Law (4 cards)
+    • Corporations (3 cards)
+    • Professional Responsibility (3 cards)
+    • Secured Transactions (3 cards)
+    • Wills, Trusts & Estates (3 cards)
+    • Iowa Procedure (2 cards)
+
+Optimal Study Schedule:
+
+  ✓ Study at the same time daily (consistency is key)
+  ✓ Morning sessions typically show better retention
+  ✓ Take breaks every 25-30 minutes (Pomodoro technique)
+  ✓ Review in multiple shorter sessions vs one long session
+  ✓ Don't skip days - consistency beats intensity
+
+Expected Timeline:
+
+  • Week 1-2: Initial learning (cards will feel hard)
+  • Week 3-4: Patterns emerge (concepts start connecting)
+  • Week 5-6: Confidence builds (review intervals lengthen)
+  • Week 7+: Mastery phase (most cards at long intervals)
+
+General Study Tips:
+
+  → Be honest with your ratings (quality 0-5)
+  → Quality 3+ means you could explain it to someone
+  → Don't be afraid to rate yourself low - it helps the algorithm
+  → If you're consistently guessing, review the underlying concepts
+  → Use mnemonic devices for lists and elements
+
+================================================================================
+Report Generated: 2025-11-08 18:22:04
+================================================================================
