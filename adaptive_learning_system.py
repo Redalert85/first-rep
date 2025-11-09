@@ -279,6 +279,32 @@ class AdaptiveLearningDatabase:
         cursor.execute("CREATE INDEX IF NOT EXISTS idx_next_review ON cards(next_review)")
         cursor.execute("CREATE INDEX IF NOT EXISTS idx_concept_id ON cards(concept_id)")
 
+        # Performance tracking table - individual review records
+        cursor.execute("""
+            CREATE TABLE IF NOT EXISTS performance (
+                id INTEGER PRIMARY KEY AUTOINCREMENT,
+                card_id TEXT NOT NULL,
+                review_date TEXT NOT NULL,
+                quality INTEGER NOT NULL,
+                time_seconds INTEGER,
+                FOREIGN KEY (card_id) REFERENCES cards(card_id)
+            )
+        """)
+        cursor.execute("CREATE INDEX IF NOT EXISTS idx_perf_card ON performance(card_id)")
+        cursor.execute("CREATE INDEX IF NOT EXISTS idx_perf_date ON performance(review_date)")
+
+        # Sessions table - study session summaries
+        cursor.execute("""
+            CREATE TABLE IF NOT EXISTS sessions (
+                id INTEGER PRIMARY KEY AUTOINCREMENT,
+                session_date TEXT NOT NULL,
+                cards_reviewed INTEGER NOT NULL,
+                avg_quality REAL,
+                duration_minutes INTEGER
+            )
+        """)
+        cursor.execute("CREATE INDEX IF NOT EXISTS idx_session_date ON sessions(session_date)")
+
         self.conn.commit()
 
     def insert_card(self, card: LearningCard):
@@ -386,6 +412,65 @@ class AdaptiveLearningDatabase:
             updated_at=datetime.fromisoformat(row['updated_at'])
         )
 
+    def insert_performance(self, card_id: str, quality: int, time_seconds: Optional[int] = None):
+        """Insert a performance record for a card review"""
+        cursor = self.conn.cursor()
+        cursor.execute("""
+            INSERT INTO performance (card_id, review_date, quality, time_seconds)
+            VALUES (?, ?, ?, ?)
+        """, (card_id, datetime.now().isoformat(), quality, time_seconds))
+        self.conn.commit()
+
+    def get_card_performance_history(self, card_id: str) -> List[Dict]:
+        """Get performance history for a specific card"""
+        cursor = self.conn.cursor()
+        cursor.execute("""
+            SELECT review_date, quality, time_seconds
+            FROM performance
+            WHERE card_id = ?
+            ORDER BY review_date DESC
+        """, (card_id,))
+
+        return [
+            {
+                'review_date': row[0],
+                'quality': row[1],
+                'time_seconds': row[2]
+            }
+            for row in cursor.fetchall()
+        ]
+
+    def insert_session(self, cards_reviewed: int, avg_quality: float, duration_minutes: int):
+        """Insert a study session record"""
+        cursor = self.conn.cursor()
+        cursor.execute("""
+            INSERT INTO sessions (session_date, cards_reviewed, avg_quality, duration_minutes)
+            VALUES (?, ?, ?, ?)
+        """, (datetime.now().isoformat(), cards_reviewed, avg_quality, duration_minutes))
+        self.conn.commit()
+
+    def get_recent_sessions(self, days: int = 30) -> List[Dict]:
+        """Get recent study sessions"""
+        cursor = self.conn.cursor()
+        cutoff_date = (datetime.now() - timedelta(days=days)).isoformat()
+
+        cursor.execute("""
+            SELECT session_date, cards_reviewed, avg_quality, duration_minutes
+            FROM sessions
+            WHERE session_date >= ?
+            ORDER BY session_date DESC
+        """, (cutoff_date,))
+
+        return [
+            {
+                'session_date': row[0],
+                'cards_reviewed': row[1],
+                'avg_quality': row[2],
+                'duration_minutes': row[3]
+            }
+            for row in cursor.fetchall()
+        ]
+
     def close(self):
         """Close database connection"""
         if self.conn:
@@ -447,6 +532,9 @@ class AdaptiveLearningSystem:
 
         # Save to database
         self.db.update_card(card)
+
+        # Record performance (quality score for this review)
+        self.db.insert_performance(card.card_id, quality, time_seconds=None)
 
         return card
 

@@ -5,6 +5,7 @@ Works with existing 876-card database (iowa_bar_prep.db)
 """
 
 import sys
+import time
 from datetime import datetime
 from adaptive_learning_system import AdaptiveLearningSystem, ConfidenceLevel
 
@@ -117,13 +118,19 @@ def run_daily_study(limit: int = 30):
 
     input("Press ENTER to begin...")
 
+    # Track session timing
+    session_start_time = time.time()
     cards_reviewed = 0
     correct_count = 0
+    quality_scores = []
 
     try:
         for i, card in enumerate(due_cards[:limit], 1):
             clear_screen()
             print_header(i, len(due_cards))
+
+            # Track card timing
+            card_start_time = time.time()
 
             # Show front
             print_card_front(card, i)
@@ -137,13 +144,27 @@ def run_daily_study(limit: int = 30):
             # Get confidence rating
             confidence = get_confidence_rating()
 
-            # Update card using SM-2
+            # Calculate time spent on this card
+            card_time_seconds = int(time.time() - card_start_time)
+
+            # Update card using SM-2 (this also records performance)
             updated_card = system.review_card(card, confidence)
+
+            # Update the performance record with actual time
+            # Get the last performance ID and update it
+            cursor = system.db.conn.cursor()
+            cursor.execute("""
+                UPDATE performance
+                SET time_seconds = ?
+                WHERE id = (SELECT id FROM performance ORDER BY id DESC LIMIT 1)
+            """, (card_time_seconds,))
+            system.db.conn.commit()
 
             # Show result
             print_review_result(updated_card, confidence)
 
             cards_reviewed += 1
+            quality_scores.append(confidence.value)
             if confidence.value >= 3:
                 correct_count += 1
 
@@ -159,8 +180,28 @@ def run_daily_study(limit: int = 30):
         print("\n\nStudy session interrupted!")
 
     finally:
+        # Calculate session duration
+        session_duration_seconds = int(time.time() - session_start_time)
+        session_duration_minutes = session_duration_seconds // 60
+
+        # Save session summary if cards were reviewed
+        if cards_reviewed > 0:
+            avg_quality = sum(quality_scores) / len(quality_scores) if quality_scores else 0.0
+            system.db.insert_session(
+                cards_reviewed=cards_reviewed,
+                avg_quality=avg_quality,
+                duration_minutes=max(1, session_duration_minutes)  # At least 1 minute
+            )
+
         # Print summary
         print_session_summary(cards_reviewed, correct_count, len(due_cards))
+
+        # Show session timing
+        if cards_reviewed > 0:
+            avg_seconds_per_card = session_duration_seconds / cards_reviewed
+            print(f"\nSession Time:")
+            print(f"  Duration: {session_duration_minutes} min {session_duration_seconds % 60} sec")
+            print(f"  Avg per card: {avg_seconds_per_card:.1f} seconds")
 
         # Show overall stats
         stats = system.get_statistics()
