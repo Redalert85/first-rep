@@ -1,0 +1,8 @@
+# Iowa Bar Prep - Python Dependencies
+
+# PDF Processing
+PyPDF2>=3.0.0
+
+# Alternative PDF libraries (optional, for better extraction)
+# pdfplumber>=0.9.0
+# pypdf>=3.0.0

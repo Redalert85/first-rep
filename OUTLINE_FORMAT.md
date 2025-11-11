@@ -2,6 +2,31 @@
 
 ## Supported Formats
 
+### PDF Format (.pdf) - NEW!
+
+**Best for:** Barbri, Themis, or other commercial outlines in PDF format
+
+```bash
+# Install PDF support first:
+pip install PyPDF2
+
+# Then import:
+python3 import_pdf.py outline.pdf
+```
+
+**What works well:**
+- Structured outlines with clear section headers
+- Content labeled with RULE:, ELEMENTS:, EXCEPTIONS:, etc.
+- Organized by topics and subtopics
+
+**Auto-detection:**
+- Automatically detects subjects from content
+- Parses section headers (RULE, ELEMENTS, TRAPS, etc.)
+- Identifies topics from Roman numerals or numbered sections
+- Filters out page headers/footers
+
+**Note:** Works best with text-based PDFs (not scanned images)
+
 ### Markdown Format (.md)
 
 ```markdown
