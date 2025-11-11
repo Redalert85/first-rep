@@ -151,6 +151,8 @@ If client declines consent, opposing counsel must obtain a court order under Par
 
 Iowa Code § 125.37 separately protects SUD treatment records and tracks Part 2's framework. Use both Part 2 and § 125.37 in briefing.
 
+**Important distinction:** Part 2 is a federal confidentiality regulation that controls **whether and how** SUD information may be disclosed; it does not expand what is **admissible** under Iowa evidence law. Even if Part 2 permits disclosure (via compliant consent or court order), the information must still satisfy Iowa's evidentiary requirements—including Iowa Code § 622.10 statutory privilege and constitutional privacy protections—to be admitted at trial or used in litigation.
+
 ### Practical Approach for SUD Providers
 
 **Option 1 (Preferred):** Obtain narrow, Part 2-compliant written consent authorizing disclosure of treatment type and dates only, with all clinical content and provider identity excluded and no redisclosure permitted.
