@@ -94,7 +94,7 @@ To determine whether constitutional privacy protection yields to disclosure, Iow
 
 #### Threshold for In-Camera Review
 
-No in-camera review should occur absent a **concrete, specific showing** by the moving party that the records are relevant and necessary. *State v. Howland*, No. 22-0519, 2023 WL 3613259, at \*3–5 (Iowa Ct. App. May 24, 2023) (reversing trial court's in-camera review where State failed to make threshold showing of relevance and need; holding that even in-camera review invades privacy and requires justification). Although *Howland* arose in the criminal context, its insistence on a threshold, specific nexus before any in-camera review is persuasive in civil mental-health disputes to guard against fishing expeditions.
+No in-camera review occurs absent a concrete, specific nexus showing the records likely contain exculpatory information unavailable elsewhere and are necessary for the defense. *State v. Howland*, No. 22-0519, 2023 WL 3613259, at \*3–5 (Iowa Ct. App. May 24, 2023) (affirming denial where defendant's request was a "fishing expedition" under § 622.10(4)). Although *Howland* arose in the criminal context and applies the § 622.10(4) criminal-defendant exception, its insistence on a threshold, specific nexus before any in-camera review—rejecting mere speculation or fishing expeditions—is persuasive in civil mental-health disputes under the *McMaster*/*Fagen* framework.
 
 Opposing counsel must satisfy the *McMaster*/*Fagen* threshold **before** the court even looks at the records. This procedural protection is critical.
 
@@ -388,7 +388,7 @@ File **simultaneously with or immediately after** disclosure.
 
 If court finds § 622.10(2) exception applies (we disagree), client's qualified constitutional privacy right provides second layer of protection. *Ashenfelter*, 792 N.W.2d at 672–73; *Fagen*, 861 N.W.2d at 831.
 
-**Threshold Requirement:** Opposing counsel must make **concrete, specific showing** of relevance and need before court even conducts in-camera review. *State v. Howland*, 2023 WL 3613259, at \*3–5 (reversing in-camera review where moving party failed to make threshold showing; even in-camera review invades privacy and requires justification).
+**Threshold Requirement:** Opposing counsel must make **concrete, specific showing** of relevance and need before court even conducts in-camera review. *State v. Howland*, 2023 WL 3613259, at \*3–5 (affirming denial where defendant's request was a "fishing expedition" under § 622.10(4); criminal case, persuasive by analogy).
 
 **McMaster Five-Factor Balancing:**
 
