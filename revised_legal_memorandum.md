@@ -94,7 +94,7 @@ To determine whether constitutional privacy protection yields to disclosure, Iow
 
 #### Threshold for In-Camera Review
 
-No in-camera review should occur absent a **concrete, specific showing** by the moving party that the records are relevant and necessary. *State v. Howland*, No. 22-0519, 2023 WL 3613259, at \*3–5 (Iowa Ct. App. May 24, 2023) (reversing trial court's in-camera review where State failed to make threshold showing of relevance and need; holding that even in-camera review invades privacy and requires justification).
+No in-camera review should occur absent a **concrete, specific showing** by the moving party that the records are relevant and necessary. *State v. Howland*, No. 22-0519, 2023 WL 3613259, at \*3–5 (Iowa Ct. App. May 24, 2023) (reversing trial court's in-camera review where State failed to make threshold showing of relevance and need; holding that even in-camera review invades privacy and requires justification). Although *Howland* arose in the criminal context, its insistence on a threshold, specific nexus before any in-camera review is persuasive in civil mental-health disputes to guard against fishing expeditions.
 
 Opposing counsel must satisfy the *McMaster*/*Fagen* threshold **before** the court even looks at the records. This procedural protection is critical.
 
@@ -102,7 +102,7 @@ Opposing counsel must satisfy the *McMaster*/*Fagen* threshold **before** the co
 
 If we lose at Gate 1 (court finds § 622.10(2) patient-litigant exception applies), we fall back to Gate 2 constitutional privacy balancing. But this is not an absolute shield. The *McMaster*/*Fagen* balancing test presents vulnerabilities in custody context:
 
-1. **Relevance factor weighs against us:** Treatment records have direct relevance to assessing current mental health stability, which courts consider relevant to parenting capacity under Iowa Code § 598.41(3)(i), (n).
+1. **Relevance factor weighs against us:** Treatment records have direct relevance to assessing current mental health stability, which courts consider relevant to parenting capacity under Iowa Code § 598.41(3).
 
 2. **"Compelling need" argument is strong in custody:** *McMaster* holds that compelling societal need can override privacy. In *Fagen* (employment discrimination) and *McMaster* (board investigation), the competing interests were institutional/regulatory. Here, the competing interest is **child welfare**—which Iowa courts treat as paramount. Opponent will argue child's best interests create compelling need that overrides privacy.
 
@@ -157,7 +157,7 @@ Iowa Code § 125.37 separately protects SUD treatment records and tracks Part 2'
 
 **Option 1 (Preferred):** Obtain narrow, Part 2-compliant written consent authorizing disclosure of treatment type and dates only, with all clinical content and provider identity excluded and no redisclosure permitted.
 
-**Option 2 (If high identification risk):** Disclose de-identified date ranges (e.g., "Client attended SUD counseling sessions during Q1–Q3 2024") consistent with Part 2's minimum necessary standard.
+**Option 2 (If high identification risk):** Disclose de-identified date ranges (e.g., "Client attended SUD counseling sessions during Q1–Q3 2024") limited to what is necessary for the stated purpose of rebutting non-treatment allegations.
 
 ---
 
@@ -204,11 +204,11 @@ This defensive posture does not trigger Iowa Code § 622.10(2)'s patient-litigan
 
 #### 3. Administrative Facts vs. Confidential Communications
 
-Iowa Code § 622.10(1) protects "**confidential communications**" between patient and mental health professional—statements, clinical content, therapeutic exchanges.
+Iowa Code § 622.10(1) protects "**confidential communications**" between patient and mental health professional—statements, clinical content, therapeutic exchanges (and records embodying them).
 
-**We are disclosing no confidential communication.** We are disclosing only that appointments of a certain type occurred on certain dates. These are administrative facts, not privileged therapeutic content.
+While Iowa appellate courts have not squarely classified dates-only attendance as "non-privileged," the **better reading**—reinforced by Iowa Code ch. 228's administrative/clinical distinction—is that dates and modality are administrative facts rather than confidential communications. Iowa Code § 228.1 (mental health confidentiality chapter) separately defines "administrative information" (including dates of service) as distinct from protected clinical content. While § 228.1 appears outside the privilege statute, the statutory distinction provides supportive reasoning that Iowa law recognizes a difference between administrative facts and confidential therapeutic communications.
 
-Iowa Code § 228.1 (mental health confidentiality chapter) separately defines "administrative information" (including dates of service) as distinct from protected clinical content. While § 228.1 appears outside the privilege statute, the statutory distinction provides supportive reasoning that Iowa law recognizes a difference between administrative facts and confidential therapeutic communications.
+**We are disclosing no confidential communication.** We disclose only that appointments of a certain type occurred on certain dates.
 
 #### 4. Liberal Construction of Privilege; Narrow Construction of Waiver
 
@@ -222,7 +222,7 @@ If we lose Gate 1 argument (court finds statutory privilege waived under § 622.
 
 #### Factor 1: Relevance
 
-**Medium-to-high.** Treatment records have relevance to assessing current stability, which courts consider relevant to parenting capacity under Iowa Code § 598.41(3)(i) (mental health), (n) (other factors).
+**Medium-to-high.** Treatment records have relevance to assessing current stability, which courts consider relevant to parenting capacity under Iowa Code § 598.41(3).
 
 *This factor weighs against privacy in custody context.*
 
@@ -258,7 +258,7 @@ Courts may find child's best interests create sufficiently compelling need to ov
 
 **High.** Mental health and substance abuse treatment records implicate the most sensitive, intimate personal information. Public policy of encouraging treatment-seeking requires strong privacy protection.
 
-Federal courts recognize psychotherapist-patient privilege as absolute in federal proceedings specifically to encourage treatment. *Jaffee v. Redmond*, 518 U.S. 1, 10–18 (1996). *Jaffee*'s reasoning—that need-based balancing undermines the privilege and deters individuals from seeking treatment—provides persuasive policy support.
+Federal courts recognize psychotherapist-patient privilege as absolute in federal proceedings specifically to encourage treatment. *Jaffee v. Redmond*, 518 U.S. 1, 10–18 (1996). Iowa's privilege is statutory under Iowa Code § 622.10, and *Jaffee* does not control state privilege law; however, *Jaffee*'s reasoning—that need-based balancing undermines the privilege and deters individuals from seeking treatment—provides persuasive policy support for robust privacy protection.
 
 *This factor weighs strongly in favor of privacy.*
 
@@ -315,6 +315,8 @@ To minimize door-opening risk and maximize protection on both Gate 1 and Gate 2,
 **Signature:** Records Custodian (not clinician).
 
 **For SUD providers:** Accompany with Part 2-compliant written consent from client (see Part 2 section above) OR obtain Part 2 court order before disclosure.
+
+**Note on provider identity:** Even provider names or facility identification can constitute "patient-identifying information" under 42 C.F.R. Part 2 for SUD treatment. Our strategic choice to omit provider names protects against Part 2 violations. If the court requires provenance, offer a **client affidavit plus stipulation** (e.g., "I have attended SUD counseling since [date]") as a safer alternative to a provider-signed letter in SUD cases.
 
 ### Component 2: Non-Waiver Legend (Attach to Disclosure and All Filings)
 
@@ -402,7 +404,7 @@ If court finds § 622.10(2) exception applies (we disagree), client's qualified 
 
 **Narrow Tailoring Required:** If court orders any disclosure after balancing, production must be: (1) limited in scope and time; (2) redacted of unnecessary clinical content; (3) subject to protective order. *Fagen*, 861 N.W.2d at 835.
 
-**Part 2 (if SUD):** 42 C.F.R. Part 2 prohibits disclosure absent compliant court order meeting Subpart E requirements (good cause, minimum necessary, no redisclosure, sealed). Federal law preempts state court's authority to order broader disclosure.
+**Part 2 (if SUD):** 42 C.F.R. Part 2 prohibits disclosure absent compliant court order meeting Subpart E requirements (good cause, limited to information necessary for the stated purpose, no redisclosure, sealed). Federal law preempts state court's authority to order broader disclosure.
 
 **Conclusion (Gate 2):** If court reaches constitutional privacy analysis, *McMaster*/*Fagen* balancing and *Howland* threshold showing favor protection. At minimum, limit disclosure through in-camera review, narrow tailoring, and protective order.
 
@@ -527,6 +529,8 @@ If court signals concerns about attendance confirmation or skepticism about Gate
 
 *Fagen v. Grand View Univ.*, 861 N.W.2d 825, 831, 834–35 (Iowa 2015).
 
+*In re A.M.*, 856 N.W.2d 365, 374–76 (Iowa 2014) (CINA-specific statutory abrogation; not applicable to ordinary custody).
+
 *In re Marriage of Hansen*, 733 N.W.2d 683, 696 (Iowa 2007).
 
 *In re Marriage of Hutchinson*, 588 N.W.2d 442, 447 (Iowa 1999).
@@ -535,9 +539,7 @@ If court signals concerns about attendance confirmation or skepticism about Gate
 
 ### Iowa Court of Appeals
 
-*In re A.M.*, 856 N.W.2d 365, 374–76 (Iowa 2014) (CINA-specific statutory abrogation; not applicable to ordinary custody).
-
-*In re Marriage of Mulligan*, No. 11-0062, 2011 WL 2420005, at \*4 (Iowa Ct. App. June 15, 2011).
+*In re Marriage of Mulligan*, No. 11-0062, 2011 WL 2420005, at \*4 (Iowa Ct. App. June 15, 2011) (unpublished).
 
 *State v. Howland*, No. 22-0519, 2023 WL 3613259, at \*3–5 (Iowa Ct. App. May 24, 2023).
 
