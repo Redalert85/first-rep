@@ -79,30 +79,64 @@ class AdvancedRealPropertyParser:
     def __init__(self, base_dir: Path):
         self.base_dir = base_dir
         self.concepts = []
-        
+        # Map section numbers to their expected emoji when the outline omits them
+        self.section_emoji_map = {
+            "1": "🏰",
+            "2": "📜",
+            "3": "🛤️",
+            "4": "👥",
+            "5": "🏠",
+            "6": "🏦",
+            "7": "🏛️",
+            "8": "⚔️",
+            "9": "🪑",
+            "10": "💧",
+            "11": "⛏️",
+            "12": "🎯",
+            "13": "🏗️",
+            "14": "🗓️",
+        }
+
     def parse_outline(self, filepath: Path) -> List[AdvancedConcept]:
         """Parse the main outline with all features"""
         content = filepath.read_text()
         concepts = []
-        
-        # Split by major sections (## headers with emojis)
-        sections = re.split(r'\n## (🏰|📜|🛤️|👥|🏠|🏦|🏛️|⚔️|🪑) \d+\. (.+?)\n', content)
-        
-        for i in range(1, len(sections), 3):
-            emoji = sections[i]
-            name = sections[i+1]
-            section_content = sections[i+2] if i+2 < len(sections) else ""
-            
+
+        # Identify all major outline sections. Some headings omit the emoji, so
+        # we capture an optional emoji followed by the numbered title.
+        emoji_class = "\u2600-\u27BF\U0001F300-\U0001FAFF"
+        pattern = re.compile(
+            rf'^##\s+(?:([{emoji_class}])\s+)?(\d+)([.)])?\s*(.+)$',
+            re.MULTILINE
+        )
+
+        matches = list(pattern.finditer(content))
+        for index, match in enumerate(matches):
+            emoji_group, section_number, _, name = match.groups()
+            emoji = emoji_group if emoji_group else None
+            name = name.strip()
+            if name.startswith('-'):
+                name = f"{section_number}{name}"
+            start = match.end()
+            end = matches[index + 1].start() if index + 1 < len(matches) else len(content)
+            section_content = content[start:end]
+
+            if not emoji:
+                emoji = self.section_emoji_map.get(section_number, "📘")
+
             concept = self._parse_major_section(emoji, name, section_content)
             if concept:
                 concepts.append(concept)
-        
+
         return concepts
-    
+
     def _parse_major_section(self, emoji: str, name: str, content: str) -> Optional[AdvancedConcept]:
         """Parse a major section with all sub-elements"""
+        concept_id = f"real_property_{name.lower().replace(' ', '_').replace('&', 'and')}"
+        concept_id = re.sub(r'[^a-z0-9_]', '', concept_id)
+
         concept = AdvancedConcept(
-            concept_id=f"real_property_{name.lower().replace(' ', '_').replace('&', 'and')}",
+            concept_id=concept_id,
             name=name,
             subject="real_property",
             emoji=emoji
