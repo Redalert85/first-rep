@@ -1,3 +1,11 @@
+#!/usr/bin/env python3
+"""Ultimate Knowledge Base"""
+
+class KnowledgeNode:
+    """Simple knowledge node container"""
+    def __init__(self, **kwargs):
+        self.__dict__.update(kwargs)
+
 # Ultimate Expanded Knowledge Base - 112+ Concepts
 # Each subject has 14+ concepts at Real Property richness level
 
