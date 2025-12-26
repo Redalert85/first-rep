@@ -76,8 +76,7 @@ class StudySession:
 
 ## Testing Approach
 
-- **Simple assertion-based tests** in test_tutor.py
-- **No external test frameworks** currently (pytest not used)
+- **Simple assertion-based tests** in test_tutor.py (no external test frameworks currently)
 - **Manual testing** via interactive sessions is primary validation method
 - **Test core components**: Knowledge graph, interleaved practice engine, tutor initialization
 - When adding tests, follow the pattern in test_tutor.py with clear success messages
@@ -85,7 +84,7 @@ class StudySession:
 ## Development Workflow
 
 ### Making Changes
-1. **Preserve existing functionality** - This is a working system used by students
+1. **Preserve existing functionality** - This is a working system
 2. **Test interactively** using `./start_interactive_tutor.sh` after changes
 3. **Verify core features** using test_tutor.py
 4. **Update documentation** if adding new features or changing workflows
@@ -98,7 +97,7 @@ class StudySession:
 - **Log to appropriate JSONL file** for persistent data
 
 ### Environment Setup
-- **API keys** stored in `.env` or `brett.env` (OPENAI_API_KEY or XAI_API_KEY)
+- **API keys** stored in `.env` file (OPENAI_API_KEY or XAI_API_KEY)
 - **Load env files** using `python-dotenv`
 - **Check for API key** before making LLM calls
 
@@ -123,22 +122,23 @@ The system covers seven MBE subjects:
 ## Common Patterns
 
 ### Spaced Repetition (SM-2 Algorithm)
+The system implements SM-2 spaced repetition in `advanced_pedagogy.py`:
+
 ```python
-def calculate_next_review(quality: int, repetitions: int, 
-                         easiness_factor: float, interval: int) -> Tuple[int, int, float]:
+def spaced_repetition_scheduler(self, concept: KnowledgeNode) -> bool:
     """
-    SM-2 spaced repetition algorithm implementation.
+    SM-2 spaced repetition algorithm - determines if concept is due for review.
     
-    Args:
-        quality: User rating 0-5 (0=complete blackout, 5=perfect recall)
-        repetitions: Number of consecutive correct reviews
-        easiness_factor: Current easiness factor (typically 1.3-2.5)
-        interval: Current interval in days
+    The KnowledgeNode contains:
+        - last_reviewed: datetime of last review
+        - ease_factor: SM-2 ease factor (typically 1.3-2.5)
+        - interval: days until next review
+        - repetitions: consecutive correct reviews
     
     Returns:
-        Tuple of (next_interval_days, new_repetitions, new_easiness_factor)
+        True if concept should be reviewed today
     """
-    # Used throughout for flashcard scheduling
+    # Implementation checks if current date >= last_reviewed + interval
 ```
 
 ### Knowledge Graph Queries
