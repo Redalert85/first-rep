@@ -71,8 +71,7 @@ def _initialize_civil_procedure(self):
             common_traps=[
                 "Same parties/privity",
                 "mutual vs non-mutual collateral estoppel",
-                "full faith and credit.
-
+                "full faith and credit."
 #### Visuals",
             ],
             # Mnemonic: RICE
