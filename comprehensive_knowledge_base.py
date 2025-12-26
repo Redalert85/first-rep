@@ -1,6 +1,11 @@
 # Generated Comprehensive Knowledge Base
 # Each subject enhanced to Real Property level + 50%
 
+
+class ComprehensiveKnowledgeBase:
+    def __init__(self):
+        self.nodes = {}
+
     def _initialize_civil_procedure(self):
         """Initialize civil_procedure - Comprehensive expansion"""
         concepts = [
