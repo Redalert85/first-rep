@@ -1,0 +1,21 @@
+# Pre-commit hooks configuration
+# Install pre-commit: pip install pre-commit
+# Setup hooks: pre-commit install
+# Run manually: pre-commit run --all-files
+
+repos:
+  - repo: https://github.com/pycqa/flake8
+    rev: 7.3.0
+    hooks:
+      - id: flake8
+        args: ['--select=E9,F63,F7,F82', '--show-source', '--statistics']
+        name: flake8 (syntax errors check)
+        description: Check for Python syntax errors
+        
+  - repo: https://github.com/pycqa/flake8
+    rev: 7.3.0
+    hooks:
+      - id: flake8
+        args: ['--max-complexity=10', '--max-line-length=127', '--statistics']
+        name: flake8 (style check)
+        description: Check for Python style issues
