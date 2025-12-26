@@ -185,6 +185,46 @@
             font-size: 0.9rem;
         }
 
+        .toast {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background: rgba(0, 0, 0, 0.8);
+            color: white;
+            padding: 15px 25px;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+            z-index: 1000;
+            animation: slideIn 0.3s ease-out, slideOut 0.3s ease-in 2.7s;
+            opacity: 0;
+        }
+
+        .toast.error {
+            background: rgba(244, 67, 54, 0.9);
+        }
+
+        @keyframes slideIn {
+            from {
+                transform: translateX(400px);
+                opacity: 0;
+            }
+            to {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideOut {
+            from {
+                transform: translateX(0);
+                opacity: 1;
+            }
+            to {
+                transform: translateX(400px);
+                opacity: 0;
+            }
+        }
+
         @media (max-width: 768px) {
             .header h1 {
                 font-size: 2rem;
@@ -271,6 +311,23 @@
         ];
 
         /**
+         * Show a toast notification
+         * @param {string} message - The message to display
+         * @param {string} type - The type of toast ('info' or 'error')
+         */
+        function showToast(message, type = 'info') {
+            const toast = document.createElement('div');
+            toast.className = `toast ${type}`;
+            toast.textContent = message;
+            document.body.appendChild(toast);
+            
+            // Remove toast after animation completes
+            setTimeout(() => {
+                document.body.removeChild(toast);
+            }, 3000);
+        }
+
+        /**
          * Initialize the application
          * Populates the time zone dropdown and renders initial clocks
          */
@@ -313,13 +370,13 @@
             const timezone = select.value;
             
             if (!timezone) {
-                alert('Please select a time zone');
+                showToast('Please select a time zone', 'error');
                 return;
             }
 
             // Check if timezone is already added
             if (activeTimeZones.some(tz => tz.timezone === timezone)) {
-                alert('This time zone is already displayed');
+                showToast('This time zone is already displayed', 'error');
                 return;
             }
 
@@ -335,6 +392,7 @@
 
             renderClocks();
             select.value = ''; // Reset dropdown
+            showToast(`Added ${label}`, 'info');
         }
 
         /**
@@ -344,12 +402,16 @@
         function removeTimeZone(id) {
             // Prevent removing default clocks
             if (id === 'local' || id === 'utc') {
-                alert('Cannot remove default clocks');
+                showToast('Cannot remove default clocks', 'error');
                 return;
             }
 
+            const tzToRemove = activeTimeZones.find(tz => tz.id === id);
             activeTimeZones = activeTimeZones.filter(tz => tz.id !== id);
             renderClocks();
+            if (tzToRemove) {
+                showToast(`Removed ${tzToRemove.label}`, 'info');
+            }
         }
 
         /**
@@ -378,17 +440,41 @@
             // Add removable class if not a default clock
             if (tzData.id !== 'local' && tzData.id !== 'utc') {
                 card.classList.add('removable');
+                
+                // Create remove button with event listener (safer than onclick in innerHTML)
+                const removeBtn = document.createElement('button');
+                removeBtn.className = 'remove-btn';
+                removeBtn.textContent = '×';
+                removeBtn.title = 'Remove';
+                removeBtn.addEventListener('click', () => removeTimeZone(tzData.id));
+                card.appendChild(removeBtn);
             }
 
-            card.innerHTML = `
-                ${tzData.id !== 'local' && tzData.id !== 'utc' ? 
-                    `<button class="remove-btn" onclick="removeTimeZone('${tzData.id}')" title="Remove">×</button>` : 
-                    ''}
-                <div class="clock-label">${tzData.label}</div>
-                <div class="time-display" id="${tzData.id}-time">--:--:--</div>
-                <div class="date-display" id="${tzData.id}-date">---</div>
-                <div class="timezone-display">${tzData.timezone}</div>
-            `;
+            // Create and append label
+            const label = document.createElement('div');
+            label.className = 'clock-label';
+            label.textContent = tzData.label;
+            card.appendChild(label);
+
+            // Create and append time display
+            const timeDisplay = document.createElement('div');
+            timeDisplay.className = 'time-display';
+            timeDisplay.id = `${tzData.id}-time`;
+            timeDisplay.textContent = '--:--:--';
+            card.appendChild(timeDisplay);
+
+            // Create and append date display
+            const dateDisplay = document.createElement('div');
+            dateDisplay.className = 'date-display';
+            dateDisplay.id = `${tzData.id}-date`;
+            dateDisplay.textContent = '---';
+            card.appendChild(dateDisplay);
+
+            // Create and append timezone display
+            const tzDisplay = document.createElement('div');
+            tzDisplay.className = 'timezone-display';
+            tzDisplay.textContent = tzData.timezone;
+            card.appendChild(tzDisplay);
 
             return card;
         }
