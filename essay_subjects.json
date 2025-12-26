@@ -678,7 +678,8 @@
       "Best interests",
       "Legal vs physical",
       "Joint vs sole",
-      "Modification standards"
+      "Modification standards",
+      "UCCJEA jurisdiction"
     ],
     "exceptions": [],
     "policy_rationales": [],
@@ -891,5 +892,405 @@
     "prerequisites": [],
     "exam_frequency": "high",
     "iowa_specific": true
+  },
+  {
+    "concept_id": "biz_entity_types",
+    "name": "Entity Formation & Types",
+    "subject": "corporations",
+    "category": "ESSAY",
+    "difficulty": 3,
+    "rule_statement": "Business associations include partnerships (general, limited, LLP), corporations (closely-held, public), and LLCs; formation and liability vary by entity type",
+    "elements": [
+      "General partnerships by agreement/conduct",
+      "Limited partnerships require filing",
+      "LLPs limit partner liability",
+      "Corporations and LLCs require state filing"
+    ],
+    "exceptions": [],
+    "policy_rationales": [],
+    "common_traps": [
+      "Assuming limited liability without proper filing",
+      "Treating LPs like GPs",
+      "Ignoring LLC operating agreement"
+    ],
+    "mnemonic": null,
+    "prerequisites": [],
+    "exam_frequency": "high",
+    "iowa_specific": false
+  },
+  {
+    "concept_id": "corp_governance",
+    "name": "Corporate Governance",
+    "subject": "corporations",
+    "category": "ESSAY",
+    "difficulty": 4,
+    "rule_statement": "Shareholders elect directors and approve fundamental changes; directors manage business; officers run day-to-day and owe fiduciary duties",
+    "elements": [
+      "Shareholder voting powers",
+      "Board management authority",
+      "Officer agency and duties",
+      "Liability for breaches"
+    ],
+    "exceptions": [],
+    "policy_rationales": [],
+    "common_traps": [
+      "Assuming shareholders manage daily operations",
+      "Ignoring officer authority limits",
+      "Overlooking director liability standards"
+    ],
+    "mnemonic": null,
+    "prerequisites": [],
+    "exam_frequency": "high",
+    "iowa_specific": false
+  },
+  {
+    "concept_id": "corp_rule_10b_5",
+    "name": "Rule 10b-5 Securities Fraud",
+    "subject": "corporations",
+    "category": "ESSAY",
+    "difficulty": 4,
+    "rule_statement": "Rule 10b-5 prohibits material misstatements or omissions in connection with purchase/sale of securities with scienter and reliance",
+    "elements": [
+      "Material misstatement/omission",
+      "Scienter",
+      "Purchase or sale of securities",
+      "Reliance and causation"
+    ],
+    "exceptions": [],
+    "policy_rationales": [],
+    "common_traps": [
+      "Negligence is insufficient",
+      "Must be in connection with purchase/sale",
+      "Omissions need duty to disclose"
+    ],
+    "mnemonic": null,
+    "prerequisites": [],
+    "exam_frequency": "medium",
+    "iowa_specific": false
+  },
+  {
+    "concept_id": "corp_insider_trading",
+    "name": "Insider Trading",
+    "subject": "corporations",
+    "category": "ESSAY",
+    "difficulty": 4,
+    "rule_statement": "Insiders must disclose or abstain from trading on material nonpublic information; tipper/tippee liability applies",
+    "elements": [
+      "Material nonpublic information",
+      "Breach of duty",
+      "Trading or tipping",
+      "Tippee knowledge"
+    ],
+    "exceptions": [],
+    "policy_rationales": [],
+    "common_traps": [
+      "Must have duty to issuer or shareholders",
+      "Tippee liability requires knowing breach",
+      "Misappropriation theory applies"
+    ],
+    "mnemonic": null,
+    "prerequisites": [],
+    "exam_frequency": "medium",
+    "iowa_specific": false
+  },
+  {
+    "concept_id": "conflict_choice_of_law",
+    "name": "Choice of Law Approaches",
+    "subject": "conflict_of_laws",
+    "category": "ESSAY",
+    "difficulty": 4,
+    "rule_statement": "Courts apply vested rights, most significant relationship, or governmental interest analysis depending on jurisdiction",
+    "elements": [
+      "Vested rights (traditional)",
+      "Most significant relationship",
+      "Governmental interest",
+      "Forum law fallback"
+    ],
+    "exceptions": [],
+    "policy_rationales": [],
+    "common_traps": [
+      "Mixing approaches",
+      "Ignoring statutory directives",
+      "Overlooking public policy exception"
+    ],
+    "mnemonic": null,
+    "prerequisites": [],
+    "exam_frequency": "high",
+    "iowa_specific": false
+  },
+  {
+    "concept_id": "conflict_personal_jurisdiction",
+    "name": "Personal Jurisdiction",
+    "subject": "conflict_of_laws",
+    "category": "ESSAY",
+    "difficulty": 4,
+    "rule_statement": "Jurisdiction requires minimum contacts and fairness; specific jurisdiction ties to claim, general requires essentially at home",
+    "elements": [
+      "Minimum contacts",
+      "Specific vs general",
+      "Purposeful availment",
+      "Fair play and substantial justice"
+    ],
+    "exceptions": [],
+    "policy_rationales": [],
+    "common_traps": [
+      "General jurisdiction is narrow",
+      "Unilateral activity insufficient",
+      "Consent can confer jurisdiction"
+    ],
+    "mnemonic": null,
+    "prerequisites": [],
+    "exam_frequency": "high",
+    "iowa_specific": false
+  },
+  {
+    "concept_id": "conflict_subject_matter_jurisdiction",
+    "name": "Subject Matter Jurisdiction",
+    "subject": "conflict_of_laws",
+    "category": "ESSAY",
+    "difficulty": 3,
+    "rule_statement": "Federal question jurisdiction requires claims arising under federal law; diversity requires complete diversity and amount in controversy",
+    "elements": [
+      "Federal question",
+      "Complete diversity",
+      "$75,000 amount in controversy",
+      "Removal and supplemental limits"
+    ],
+    "exceptions": [],
+    "policy_rationales": [],
+    "common_traps": [
+      "Well-pleaded complaint rule",
+      "No aggregation unless common interest",
+      "Forum defendant rule"
+    ],
+    "mnemonic": null,
+    "prerequisites": [],
+    "exam_frequency": "medium",
+    "iowa_specific": false
+  },
+  {
+    "concept_id": "conflict_recognition_judgments",
+    "name": "Recognition of Judgments",
+    "subject": "conflict_of_laws",
+    "category": "ESSAY",
+    "difficulty": 3,
+    "rule_statement": "Full faith and credit requires recognition of sister-state judgments unless rendering court lacked jurisdiction or due process",
+    "elements": [
+      "Final valid judgment",
+      "Full faith and credit",
+      "Jurisdictional inquiry",
+      "Collateral attack limits"
+    ],
+    "exceptions": [],
+    "policy_rationales": [],
+    "common_traps": [
+      "No relitigation of merits",
+      "Default judgment still enforceable",
+      "Penal judgments exceptions"
+    ],
+    "mnemonic": null,
+    "prerequisites": [],
+    "exam_frequency": "medium",
+    "iowa_specific": false
+  },
+  {
+    "concept_id": "conflict_constitutional_limits",
+    "name": "Constitutional Limits",
+    "subject": "conflict_of_laws",
+    "category": "ESSAY",
+    "difficulty": 3,
+    "rule_statement": "Choice of law and jurisdiction must satisfy due process and privileges and immunities constraints",
+    "elements": [
+      "Due process limits",
+      "Privileges and immunities",
+      "Full faith and credit",
+      "Fundamental fairness"
+    ],
+    "exceptions": [],
+    "policy_rationales": [],
+    "common_traps": [
+      "Insufficient state contacts",
+      "Ignoring constitutional floor",
+      "Mistaking comity for obligation"
+    ],
+    "mnemonic": null,
+    "prerequisites": [],
+    "exam_frequency": "medium",
+    "iowa_specific": false
+  },
+  {
+    "concept_id": "family_marriage",
+    "name": "Marriage & Premarital Agreements",
+    "subject": "family_law",
+    "category": "ESSAY",
+    "difficulty": 3,
+    "rule_statement": "Valid marriage requires capacity, consent, and license/solemnization; premarital agreements require voluntariness, disclosure, and no unconscionability",
+    "elements": [
+      "Capacity and consent",
+      "License/solemnization",
+      "Premarital agreement formalities",
+      "Enforceability standards"
+    ],
+    "exceptions": [],
+    "policy_rationales": [],
+    "common_traps": [
+      "Common-law marriage varies by state",
+      "Agreements cannot waive child support",
+      "Unconscionability at execution or enforcement"
+    ],
+    "mnemonic": null,
+    "prerequisites": [],
+    "exam_frequency": "high",
+    "iowa_specific": false
+  },
+  {
+    "concept_id": "family_adoption_paternity",
+    "name": "Adoption & Paternity",
+    "subject": "family_law",
+    "category": "ESSAY",
+    "difficulty": 4,
+    "rule_statement": "Adoption requires consent or termination of parental rights; paternity can be established by acknowledgment, marriage presumption, or adjudication",
+    "elements": [
+      "Consent/termination",
+      "Best interests standard",
+      "Paternity presumptions",
+      "Notice requirements"
+    ],
+    "exceptions": [],
+    "policy_rationales": [],
+    "common_traps": [
+      "Putative father registry issues",
+      "Revocation windows for consent",
+      "Adoption cuts off prior rights"
+    ],
+    "mnemonic": null,
+    "prerequisites": [],
+    "exam_frequency": "medium",
+    "iowa_specific": false
+  },
+  {
+    "concept_id": "secured_proceeds",
+    "name": "Proceeds",
+    "subject": "secured_transactions",
+    "category": "ESSAY",
+    "difficulty": 4,
+    "rule_statement": "Security interest continues in identifiable proceeds; perfection continues temporarily and may require new filing",
+    "elements": [
+      "Identifiable proceeds",
+      "Tracing rules",
+      "Temporary perfection",
+      "Cash vs non-cash proceeds"
+    ],
+    "exceptions": [],
+    "policy_rationales": [],
+    "common_traps": [
+      "Commingling requires tracing",
+      "Perfection may lapse after 20 days",
+      "Different filing office for proceeds"
+    ],
+    "mnemonic": null,
+    "prerequisites": [],
+    "exam_frequency": "high",
+    "iowa_specific": false
+  },
+  {
+    "concept_id": "wills_ademption_lapse",
+    "name": "Ademption & Lapse",
+    "subject": "wills_trusts_estates",
+    "category": "ESSAY",
+    "difficulty": 4,
+    "rule_statement": "Specific gifts fail if not in estate at death (ademption); lapse occurs if beneficiary predeceases, unless anti-lapse statute applies",
+    "elements": [
+      "Specific vs general devises",
+      "Ademption by extinction",
+      "Lapse and anti-lapse",
+      "Class gifts"
+    ],
+    "exceptions": [],
+    "policy_rationales": [],
+    "common_traps": [
+      "Anti-lapse for certain relatives",
+      "Change in form vs substance",
+      "Residuary gift implications"
+    ],
+    "mnemonic": null,
+    "prerequisites": [],
+    "exam_frequency": "high",
+    "iowa_specific": false
+  },
+  {
+    "concept_id": "trusts_administration",
+    "name": "Trust Administration",
+    "subject": "wills_trusts_estates",
+    "category": "ESSAY",
+    "difficulty": 4,
+    "rule_statement": "Trustees must administer in good faith, invest prudently, inform beneficiaries, and follow trust terms",
+    "elements": [
+      "Duty to inform and account",
+      "Prudent investor rule",
+      "Impartiality",
+      "Delegation limits"
+    ],
+    "exceptions": [],
+    "policy_rationales": [],
+    "common_traps": [
+      "Delegation requires oversight",
+      "Income vs principal allocations",
+      "Beneficiary standing"
+    ],
+    "mnemonic": null,
+    "prerequisites": [],
+    "exam_frequency": "high",
+    "iowa_specific": false
+  },
+  {
+    "concept_id": "trusts_powers_appointment",
+    "name": "Powers of Appointment",
+    "subject": "wills_trusts_estates",
+    "category": "ESSAY",
+    "difficulty": 4,
+    "rule_statement": "General powers allow appointment to self, estate, or creditors; special powers limit permissible appointees",
+    "elements": [
+      "General vs special",
+      "Creation and scope",
+      "Exercise requirements",
+      "Default takers"
+    ],
+    "exceptions": [],
+    "policy_rationales": [],
+    "common_traps": [
+      "Special power cannot benefit donee",
+      "Blanket exercises require intent",
+      "Release vs lapse"
+    ],
+    "mnemonic": null,
+    "prerequisites": [],
+    "exam_frequency": "medium",
+    "iowa_specific": false
+  },
+  {
+    "concept_id": "probate_will_contests",
+    "name": "Probate & Will Contests",
+    "subject": "wills_trusts_estates",
+    "category": "ESSAY",
+    "difficulty": 4,
+    "rule_statement": "Probate authenticates wills and administers estates; will contests allege lack of capacity, undue influence, or improper execution; surviving spouse may claim elective share",
+    "elements": [
+      "Probate process",
+      "Will contest grounds",
+      "Burden of proof",
+      "Elective share rights"
+    ],
+    "exceptions": [],
+    "policy_rationales": [],
+    "common_traps": [
+      "No-contest clause limits",
+      "Standing to contest",
+      "Time limits for contest"
+    ],
+    "mnemonic": null,
+    "prerequisites": [],
+    "exam_frequency": "high",
+    "iowa_specific": false
   }
 ]
