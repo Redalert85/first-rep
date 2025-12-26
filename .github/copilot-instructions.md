@@ -126,7 +126,18 @@ The system covers seven MBE subjects:
 ```python
 def calculate_next_review(quality: int, repetitions: int, 
                          easiness_factor: float, interval: int) -> Tuple[int, int, float]:
-    """SM-2 spaced repetition algorithm implementation."""
+    """
+    SM-2 spaced repetition algorithm implementation.
+    
+    Args:
+        quality: User rating 0-5 (0=complete blackout, 5=perfect recall)
+        repetitions: Number of consecutive correct reviews
+        easiness_factor: Current easiness factor (typically 1.3-2.5)
+        interval: Current interval in days
+    
+    Returns:
+        Tuple of (next_interval_days, new_repetitions, new_easiness_factor)
+    """
     # Used throughout for flashcard scheduling
 ```
 
