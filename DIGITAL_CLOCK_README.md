@@ -8,7 +8,7 @@ A modern, responsive digital clock application that displays the current time in
 1. **Display Components**: Clean, modern user interface showing current time with large, readable fonts
 2. **Time Zone Support**: View times in different time zones including:
    - Local time (automatically detected)
-   - UTC (Universal Coordinated Time)
+   - UTC (Coordinated Universal Time)
    - Any other time zone from a comprehensive list
 3. **Automatic Refresh**: Time updates dynamically every second
 4. **User Time Zone Selection**: Interactive dropdown to add or remove time zones dynamically

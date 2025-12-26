@@ -323,7 +323,9 @@
             
             // Remove toast after animation completes
             setTimeout(() => {
-                document.body.removeChild(toast);
+                if (toast.parentNode) {
+                    toast.parentNode.removeChild(toast);
+                }
             }, 3000);
         }
 
