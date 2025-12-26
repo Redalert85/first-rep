@@ -1,7 +1,8 @@
 # Full MBE Expansion - Additional Concepts
 # Adds 58-98 concepts for complete NCBE coverage
 
-    def _add_civil_procedure_expansion(self):
+
+def _add_civil_procedure_expansion(self):
         """Add 7 additional civil_procedure concepts"""
         concepts = [
             KnowledgeNode(
@@ -82,7 +83,7 @@
         for node in concepts:
             self.nodes[node.concept_id] = node
 
-    def _add_constitutional_law_expansion(self):
+def _add_constitutional_law_expansion(self):
         """Add 7 additional constitutional_law concepts"""
         concepts = [
             KnowledgeNode(
@@ -162,7 +163,7 @@
         for node in concepts:
             self.nodes[node.concept_id] = node
 
-    def _add_contracts_expansion(self):
+def _add_contracts_expansion(self):
         """Add 12 additional contracts concepts"""
         concepts = [
             KnowledgeNode(
@@ -293,7 +294,7 @@
         for node in concepts:
             self.nodes[node.concept_id] = node
 
-    def _add_criminal_law_expansion(self):
+def _add_criminal_law_expansion(self):
         """Add 7 additional criminal_law concepts"""
         concepts = [
             KnowledgeNode(
@@ -373,7 +374,7 @@
         for node in concepts:
             self.nodes[node.concept_id] = node
 
-    def _add_criminal_procedure_expansion(self):
+def _add_criminal_procedure_expansion(self):
         """Add 7 additional criminal_procedure concepts"""
         concepts = [
             KnowledgeNode(
@@ -452,7 +453,7 @@
         for node in concepts:
             self.nodes[node.concept_id] = node
 
-    def _add_evidence_expansion(self):
+def _add_evidence_expansion(self):
         """Add 9 additional evidence concepts"""
         concepts = [
             KnowledgeNode(
@@ -549,7 +550,7 @@
         for node in concepts:
             self.nodes[node.concept_id] = node
 
-    def _add_real_property_expansion(self):
+def _add_real_property_expansion(self):
         """Add 12 additional real_property concepts"""
         concepts = [
             KnowledgeNode(
@@ -682,7 +683,7 @@
         for node in concepts:
             self.nodes[node.concept_id] = node
 
-    def _add_torts_expansion(self):
+def _add_torts_expansion(self):
         """Add 9 additional torts concepts"""
         concepts = [
             KnowledgeNode(

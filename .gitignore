@@ -12,6 +12,9 @@ __pycache__/
 .coverage
 htmlcov/
 
+# Application logs
+bar_tutor.log
+
 # macOS
 .DS_Store
 

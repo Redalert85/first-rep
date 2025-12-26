@@ -1,6 +1,7 @@
 # Essay Subjects for Iowa Bar
 
-    def _initialize_professional_responsibility(self):
+
+def _initialize_professional_responsibility(self):
         """10 Professional Responsibility concepts"""
         concepts = [
             KnowledgeNode(
@@ -111,7 +112,7 @@
         for node in concepts:
             self.nodes[node.concept_id] = node
 
-    def _initialize_corporations(self):
+def _initialize_corporations(self):
         """7 Corporations concepts"""
         concepts = [
             KnowledgeNode(
@@ -189,7 +190,7 @@
         for node in concepts:
             self.nodes[node.concept_id] = node
 
-    def _initialize_wills_trusts_estates(self):
+def _initialize_wills_trusts_estates(self):
         """6 Wills Trusts Estates concepts"""
         concepts = [
             KnowledgeNode(
@@ -259,7 +260,7 @@
         for node in concepts:
             self.nodes[node.concept_id] = node
 
-    def _initialize_family_law(self):
+def _initialize_family_law(self):
         """5 Family Law concepts"""
         concepts = [
             KnowledgeNode(
@@ -316,7 +317,7 @@
         for node in concepts:
             self.nodes[node.concept_id] = node
 
-    def _initialize_secured_transactions(self):
+def _initialize_secured_transactions(self):
         """6 Secured Transactions concepts"""
         concepts = [
             KnowledgeNode(
@@ -385,7 +386,7 @@
         for node in concepts:
             self.nodes[node.concept_id] = node
 
-    def _initialize_iowa_procedure(self):
+def _initialize_iowa_procedure(self):
         """1 Iowa Procedure concepts"""
         concepts = [
             KnowledgeNode(

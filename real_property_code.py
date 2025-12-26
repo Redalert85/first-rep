@@ -1,4 +1,4 @@
-    def _initialize_real_property(self):
+def _initialize_real_property(self):
         """Initialize real property - LAND BARON framework (9 concepts)"""
         concepts = [
             KnowledgeNode(

@@ -1046,7 +1046,7 @@
   {
     "concept_id": "conflict_subject_matter_jurisdiction",
     "name": "Subject Matter Jurisdiction",
-    "subject": "conflict_of_laws",
+    "subject": "civil_procedure",
     "category": "ESSAY",
     "difficulty": 3,
     "rule_statement": "Federal question jurisdiction requires claims arising under federal law; diversity requires complete diversity and amount in controversy",
