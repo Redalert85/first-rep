@@ -671,6 +671,283 @@ class AdvancedPedagogyEngine:
                 'property_equitable_servitudes', 'Equitable Servitudes', 'property', 4,
                 related_concepts=['property_covenants']
             ),
+
+            # ==================== BUSINESS ASSOCIATIONS ====================
+            'bizassoc_formation': KnowledgeNode(
+                'bizassoc_formation', 'Business Entity Formation & Selection', 'business_associations', 3,
+                related_concepts=['bizassoc_partnership', 'bizassoc_corporation', 'bizassoc_llc']
+            ),
+            'bizassoc_partnership': KnowledgeNode(
+                'bizassoc_partnership', 'General & Limited Partnerships', 'business_associations', 3,
+                related_concepts=['bizassoc_formation', 'bizassoc_fiduciary_duties']
+            ),
+            'bizassoc_corporation': KnowledgeNode(
+                'bizassoc_corporation', 'Corporate Formation & Structure', 'business_associations', 3,
+                related_concepts=['bizassoc_formation', 'bizassoc_fiduciary_duties', 'bizassoc_piercing_veil']
+            ),
+            'bizassoc_llc': KnowledgeNode(
+                'bizassoc_llc', 'Limited Liability Companies', 'business_associations', 3,
+                related_concepts=['bizassoc_formation', 'bizassoc_fiduciary_duties']
+            ),
+            'bizassoc_fiduciary_duties': KnowledgeNode(
+                'bizassoc_fiduciary_duties', 'Fiduciary Duties (Care, Loyalty, Good Faith)', 'business_associations', 4,
+                related_concepts=['bizassoc_partnership', 'bizassoc_corporation', 'bizassoc_derivative_suits']
+            ),
+            'bizassoc_piercing_veil': KnowledgeNode(
+                'bizassoc_piercing_veil', 'Piercing the Corporate Veil', 'business_associations', 4,
+                related_concepts=['bizassoc_corporation']
+            ),
+            'bizassoc_derivative_suits': KnowledgeNode(
+                'bizassoc_derivative_suits', 'Shareholder Derivative Actions', 'business_associations', 4,
+                related_concepts=['bizassoc_fiduciary_duties', 'bizassoc_corporation']
+            ),
+
+            # ==================== CONSTITUTIONAL LAW - EXPANDED NCBE COVERAGE ====================
+            # Judicial Power & Justiciability
+            'conlaw_judicial_power': KnowledgeNode(
+                'conlaw_judicial_power', 'Judicial Power (Article III)', 'constitutional_law', 3,
+                related_concepts=['conlaw_judicial_review', 'conlaw_case_controversy']
+            ),
+            'conlaw_case_controversy': KnowledgeNode(
+                'conlaw_case_controversy', 'Case or Controversy Requirement', 'constitutional_law', 3,
+                related_concepts=['conlaw_standing', 'conlaw_mootness', 'conlaw_ripeness', 'conlaw_political_question']
+            ),
+            'conlaw_ripeness': KnowledgeNode(
+                'conlaw_ripeness', 'Ripeness Doctrine', 'constitutional_law', 3,
+                related_concepts=['conlaw_case_controversy']
+            ),
+            'conlaw_political_question': KnowledgeNode(
+                'conlaw_political_question', 'Political Question Doctrine', 'constitutional_law', 4,
+                related_concepts=['conlaw_case_controversy', 'conlaw_separation_of_powers']
+            ),
+            'conlaw_11th_amendment': KnowledgeNode(
+                'conlaw_11th_amendment', 'Eleventh Amendment & Sovereign Immunity', 'constitutional_law', 4,
+                related_concepts=['conlaw_judicial_power', 'conlaw_state_action']
+            ),
+
+            # Federal Legislative Power - Expanded
+            'conlaw_necessary_proper': KnowledgeNode(
+                'conlaw_necessary_proper', 'Necessary and Proper Clause', 'constitutional_law', 3,
+                related_concepts=['conlaw_federal_powers', 'conlaw_commerce_clause']
+            ),
+            'conlaw_taxing_power': KnowledgeNode(
+                'conlaw_taxing_power', 'Congressional Taxing Power', 'constitutional_law', 3,
+                related_concepts=['conlaw_spending_power', 'conlaw_federal_powers']
+            ),
+            'conlaw_war_power': KnowledgeNode(
+                'conlaw_war_power', 'War & Defense Powers', 'constitutional_law', 3,
+                related_concepts=['conlaw_federal_powers', 'conlaw_executive_power']
+            ),
+            'conlaw_property_power': KnowledgeNode(
+                'conlaw_property_power', 'Property Power & Territories', 'constitutional_law', 3,
+                related_concepts=['conlaw_federal_powers']
+            ),
+            'conlaw_citizenship': KnowledgeNode(
+                'conlaw_citizenship', 'Naturalization & Citizenship', 'constitutional_law', 3,
+                related_concepts=['conlaw_federal_powers', 'conlaw_equal_protection']
+            ),
+            'conlaw_delegation': KnowledgeNode(
+                'conlaw_delegation', 'Delegation of Legislative Power', 'constitutional_law', 4,
+                related_concepts=['conlaw_separation_of_powers', 'conlaw_federal_powers']
+            ),
+
+            # Federalism & State Powers
+            'conlaw_supremacy': KnowledgeNode(
+                'conlaw_supremacy', 'Supremacy Clause & Preemption', 'constitutional_law', 4,
+                related_concepts=['conlaw_federal_powers', 'conlaw_dormant_commerce']
+            ),
+            'conlaw_preemption_express': KnowledgeNode(
+                'conlaw_preemption_express', 'Express Preemption', 'constitutional_law', 3,
+                related_concepts=['conlaw_supremacy']
+            ),
+            'conlaw_preemption_implied': KnowledgeNode(
+                'conlaw_preemption_implied', 'Implied Preemption (Field & Conflict)', 'constitutional_law', 4,
+                related_concepts=['conlaw_supremacy']
+            ),
+            'conlaw_intergovernmental_immunity': KnowledgeNode(
+                'conlaw_intergovernmental_immunity', 'Intergovernmental Immunity', 'constitutional_law', 4,
+                related_concepts=['conlaw_supremacy', 'conlaw_10th_amendment']
+            ),
+            'conlaw_10th_amendment': KnowledgeNode(
+                'conlaw_10th_amendment', 'Tenth Amendment & State Sovereignty', 'constitutional_law', 4,
+                related_concepts=['conlaw_federal_powers', 'conlaw_anti_commandeering']
+            ),
+            'conlaw_anti_commandeering': KnowledgeNode(
+                'conlaw_anti_commandeering', 'Anti-Commandeering Doctrine', 'constitutional_law', 4,
+                related_concepts=['conlaw_10th_amendment']
+            ),
+            'conlaw_privileges_immunities_art4': KnowledgeNode(
+                'conlaw_privileges_immunities_art4', 'Privileges & Immunities (Article IV)', 'constitutional_law', 4,
+                related_concepts=['conlaw_dormant_commerce', 'conlaw_equal_protection']
+            ),
+
+            # Executive Power - Expanded
+            'conlaw_appointment': KnowledgeNode(
+                'conlaw_appointment', 'Appointment & Removal Powers', 'constitutional_law', 4,
+                related_concepts=['conlaw_executive_power', 'conlaw_separation_of_powers']
+            ),
+            'conlaw_executive_privilege': KnowledgeNode(
+                'conlaw_executive_privilege', 'Executive Privilege', 'constitutional_law', 4,
+                related_concepts=['conlaw_executive_power', 'conlaw_separation_of_powers']
+            ),
+            'conlaw_executive_immunity': KnowledgeNode(
+                'conlaw_executive_immunity', 'Presidential Immunity', 'constitutional_law', 4,
+                related_concepts=['conlaw_executive_power']
+            ),
+            'conlaw_treaty_power': KnowledgeNode(
+                'conlaw_treaty_power', 'Treaty Power & Executive Agreements', 'constitutional_law', 4,
+                related_concepts=['conlaw_executive_power', 'conlaw_federal_powers']
+            ),
+            'conlaw_veto': KnowledgeNode(
+                'conlaw_veto', 'Veto Power & Presentment', 'constitutional_law', 3,
+                related_concepts=['conlaw_executive_power', 'conlaw_separation_of_powers']
+            ),
+            'conlaw_pardon': KnowledgeNode(
+                'conlaw_pardon', 'Pardon Power', 'constitutional_law', 2,
+                related_concepts=['conlaw_executive_power']
+            ),
+
+            # Individual Rights - Due Process Expanded
+            'conlaw_incorporation': KnowledgeNode(
+                'conlaw_incorporation', 'Incorporation Doctrine', 'constitutional_law', 4,
+                related_concepts=['conlaw_due_process', 'conlaw_bill_of_rights']
+            ),
+            'conlaw_bill_of_rights': KnowledgeNode(
+                'conlaw_bill_of_rights', 'Bill of Rights Application', 'constitutional_law', 3,
+                related_concepts=['conlaw_incorporation', 'conlaw_state_action']
+            ),
+            'conlaw_takings': KnowledgeNode(
+                'conlaw_takings', 'Takings Clause (5th Amendment)', 'constitutional_law', 4,
+                related_concepts=['conlaw_substantive_dp', 'conlaw_just_compensation']
+            ),
+            'conlaw_just_compensation': KnowledgeNode(
+                'conlaw_just_compensation', 'Just Compensation Requirement', 'constitutional_law', 3,
+                related_concepts=['conlaw_takings']
+            ),
+            'conlaw_regulatory_takings': KnowledgeNode(
+                'conlaw_regulatory_takings', 'Regulatory Takings', 'constitutional_law', 5,
+                related_concepts=['conlaw_takings']
+            ),
+            'conlaw_exactions': KnowledgeNode(
+                'conlaw_exactions', 'Exactions & Conditions', 'constitutional_law', 4,
+                related_concepts=['conlaw_takings', 'conlaw_regulatory_takings']
+            ),
+            'conlaw_contracts_clause': KnowledgeNode(
+                'conlaw_contracts_clause', 'Contracts Clause', 'constitutional_law', 4,
+                related_concepts=['conlaw_substantive_dp']
+            ),
+            'conlaw_ex_post_facto': KnowledgeNode(
+                'conlaw_ex_post_facto', 'Ex Post Facto & Bills of Attainder', 'constitutional_law', 3,
+                related_concepts=['conlaw_due_process']
+            ),
+
+            # Equal Protection - Expanded
+            'conlaw_rational_basis': KnowledgeNode(
+                'conlaw_rational_basis', 'Rational Basis Review', 'constitutional_law', 3,
+                related_concepts=['conlaw_equal_protection']
+            ),
+            'conlaw_suspect_class': KnowledgeNode(
+                'conlaw_suspect_class', 'Suspect Classifications (Race, National Origin, Alienage)', 'constitutional_law', 4,
+                related_concepts=['conlaw_strict_scrutiny', 'conlaw_equal_protection']
+            ),
+            'conlaw_quasi_suspect': KnowledgeNode(
+                'conlaw_quasi_suspect', 'Quasi-Suspect Classifications (Gender, Legitimacy)', 'constitutional_law', 4,
+                related_concepts=['conlaw_intermediate_scrutiny', 'conlaw_equal_protection']
+            ),
+            'conlaw_affirmative_action': KnowledgeNode(
+                'conlaw_affirmative_action', 'Affirmative Action', 'constitutional_law', 5,
+                related_concepts=['conlaw_strict_scrutiny', 'conlaw_equal_protection']
+            ),
+            'conlaw_voting_rights': KnowledgeNode(
+                'conlaw_voting_rights', 'Voting Rights & Ballot Access', 'constitutional_law', 4,
+                related_concepts=['conlaw_fundamental_rights', 'conlaw_equal_protection']
+            ),
+            'conlaw_travel': KnowledgeNode(
+                'conlaw_travel', 'Right to Travel', 'constitutional_law', 3,
+                related_concepts=['conlaw_fundamental_rights', 'conlaw_privileges_immunities_14th']
+            ),
+            'conlaw_privileges_immunities_14th': KnowledgeNode(
+                'conlaw_privileges_immunities_14th', 'Privileges or Immunities (14th Amendment)', 'constitutional_law', 4,
+                related_concepts=['conlaw_equal_protection', 'conlaw_travel']
+            ),
+
+            # First Amendment - Speech Expanded
+            'conlaw_speech_unprotected': KnowledgeNode(
+                'conlaw_speech_unprotected', 'Unprotected Speech Categories', 'constitutional_law', 4,
+                related_concepts=['conlaw_free_speech', 'conlaw_obscenity', 'conlaw_fighting_words']
+            ),
+            'conlaw_obscenity': KnowledgeNode(
+                'conlaw_obscenity', 'Obscenity (Miller Test)', 'constitutional_law', 4,
+                related_concepts=['conlaw_speech_unprotected']
+            ),
+            'conlaw_fighting_words': KnowledgeNode(
+                'conlaw_fighting_words', 'Fighting Words & True Threats', 'constitutional_law', 3,
+                related_concepts=['conlaw_speech_unprotected']
+            ),
+            'conlaw_defamation_const': KnowledgeNode(
+                'conlaw_defamation_const', 'Defamation & Constitutional Limits', 'constitutional_law', 4,
+                related_concepts=['conlaw_free_speech', 'conlaw_actual_malice']
+            ),
+            'conlaw_actual_malice': KnowledgeNode(
+                'conlaw_actual_malice', 'Actual Malice Standard (NY Times v. Sullivan)', 'constitutional_law', 4,
+                related_concepts=['conlaw_defamation_const']
+            ),
+            'conlaw_commercial_speech': KnowledgeNode(
+                'conlaw_commercial_speech', 'Commercial Speech', 'constitutional_law', 4,
+                related_concepts=['conlaw_free_speech', 'conlaw_intermediate_scrutiny']
+            ),
+            'conlaw_symbolic_speech': KnowledgeNode(
+                'conlaw_symbolic_speech', 'Symbolic Speech & Expressive Conduct', 'constitutional_law', 4,
+                related_concepts=['conlaw_free_speech', 'conlaw_overbreadth']
+            ),
+            'conlaw_prior_restraint': KnowledgeNode(
+                'conlaw_prior_restraint', 'Prior Restraints', 'constitutional_law', 4,
+                related_concepts=['conlaw_free_speech']
+            ),
+            'conlaw_public_forum': KnowledgeNode(
+                'conlaw_public_forum', 'Public Forum Doctrine', 'constitutional_law', 4,
+                related_concepts=['conlaw_free_speech', 'conlaw_time_place_manner']
+            ),
+            'conlaw_time_place_manner': KnowledgeNode(
+                'conlaw_time_place_manner', 'Time, Place, and Manner Restrictions', 'constitutional_law', 4,
+                related_concepts=['conlaw_public_forum', 'conlaw_content_neutral']
+            ),
+            'conlaw_overbreadth': KnowledgeNode(
+                'conlaw_overbreadth', 'Overbreadth & Vagueness', 'constitutional_law', 4,
+                related_concepts=['conlaw_free_speech']
+            ),
+            'conlaw_association': KnowledgeNode(
+                'conlaw_association', 'Freedom of Association', 'constitutional_law', 3,
+                related_concepts=['conlaw_first_amendment']
+            ),
+            'conlaw_press': KnowledgeNode(
+                'conlaw_press', 'Freedom of Press', 'constitutional_law', 3,
+                related_concepts=['conlaw_first_amendment', 'conlaw_prior_restraint']
+            ),
+
+            # First Amendment - Religion Expanded
+            'conlaw_establishment': KnowledgeNode(
+                'conlaw_establishment', 'Establishment Clause', 'constitutional_law', 4,
+                related_concepts=['conlaw_religion', 'conlaw_lemon_test']
+            ),
+            'conlaw_lemon_test': KnowledgeNode(
+                'conlaw_lemon_test', 'Lemon Test & Endorsement Test', 'constitutional_law', 4,
+                related_concepts=['conlaw_establishment']
+            ),
+            'conlaw_free_exercise': KnowledgeNode(
+                'conlaw_free_exercise', 'Free Exercise Clause', 'constitutional_law', 4,
+                related_concepts=['conlaw_religion', 'conlaw_employment_division']
+            ),
+            'conlaw_employment_division': KnowledgeNode(
+                'conlaw_employment_division', 'Employment Division v. Smith (Neutral Laws)', 'constitutional_law', 4,
+                related_concepts=['conlaw_free_exercise']
+            ),
+
+            # Second Amendment
+            'conlaw_second_amendment': KnowledgeNode(
+                'conlaw_second_amendment', 'Second Amendment - Right to Bear Arms', 'constitutional_law', 4,
+                related_concepts=['conlaw_bill_of_rights', 'conlaw_incorporation']
+            ),
         }
 
         # Add prerequisites and relationships
