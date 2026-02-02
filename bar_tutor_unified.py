@@ -9249,6 +9249,398 @@ How should the court rule?""",
                     'tested_rule': 'Twombly/Iqbal plausibility pleading standard',
                     'why_correct': 'Under Twombly and Iqbal, a complaint must contain sufficient factual matter to state a claim that is plausible on its face. The complaint here is conclusory - it labels the defendant\'s conduct as "negligent" without factual allegations showing what the defendant did wrong. The court should grant the motion with leave to amend.',
                     'difficulty': 3
+                },
+                {
+                    'id': 'civpro_q3',
+                    'concept_id': 'civil_procedure_erie',
+                    'subject': 'civil_procedure',
+                    'question': """A plaintiff from State A filed a diversity action against a defendant from State B in federal court in State B. State B has a statute requiring plaintiffs in negligence cases to file an affidavit from a medical expert with the complaint. Federal Rule of Civil Procedure 8 requires only a short and plain statement of the claim.
+
+Should the federal court apply the state affidavit requirement?""",
+                    'options': {
+                        'A': 'Yes, because it is a substantive state law that affects the outcome',
+                        'B': 'Yes, because federal courts must always follow state procedural rules',
+                        'C': 'No, because Federal Rule 8 directly addresses the matter and is valid',
+                        'D': 'No, because the Rules of Decision Act requires federal procedure in federal court'
+                    },
+                    'answer': 'C',
+                    'tested_rule': 'Erie doctrine - Hanna v. Plumer analysis for Federal Rules',
+                    'why_correct': 'Under Hanna v. Plumer, when a Federal Rule of Civil Procedure directly conflicts with state law, the Federal Rule applies if it is valid under the Rules Enabling Act. Federal Rule 8 directly addresses pleading requirements and is a valid procedural rule. The state affidavit requirement conflicts with Rule 8, so the Federal Rule controls.',
+                    'difficulty': 4
+                }
+            ],
+            'real_property': [
+                {
+                    'id': 'property_q1',
+                    'concept_id': 'real_property_recording',
+                    'subject': 'real_property',
+                    'question': """O conveyed Blackacre to A by warranty deed on January 1. A did not record. On February 1, O conveyed Blackacre to B by warranty deed. B had no actual knowledge of the prior conveyance to A. B recorded immediately. The jurisdiction has a notice recording statute.
+
+Who owns Blackacre?""",
+                    'options': {
+                        'A': 'A, because A received the first conveyance',
+                        'B': 'A, because B had constructive notice from A\'s possession',
+                        'C': 'B, because B was a subsequent bona fide purchaser without notice who recorded first',
+                        'D': 'B, because the warranty deed to A was void'
+                    },
+                    'answer': 'C',
+                    'tested_rule': 'Notice recording statute - BFP without notice prevails',
+                    'why_correct': 'Under a notice statute, a subsequent bona fide purchaser (BFP) who takes without notice of the prior conveyance prevails over the prior grantee, regardless of who records first. B had no actual knowledge, and since A did not record, B had no constructive (record) notice. B qualifies as a BFP and owns Blackacre.',
+                    'difficulty': 3
+                },
+                {
+                    'id': 'property_q2',
+                    'concept_id': 'real_property_easements',
+                    'subject': 'real_property',
+                    'question': """A owned two adjacent lots. A built a house on Lot 1 with a driveway that crossed Lot 2 to reach the public road. A then sold Lot 2 to B by a deed that made no mention of the driveway. The driveway was clearly visible.
+
+Does A have an easement to use the driveway across Lot 2?""",
+                    'options': {
+                        'A': 'No, because the deed made no mention of the easement',
+                        'B': 'No, because easements must be created in writing',
+                        'C': 'Yes, by an easement implied from prior existing use',
+                        'D': 'Yes, by an easement by necessity'
+                    },
+                    'answer': 'C',
+                    'tested_rule': 'Easement implied from prior existing use (quasi-easement)',
+                    'why_correct': 'An easement implied from prior existing use arises when: (1) there was common ownership, (2) a quasi-easement existed during unity of ownership, (3) the use was apparent and continuous, and (4) the easement is reasonably necessary for enjoyment of the dominant estate. Here, A used the driveway while owning both lots, it was visible, and it provides access to the road. All elements are met.',
+                    'difficulty': 3
+                },
+                {
+                    'id': 'property_q3',
+                    'concept_id': 'real_property_rap',
+                    'subject': 'real_property',
+                    'question': """A testator\'s will devised property "to my daughter for life, then to my daughter\'s children who reach age 25." At the testator\'s death, the daughter was alive with one child, age 10.
+
+Is the gift to the daughter\'s children valid under the Rule Against Perpetuities?""",
+                    'options': {
+                        'A': 'Yes, because the daughter is a life in being who validates the interest',
+                        'B': 'Yes, because there is already a child who could reach 25 within the perpetuities period',
+                        'C': 'No, because a child could be born who reaches 25 more than 21 years after the daughter dies',
+                        'D': 'No, because the interest is contingent on surviving the daughter'
+                    },
+                    'answer': 'C',
+                    'tested_rule': 'Rule Against Perpetuities - "what might happen" test',
+                    'why_correct': 'Under the RAP, we must consider what "might happen," not what probably will happen. The daughter could have another child after the testator\'s death, then die, and that afterborn child might not reach 25 until more than 21 years after the daughter\'s death. Since there is any possibility the interest might vest too remotely, the gift to the children is void under the RAP.',
+                    'difficulty': 5
+                }
+            ],
+            'criminal_procedure': [
+                {
+                    'id': 'crimpro_q1',
+                    'concept_id': 'criminal_procedure_search',
+                    'subject': 'criminal_procedure',
+                    'question': """Police officers obtained a valid warrant to search a suspect\'s home for illegal drugs. While executing the warrant, an officer noticed a stolen television in plain view in the living room.
+
+May the officer seize the television?""",
+                    'options': {
+                        'A': 'No, because the warrant only authorized a search for drugs',
+                        'B': 'No, because seizing the television exceeds the scope of the warrant',
+                        'C': 'Yes, under the plain view doctrine',
+                        'D': 'Yes, because any evidence of crime may be seized during a warranted search'
+                    },
+                    'answer': 'C',
+                    'tested_rule': 'Plain view doctrine during lawful search',
+                    'why_correct': 'Under the plain view doctrine, police may seize evidence without a warrant if: (1) the officer is lawfully present, (2) the item is in plain view, and (3) the incriminating nature of the item is immediately apparent. Here, the officers were lawfully in the home executing a valid warrant, the TV was in plain view, and its stolen nature was immediately apparent. Seizure is valid.',
+                    'difficulty': 2
+                },
+                {
+                    'id': 'crimpro_q2',
+                    'concept_id': 'criminal_procedure_miranda',
+                    'subject': 'criminal_procedure',
+                    'question': """Police arrested a suspect for robbery and gave proper Miranda warnings. The suspect said, "I want a lawyer." The police stopped questioning. Two hours later, a different officer approached the suspect in his cell about an unrelated murder and began asking questions without repeating Miranda warnings. The suspect confessed to the murder.
+
+Is the murder confession admissible?""",
+                    'options': {
+                        'A': 'Yes, because the murder investigation was separate from the robbery',
+                        'B': 'Yes, because two hours had passed since the request for counsel',
+                        'C': 'No, because police must wait 14 days before reinitiating questioning',
+                        'D': 'No, because once a suspect invokes the right to counsel, police cannot reinitiate questioning about any crime'
+                    },
+                    'answer': 'D',
+                    'tested_rule': 'Edwards v. Arizona - invocation of right to counsel',
+                    'why_correct': 'Under Edwards v. Arizona, once a suspect invokes the right to counsel, all police-initiated interrogation must cease until counsel is provided or the suspect initiates further communication. This protection applies to all crimes, not just the crime for which the suspect was arrested. Arizona v. Roberson extended Edwards to bar questioning about unrelated crimes.',
+                    'difficulty': 4
+                },
+                {
+                    'id': 'crimpro_q3',
+                    'concept_id': 'criminal_procedure_exclusionary',
+                    'subject': 'criminal_procedure',
+                    'question': """Police conducted an illegal search of a defendant\'s home and found evidence of drug trafficking. At trial, the prosecution did not offer the illegally seized evidence in its case-in-chief. However, when the defendant testified that he had never possessed drugs, the prosecution sought to use the seized evidence to impeach his testimony.
+
+Should the court allow the evidence for impeachment purposes?""",
+                    'options': {
+                        'A': 'No, because illegally seized evidence can never be used for any purpose',
+                        'B': 'No, because using the evidence for impeachment rewards police misconduct',
+                        'C': 'Yes, because the exclusionary rule does not apply to impeachment of defendant\'s testimony',
+                        'D': 'Yes, because the defendant opened the door by testifying'
+                    },
+                    'answer': 'C',
+                    'tested_rule': 'Exclusionary rule exception for impeachment (Harris/Walder)',
+                    'why_correct': 'Under Harris v. New York and subsequent cases, illegally obtained evidence that is inadmissible in the prosecution\'s case-in-chief may still be used to impeach the defendant\'s testimony. The exclusionary rule\'s purpose of deterring police misconduct is not served by allowing defendants to commit perjury. However, the evidence can only impeach the defendant, not other witnesses.',
+                    'difficulty': 4
+                }
+            ],
+            'professional_responsibility': [
+                {
+                    'id': 'pr_q1',
+                    'concept_id': 'professional_responsibility_conflicts',
+                    'subject': 'professional_responsibility',
+                    'question': """Attorney represents Client A in a breach of contract action against Client B. Client B then asks Attorney to represent her in an unrelated personal injury case against a third party.
+
+May Attorney represent Client B in the personal injury case?""",
+                    'options': {
+                        'A': 'Yes, because the matters are unrelated',
+                        'B': 'Yes, if both clients give informed consent confirmed in writing',
+                        'C': 'No, because Attorney cannot represent opposing parties in any matter',
+                        'D': 'No, unless Attorney withdraws from representing Client A'
+                    },
+                    'answer': 'B',
+                    'tested_rule': 'Model Rule 1.7 - Concurrent conflicts of interest',
+                    'why_correct': 'Under Model Rule 1.7, representing Client B while suing her on behalf of Client A creates a concurrent conflict because there is a significant risk that representation of one client will be materially limited by the lawyer\'s responsibilities to the other. However, this conflict is waivable with informed consent, confirmed in writing, from both clients, if the lawyer reasonably believes she can competently represent both.',
+                    'difficulty': 3
+                },
+                {
+                    'id': 'pr_q2',
+                    'concept_id': 'professional_responsibility_confidentiality',
+                    'subject': 'professional_responsibility',
+                    'question': """Client told Attorney in confidence that Client plans to lie on the witness stand tomorrow. Attorney has tried to persuade Client not to testify falsely, but Client refuses to change his mind.
+
+What must Attorney do?""",
+                    'options': {
+                        'A': 'Keep the information confidential and allow Client to testify',
+                        'B': 'Inform the court that Client intends to commit perjury',
+                        'C': 'Withdraw from representation if permitted, or take remedial measures',
+                        'D': 'Refuse to call Client as a witness but keep the information confidential'
+                    },
+                    'answer': 'C',
+                    'tested_rule': 'Model Rule 3.3 - Candor toward the tribunal',
+                    'why_correct': 'Under Model Rule 3.3, a lawyer must take reasonable remedial measures when the lawyer knows the client intends to offer false evidence. The lawyer should first try to persuade the client not to testify falsely. If that fails, the lawyer may seek to withdraw. If withdrawal is not permitted or does not solve the problem, the lawyer must disclose to the tribunal. Duties of candor to the tribunal override confidentiality.',
+                    'difficulty': 4
+                }
+            ],
+            'corporations': [
+                {
+                    'id': 'corp_q1',
+                    'concept_id': 'corporations_fiduciary_duties',
+                    'subject': 'corporations',
+                    'question': """The board of directors of a corporation approved a merger that would benefit the CEO personally but was arguably not in the best interests of the shareholders. A shareholder brings a derivative suit challenging the merger.
+
+What standard of review will the court apply?""",
+                    'options': {
+                        'A': 'Business judgment rule - presumes directors acted in good faith',
+                        'B': 'Entire fairness standard - directors must prove fair dealing and fair price',
+                        'C': 'Rational basis review - any rational business purpose is sufficient',
+                        'D': 'Strict scrutiny - directors must prove compelling necessity'
+                    },
+                    'answer': 'B',
+                    'tested_rule': 'Entire fairness standard applies when directors have conflicts of interest',
+                    'why_correct': 'When directors have a personal interest in a transaction (here, the CEO\'s benefit), the business judgment rule does not apply. Instead, the court applies the entire fairness standard, which requires the directors to prove both fair dealing (proper process) and fair price. The burden shifts to the conflicted directors to prove fairness.',
+                    'difficulty': 4
+                },
+                {
+                    'id': 'corp_q2',
+                    'concept_id': 'corporations_piercing_veil',
+                    'subject': 'corporations',
+                    'question': """A sole shareholder formed a corporation and deposited the minimum required capital. The shareholder never held board meetings, commingled personal and corporate funds, and used corporate assets for personal expenses. The corporation became insolvent.
+
+Can creditors pierce the corporate veil to reach the shareholder's personal assets?""",
+                    'options': {
+                        'A': 'No, because the corporation was properly formed',
+                        'B': 'No, because creditors assumed the risk of dealing with a corporation',
+                        'C': 'Yes, because the shareholder disregarded the corporate form',
+                        'D': 'Yes, but only for tort creditors, not contract creditors'
+                    },
+                    'answer': 'C',
+                    'tested_rule': 'Piercing the corporate veil - alter ego/instrumentality doctrine',
+                    'why_correct': 'Courts will pierce the corporate veil when the shareholder has: (1) disregarded corporate formalities (no meetings), (2) commingled funds, and (3) used the corporation as an alter ego for personal purposes. Here, all three factors are present. Undercapitalization alone is usually not sufficient, but combined with these other factors, piercing is appropriate.',
+                    'difficulty': 3
+                },
+                {
+                    'id': 'corp_q3',
+                    'concept_id': 'corporations_shareholder_rights',
+                    'subject': 'corporations',
+                    'question': """A shareholder wants to inspect the corporation's books and records to investigate suspected mismanagement by the board. The shareholder owns 100 shares of a company with 10 million shares outstanding.
+
+Does the shareholder have a right to inspect the books and records?""",
+                    'options': {
+                        'A': 'No, because the shareholder owns less than 5% of shares',
+                        'B': 'No, because inspection rights are limited to creditors',
+                        'C': 'Yes, if the shareholder has a proper purpose related to the shareholder\'s interest',
+                        'D': 'Yes, shareholders have an absolute right to inspect at any time'
+                    },
+                    'answer': 'C',
+                    'tested_rule': 'Shareholder inspection rights require proper purpose',
+                    'why_correct': 'Under corporate law, shareholders have a right to inspect books and records if they have a proper purpose reasonably related to their interest as shareholders. Investigating mismanagement is a proper purpose. The percentage of ownership is not determinative; even small shareholders have this right if the purpose is proper.',
+                    'difficulty': 3
+                }
+            ],
+            'wills_trusts_estates': [
+                {
+                    'id': 'wte_q1',
+                    'concept_id': 'wills_execution',
+                    'subject': 'wills_trusts_estates',
+                    'question': """A testator typed a will on his computer, printed it, and signed it at the bottom. His neighbor witnessed the signing but did not sign the document. The testator then showed the will to a friend who signed as a witness two days later without the testator present.
+
+Is this a valid will under traditional formalities?""",
+                    'options': {
+                        'A': 'Yes, because it was signed by the testator and two witnesses',
+                        'B': 'Yes, because substantial compliance with formalities is sufficient',
+                        'C': 'No, because the witnesses did not sign in the testator\'s presence',
+                        'D': 'No, because the will was not handwritten'
+                    },
+                    'answer': 'C',
+                    'tested_rule': 'Will execution requires witnesses to sign in testator\'s presence',
+                    'why_correct': 'Under traditional will formalities, witnesses must: (1) witness the testator\'s signature or acknowledgment, and (2) sign in the testator\'s presence (and often in each other\'s presence). Here, the second witness signed without the testator present, violating the presence requirement. The will fails for improper execution.',
+                    'difficulty': 3
+                },
+                {
+                    'id': 'wte_q2',
+                    'concept_id': 'wills_revocation',
+                    'subject': 'wills_trusts_estates',
+                    'question': """A testator executed a valid will leaving everything to her son. Later, she executed a second valid will that stated "I revoke all prior wills" and left everything to her daughter. The testator then tore up the second will with the intent to revive the first will.
+
+What is the effect on the testator's estate?""",
+                    'options': {
+                        'A': 'The son takes under the first will, which is revived',
+                        'B': 'The daughter takes under the second will, which remains valid',
+                        'C': 'The estate passes by intestacy because no valid will exists',
+                        'D': 'The son and daughter share equally under both wills'
+                    },
+                    'answer': 'C',
+                    'tested_rule': 'Dependent relative revocation and will revival',
+                    'why_correct': 'The first will was revoked by the second will\'s express revocation clause. Under the majority rule, destroying a later will does NOT automatically revive an earlier revoked will. Revival requires re-execution or a codicil. Since the first will was revoked and the second was destroyed, the testator died without a valid will, so the estate passes by intestacy.',
+                    'difficulty': 4
+                },
+                {
+                    'id': 'wte_q3',
+                    'concept_id': 'trusts_creation',
+                    'subject': 'wills_trusts_estates',
+                    'question': """A settlor conveyed property "to Trustee, in trust, to distribute income and principal as Trustee sees fit among my descendants." The trust instrument named no specific beneficiaries and gave the trustee complete discretion.
+
+Is this a valid trust?""",
+                    'options': {
+                        'A': 'No, because the beneficiaries are not sufficiently identified',
+                        'B': 'No, because a trust cannot give the trustee unlimited discretion',
+                        'C': 'Yes, because "descendants" is a sufficiently definite class',
+                        'D': 'Yes, because trusts are favored and courts will supply missing terms'
+                    },
+                    'answer': 'C',
+                    'tested_rule': 'Trust beneficiaries must be identifiable or ascertainable',
+                    'why_correct': '"Descendants" is a sufficiently definite class that can be ascertained by objective criteria (blood relationship). The trust is valid even though specific individuals are not named, as long as the class is definable. Trustee discretion in distributions does not invalidate the trust if the beneficiary class is identifiable.',
+                    'difficulty': 3
+                }
+            ],
+            'family_law': [
+                {
+                    'id': 'family_q1',
+                    'concept_id': 'family_law_marital_property',
+                    'subject': 'family_law',
+                    'question': """During marriage, Wife received an inheritance of $100,000 which she deposited into a joint bank account with Husband. The couple later divorces in an equitable distribution state.
+
+How should the inheritance be treated in the divorce?""",
+                    'options': {
+                        'A': 'Separate property because inheritances are always separate',
+                        'B': 'Marital property because it was deposited into a joint account',
+                        'C': 'Separate property but Husband has a claim for reimbursement',
+                        'D': 'Split 50-50 as community property'
+                    },
+                    'answer': 'B',
+                    'tested_rule': 'Transmutation of separate property into marital property',
+                    'why_correct': 'While inheritances are typically separate property, depositing separate property into a joint marital account can transmute it into marital property through commingling. By depositing the inheritance into the joint account, Wife demonstrated intent to share it with Husband, converting it to marital property subject to equitable distribution.',
+                    'difficulty': 3
+                },
+                {
+                    'id': 'family_q2',
+                    'concept_id': 'family_law_child_custody',
+                    'subject': 'family_law',
+                    'question': """Parents are divorcing and cannot agree on custody of their 8-year-old child. Father lives in the family home in good school district. Mother plans to move to another state for a job opportunity. Both parents have been actively involved in parenting.
+
+What standard will the court apply in determining custody?""",
+                    'options': {
+                        'A': 'The parent who can provide greater financial support',
+                        'B': 'The best interests of the child',
+                        'C': 'The preference of the child regardless of age',
+                        'D': 'Automatic preference for the mother for children under 10'
+                    },
+                    'answer': 'B',
+                    'tested_rule': 'Best interests of the child standard',
+                    'why_correct': 'Courts apply the "best interests of the child" standard when determining custody. This includes factors such as: stability, each parent\'s relationship with the child, the child\'s adjustment to home/school/community, and each parent\'s ability to meet the child\'s needs. There is no automatic preference based on gender, and a child\'s preference is only one factor (weighted by age and maturity).',
+                    'difficulty': 2
+                },
+                {
+                    'id': 'family_q3',
+                    'concept_id': 'family_law_child_support',
+                    'subject': 'family_law',
+                    'question': """Father owes $50,000 in past-due child support. He files for Chapter 7 bankruptcy seeking to discharge all debts.
+
+Is the child support obligation dischargeable in bankruptcy?""",
+                    'options': {
+                        'A': 'Yes, because Chapter 7 discharges all unsecured debts',
+                        'B': 'Yes, but only the portion over $25,000',
+                        'C': 'No, because domestic support obligations are non-dischargeable',
+                        'D': 'No, unless the custodial parent consents to discharge'
+                    },
+                    'answer': 'C',
+                    'tested_rule': 'Domestic support obligations are non-dischargeable in bankruptcy',
+                    'why_correct': 'Under 11 U.S.C. § 523(a)(5), domestic support obligations (child support, alimony) are non-dischargeable in bankruptcy. This applies in both Chapter 7 and Chapter 13. The policy is to protect children and former spouses who depend on these payments. Father remains obligated for the full $50,000.',
+                    'difficulty': 2
+                }
+            ],
+            'secured_transactions': [
+                {
+                    'id': 'secured_q1',
+                    'concept_id': 'secured_transactions_attachment',
+                    'subject': 'secured_transactions',
+                    'question': """A lender made a loan to a borrower and took a security interest in the borrower's inventory. The security agreement was signed by the borrower and described the collateral as "all inventory." The lender did not file a financing statement.
+
+Is the security interest enforceable against the borrower?""",
+                    'options': {
+                        'A': 'No, because the lender failed to perfect by filing',
+                        'B': 'No, because "all inventory" is not a sufficient description',
+                        'C': 'Yes, because attachment only requires agreement, value, and rights in collateral',
+                        'D': 'Yes, but only if the lender takes possession of the inventory'
+                    },
+                    'answer': 'C',
+                    'tested_rule': 'UCC Article 9 attachment requirements',
+                    'why_correct': 'A security interest attaches (becomes enforceable against the debtor) when: (1) value has been given, (2) the debtor has rights in the collateral, and (3) the debtor has authenticated a security agreement describing the collateral. Filing is required for perfection (priority against third parties), not attachment. "All inventory" is a sufficient description for the security agreement.',
+                    'difficulty': 3
+                },
+                {
+                    'id': 'secured_q2',
+                    'concept_id': 'secured_transactions_priority',
+                    'subject': 'secured_transactions',
+                    'question': """Bank A filed a financing statement covering Debtor's equipment on March 1. Bank B filed a financing statement covering the same equipment on March 15 and made its loan on that date. Bank A did not make its loan until April 1.
+
+Who has priority in the equipment?""",
+                    'options': {
+                        'A': 'Bank A, because it filed first',
+                        'B': 'Bank B, because it was the first to give value',
+                        'C': 'Bank B, because Bank A\'s filing was ineffective without a loan',
+                        'D': 'They share pro rata because both perfected'
+                    },
+                    'answer': 'A',
+                    'tested_rule': 'First-to-file-or-perfect rule under UCC 9-322',
+                    'why_correct': 'Under UCC 9-322(a)(1), priority among perfected security interests goes to the first to file OR perfect. A financing statement can be filed before the security interest attaches. Bank A filed first on March 1. Even though Bank A\'s security interest did not attach until April 1, Bank A has priority because it filed first. This is called "advance filing."',
+                    'difficulty': 4
+                },
+                {
+                    'id': 'secured_q3',
+                    'concept_id': 'secured_transactions_pmsi',
+                    'subject': 'secured_transactions',
+                    'question': """Debtor granted Bank a security interest in "all equipment, now owned or after-acquired." Bank perfected by filing. Later, Seller sold equipment to Debtor on credit, retaining a security interest. Seller filed within 20 days of Debtor receiving possession.
+
+Who has priority in the new equipment?""",
+                    'options': {
+                        'A': 'Bank, because it filed first and has an after-acquired property clause',
+                        'B': 'Bank, because Seller\'s filing was late',
+                        'C': 'Seller, because it has a purchase money security interest that was timely perfected',
+                        'D': 'Seller, but only if Bank had actual knowledge of the sale'
+                    },
+                    'answer': 'C',
+                    'tested_rule': 'PMSI superpriority in equipment under UCC 9-324(a)',
+                    'why_correct': 'A purchase money security interest (PMSI) in equipment has priority over a conflicting security interest if the PMSI is perfected within 20 days after the debtor receives possession. Seller has a PMSI (it sold the goods on credit) and filed within the 20-day grace period. Seller\'s PMSI has superpriority over Bank\'s earlier-filed after-acquired property interest.',
+                    'difficulty': 4
                 }
             ]
         }

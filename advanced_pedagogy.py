@@ -953,6 +953,42 @@ class AdvancedPedagogyEngine:
                 'how': "How does this constitutional principle interact with government powers?",
                 'when': "When would courts apply strict scrutiny vs. rational basis review?",
                 'what_if': "What if this were a state vs. federal government action?"
+            },
+            'criminal_law': {
+                'why': "Why does criminal law require both actus reus and mens rea for most crimes?",
+                'how': "How does this criminal concept relate to available defenses?",
+                'when': "When does the MPC approach differ from common law?",
+                'what_if': "What if the defendant had a different mental state - how would liability change?"
+            },
+            'criminal_procedure': {
+                'why': "Why does the Constitution protect against unreasonable searches and coerced confessions?",
+                'how': "How does the exclusionary rule deter police misconduct?",
+                'when': "When do exceptions to the warrant requirement apply?",
+                'what_if': "What if the defendant had not been in custody - would Miranda apply?"
+            },
+            'evidence': {
+                'why': "Why does the hearsay rule exist and what reliability concerns does it address?",
+                'how': "How does this evidentiary rule relate to the party seeking to admit/exclude?",
+                'when': "When would this evidence be admissible under an exception?",
+                'what_if': "What if the statement were offered for a different purpose?"
+            },
+            'civil_procedure': {
+                'why': "Why does federal jurisdiction require complete diversity AND amount in controversy?",
+                'how': "How does this procedural rule affect the parties' litigation strategy?",
+                'when': "When would a different procedural posture change the analysis?",
+                'what_if': "What if this case were in state court instead?"
+            },
+            'real_property': {
+                'why': "Why does property law distinguish between different types of estates and future interests?",
+                'how': "How does the recording system protect bona fide purchasers?",
+                'when': "When would an easement be implied rather than express?",
+                'what_if': "What if the conveyancing language were slightly different?"
+            },
+            'professional_responsibility': {
+                'why': "Why do the Model Rules balance duties to clients, courts, and the profession?",
+                'how': "How does this ethics rule protect the integrity of the legal system?",
+                'when': "When does a conflict become non-waivable?",
+                'what_if': "What if the client refused to consent to disclosure?"
             }
         }
 
