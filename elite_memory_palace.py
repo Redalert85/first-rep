@@ -15,15 +15,18 @@ Features:
 
 from __future__ import annotations
 
+import asyncio
 import hashlib
 import json
 import logging
 import math
+import os
 import random
 import time
 from collections import defaultdict, deque
-from dataclasses import dataclass, field
+from dataclasses import dataclass, field, asdict
 from datetime import datetime, timedelta
+from pathlib import Path
 from typing import Any, Dict, List, Optional, Protocol, Set, Tuple, Union
 
 # Type aliases for improved code clarity and documentation
@@ -3666,6 +3669,511 @@ class EliteMemoryPalaceSystem:
                     f"Graph={'NetworkX' if self.spatial_intelligence.graph_analyzer.advanced_mode else 'Fallback'}, "
                     f"MultiModal={'Active' if self.multi_modal_system else 'Inactive'}")
 
+    # =========================================================================
+    # ASYNC/SYNC BRIDGE - Fixes nested event loop issues
+    # =========================================================================
+
+    def _run_async(self, coro):
+        """
+        Safely run async code from sync context.
+        Handles nested event loops gracefully.
+        """
+        try:
+            # Check if we're already in an event loop
+            loop = asyncio.get_running_loop()
+            # We're in an async context - create a task
+            import concurrent.futures
+            with concurrent.futures.ThreadPoolExecutor() as pool:
+                future = pool.submit(asyncio.run, coro)
+                return future.result(timeout=30)
+        except RuntimeError:
+            # No running event loop - safe to use asyncio.run
+            return asyncio.run(coro)
+
+    # =========================================================================
+    # PERSISTENCE LAYER - Save/Load palace data
+    # =========================================================================
+
+    def save_to_file(self, filepath: str) -> Dict[str, Any]:
+        """
+        Persist all palaces and performance data to JSON file.
+
+        Args:
+            filepath: Path to save the data (e.g., 'my_palaces.json')
+
+        Returns:
+            Dict with save status and statistics
+        """
+        save_data = {
+            "version": "1.0",
+            "saved_at": datetime.now().isoformat(),
+            "system_name": self.name,
+            "palaces": {},
+            "cognitive_profiles": {},
+            "session_history_count": len(self.session_history),
+            "performance_metrics": self._performance_metrics.copy(),
+        }
+
+        # Serialize palaces
+        for palace_id, palace in self.palaces.items():
+            palace_data = {
+                "id": palace["id"],
+                "name": palace["name"],
+                "category": palace["category"],
+                "layout_type": palace["layout_type"],
+                "dimensions": list(palace["dimensions"]),
+                "created_at": palace["created_at"].isoformat() if isinstance(palace["created_at"], datetime) else palace["created_at"],
+                "performance_stats": palace["performance_stats"],
+                "locations": {},
+            }
+
+            # Serialize locations
+            for loc_id, location in palace["locations"].items():
+                loc_data = {
+                    "id": location.id,
+                    "content": location.content,
+                    "position": list(location.position),
+                    "sensory_matrix": location.sensory_matrix,
+                    "pao_encoding": location.pao_encoding,
+                    "bizarreness_factor": location.bizarreness_factor,
+                    "emotional_intensity": location.emotional_intensity,
+                    "speed_markers": location.speed_markers,
+                    "error_traps": location.error_traps,
+                    "performance_history": location.performance_history,
+                    "created_at": location.created_at.isoformat() if isinstance(location.created_at, datetime) else str(location.created_at),
+                    "consolidation_schedule": [
+                        dt.isoformat() if isinstance(dt, datetime) else str(dt)
+                        for dt in location.consolidation_schedule
+                    ],
+                }
+                palace_data["locations"][loc_id] = loc_data
+
+            save_data["palaces"][palace_id] = palace_data
+
+        # Serialize cognitive profiles
+        for user_id, profile in self.cognitive_profiles.items():
+            if hasattr(profile, '__dict__'):
+                save_data["cognitive_profiles"][user_id] = {
+                    k: v for k, v in profile.__dict__.items()
+                    if not k.startswith('_')
+                }
+
+        # Write to file with atomic write pattern
+        filepath = Path(filepath)
+        temp_path = filepath.with_suffix('.tmp')
+
+        try:
+            with open(temp_path, 'w', encoding='utf-8') as f:
+                json.dump(save_data, f, indent=2, default=str)
+
+            # Atomic rename
+            temp_path.replace(filepath)
+
+            logger.info(f"Saved {len(self.palaces)} palaces to {filepath}")
+
+            return {
+                "success": True,
+                "filepath": str(filepath),
+                "palaces_saved": len(self.palaces),
+                "total_locations": sum(len(p["locations"]) for p in self.palaces.values()),
+                "file_size_kb": filepath.stat().st_size / 1024,
+            }
+
+        except Exception as e:
+            if temp_path.exists():
+                temp_path.unlink()
+            logger.error(f"Failed to save palaces: {e}")
+            return {"success": False, "error": str(e)}
+
+    def load_from_file(self, filepath: str) -> Dict[str, Any]:
+        """
+        Restore palaces from saved state.
+
+        Args:
+            filepath: Path to the saved data file
+
+        Returns:
+            Dict with load status and statistics
+        """
+        filepath = Path(filepath)
+
+        if not filepath.exists():
+            return {"success": False, "error": f"File not found: {filepath}"}
+
+        try:
+            with open(filepath, 'r', encoding='utf-8') as f:
+                save_data = json.load(f)
+
+            # Validate version
+            version = save_data.get("version", "unknown")
+            if version not in ["1.0"]:
+                logger.warning(f"Loading from potentially incompatible version: {version}")
+
+            # Restore palaces
+            palaces_loaded = 0
+            locations_loaded = 0
+
+            for palace_id, palace_data in save_data.get("palaces", {}).items():
+                # Reconstruct palace
+                palace = {
+                    "id": palace_data["id"],
+                    "name": palace_data["name"],
+                    "category": palace_data["category"],
+                    "layout_type": palace_data["layout_type"],
+                    "dimensions": tuple(palace_data["dimensions"]),
+                    "created_at": datetime.fromisoformat(palace_data["created_at"]) if isinstance(palace_data["created_at"], str) else palace_data["created_at"],
+                    "performance_stats": palace_data["performance_stats"],
+                    "locations": {},
+                }
+
+                # Reconstruct locations
+                for loc_id, loc_data in palace_data.get("locations", {}).items():
+                    location = ElitePalaceLocation(
+                        id=loc_data["id"],
+                        content=loc_data["content"],
+                        position=tuple(loc_data["position"]),
+                        sensory_matrix=loc_data.get("sensory_matrix", {}),
+                        pao_encoding=loc_data.get("pao_encoding", ""),
+                        bizarreness_factor=loc_data.get("bizarreness_factor", 0.0),
+                        emotional_intensity=loc_data.get("emotional_intensity", 0.0),
+                        speed_markers=loc_data.get("speed_markers", []),
+                        error_traps=loc_data.get("error_traps", []),
+                        performance_history=loc_data.get("performance_history", []),
+                        created_at=datetime.fromisoformat(loc_data["created_at"]) if isinstance(loc_data.get("created_at"), str) else datetime.now(),
+                    )
+
+                    # Restore consolidation schedule
+                    if "consolidation_schedule" in loc_data:
+                        location.consolidation_schedule = [
+                            datetime.fromisoformat(dt) if isinstance(dt, str) else dt
+                            for dt in loc_data["consolidation_schedule"]
+                        ]
+
+                    palace["locations"][loc_id] = location
+
+                    # Re-add to spatial index
+                    self.spatial_index.add_location(loc_id, location.position)
+                    locations_loaded += 1
+
+                self.palaces[palace_id] = palace
+                palaces_loaded += 1
+
+            # Restore performance metrics
+            if "performance_metrics" in save_data:
+                self._performance_metrics.update(save_data["performance_metrics"])
+
+            logger.info(f"Loaded {palaces_loaded} palaces with {locations_loaded} locations from {filepath}")
+
+            return {
+                "success": True,
+                "filepath": str(filepath),
+                "version": version,
+                "palaces_loaded": palaces_loaded,
+                "locations_loaded": locations_loaded,
+                "saved_at": save_data.get("saved_at"),
+            }
+
+        except json.JSONDecodeError as e:
+            return {"success": False, "error": f"Invalid JSON: {e}"}
+        except Exception as e:
+            logger.error(f"Failed to load palaces: {e}")
+            return {"success": False, "error": str(e)}
+
+    def export_progress(self, user_id: str = "default") -> Dict[str, Any]:
+        """
+        Export user's learning progress for backup or transfer.
+
+        Args:
+            user_id: User identifier
+
+        Returns:
+            Dict containing all learning progress data
+        """
+        progress = {
+            "user_id": user_id,
+            "exported_at": datetime.now().isoformat(),
+            "palaces": {},
+            "overall_stats": {
+                "total_palaces": len(self.palaces),
+                "total_locations": sum(len(p["locations"]) for p in self.palaces.values()),
+                "total_reviews": sum(
+                    p["performance_stats"].get("total_reviews", 0)
+                    for p in self.palaces.values()
+                ),
+            },
+        }
+
+        for palace_id, palace in self.palaces.items():
+            palace_progress = {
+                "name": palace["name"],
+                "category": palace["category"],
+                "mastery_level": palace["performance_stats"].get("mastery_level", 0),
+                "accuracy_rate": palace["performance_stats"].get("accuracy_rate", 0),
+                "locations": {},
+            }
+
+            for loc_id, location in palace["locations"].items():
+                palace_progress["locations"][loc_id] = {
+                    "content_preview": location.content[:50] + "..." if len(location.content) > 50 else location.content,
+                    "mastery_score": location.calculate_mastery_score(),
+                    "review_count": len(location.performance_history),
+                    "last_reviewed": location.performance_history[-1].get("timestamp") if location.performance_history else None,
+                }
+
+            progress["palaces"][palace_id] = palace_progress
+
+        return progress
+
+    # =========================================================================
+    # BAR PREP INTEGRATION - Connect to knowledge bases
+    # =========================================================================
+
+    def create_mbe_subject_palace(
+        self,
+        subject: str,
+        knowledge_base_path: str = "ultimate_knowledge_base.json"
+    ) -> Dict[str, Any]:
+        """
+        Create a pre-populated memory palace for an MBE subject from knowledge base.
+
+        Args:
+            subject: MBE subject (e.g., 'civil_procedure', 'contracts', 'torts')
+            knowledge_base_path: Path to the knowledge base JSON file
+
+        Returns:
+            The created palace with all concepts as locations
+        """
+        # Load knowledge base
+        kb_path = Path(knowledge_base_path)
+        if not kb_path.exists():
+            # Try relative to script location
+            script_dir = Path(__file__).parent
+            kb_path = script_dir / knowledge_base_path
+
+        if not kb_path.exists():
+            return {"error": f"Knowledge base not found: {knowledge_base_path}"}
+
+        try:
+            with open(kb_path, 'r', encoding='utf-8') as f:
+                knowledge_base = json.load(f)
+        except Exception as e:
+            return {"error": f"Failed to load knowledge base: {e}"}
+
+        # Filter concepts by subject
+        subject_lower = subject.lower().replace(" ", "_")
+        concepts = [
+            c for c in knowledge_base
+            if c.get("subject", "").lower().replace(" ", "_") == subject_lower
+        ]
+
+        if not concepts:
+            available_subjects = list(set(c.get("subject", "") for c in knowledge_base))
+            return {
+                "error": f"No concepts found for subject: {subject}",
+                "available_subjects": available_subjects[:10],
+            }
+
+        # Create palace
+        palace_name = f"{subject.replace('_', ' ').title()} Memory Palace"
+        palace = self.create_elite_palace(
+            name=palace_name,
+            category="legal",
+            layout_type="thematic",
+            dimensions=(100, 100, 20),
+        )
+
+        # Add each concept as a location with rich encoding
+        locations_added = []
+        for i, concept in enumerate(concepts):
+            # Build rich content from concept
+            content_parts = []
+
+            # Rule statement
+            if concept.get("rule_statement"):
+                content_parts.append(f"RULE: {concept['rule_statement']}")
+            else:
+                content_parts.append(f"CONCEPT: {concept.get('name', 'Unknown')}")
+
+            # Elements
+            if concept.get("elements"):
+                elements = concept["elements"]
+                if isinstance(elements, list):
+                    content_parts.append(f"ELEMENTS: {', '.join(str(e) for e in elements)}")
+
+            # Mnemonic
+            if concept.get("mnemonic"):
+                content_parts.append(f"MNEMONIC: {concept['mnemonic']}")
+
+            content = " | ".join(content_parts)
+
+            # Calculate position in a logical layout
+            row = i // 5
+            col = i % 5
+            position = (col * 15 + 10, row * 15 + 10, 5)
+
+            try:
+                location = self.add_elite_location(
+                    palace_id=palace["id"],
+                    content=content,
+                    position=position,
+                )
+
+                # Add metadata from concept
+                location.error_traps = concept.get("common_traps", [])
+
+                locations_added.append({
+                    "concept_id": concept.get("concept_id"),
+                    "name": concept.get("name"),
+                    "location_id": location.id,
+                    "mnemonic": concept.get("mnemonic"),
+                })
+
+            except Exception as e:
+                logger.warning(f"Failed to add concept {concept.get('name')}: {e}")
+
+        logger.info(f"Created {palace_name} with {len(locations_added)} concepts")
+
+        return {
+            "success": True,
+            "palace_id": palace["id"],
+            "palace_name": palace_name,
+            "subject": subject,
+            "concepts_loaded": len(locations_added),
+            "locations": locations_added,
+        }
+
+    def create_essay_subject_palace(
+        self,
+        subject: str,
+        knowledge_base_path: str = "essay_subjects.json"
+    ) -> Dict[str, Any]:
+        """
+        Create a pre-populated memory palace for an essay subject.
+
+        Args:
+            subject: Essay subject (e.g., 'professional_responsibility', 'wills_trusts')
+            knowledge_base_path: Path to the essay subjects JSON file
+
+        Returns:
+            The created palace with all concepts as locations
+        """
+        return self.create_mbe_subject_palace(subject, knowledge_base_path)
+
+    def create_all_mbe_palaces(
+        self,
+        knowledge_base_path: str = "ultimate_knowledge_base.json"
+    ) -> Dict[str, Any]:
+        """
+        Create memory palaces for ALL MBE subjects at once.
+
+        Returns:
+            Summary of all created palaces
+        """
+        mbe_subjects = [
+            "civil_procedure",
+            "constitutional_law",
+            "contracts",
+            "criminal_law",
+            "criminal_procedure",
+            "evidence",
+            "real_property",
+            "torts",
+        ]
+
+        results = {
+            "success": True,
+            "palaces_created": [],
+            "failed": [],
+            "total_concepts": 0,
+        }
+
+        for subject in mbe_subjects:
+            result = self.create_mbe_subject_palace(subject, knowledge_base_path)
+
+            if result.get("success"):
+                results["palaces_created"].append({
+                    "subject": subject,
+                    "palace_id": result["palace_id"],
+                    "concepts": result["concepts_loaded"],
+                })
+                results["total_concepts"] += result["concepts_loaded"]
+            else:
+                results["failed"].append({
+                    "subject": subject,
+                    "error": result.get("error"),
+                })
+
+        if results["failed"]:
+            results["success"] = False
+
+        logger.info(f"Created {len(results['palaces_created'])} MBE palaces with {results['total_concepts']} total concepts")
+
+        return results
+
+    def get_due_reviews(self, palace_id: str = None) -> List[Dict[str, Any]]:
+        """
+        Get all locations due for review based on spaced repetition schedule.
+
+        Args:
+            palace_id: Optional palace to filter by, or None for all palaces
+
+        Returns:
+            List of locations due for review with priority scores
+        """
+        due_reviews = []
+        now = datetime.now()
+
+        palaces_to_check = [self.palaces[palace_id]] if palace_id else self.palaces.values()
+
+        for palace in palaces_to_check:
+            if isinstance(palace, str):
+                palace = self.palaces.get(palace, {})
+
+            for loc_id, location in palace.get("locations", {}).items():
+                # Check consolidation schedule
+                is_due = False
+                priority = 0.5
+
+                if location.consolidation_schedule:
+                    next_review = location.consolidation_schedule[0] if location.consolidation_schedule else None
+                    if next_review and isinstance(next_review, datetime) and next_review <= now:
+                        is_due = True
+                        # Higher priority for more overdue items
+                        overdue_hours = (now - next_review).total_seconds() / 3600
+                        priority = min(1.0, 0.5 + (overdue_hours / 48))  # Max priority after 48 hours
+
+                # Also check based on performance history
+                if location.performance_history:
+                    last_review = location.performance_history[-1]
+                    last_accuracy = last_review.get("accuracy", 0.5)
+
+                    # Low accuracy items need more frequent review
+                    if last_accuracy < 0.7:
+                        is_due = True
+                        priority = max(priority, 0.8)
+
+                # Items never reviewed are high priority
+                if not location.performance_history:
+                    is_due = True
+                    priority = 0.9
+
+                if is_due:
+                    due_reviews.append({
+                        "palace_id": palace.get("id"),
+                        "palace_name": palace.get("name"),
+                        "location_id": loc_id,
+                        "content_preview": location.content[:80] + "..." if len(location.content) > 80 else location.content,
+                        "mnemonic": location.sensory_matrix.get("mnemonic", ""),
+                        "priority": priority,
+                        "mastery_score": location.calculate_mastery_score(),
+                        "review_count": len(location.performance_history),
+                    })
+
+        # Sort by priority (highest first)
+        due_reviews.sort(key=lambda x: x["priority"], reverse=True)
+
+        return due_reviews
+
     def __enter__(self):
         """Context manager entry"""
         return self
@@ -3738,10 +4246,8 @@ class EliteMemoryPalaceSystem:
         location_id = hashlib.md5(f"{content}{datetime.now()}".encode()).hexdigest()[:8]
 
         # Generate multi-modal sensory encoding with enhanced coherence
-        import asyncio
-
         try:
-            multi_modal_encoding = asyncio.run(
+            multi_modal_encoding = self._run_async(
                 self.multi_modal_system.create_multi_modal_encoding(
                     content, self.user_sensory_preferences
                 )
@@ -3941,7 +4447,7 @@ class EliteMemoryPalaceSystem:
                     },
                 )
 
-                analysis_result = asyncio.run(
+                analysis_result = self._run_async(
                     self.performance_analyzer.analyze_recall_session(session)
                 )
 
@@ -4437,9 +4943,7 @@ class EliteMemoryPalaceSystem:
         """Create multi-sensory encoding for content using AI-enhanced methods"""
         try:
             # Try to use AI-enhanced encoding
-            import asyncio
-
-            encoding_result = asyncio.run(self.ai_encoder.generate_optimal_encoding(content))
+            encoding_result = self._run_async(self.ai_encoder.generate_optimal_encoding(content))
             return encoding_result.sensory_map
         except Exception as e:
             logger.debug(f"AI encoding failed, using fallback: {e}")
