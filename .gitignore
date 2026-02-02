@@ -12,6 +12,9 @@ __pycache__/
 .coverage
 htmlcov/
 
+# Log files
+*.log
+
 # macOS
 .DS_Store
 
