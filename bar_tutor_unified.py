@@ -23,6 +23,14 @@ from typing import Dict, List, Optional, Set, Tuple, Any, Union
 
 from dotenv import load_dotenv
 
+# Import advanced pedagogy features
+from advanced_pedagogy import (
+    AdvancedPedagogyEngine,
+    LearningMode,
+    CognitiveStrategy,
+    StudySession
+)
+
 # Configure logging
 logging.basicConfig(
     level=logging.INFO,
@@ -128,7 +136,7 @@ class FlashcardEntry:
 
 @dataclass
 class LearningState:
-    """Current state of the interactive learning session"""
+    """Current state of the interactive learning session with advanced pedagogy"""
     current_subject: str = "contracts"
     current_concept: Optional[str] = None
     session_started: bool = False
@@ -138,6 +146,14 @@ class LearningState:
     learning_mode: str = "guided"
     user_responses: List[Dict] = field(default_factory=list)
     last_interaction: Optional[datetime] = None
+    # Advanced pedagogy fields
+    confidence_ratings: List[int] = field(default_factory=list)  # 1-5 scale
+    current_question: Optional[Dict] = None
+    awaiting_answer: bool = False
+    awaiting_confidence: bool = False
+    session_id: str = ""
+    cognitive_strategies_used: List[str] = field(default_factory=list)
+    elaboration_mode: bool = False  # Deep thinking prompts after answers
 
 # ==================== KNOWLEDGE GRAPH ====================
 
@@ -170,7 +186,7 @@ class LegalKnowledgeGraph:
         self._add_evidence_expansion()
         self._add_real_property_expansion()
 
-        # Essay Subjects (151 concepts)
+        # Essay Subjects (151 concepts) - Initialize once only
         self._initialize_professional_responsibility()
         self._initialize_corporations()
         self._initialize_wills_trusts_estates()
@@ -178,49 +194,7 @@ class LegalKnowledgeGraph:
         self._initialize_secured_transactions()
         self._initialize_iowa_procedure()
 
-
-        # Essay Subjects (151 concepts)
-        self._initialize_professional_responsibility()
-        self._initialize_corporations()
-        self._initialize_wills_trusts_estates()
-        self._initialize_family_law()
-        self._initialize_secured_transactions()
-        self._initialize_iowa_procedure()
-
-
-        # Essay Subjects (151 concepts)
-        self._initialize_professional_responsibility()
-        self._initialize_corporations()
-        self._initialize_wills_trusts_estates()
-        self._initialize_family_law()
-        self._initialize_secured_transactions()
-        self._initialize_iowa_procedure()
-
-
-        # Essay Subjects (151 concepts)
-        self._initialize_professional_responsibility()
-        self._initialize_corporations()
-        self._initialize_wills_trusts_estates()
-        self._initialize_family_law()
-        self._initialize_secured_transactions()
-        self._initialize_iowa_procedure()
-
-        
-        # Essay Subjects (35 concepts)
-        self._initialize_professional_responsibility()
-        self._initialize_corporations()
-        self._initialize_wills_trusts_estates()
-        self._initialize_family_law()
-        self._initialize_secured_transactions()
-        self._initialize_iowa_procedure()
-        
-        # Essay Subjects (35 concepts)
-        self._initialize_professional_responsibility()
-        self._initialize_corporations()
-        self._initialize_wills_trusts_estates()
-        self._initialize_family_law()
-        self._initialize_secured_transactions()
-        self._initialize_iowa_procedure()
+        logger.info(f"Knowledge graph initialized with {len(self.nodes)} concepts")
 
 # Ultimate Expanded Knowledge Base - 112+ Concepts
 # Each subject has 14+ concepts at Real Property richness level
@@ -8943,7 +8917,7 @@ class PerformanceTracker:
                         stats[subj]["total"] += 1
                         if entry["correct"]:
                             stats[subj]["correct"] += 1
-                    except:
+                    except (json.JSONDecodeError, KeyError, ValueError):
                         continue
         except Exception as e:
             logger.error(f"Error reading stats: {e}")
@@ -8983,130 +8957,958 @@ class PerformanceTracker:
 # ==================== INTERACTIVE TUTOR ====================
 
 class InteractiveBarTutor:
-    """Interactive conversational tutor"""
-    
+    """Interactive conversational tutor with advanced pedagogy features"""
+
     def __init__(self, bar_tutor):
         self.bar_tutor = bar_tutor
         self.state = LearningState()
         self.conversation_history = []
-    
+        self.question_bank = {}  # subject -> list of questions
+        self._initialize_question_bank()
+
+    def _initialize_question_bank(self):
+        """Initialize MBE-style question bank for each subject"""
+        self.question_bank = {
+            'contracts': [
+                {
+                    'id': 'contracts_q1',
+                    'concept_id': 'contracts_offer',
+                    'subject': 'contracts',
+                    'question': """A manufacturer sent a letter to a retailer stating: "We will sell you 100 widgets at $5 each. This offer will remain open for 30 days." The retailer received the letter on March 1. On March 10, the manufacturer sent a fax revoking the offer. The retailer received the fax on March 11. On March 12, the retailer mailed a letter accepting the offer. The manufacturer received the acceptance on March 15.
+
+Was a contract formed?""",
+                    'options': {
+                        'A': 'Yes, because the offer was a firm offer under UCC 2-205',
+                        'B': 'Yes, because the acceptance was mailed before the revocation was effective',
+                        'C': 'No, because the revocation was effective when received on March 11',
+                        'D': 'No, because the manufacturer is not a merchant'
+                    },
+                    'answer': 'C',
+                    'tested_rule': 'Revocation of offers - effective upon receipt by offeree',
+                    'why_correct': 'Under common law, an offer can be revoked at any time before acceptance, and revocation is effective upon receipt. Here, the manufacturer revoked (received March 11) before the retailer accepted (mailed March 12). UCC 2-205 firm offers require a signed writing by a merchant, but even merchants can revoke before the stated time expires unless there is consideration.',
+                    'difficulty': 3
+                },
+                {
+                    'id': 'contracts_q2',
+                    'concept_id': 'contracts_consideration',
+                    'subject': 'contracts',
+                    'question': """An uncle promised his 21-year-old nephew: "If you refrain from drinking alcohol until you turn 25, I will pay you $10,000." The nephew, who had been a moderate social drinker, completely abstained from alcohol for four years. When the nephew turned 25, he asked his uncle for the money. The uncle refused.
+
+Can the nephew enforce the uncle's promise?""",
+                    'options': {
+                        'A': 'Yes, because the nephew provided consideration by forbearing a legal right',
+                        'B': 'Yes, because the uncle received a benefit from the nephew\'s abstinence',
+                        'C': 'No, because the nephew had no legal right to drink alcohol',
+                        'D': 'No, because past forbearance cannot serve as consideration'
+                    },
+                    'answer': 'A',
+                    'tested_rule': 'Consideration - forbearance of a legal right constitutes valid consideration',
+                    'why_correct': 'Forbearance from exercising a legal right (here, the legal right to drink alcohol at age 21) constitutes valid consideration. The nephew gave up something of value (his legal right to drink) in exchange for the uncle\'s promise. This is the classic Hamer v. Sidway analysis.',
+                    'difficulty': 2
+                },
+                {
+                    'id': 'contracts_q3',
+                    'concept_id': 'contracts_statute_of_frauds',
+                    'subject': 'contracts',
+                    'question': """A landowner orally agreed to sell her farm to a buyer for $500,000. The buyer paid $50,000 as a down payment and took possession of the farm. The buyer made $25,000 worth of improvements to the farm. The landowner later refused to convey the property.
+
+Can the buyer enforce the oral agreement?""",
+                    'options': {
+                        'A': 'No, because real estate contracts must be in writing under the Statute of Frauds',
+                        'B': 'No, because the down payment can be returned, making the buyer whole',
+                        'C': 'Yes, because the buyer\'s part performance takes the contract out of the Statute of Frauds',
+                        'D': 'Yes, because oral contracts are always enforceable if both parties agree'
+                    },
+                    'answer': 'C',
+                    'tested_rule': 'Part performance exception to Statute of Frauds for land sale contracts',
+                    'why_correct': 'The part performance doctrine allows enforcement of an oral land sale contract when the buyer has: (1) taken possession, (2) made valuable improvements, and/or (3) paid part of the purchase price. Here, the buyer did all three, which is sufficient to take the contract outside the Statute of Frauds.',
+                    'difficulty': 3
+                }
+            ],
+            'torts': [
+                {
+                    'id': 'torts_q1',
+                    'concept_id': 'torts_negligence',
+                    'subject': 'torts',
+                    'question': """A driver was speeding on a highway when she noticed a child dart into the road. The driver swerved to avoid the child but struck a pedestrian on the sidewalk. The pedestrian was seriously injured.
+
+If the pedestrian sues the driver for negligence, what is the likely result?""",
+                    'options': {
+                        'A': 'The driver will prevail because the child was the proximate cause of the injury',
+                        'B': 'The driver will prevail because she acted reasonably in an emergency',
+                        'C': 'The pedestrian will prevail because the driver was speeding',
+                        'D': 'The pedestrian will prevail because drivers owe a duty of care to pedestrians on sidewalks'
+                    },
+                    'answer': 'C',
+                    'tested_rule': 'Negligence per se - violation of statute as breach of duty',
+                    'why_correct': 'The driver\'s speeding constitutes negligence per se because it violates a safety statute. Even though the driver faced an emergency, the emergency doctrine does not apply when the defendant\'s own negligence (speeding) created or contributed to the emergency. The speeding was the but-for and proximate cause of the pedestrian\'s injuries.',
+                    'difficulty': 3
+                },
+                {
+                    'id': 'torts_q2',
+                    'concept_id': 'torts_strict_liability',
+                    'subject': 'torts',
+                    'question': """A homeowner kept a pet tiger in his backyard, which was enclosed by a 10-foot fence. Despite the homeowner's precautions, the tiger escaped and injured a neighbor. The homeowner had never had any problems with the tiger escaping before.
+
+Is the homeowner liable for the neighbor's injuries?""",
+                    'options': {
+                        'A': 'No, because the homeowner exercised reasonable care by building a 10-foot fence',
+                        'B': 'No, because the tiger had never escaped before',
+                        'C': 'Yes, under strict liability for keeping a wild animal',
+                        'D': 'Yes, but only if the homeowner was negligent in maintaining the fence'
+                    },
+                    'answer': 'C',
+                    'tested_rule': 'Strict liability for wild animals - no negligence required',
+                    'why_correct': 'Owners of wild animals are strictly liable for injuries caused by those animals, regardless of the precautions taken. A tiger is a wild animal by nature, and strict liability applies even if the owner exercised the utmost care. The homeowner\'s due care and the tiger\'s prior good behavior are irrelevant.',
+                    'difficulty': 2
+                },
+                {
+                    'id': 'torts_q3',
+                    'concept_id': 'torts_intentional_torts',
+                    'subject': 'torts',
+                    'question': """A defendant pointed an unloaded gun at a plaintiff and said, "I'm going to shoot you." The plaintiff knew the defendant owned several guns and believed the threat was real. The plaintiff suffered severe anxiety as a result.
+
+What is the defendant's strongest defense to a claim of assault?""",
+                    'options': {
+                        'A': 'The gun was unloaded, so there was no actual threat',
+                        'B': 'Words alone cannot constitute an assault',
+                        'C': 'The plaintiff\'s fear was unreasonable',
+                        'D': 'The defendant had no intent to actually shoot'
+                    },
+                    'answer': 'D',
+                    'tested_rule': 'Assault requires intent to cause apprehension of imminent harmful contact',
+                    'why_correct': 'Assault requires the defendant to intend to cause apprehension of imminent harmful or offensive contact. If the defendant only intended to frighten without any intent to follow through, this could negate the required intent. However, this is a weak defense because intent to cause apprehension (even without intent to actually harm) is sufficient. The better answer focuses on the defendant\'s mental state. Note: A is wrong because apparent ability is sufficient; B is wrong because words + act (pointing gun) can be assault; C is wrong because the fear appears reasonable.',
+                    'difficulty': 4
+                }
+            ],
+            'evidence': [
+                {
+                    'id': 'evidence_q1',
+                    'concept_id': 'evidence_hearsay',
+                    'subject': 'evidence',
+                    'question': """At trial, a plaintiff called a witness to testify that the defendant had told the witness: "I ran the red light." The defendant objects on hearsay grounds.
+
+How should the court rule?""",
+                    'options': {
+                        'A': 'Sustained, because the statement is hearsay',
+                        'B': 'Sustained, because the witness has no personal knowledge of the accident',
+                        'C': 'Overruled, because the statement is not hearsay',
+                        'D': 'Overruled, because the statement falls under the excited utterance exception'
+                    },
+                    'answer': 'C',
+                    'tested_rule': 'Party-opponent admissions are not hearsay under FRE 801(d)(2)',
+                    'why_correct': 'A statement by a party-opponent is not hearsay under FRE 801(d)(2). The defendant\'s own statement ("I ran the red light") offered against the defendant is an admission by a party-opponent. It is admissible regardless of whether it was against interest when made and does not require the declarant to have personal knowledge.',
+                    'difficulty': 2
+                },
+                {
+                    'id': 'evidence_q2',
+                    'concept_id': 'evidence_character',
+                    'subject': 'evidence',
+                    'question': """In a murder trial, the defendant claims self-defense. The defendant wants to introduce evidence that the victim had a reputation in the community for being violent.
+
+Is this evidence admissible?""",
+                    'options': {
+                        'A': 'No, because character evidence of the victim is never admissible in criminal cases',
+                        'B': 'No, because only specific instances of conduct can prove character',
+                        'C': 'Yes, because the defendant may offer evidence of the victim\'s pertinent character trait',
+                        'D': 'Yes, but only if the defendant first testifies about the victim\'s violence'
+                    },
+                    'answer': 'C',
+                    'tested_rule': 'FRE 404(a)(2) - Defendant may offer evidence of victim\'s pertinent trait',
+                    'why_correct': 'Under FRE 404(a)(2)(B), in a criminal case, the defendant may offer evidence of an alleged victim\'s pertinent character trait. In a self-defense case, the victim\'s violent character is pertinent. Reputation evidence is an acceptable form of proving character under FRE 405(a).',
+                    'difficulty': 3
+                },
+                {
+                    'id': 'evidence_q3',
+                    'concept_id': 'evidence_privileges',
+                    'subject': 'evidence',
+                    'question': """An attorney represented a client in a contract dispute. During their meeting, the client confided to the attorney that he had hidden assets to avoid paying the contract judgment if he lost. The opposing party later sought to compel the attorney to testify about this conversation.
+
+Is the attorney required to testify?""",
+                    'options': {
+                        'A': 'Yes, because the crime-fraud exception applies',
+                        'B': 'Yes, because the attorney has a duty to the court',
+                        'C': 'No, because the communication is protected by attorney-client privilege',
+                        'D': 'No, because the attorney\'s testimony would be hearsay'
+                    },
+                    'answer': 'C',
+                    'tested_rule': 'Attorney-client privilege protects confidential communications',
+                    'why_correct': 'The attorney-client privilege protects confidential communications made for the purpose of obtaining legal advice. The crime-fraud exception applies only when the client seeks advice to commit a future crime or fraud. Here, the client was discussing past/ongoing asset concealment, not seeking advice on how to commit fraud. The privilege applies.',
+                    'difficulty': 4
+                }
+            ],
+            'constitutional_law': [
+                {
+                    'id': 'conlaw_q1',
+                    'concept_id': 'constitutional_law_equal_protection',
+                    'subject': 'constitutional_law',
+                    'question': """A state law requires that all applicants for state employment must be U.S. citizens. A lawful permanent resident who was denied employment solely based on this requirement challenges the law.
+
+What level of scrutiny should the court apply?""",
+                    'options': {
+                        'A': 'Rational basis review',
+                        'B': 'Intermediate scrutiny',
+                        'C': 'Strict scrutiny',
+                        'D': 'No scrutiny because alienage is not a protected classification'
+                    },
+                    'answer': 'C',
+                    'tested_rule': 'Alienage classifications by states are subject to strict scrutiny',
+                    'why_correct': 'Alienage is a suspect classification, and state laws discriminating against lawful permanent residents are subject to strict scrutiny. The state must show the law is necessary to achieve a compelling government interest. Note: Federal alienage classifications receive only rational basis review due to Congress\'s plenary power over immigration.',
+                    'difficulty': 3
+                },
+                {
+                    'id': 'conlaw_q2',
+                    'concept_id': 'constitutional_law_first_amendment',
+                    'subject': 'constitutional_law',
+                    'question': """A city ordinance prohibits all signs on residential property except "For Sale" signs. A homeowner who wants to display a political sign challenges the ordinance.
+
+Is the ordinance constitutional?""",
+                    'options': {
+                        'A': 'Yes, because the city has a legitimate interest in aesthetics',
+                        'B': 'Yes, because the ordinance applies equally to all political viewpoints',
+                        'C': 'No, because it is a content-based restriction on speech',
+                        'D': 'No, because residential areas are traditional public forums'
+                    },
+                    'answer': 'C',
+                    'tested_rule': 'Content-based speech restrictions require strict scrutiny',
+                    'why_correct': 'The ordinance is content-based because it distinguishes between signs based on their message (allowing "For Sale" signs but not political signs). Content-based restrictions on speech are presumptively unconstitutional and subject to strict scrutiny. The city\'s aesthetic interest does not justify this content discrimination. See City of Ladue v. Gilleo.',
+                    'difficulty': 3
+                }
+            ],
+            'criminal_law': [
+                {
+                    'id': 'crim_q1',
+                    'concept_id': 'criminal_law_homicide',
+                    'subject': 'criminal_law',
+                    'question': """A defendant planned to kill his business partner. He waited outside the partner's office with a loaded gun. When the partner emerged, the defendant shot at him but missed, accidentally killing a bystander.
+
+What is the most serious crime the defendant can be convicted of for the bystander's death?""",
+                    'options': {
+                        'A': 'Voluntary manslaughter',
+                        'B': 'Involuntary manslaughter',
+                        'C': 'Second-degree murder',
+                        'D': 'First-degree murder'
+                    },
+                    'answer': 'D',
+                    'tested_rule': 'Transferred intent applies to premeditated murder',
+                    'why_correct': 'Under the doctrine of transferred intent, the defendant\'s intent to kill the business partner transfers to the bystander who was actually killed. Because the defendant acted with premeditation and deliberation (planned the killing, waited with a loaded gun), the crime is first-degree murder, not merely second-degree murder.',
+                    'difficulty': 3
+                },
+                {
+                    'id': 'crim_q2',
+                    'concept_id': 'criminal_law_inchoate',
+                    'subject': 'criminal_law',
+                    'question': """A defendant agreed with two friends to rob a bank. The defendant purchased ski masks and a getaway car. On the day of the planned robbery, the defendant decided not to participate and stayed home. The two friends proceeded with the robbery.
+
+Can the defendant be convicted of conspiracy to commit robbery?""",
+                    'options': {
+                        'A': 'No, because the defendant withdrew before the robbery occurred',
+                        'B': 'No, because the defendant did not actually participate in the robbery',
+                        'C': 'Yes, because the defendant agreed and committed an overt act',
+                        'D': 'Yes, but only if the friends are also convicted'
+                    },
+                    'answer': 'C',
+                    'tested_rule': 'Conspiracy is complete upon agreement plus overt act; withdrawal is not a defense',
+                    'why_correct': 'Conspiracy requires (1) an agreement between two or more persons to commit a crime, and (2) an overt act in furtherance of the conspiracy. The defendant agreed and purchased supplies (overt act). Withdrawal is NOT a defense to conspiracy because the crime is complete once the agreement and overt act occur. Withdrawal only limits liability for subsequent crimes committed by co-conspirators.',
+                    'difficulty': 4
+                }
+            ],
+            'civil_procedure': [
+                {
+                    'id': 'civpro_q1',
+                    'concept_id': 'civil_procedure_jurisdiction_and_venue',
+                    'subject': 'civil_procedure',
+                    'question': """A citizen of State A sued a citizen of State B in federal court in State A, claiming $50,000 in damages for breach of contract. The defendant filed a motion to dismiss for lack of subject matter jurisdiction.
+
+How should the court rule?""",
+                    'options': {
+                        'A': 'Grant the motion because the amount in controversy does not exceed $75,000',
+                        'B': 'Grant the motion because contract cases must be heard in state court',
+                        'C': 'Deny the motion because there is complete diversity of citizenship',
+                        'D': 'Deny the motion because federal courts have exclusive jurisdiction over contract disputes'
+                    },
+                    'answer': 'A',
+                    'tested_rule': 'Diversity jurisdiction requires amount in controversy exceeding $75,000',
+                    'why_correct': '28 U.S.C. § 1332 requires both complete diversity of citizenship AND an amount in controversy exceeding $75,000. While there is complete diversity here (State A citizen vs. State B citizen), the $50,000 claim does not meet the amount in controversy requirement. The motion should be granted.',
+                    'difficulty': 2
+                },
+                {
+                    'id': 'civpro_q2',
+                    'concept_id': 'civil_procedure_pleadings_and_motions',
+                    'subject': 'civil_procedure',
+                    'question': """A plaintiff filed a complaint alleging that the defendant was negligent. The complaint stated: "On June 1, the defendant negligently operated his vehicle, causing injury to the plaintiff." The defendant moved to dismiss under Rule 12(b)(6).
+
+How should the court rule?""",
+                    'options': {
+                        'A': 'Grant the motion because the complaint lacks sufficient factual detail',
+                        'B': 'Grant the motion because negligence claims require heightened pleading',
+                        'C': 'Deny the motion because the complaint provides fair notice of the claim',
+                        'D': 'Deny the motion because Rule 12(b)(6) motions are disfavored'
+                    },
+                    'answer': 'A',
+                    'tested_rule': 'Twombly/Iqbal plausibility pleading standard',
+                    'why_correct': 'Under Twombly and Iqbal, a complaint must contain sufficient factual matter to state a claim that is plausible on its face. The complaint here is conclusory - it labels the defendant\'s conduct as "negligent" without factual allegations showing what the defendant did wrong. The court should grant the motion with leave to amend.',
+                    'difficulty': 3
+                }
+            ]
+        }
+
     def start_session(self, subject: str = "contracts") -> str:
-        """Start interactive session"""
+        """Start interactive session with pedagogy features"""
+        self.state = LearningState()  # Reset state
         self.state.current_subject = subject
         self.state.session_started = True
         self.state.last_interaction = datetime.now()
-        
+        self.state.session_id = generate_id(f"{subject}_{datetime.now().isoformat()}")
+
         welcome = f"""
-Welcome to Interactive Bar Exam Tutor
+================================================================================
+           INTERACTIVE BAR EXAM TUTOR - Advanced Pedagogy Mode
+================================================================================
 
 Subject: {subject.upper()}
+Session ID: {self.state.session_id[:8]}
+
+This session uses evidence-based learning techniques:
+  - Spaced Repetition (SM-2 algorithm)
+  - Confidence Calibration
+  - Elaborative Interrogation
+  - Socratic Dialogue for wrong answers
 
 Commands:
-- 'explain [concept]' - Get detailed explanations
-- 'practice' - Answer questions
-- 'progress' - View your stats
-- 'help' - Show all commands
-- 'quit' - End session
+  'practice' or 'quiz'  - Start answering MBE-style questions
+  'explain [concept]'   - Get detailed concept explanations
+  'review'              - See concepts due for spaced repetition
+  'progress'            - View your session stats
+  'study plan'          - Get personalized study recommendations
+  'help'                - Show all commands
+  'quit'                - End session
 
-What would you like to focus on?
+Ready to master {subject.replace('_', ' ').title()}? Type 'practice' to begin!
+================================================================================
 """
-        
         self.conversation_history.append({"role": "assistant", "content": welcome})
         return welcome
-    
-    def process_input(self, user_input: str) -> str:
-        """Process user input"""
-        self.state.last_interaction = datetime.now()
-        user_input = user_input.lower().strip()
-        
-        if user_input in ['quit', 'exit', 'end']:
-            return self._end_session()
-        elif user_input in ['help', 'h', '?']:
-            return self._show_help()
-        elif user_input in ['progress', 'stats']:
-            return self._show_progress()
-        elif 'explain' in user_input:
-            return self._explain_concept(user_input)
-        elif user_input in ['practice', 'quiz']:
-            return "Practice mode: Answer questions (feature coming soon)"
-        else:
-            return f"I understand you're asking about '{user_input}'. Try 'help' for available commands."
-    
-    def _show_help(self) -> str:
-        """Show help menu"""
-        return """
-Available Commands:
-- explain [concept] - Get detailed explanations
-- practice - Answer questions
-- progress - View your stats
-- help - Show this menu
-- quit - End session
 
-Available subjects:
-- contracts
-- torts
-- evidence
-- constitutional_law
-- criminal_law
-- civil_procedure
-"""
-    
-    def _show_progress(self) -> str:
-        """Show progress"""
+    def process_input(self, user_input: str) -> str:
+        """Process user input with advanced pedagogy state machine"""
+        self.state.last_interaction = datetime.now()
+        original_input = user_input
+        user_input = user_input.strip()
+
+        # Handle answer input when awaiting
+        if self.state.awaiting_answer:
+            return self._process_answer(user_input.upper())
+
+        # Handle confidence rating when awaiting
+        if self.state.awaiting_confidence:
+            return self._process_confidence(user_input)
+
+        # Handle elaboration mode
+        if self.state.elaboration_mode:
+            self.state.elaboration_mode = False
+            return self._continue_practice()
+
+        # Normal command processing
+        user_input_lower = user_input.lower()
+
+        if user_input_lower in ['quit', 'exit', 'end']:
+            return self._end_session()
+        elif user_input_lower in ['help', 'h', '?']:
+            return self._show_help()
+        elif user_input_lower in ['progress', 'stats']:
+            return self._show_progress()
+        elif user_input_lower in ['practice', 'quiz', 'start', 'next']:
+            return self._start_practice()
+        elif user_input_lower == 'review':
+            return self._show_review_queue()
+        elif user_input_lower == 'study plan':
+            return self._show_study_plan()
+        elif 'explain' in user_input_lower:
+            return self._explain_concept(original_input)
+        else:
+            return f"Command not recognized: '{user_input}'. Type 'help' for available commands."
+
+    def _start_practice(self) -> str:
+        """Start a practice question with pedagogical features"""
+        subject = self.state.current_subject
+
+        if subject not in self.question_bank or not self.question_bank[subject]:
+            return f"No questions available for {subject}. Try 'explain [concept]' instead."
+
+        # Select question based on spaced repetition if available
+        questions = self.question_bank[subject]
+
+        # Prioritize questions for concepts due for review
+        due_concepts = [c.concept_id for c in self.bar_tutor.get_spaced_repetition_queue(subject)]
+
+        # Find a question matching due concepts, or pick randomly
+        selected = None
+        for q in questions:
+            if q['concept_id'] in due_concepts:
+                selected = q
+                break
+
+        if not selected:
+            selected = random.choice(questions)
+
+        self.state.current_question = selected
+        self.state.awaiting_answer = True
+        self.state.current_concept = selected['concept_id']
+
+        # Format question
+        options_text = "\n".join([f"   {k}. {v}" for k, v in selected['options'].items()])
+
         return f"""
-Current Session Progress:
-- Subject: {self.state.current_subject}
-- Questions Answered: {self.state.questions_asked}
-- Correct Answers: {self.state.correct_answers}
-- Accuracy: {self.state.correct_answers/max(self.state.questions_asked, 1)*100:.1f}%
+================================================================================
+QUESTION {self.state.questions_asked + 1} | {subject.upper()} | Difficulty: {'*' * selected['difficulty']}
+================================================================================
+
+{selected['question']}
+
+{options_text}
+
+--------------------------------------------------------------------------------
+Enter your answer (A, B, C, or D):
 """
-    
+
+    def _process_answer(self, answer: str) -> str:
+        """Process answer and provide pedagogical feedback"""
+        if answer not in ['A', 'B', 'C', 'D']:
+            return "Please enter A, B, C, or D:"
+
+        self.state.awaiting_answer = False
+        question = self.state.current_question
+        correct_answer = question['answer']
+        is_correct = answer == correct_answer
+
+        self.state.questions_asked += 1
+        if is_correct:
+            self.state.correct_answers += 1
+
+        # Store response for tracking
+        self.state.user_responses.append({
+            'question_id': question['id'],
+            'user_answer': answer,
+            'correct': is_correct,
+            'timestamp': datetime.now().isoformat()
+        })
+
+        # Now ask for confidence rating
+        self.state.awaiting_confidence = True
+
+        result_icon = "CORRECT" if is_correct else "INCORRECT"
+        result_emoji = "+" if is_correct else "X"
+
+        return f"""
+[{result_emoji}] {result_icon}!
+
+Your answer: {answer}
+Correct answer: {correct_answer}
+
+Before we continue, rate your confidence in your answer:
+   1 = Wild guess
+   2 = Somewhat unsure
+   3 = Moderately confident
+   4 = Quite confident
+   5 = Completely certain
+
+Enter confidence rating (1-5):
+"""
+
+    def _process_confidence(self, rating_str: str) -> str:
+        """Process confidence rating and provide calibration feedback"""
+        try:
+            confidence = int(rating_str)
+            if confidence < 1 or confidence > 5:
+                return "Please enter a number from 1 to 5:"
+        except ValueError:
+            return "Please enter a number from 1 to 5:"
+
+        self.state.awaiting_confidence = False
+        self.state.confidence_ratings.append(confidence)
+
+        question = self.state.current_question
+        last_response = self.state.user_responses[-1]
+        is_correct = last_response['correct']
+        user_answer = last_response['user_answer']
+
+        # Update concept mastery with confidence
+        self.bar_tutor.update_concept_mastery(
+            question['concept_id'],
+            is_correct,
+            confidence
+        )
+
+        # Get confidence calibration feedback
+        calibration = self.bar_tutor.get_confidence_calibration(
+            question, user_answer, confidence, is_correct
+        )
+
+        # Build detailed feedback
+        output = []
+        output.append("=" * 80)
+        output.append("EXPLANATION")
+        output.append("=" * 80)
+        output.append("")
+        output.append(f"Tested Rule: {question['tested_rule']}")
+        output.append("")
+        output.append(f"Why {question['answer']} is correct:")
+        output.append(question['why_correct'])
+        output.append("")
+
+        # Add calibration feedback if available
+        if calibration.get('calibration_feedback'):
+            output.append("-" * 80)
+            output.append("CONFIDENCE CALIBRATION")
+            output.append("-" * 80)
+            output.append(calibration['calibration_feedback'])
+            output.append("")
+
+        # If wrong, add Socratic dialogue
+        if not is_correct:
+            output.append("-" * 80)
+            output.append("SOCRATIC REFLECTION")
+            output.append("-" * 80)
+
+            socratic = self.bar_tutor.get_socratic_dialogue(question, user_answer)
+            output.append(f"Key insight: {socratic['key_insight']}")
+            output.append("")
+            output.append("Consider these questions:")
+            for i, step in enumerate(socratic['dialogue_steps'][:2], 1):
+                output.append(f"  {i}. {step['question']}")
+            output.append("")
+
+            # Add remediation
+            if socratic.get('remediation_strategy'):
+                output.append("Suggested remediation:")
+                for strategy in socratic['remediation_strategy'][:2]:
+                    output.append(f"  - {strategy}")
+                output.append("")
+
+        # Get elaborative feedback (for both correct and incorrect)
+        elaboration = self.bar_tutor.get_elaborative_feedback(question, user_answer, is_correct)
+        if elaboration.get('interrogation_prompts'):
+            output.append("-" * 80)
+            output.append("DEEP LEARNING PROMPTS")
+            output.append("-" * 80)
+            output.append("To strengthen retention, consider:")
+            for prompt in elaboration['interrogation_prompts'][:2]:
+                output.append(f"  - {prompt}")
+            output.append("")
+
+        output.append("=" * 80)
+        output.append("")
+        output.append("Press Enter to continue to the next question, or type 'quit' to end.")
+
+        self.state.elaboration_mode = True
+
+        return "\n".join(output)
+
+    def _continue_practice(self) -> str:
+        """Continue to next practice question"""
+        return self._start_practice()
+
+    def _show_review_queue(self) -> str:
+        """Show concepts due for spaced repetition review"""
+        due_concepts = self.bar_tutor.get_spaced_repetition_queue(self.state.current_subject)
+
+        if not due_concepts:
+            return f"""
+No concepts due for review in {self.state.current_subject}!
+All caught up with spaced repetition.
+
+Type 'practice' to continue learning new material.
+"""
+
+        output = [
+            "=" * 80,
+            f"SPACED REPETITION REVIEW QUEUE - {self.state.current_subject.upper()}",
+            "=" * 80,
+            "",
+            f"{len(due_concepts)} concepts due for review:",
+            ""
+        ]
+
+        for i, concept in enumerate(due_concepts, 1):
+            days_overdue = ""
+            if concept.last_reviewed:
+                days = (datetime.now() - concept.last_reviewed).days
+                days_overdue = f" (last reviewed {days} days ago)"
+
+            mastery_bar = "*" * int(concept.mastery_level * 10)
+            output.append(f"{i}. {concept.name}")
+            output.append(f"   Mastery: [{mastery_bar:<10}] {concept.mastery_level:.0%}{days_overdue}")
+
+        output.append("")
+        output.append("Type 'practice' to start reviewing these concepts.")
+        output.append("=" * 80)
+
+        return "\n".join(output)
+
+    def _show_study_plan(self) -> str:
+        """Show personalized study plan"""
+        plan = self.bar_tutor.generate_study_plan()
+
+        output = [
+            "=" * 80,
+            "PERSONALIZED STUDY PLAN",
+            "=" * 80,
+            "",
+            f"Weeks until exam: {plan['total_weeks']}",
+            f"Focus subjects: {', '.join(plan['focus_subjects']) or 'All subjects'}",
+            "",
+            "Recommended Daily Structure:",
+        ]
+
+        for session_name, session in plan['daily_structure'].items():
+            output.append(f"  {session_name.replace('_', ' ').title()}:")
+            output.append(f"    Duration: {session['duration']} minutes")
+            output.append(f"    Mode: {session['mode'].value}")
+            output.append(f"    Strategy: {session['strategy'].value}")
+            output.append("")
+
+        if plan.get('adaptive_goals'):
+            goals = plan['adaptive_goals']
+            output.append("Adaptive Goals:")
+            output.append(f"  - Target accuracy: {goals['accuracy_target']:.0%}")
+            output.append(f"  - Target time per question: {goals['speed_target']} seconds")
+            output.append(f"  - Weak subject improvement: {goals['weak_subject_improvement']}")
+            output.append("")
+
+        output.append("=" * 80)
+        return "\n".join(output)
+
+    def _show_help(self) -> str:
+        """Show enhanced help menu"""
+        return """
+================================================================================
+AVAILABLE COMMANDS
+================================================================================
+
+PRACTICE COMMANDS:
+  practice, quiz     - Start answering MBE-style questions
+  next              - Go to next question
+  review            - See concepts due for spaced repetition
+
+LEARNING COMMANDS:
+  explain [concept] - Get detailed explanation of a concept
+  study plan        - Get personalized study recommendations
+
+PROGRESS COMMANDS:
+  progress, stats   - View session statistics
+  help              - Show this menu
+
+SESSION COMMANDS:
+  quit, exit        - End the current session
+
+AVAILABLE SUBJECTS:
+  contracts         constitutional_law    criminal_law
+  torts             evidence              civil_procedure
+  real_property     criminal_procedure    professional_responsibility
+  corporations      wills_trusts_estates  family_law
+
+================================================================================
+"""
+
+    def _show_progress(self) -> str:
+        """Show enhanced progress with calibration data"""
+        accuracy = self.state.correct_answers / max(self.state.questions_asked, 1)
+
+        # Calculate confidence metrics
+        avg_confidence = sum(self.state.confidence_ratings) / max(len(self.state.confidence_ratings), 1)
+
+        output = [
+            "=" * 80,
+            "SESSION PROGRESS",
+            "=" * 80,
+            "",
+            f"Subject: {self.state.current_subject.replace('_', ' ').title()}",
+            f"Session ID: {self.state.session_id[:8] if self.state.session_id else 'N/A'}",
+            "",
+            "Performance:",
+            f"  Questions Answered: {self.state.questions_asked}",
+            f"  Correct Answers: {self.state.correct_answers}",
+            f"  Accuracy: {accuracy:.1%}",
+            "",
+        ]
+
+        if self.state.confidence_ratings:
+            output.append("Confidence Calibration:")
+            output.append(f"  Average Confidence: {avg_confidence:.1f}/5")
+
+            # Analyze calibration
+            high_conf_correct = sum(
+                1 for i, r in enumerate(self.state.user_responses)
+                if i < len(self.state.confidence_ratings)
+                and self.state.confidence_ratings[i] >= 4
+                and r['correct']
+            )
+            high_conf_total = sum(
+                1 for c in self.state.confidence_ratings if c >= 4
+            )
+
+            if high_conf_total > 0:
+                high_conf_acc = high_conf_correct / high_conf_total
+                output.append(f"  High-Confidence Accuracy: {high_conf_acc:.1%}")
+
+                if high_conf_acc < 0.8:
+                    output.append("  [!] Calibration Alert: High confidence but lower accuracy")
+            output.append("")
+
+        output.append("Cognitive Strategies Used This Session:")
+        strategies = list(set(self.state.cognitive_strategies_used)) or ["Retrieval Practice", "Spaced Repetition"]
+        for s in strategies:
+            output.append(f"  - {s}")
+
+        output.append("")
+        output.append("=" * 80)
+
+        return "\n".join(output)
+
     def _explain_concept(self, user_input: str) -> str:
-        """Explain a concept"""
+        """Enhanced concept explanation with pedagogical context"""
         parts = user_input.split()
         if len(parts) < 2:
             return "Please specify a concept, e.g., 'explain consideration'"
-        
-        concept_query = ' '.join(parts[1:])
-        
+
+        concept_query = ' '.join(parts[1:]).lower()
+
         # Try to find matching concept
         for concept in self.bar_tutor.kg.nodes.values():
             if concept_query in concept.name.lower() or concept_query in concept.concept_id:
-                return f"""
-{concept.name}
+                # Get related questions for context
+                related_questions = []
+                if concept.subject in self.question_bank:
+                    related_questions = [
+                        q for q in self.question_bank[concept.subject]
+                        if q['concept_id'] == concept.concept_id
+                    ]
 
-Rule: {concept.rule_statement}
+                output = [
+                    "=" * 80,
+                    f"{concept.name.upper()}",
+                    "=" * 80,
+                    "",
+                    f"Subject: {concept.subject.replace('_', ' ').title()}",
+                    f"Difficulty: {'*' * concept.difficulty} ({concept.difficulty}/5)",
+                    f"Mastery Level: {concept.mastery_level:.0%}",
+                    "",
+                ]
 
-Elements: {', '.join(concept.elements) if concept.elements else 'N/A'}
+                if concept.rule_statement:
+                    output.append("RULE STATEMENT:")
+                    output.append(f"  {concept.rule_statement}")
+                    output.append("")
 
-Common Traps: {concept.common_traps[0] if concept.common_traps else 'N/A'}
-"""
-        
+                if concept.elements:
+                    output.append("ELEMENTS:")
+                    for i, elem in enumerate(concept.elements, 1):
+                        output.append(f"  {i}. {elem}")
+                    output.append("")
+
+                if concept.exceptions:
+                    output.append("EXCEPTIONS:")
+                    for exc in concept.exceptions:
+                        output.append(f"  - {exc}")
+                    output.append("")
+
+                if concept.common_traps:
+                    output.append("COMMON TRAPS (Watch out for these!):")
+                    for trap in concept.common_traps:
+                        output.append(f"  [!] {trap}")
+                    output.append("")
+
+                if related_questions:
+                    output.append(f"PRACTICE: {len(related_questions)} question(s) available for this concept")
+                    output.append("Type 'practice' to test your understanding")
+                    output.append("")
+
+                output.append("=" * 80)
+                return "\n".join(output)
+
         return f"Concept '{concept_query}' not found. Try 'help' for available topics."
-    
+
     def _end_session(self) -> str:
-        """End session"""
+        """End session with summary"""
         self.state.session_started = False
-        return "Session ended. Good luck on the bar exam!"
+
+        accuracy = self.state.correct_answers / max(self.state.questions_asked, 1)
+
+        return f"""
+================================================================================
+SESSION COMPLETE
+================================================================================
+
+Final Statistics:
+  Questions Answered: {self.state.questions_asked}
+  Correct Answers: {self.state.correct_answers}
+  Final Accuracy: {accuracy:.1%}
+
+Keep studying and good luck on your bar exam!
+
+Tip: Concepts you practiced today will appear in spaced repetition reviews
+at optimal intervals to maximize long-term retention.
+
+================================================================================
+"""
 
 # ==================== MAIN TUTOR ====================
 
 class BarExamTutor:
-    """Main unified bar exam tutor"""
-    
+    """Main unified bar exam tutor with advanced pedagogy integration"""
+
     def __init__(self, api_key: str = None):
-        logger.info("Initializing Unified Bar Exam Tutor v4.0")
+        logger.info("Initializing Unified Bar Exam Tutor v5.0 with Advanced Pedagogy")
 
         self.api_key = api_key
         self.model = DEFAULT_MODEL
-        
+
         self.kg = LegalKnowledgeGraph()
         self.practice_engine = InterleavedPracticeEngine(self.kg)
         self.tracker = PerformanceTracker()
+
+        # Initialize advanced pedagogy engine
+        self.pedagogy = AdvancedPedagogyEngine()
+        self.pedagogy.initialize_knowledge_graph()
+
+        # Sync knowledge graphs
+        self._sync_pedagogy_knowledge_graph()
         self.interactive = InteractiveBarTutor(self)
         
         logger.info("Tutor initialized successfully")
-    
+
+    def _sync_pedagogy_knowledge_graph(self):
+        """Sync bar tutor knowledge graph with pedagogy engine"""
+        # Map bar tutor subjects to pedagogy subjects
+        subject_mapping = {
+            'contracts': 'contracts',
+            'torts': 'torts',
+            'constitutional_law': 'conlaw',
+            'criminal_law': 'crim',
+            'criminal_procedure': 'crim',
+            'evidence': 'evidence',
+            'civil_procedure': 'civpro',
+            'real_property': 'property'
+        }
+
+        # Add bar tutor concepts to pedagogy knowledge graph
+        for concept_id, concept in self.kg.nodes.items():
+            pedagogy_subject = subject_mapping.get(concept.subject, concept.subject)
+            # Create a simplified pedagogy node reference
+            if concept_id not in self.pedagogy.knowledge_graph:
+                from advanced_pedagogy import KnowledgeNode as PedagogyNode
+                self.pedagogy.knowledge_graph[concept_id] = PedagogyNode(
+                    concept_id=concept_id,
+                    name=concept.name,
+                    subject=pedagogy_subject,
+                    difficulty=concept.difficulty,
+                    mastery_level=concept.mastery_level,
+                    ease_factor=concept.ease_factor,
+                    interval=concept.interval
+                )
+
+        logger.info(f"Synced {len(self.kg.nodes)} concepts to pedagogy engine")
+
+    def get_spaced_repetition_queue(self, subject: str = None) -> List[KnowledgeNode]:
+        """Get concepts due for review using SM-2 spaced repetition"""
+        due_concepts = []
+
+        for concept_id, p_node in self.pedagogy.knowledge_graph.items():
+            if subject and p_node.subject != subject:
+                continue
+            if self.pedagogy.spaced_repetition_scheduler(p_node):
+                # Get the full concept from bar tutor kg
+                if concept_id in self.kg.nodes:
+                    due_concepts.append(self.kg.nodes[concept_id])
+
+        # Sort by urgency (overdue items first, then by difficulty)
+        due_concepts.sort(key=lambda c: (
+            -(datetime.now() - c.last_reviewed).days if c.last_reviewed else 1000,
+            c.difficulty
+        ))
+
+        return due_concepts[:10]  # Return top 10 most urgent
+
+    def update_concept_mastery(self, concept_id: str, correct: bool, confidence: int = 3):
+        """Update concept mastery using SM-2 algorithm and confidence calibration"""
+        if concept_id not in self.kg.nodes:
+            return
+
+        concept = self.kg.nodes[concept_id]
+
+        # SM-2 algorithm update
+        if correct:
+            if concept.review_count == 0:
+                concept.interval = 1
+            elif concept.review_count == 1:
+                concept.interval = 6
+            else:
+                concept.interval = int(concept.interval * concept.ease_factor)
+
+            # Adjust ease factor based on confidence
+            # High confidence + correct = good learning
+            # Low confidence + correct = lucky guess, don't increase ease much
+            confidence_modifier = (confidence - 3) * 0.05
+            concept.ease_factor = max(1.3, concept.ease_factor + 0.1 + confidence_modifier)
+            concept.mastery_level = min(1.0, concept.mastery_level + 0.15)
+        else:
+            # Reset interval on failure
+            concept.interval = 1
+            concept.ease_factor = max(1.3, concept.ease_factor - 0.2)
+            concept.mastery_level = max(0.0, concept.mastery_level - 0.1)
+
+        concept.last_reviewed = datetime.now()
+        concept.review_count += 1
+
+        # Sync to pedagogy engine
+        if concept_id in self.pedagogy.knowledge_graph:
+            p_node = self.pedagogy.knowledge_graph[concept_id]
+            p_node.mastery_level = concept.mastery_level
+            p_node.ease_factor = concept.ease_factor
+            p_node.interval = concept.interval
+            p_node.last_reviewed = concept.last_reviewed
+            p_node.review_count = concept.review_count
+
+        # Record performance
+        self.tracker.record_attempt(concept.subject, correct)
+
+    def get_elaborative_feedback(self, question: Dict, user_answer: str, is_correct: bool) -> Dict:
+        """Get elaborative interrogation feedback from pedagogy engine"""
+        return self.pedagogy.elaborative_interrogation_engine(question, user_answer, is_correct)
+
+    def get_socratic_dialogue(self, question: Dict, user_answer: str) -> Dict:
+        """Get Socratic dialogue prompts for wrong answers"""
+        return self.pedagogy.socratic_dialogue_engine(question, user_answer)
+
+    def get_confidence_calibration(self, question: Dict, user_answer: str, confidence: int, is_correct: bool) -> Dict:
+        """Track and analyze confidence calibration"""
+        return self.pedagogy.confidence_calibration_tracker(question, user_answer, confidence, is_correct)
+
+    def generate_study_plan(self, weak_subjects: List[str] = None) -> Dict:
+        """Generate personalized study plan using pedagogy engine"""
+        # Analyze performance to find weak subjects
+        stats = self.tracker.get_stats(30)
+
+        if not weak_subjects:
+            weak_subjects = [
+                subj for subj, data in stats.items()
+                if data.get('percentage', 0) < 70
+            ]
+
+        # Get overall performance metrics
+        total_correct = sum(s.get('correct', 0) for s in stats.values())
+        total_questions = sum(s.get('total', 0) for s in stats.values())
+
+        user_performance = {
+            'weak_subjects': weak_subjects or ['contracts', 'evidence'],
+            'overall_accuracy': total_correct / max(total_questions, 1),
+            'study_hours_per_week': 20,
+            'exam_date': datetime.now() + timedelta(days=90)
+        }
+
+        return self.pedagogy.generate_personalized_study_plan(user_performance)
+
     def generate_interleaved_practice(self, subject: str, count: int = 5) -> List[KnowledgeNode]:
         """Generate interleaved practice"""
         print(f"\nGenerating Interleaved Practice - {subject.upper()}")
@@ -9181,45 +9983,112 @@ class BarExamTutor:
                 print(f"Error: {e}")
     
     def run_menu(self):
-        """Main menu"""
+        """Main menu with advanced pedagogy features"""
         print("\n" + "="*70)
-        print("BAR EXAM TUTOR v4.0 - Unified System")
+        print("BAR EXAM TUTOR v5.0 - Advanced Pedagogy Edition")
         print("="*70)
-        
+        print("Featuring: Spaced Repetition | Confidence Calibration | Socratic Dialogue")
+
         while True:
             print("\n" + "-"*70)
             print("MAIN MENU")
             print("-"*70)
-            print("1. Interleaved Practice")
-            print("2. Explain Concept")
-            print("3. Performance Dashboard")
-            print("4. Interactive Mode (Conversational)")
+            print("1. Interactive Practice Mode (Recommended)")
+            print("2. Interleaved Practice (Concept Review)")
+            print("3. Explain Concept")
+            print("4. Performance Dashboard")
+            print("5. Spaced Repetition Review Queue")
+            print("6. Generate Study Plan")
             print("0. Exit")
             print("-"*70)
-            
+
             choice = input("\nSelect: ").strip()
-            
+
             try:
                 if choice == "0":
                     print("\nGood luck on your bar exam!")
                     break
                 elif choice == "1":
-                    self._interleaved_menu()
-                elif choice == "2":
-                    self._explain_menu()
-                elif choice == "3":
-                    self.tracker.display_dashboard()
-                elif choice == "4":
                     self.start_interactive_mode()
+                elif choice == "2":
+                    self._interleaved_menu()
+                elif choice == "3":
+                    self._explain_menu()
+                elif choice == "4":
+                    self.tracker.display_dashboard()
+                elif choice == "5":
+                    self._show_spaced_repetition_queue()
+                elif choice == "6":
+                    self._show_study_plan()
                 else:
                     print("Invalid choice")
-            
+
             except KeyboardInterrupt:
                 print("\n\nExiting...")
                 break
             except Exception as e:
                 logger.error(f"Error: {e}", exc_info=True)
                 print(f"Error: {e}")
+
+    def _show_spaced_repetition_queue(self):
+        """Display concepts due for spaced repetition review"""
+        print("\n" + "="*70)
+        print("SPACED REPETITION REVIEW QUEUE")
+        print("="*70)
+
+        due_concepts = self.get_spaced_repetition_queue()
+
+        if not due_concepts:
+            print("\nNo concepts due for review! All caught up.")
+            print("Tip: Practice new concepts in Interactive Mode to build your queue.")
+            return
+
+        print(f"\n{len(due_concepts)} concepts due for review:\n")
+
+        for i, concept in enumerate(due_concepts, 1):
+            days_info = ""
+            if concept.last_reviewed:
+                days = (datetime.now() - concept.last_reviewed).days
+                days_info = f" (last reviewed {days} days ago)"
+
+            mastery_bar = "*" * int(concept.mastery_level * 10)
+            print(f"{i}. {concept.name}")
+            print(f"   Subject: {concept.subject.replace('_', ' ').title()}")
+            print(f"   Mastery: [{mastery_bar:<10}] {concept.mastery_level:.0%}{days_info}")
+            print()
+
+        print("="*70)
+        print("\nTip: Use Interactive Mode (Option 1) to practice these concepts.")
+
+    def _show_study_plan(self):
+        """Display personalized study plan"""
+        print("\n" + "="*70)
+        print("PERSONALIZED STUDY PLAN")
+        print("="*70)
+
+        plan = self.generate_study_plan()
+
+        print(f"\nWeeks until exam: {plan['total_weeks']}")
+        print(f"Focus subjects: {', '.join(plan['focus_subjects']) or 'All subjects balanced'}")
+
+        print("\nRecommended Daily Structure:")
+        print("-"*40)
+
+        for session_name, session in plan['daily_structure'].items():
+            print(f"\n  {session_name.replace('_', ' ').title()}:")
+            print(f"    Duration: {session['duration']} minutes")
+            print(f"    Mode: {session['mode'].value}")
+            print(f"    Strategy: {session['strategy'].value}")
+
+        if plan.get('adaptive_goals'):
+            goals = plan['adaptive_goals']
+            print("\n" + "-"*40)
+            print("Adaptive Goals:")
+            print(f"  Target accuracy: {goals['accuracy_target']:.0%}")
+            print(f"  Target time per question: {goals['speed_target']} seconds")
+            print(f"  Weak subject improvement: {goals['weak_subject_improvement']}")
+
+        print("\n" + "="*70)
     
     def _interleaved_menu(self):
         """Interleaved practice menu"""
