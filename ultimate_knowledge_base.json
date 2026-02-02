@@ -9,7 +9,11 @@
       "Mnemonic",
       "Traps"
     ],
-    "policy_rationales": [],
+    "policy_rationales": [
+      "Subject-matter jurisdiction ensures federal courts only hear cases within constitutional and statutory limits",
+      "Venue rules promote convenience and fairness by locating trials near relevant events and witnesses",
+      "Forum non conveniens allows courts to decline jurisdiction when another forum is clearly more appropriate"
+    ],
     "common_traps": [
       "General vs specific jurisdiction",
       "minimum contacts",
@@ -18,7 +22,11 @@
       "removal timing."
     ],
     "mnemonic": "PISSED",
-    "micro_hypos": [],
+    "micro_hypos": [
+      "Plaintiff (citizen of NY) sues Defendant (citizen of NJ) for $100K breach of contract. RESULT: Diversity jurisdiction exists—complete diversity and amount exceeds $75K.",
+      "Plaintiff sues under federal civil rights statute for $5K. RESULT: Federal question jurisdiction exists regardless of amount—federal law on face of complaint.",
+      "Plaintiff and Defendant both from California. State law claim for $200K. RESULT: No diversity—same state citizens. Must use state court."
+    ],
     "source": "existing",
     "exam_frequency": "medium"
   },
@@ -32,14 +40,22 @@
       "Mnemonic",
       "Traps"
     ],
-    "policy_rationales": [],
+    "policy_rationales": [
+      "Twombly/Iqbal plausibility standard prevents fishing expeditions through discovery",
+      "Liberal amendment policy promotes resolution on merits rather than procedural technicalities",
+      "Rule 12 motions allow early dismissal of meritless claims, saving resources"
+    ],
     "common_traps": [
       "Twiqbal plausibility",
       "relation back",
       "waiver of defenses."
     ],
     "mnemonic": "CLAIMS",
-    "micro_hypos": [],
+    "micro_hypos": [
+      "Complaint alleges 'D was negligent.' No specific facts. RESULT: Dismiss under 12(b)(6)—conclusory allegations without factual support.",
+      "Plaintiff discovers new theory of liability during discovery. Wants to amend. RESULT: Amendment freely granted when justice requires (Rule 15).",
+      "D fails to raise personal jurisdiction defense in answer. Raises it later. RESULT: Waived—Rule 12(h) requires certain defenses in first response."
+    ],
     "source": "existing",
     "exam_frequency": "medium"
   },
@@ -53,14 +69,22 @@
       "Mnemonic",
       "Traps"
     ],
-    "policy_rationales": [],
+    "policy_rationales": [
+      "Liberal joinder promotes efficiency by resolving related claims in single action",
+      "Compulsory counterclaims prevent piecemeal litigation of related disputes",
+      "Broad discovery ensures parties have access to relevant information for fair adjudication"
+    ],
     "common_traps": [
       "Compulsory counterclaims",
       "indispensable parties",
       "discovery sanctions."
     ],
     "mnemonic": "JEDI",
-    "micro_hypos": [],
+    "micro_hypos": [
+      "A sues B for breach of contract. B has tort claim against A from same transaction. RESULT: Compulsory counterclaim—must raise or waive.",
+      "P wants to join D2 as defendant. D2 is from same state as P. RESULT: Permissive joinder allowed if same transaction; supplemental jurisdiction may apply.",
+      "P requests 'all documents about product safety.' D objects as overbroad. RESULT: Court may limit—discovery must be proportional to needs of case."
+    ],
     "source": "existing",
     "exam_frequency": "medium"
   },
@@ -73,10 +97,18 @@
     "elements": [
       "Mnemonic"
     ],
-    "policy_rationales": [],
+    "policy_rationales": [
+      "Summary judgment promotes efficiency when no genuine factual disputes exist",
+      "JMOL prevents verdicts unsupported by evidence",
+      "New trial corrects errors affecting substantial rights while respecting jury findings"
+    ],
     "common_traps": [],
     "mnemonic": "LIMES",
-    "micro_hypos": [],
+    "micro_hypos": [
+      "P presents circumstantial evidence of negligence. D moves for SJ arguing evidence is weak. RESULT: Denied—court cannot weigh evidence; jury must assess.",
+      "After P's case, D moves for JMOL. No reasonable jury could find for P. RESULT: Granted—JMOL appropriate when evidence permits only one conclusion.",
+      "Juror misconduct discovered after verdict. D moves for new trial. RESULT: Granted if misconduct prejudiced substantial rights."
+    ],
     "source": "existing",
     "exam_frequency": "medium"
   },
@@ -132,10 +164,19 @@
       "Specific Jurisdiction",
       "Fair Play Factors"
     ],
-    "policy_rationales": [],
+    "policy_rationales": [
+      "Due process protects defendants from being sued in distant, inconvenient forums with no connection to them",
+      "Minimum contacts doctrine balances plaintiff's interest in convenient forum with defendant's liberty interest",
+      "Promotes fairness by requiring defendants to reasonably anticipate being haled into court based on their conduct"
+    ],
     "common_traps": [],
     "mnemonic": null,
-    "micro_hypos": [],
+    "micro_hypos": [
+      "A website operator in Maine sells products to customers in all 50 states. A California customer sues in California. RESULT: Likely specific jurisdiction—purposeful availment through systematic sales to California market.",
+      "A tourist from Ohio causes a car accident while vacationing in Florida. Victim sues in Ohio. RESULT: No jurisdiction—Ohio has no connection to the accident; Florida is proper forum.",
+      "A company's only contact with Texas is one contract with a Texas company. Suit arises from that contract. RESULT: Specific jurisdiction exists—claim arises from the Texas contact.",
+      "A corporation is incorporated in Delaware, headquartered in New York, with no offices in California. RESULT: General jurisdiction only in Delaware and New York (where 'at home'); not California."
+    ],
     "source": "existing",
     "exam_frequency": "medium"
   },
@@ -230,10 +271,18 @@
     "difficulty": 3,
     "rule_statement": "No genuine dispute of material fact",
     "elements": [],
-    "policy_rationales": [],
+    "policy_rationales": [
+      "Eliminates need for trial when no genuine factual disputes exist—saves judicial resources",
+      "Protects parties from cost of unnecessary trials when outcome is legally certain",
+      "Balances efficiency with right to jury trial by allowing trial when facts are genuinely disputed"
+    ],
     "common_traps": [],
     "mnemonic": null,
-    "micro_hypos": [],
+    "micro_hypos": [
+      "Plaintiff claims breach of contract. Defendant produces unsigned contract. Plaintiff produces nothing showing signature. RESULT: Summary judgment for defendant—no evidence of contract formation.",
+      "Both parties submit conflicting affidavits about whether light was red or green. RESULT: Summary judgment denied—genuine dispute of material fact for jury.",
+      "Defendant admits all facts but argues law doesn't support liability. RESULT: Summary judgment appropriate—legal question for court, no factual dispute."
+    ],
     "source": "auto-generated",
     "exam_frequency": "medium"
   },
@@ -249,10 +298,18 @@
       "Future Interests",
       "RAP Analysis"
     ],
-    "policy_rationales": [],
+    "policy_rationales": [
+      "Estate system balances property owners' desires with societal interest in marketable land",
+      "Future interests doctrine allows planning for generational wealth transfer",
+      "RAP prevents dead hand control by limiting how long future interests can remain contingent"
+    ],
     "common_traps": [],
     "mnemonic": null,
-    "micro_hypos": [],
+    "micro_hypos": [
+      "'To A for life, then to B.' RESULT: A has life estate; B has vested remainder in fee simple.",
+      "'To A so long as used for school.' RESULT: A has fee simple determinable; grantor has possibility of reverter.",
+      "'To A, but if liquor sold, to B.' RESULT: A has fee simple subject to executory limitation; B has executory interest."
+    ],
     "source": "existing",
     "exam_frequency": "medium"
   },
@@ -268,10 +325,18 @@
       "Recording Acts",
       "Chain Issues"
     ],
-    "policy_rationales": [],
+    "policy_rationales": [
+      "Recording acts protect good faith purchasers who rely on public records",
+      "Race-notice jurisdictions balance recording diligence with protection from fraud",
+      "Title examination promotes certainty in real property transactions"
+    ],
     "common_traps": [],
     "mnemonic": null,
-    "micro_hypos": [],
+    "micro_hypos": [
+      "O sells to A (doesn't record). O sells to B (knows of A's deed). B records first. RESULT: In race-notice, A wins—B had notice.",
+      "O sells to A (doesn't record). O sells to B (no knowledge of A). B records. RESULT: B wins in notice or race-notice jurisdiction.",
+      "Wild deed in chain of title. Subsequent purchaser fails to find it. RESULT: May have constructive notice depending on reasonable search scope."
+    ],
     "source": "existing",
     "exam_frequency": "medium"
   },
@@ -289,14 +354,22 @@
       "Rule Against Perpetuities (RAP)",
       "Class Gifts"
     ],
-    "policy_rationales": [],
+    "policy_rationales": [
+      "Estate system balances property owners' desires with societal interest in marketable land",
+      "Future interests doctrine allows planning for generational wealth transfer",
+      "RAP prevents dead hand control by limiting how long future interests can remain contingent"
+    ],
     "common_traps": [
       "AUTO vs. MANUAL: Determinable = AUTOmatic (like autopilot); Condition Subsequent = MANUAL reentry (like manual transmission)",
       "REMAINDER RULE: Remainders are like train passengers - they wait for their turn, never jump ahead (never executory)",
       "RAP TRAP: 21 years + lives in being = drinking age (21) + pregnancy (gestation)"
     ],
     "mnemonic": "PREFUR",
-    "micro_hypos": [],
+    "micro_hypos": [
+      "'To A for life, then to B.' RESULT: A has life estate; B has vested remainder in fee simple.",
+      "'To A so long as used for school.' RESULT: A has fee simple determinable; grantor has possibility of reverter.",
+      "'To A, but if liquor sold, to B.' RESULT: A has fee simple subject to executory limitation; B has executory interest."
+    ],
     "source": "real_property_advanced",
     "exam_frequency": "medium"
   },
@@ -314,14 +387,22 @@
       "Recording Acts",
       "Chain of Title"
     ],
-    "policy_rationales": [],
+    "policy_rationales": [
+      "Recording acts protect good faith purchasers who rely on public records",
+      "Race-notice jurisdictions balance recording diligence with protection from fraud",
+      "Title examination promotes certainty in real property transactions"
+    ],
     "common_traps": [
       "BFP = Good Faith Penny: Bona fide purchaser needs good faith + value (even $1) + no notice",
       "Chain Gang: Must examine entire chain of title, not just immediate grantor (like prison chain gang - all connected)",
       "Triple Notice Threat: Actual (you know) + Constructive (recorded) + Inquiry (should have known)"
     ],
     "mnemonic": "RACE to the Courthouse",
-    "micro_hypos": [],
+    "micro_hypos": [
+      "O sells to A (doesn't record). O sells to B (knows of A's deed). B records first. RESULT: In race-notice, A wins—B had notice.",
+      "O sells to A (doesn't record). O sells to B (no knowledge of A). B records. RESULT: B wins in notice or race-notice jurisdiction.",
+      "Wild deed in chain of title. Subsequent purchaser fails to find it. RESULT: May have constructive notice depending on reasonable search scope."
+    ],
     "source": "real_property_advanced",
     "exam_frequency": "medium"
   },
@@ -340,10 +421,18 @@
       "Termination",
       "Scope of Rights"
     ],
-    "policy_rationales": [],
+    "policy_rationales": [
+      "Easements allow beneficial use of land while respecting ownership boundaries",
+      "Distinction between appurtenant and in gross affects transferability",
+      "Methods of creation (express, implied, prescriptive) serve different policy goals"
+    ],
     "common_traps": [],
     "mnemonic": "EASE",
-    "micro_hypos": [],
+    "micro_hypos": [
+      "Deed grants 'right to cross Blackacre to reach highway.' A owns Whiteacre. RESULT: Easement appurtenant—benefits Whiteacre, burdens Blackacre.",
+      "Utility company has power line across property. RESULT: Easement in gross—benefits company personally, not other land.",
+      "A openly crosses B's land for 20 years without permission (15-year period). RESULT: Prescriptive easement—like adverse possession but for use, not title."
+    ],
     "source": "real_property_advanced",
     "exam_frequency": "medium"
   },
@@ -382,10 +471,18 @@
       "Assignment vs. Sublease",
       "Holdover Tenants"
     ],
-    "policy_rationales": [],
+    "policy_rationales": [
+      "Implied warranty of habitability protects residential tenants from substandard housing",
+      "Quiet enjoyment covenant ensures tenant's peaceful possession",
+      "Anti-retaliation rules protect tenants who assert legal rights"
+    ],
     "common_traps": [],
     "mnemonic": "RENT",
-    "micro_hypos": [],
+    "micro_hypos": [
+      "Landlord fails to repair heating in winter despite notice. RESULT: Breach of implied warranty of habitability—tenant may withhold rent.",
+      "Landlord rents apartment above, new tenant plays loud music at 3 AM. RESULT: May breach quiet enjoyment if landlord controls/causes interference.",
+      "Tenant reports code violations. Landlord raises rent 50% next month. RESULT: Retaliatory—may be prohibited; rent increase voidable."
+    ],
     "source": "real_property_advanced",
     "exam_frequency": "medium"
   },
@@ -445,10 +542,18 @@
       "Boundary Disputes",
       "Government Immunity"
     ],
-    "policy_rationales": [],
+    "policy_rationales": [
+      "Rewards productive use of land and punishes owners who sleep on rights",
+      "Quiets title and promotes certainty in land ownership",
+      "Statute of limitations provides finality and prevents stale claims"
+    ],
     "common_traps": [],
     "mnemonic": "HATE",
-    "micro_hypos": [],
+    "micro_hypos": [
+      "A uses neighbor's land openly for 12 years (10-year statute). Neighbor sues for trespass. RESULT: A owns by adverse possession—all elements met.",
+      "A uses land with owner's permission. Uses for 15 years. RESULT: No adverse possession—permissive use is not hostile.",
+      "A uses land hostilely for 6 years, sells to B. B uses for 5 years. RESULT: B can tack A's period—privity through sale. 11 years > 10."
+    ],
     "source": "real_property_advanced",
     "exam_frequency": "medium"
   },
@@ -532,7 +637,11 @@
       "Traps",
       "Micro-Hypos"
     ],
-    "policy_rationales": [],
+    "policy_rationales": [
+      "Actus reus requirement ensures punishment for conduct, not thoughts alone",
+      "Mens rea requirement reflects moral culpability—intentional harm more blameworthy than accidental",
+      "Concurrence doctrine ensures mental state accompanies the criminal act"
+    ],
     "common_traps": [
       "Specific vs general intent (intoxication defenses)",
       "transferred intent limited to same crime",
@@ -540,7 +649,11 @@
       "strict liability defeats mistake defenses."
     ],
     "mnemonic": null,
-    "micro_hypos": [],
+    "micro_hypos": [
+      "D has seizure, arms flail, strikes V. Charged with battery. RESULT: Not guilty—no voluntary act; seizure is involuntary.",
+      "D plans murder. Before acting, D is arrested. RESULT: No crime—guilty mind alone without guilty act is not punishable.",
+      "D borrows car intending to return. Later decides to keep it. RESULT: Not larceny—intent to steal must exist at time of taking."
+    ],
     "source": "existing",
     "exam_frequency": "medium"
   },
@@ -558,12 +671,21 @@
       "Traps",
       "Micro-Hypos"
     ],
-    "policy_rationales": [],
+    "policy_rationales": [
+      "Gradations of homicide reflect moral culpability—premeditated killing more blameworthy than heat-of-passion",
+      "Malice aforethought requirement ensures only intentional or reckless killings receive harshest punishment",
+      "Voluntary manslaughter recognizes human frailty while still condemning the killing"
+    ],
     "common_traps": [
       "Instant premeditation allowed; deadly weapon inference; felony-murder merger; cooling-off defeats voluntary manslaughter; police/victim killings not felony murder (agency theory)."
     ],
     "mnemonic": null,
-    "micro_hypos": [],
+    "micro_hypos": [
+      "D spends two weeks planning to kill V, purchases gun, and executes plan. RESULT: First-degree murder—clear premeditation and deliberation.",
+      "D finds spouse in bed with V, immediately grabs lamp and kills V. RESULT: Voluntary manslaughter—adequate provocation, heat of passion, no cooling time.",
+      "D drives 90mph through school zone, killing child. RESULT: Depraved heart murder—conscious disregard of extreme risk to human life.",
+      "D punches V once in bar fight; V falls, hits head, dies. RESULT: Involuntary manslaughter—criminal negligence but no intent to kill or seriously injure."
+    ],
     "source": "existing",
     "exam_frequency": "medium"
   },
@@ -758,10 +880,19 @@
     "difficulty": 3,
     "rule_statement": "Killing during inherently dangerous felony",
     "elements": [],
-    "policy_rationales": [],
+    "policy_rationales": [
+      "Deters dangerous felonies by imposing murder liability for resulting deaths",
+      "Holds felons responsible for foreseeable consequences of their criminal conduct",
+      "Reflects judgment that inherently dangerous felonies demonstrate disregard for human life"
+    ],
     "common_traps": [],
     "mnemonic": null,
-    "micro_hypos": [],
+    "micro_hypos": [
+      "D robs bank; security guard has heart attack and dies from stress. RESULT: Felony murder—death during inherently dangerous felony.",
+      "D commits arson; firefighter dies fighting fire. RESULT: Felony murder—arson is inherently dangerous; firefighter death foreseeable.",
+      "D commits felony tax evasion; accountant dies in car accident driving to testify. RESULT: No felony murder—tax evasion not inherently dangerous.",
+      "During robbery, store clerk shoots co-felon. Under agency theory: RESULT: Surviving felon not liable—clerk is not felon's agent."
+    ],
     "source": "auto-generated",
     "exam_frequency": "medium"
   },
@@ -802,7 +933,11 @@
     "elements": [
       "Traps"
     ],
-    "policy_rationales": [],
+    "policy_rationales": [
+      "Protects individual privacy from arbitrary government intrusion",
+      "Warrant requirement ensures neutral magistrate reviews police actions",
+      "Probable cause standard balances law enforcement needs with privacy rights"
+    ],
     "common_traps": [
       "Standing (expectation of privacy)",
       "private search doctrine",
@@ -810,7 +945,12 @@
       "good-faith exception limits."
     ],
     "mnemonic": null,
-    "micro_hypos": [],
+    "micro_hypos": [
+      "Police search home without warrant based on anonymous tip. RESULT: Unconstitutional—home searches require warrant absent exigency.",
+      "Police fly over backyard at legal altitude, observe marijuana. RESULT: Constitutional—no reasonable expectation of privacy from lawful aerial observation.",
+      "Police use thermal imaging on home to detect heat lamps for growing marijuana. RESULT: Unconstitutional—sense-enhancing technology on home requires warrant (Kyllo).",
+      "Police search car based on smell of marijuana. RESULT: Constitutional—automobile exception with probable cause."
+    ],
     "source": "existing",
     "exam_frequency": "medium"
   },
@@ -824,14 +964,23 @@
       "Mnemonic",
       "Traps"
     ],
-    "policy_rationales": [],
+    "policy_rationales": [
+      "Deters police misconduct by removing incentive for illegal searches",
+      "Preserves judicial integrity by refusing to sanction illegal police conduct",
+      "Protects Fourth Amendment rights by providing meaningful remedy"
+    ],
     "common_traps": [
       "Impeachment use",
       "Miranda violations (non-Miranda statements may be used for impeachment)",
       "attenuation factors."
     ],
     "mnemonic": "FISSURE",
-    "micro_hypos": [],
+    "micro_hypos": [
+      "Illegal search finds drugs. D charged. RESULT: Drugs excluded from prosecution's case-in-chief.",
+      "Illegal search finds drugs. D testifies he never saw drugs before. RESULT: Drugs admissible to impeach D's testimony.",
+      "Police illegally arrest D. During search, discover valid outstanding warrant. D confesses. RESULT: Confession admissible—warrant attenuates taint (Strieff).",
+      "Police conduct illegal search. D's gun found. Later, informant independently tells police about gun. RESULT: Gun admissible—independent source doctrine."
+    ],
     "source": "existing",
     "exam_frequency": "medium"
   },
@@ -866,7 +1015,11 @@
       "Mnemonic",
       "Traps"
     ],
-    "policy_rationales": [],
+    "policy_rationales": [
+      "Guarantees effective legal representation during critical stages of prosecution",
+      "Offense-specific attachment balances defendant rights with legitimate investigative needs",
+      "Preserves adversarial system by preventing government from circumventing counsel"
+    ],
     "common_traps": [
       "Offense-specific attachment",
       "deliberate elicitation",
@@ -874,7 +1027,12 @@
       "confrontation clause exceptions.\n\n#### Micro-Hypos"
     ],
     "mnemonic": "PACED",
-    "micro_hypos": [],
+    "micro_hypos": [
+      "D indicted for robbery. Police question about uncharged burglary without counsel. RESULT: Statement admissible—Sixth Amendment is offense-specific; no charges for burglary.",
+      "D indicted. Informant placed in cell. Informant asks about charged crime. D confesses. RESULT: Suppressed—deliberate elicitation after attachment.",
+      "D charged with DUI. Blood test taken without D's attorney present. RESULT: Admissible—blood test is not testimonial; no Sixth Amendment violation.",
+      "D's lawyer sleeps through trial. D convicted. RESULT: Ineffective assistance—prejudicial if outcome would likely differ."
+    ],
     "source": "existing",
     "exam_frequency": "medium"
   },
@@ -1035,7 +1193,11 @@
       "Traps",
       "Micro-Hypos"
     ],
-    "policy_rationales": [],
+    "policy_rationales": [
+      "Intent requirement distinguishes intentional from negligent conduct",
+      "Transferred intent holds wrongdoers liable even when different harm occurs",
+      "Consent and privilege defenses balance protection with autonomy"
+    ],
     "common_traps": [
       "Transferred intent",
       "consent scope",
@@ -1043,7 +1205,11 @@
       "extreme/outrageous threshold for IIED."
     ],
     "mnemonic": "BAFI²",
-    "micro_hypos": [],
+    "micro_hypos": [
+      "D intends to scare P but causes harmful contact. RESULT: Battery—intent to cause apprehension transferred to harmful contact.",
+      "D throws rock at A, hits B. RESULT: Transferred intent—D liable for battery to B.",
+      "P consents to boxing match. D punches P. RESULT: No battery—consent to contact within scope of game."
+    ],
     "source": "existing",
     "exam_frequency": "medium"
   },
@@ -1059,7 +1225,11 @@
       "Traps",
       "Micro-Hypos"
     ],
-    "policy_rationales": [],
+    "policy_rationales": [
+      "Reasonable person standard provides objective measure of required care",
+      "Proximate cause limits liability to foreseeable consequences",
+      "Comparative fault allocates damages based on relative responsibility"
+    ],
     "common_traps": [
       "Duty to unforeseeable plaintiffs (Cardozo vs Andrews)",
       "res ipsa limits",
@@ -1067,7 +1237,11 @@
       "pure economic loss (no recovery)."
     ],
     "mnemonic": "DBCD",
-    "micro_hypos": [],
+    "micro_hypos": [
+      "D drives carefully but hits P who suddenly runs into street. RESULT: No breach—D acted as reasonable person; P's conduct may be superseding.",
+      "D negligently starts fire. Fire spreads to P's house 2 miles away. RESULT: Proximate cause analysis—was spread foreseeable given conditions?",
+      "P 30% at fault. Damages $100K. Pure comparative fault state. RESULT: P recovers $70K."
+    ],
     "source": "existing",
     "exam_frequency": "medium"
   },
@@ -1083,14 +1257,22 @@
       "Traps",
       "Micro-Hypos"
     ],
-    "policy_rationales": [],
+    "policy_rationales": [
+      "Strict liability for dangerous activities places loss on party best able to prevent harm",
+      "Products liability ensures manufacturers internalize costs of defective products",
+      "Consumer expectations test focuses on reasonable consumer's safety assumptions"
+    ],
     "common_traps": [
       "Product misuse vs foreseeable misuse",
       "learned intermediary (pharma)",
       "design vs manufacturing defects tests."
     ],
     "mnemonic": "ADAMS",
-    "micro_hypos": [],
+    "micro_hypos": [
+      "D keeps lion as pet. Lion escapes, bites P. RESULT: Strict liability—wild animals; no negligence required.",
+      "Blender blade breaks during normal use, cutting P. RESULT: Manufacturing defect—product deviated from intended design.",
+      "Car lacks possible safety feature. P injured in crash. RESULT: Design defect claim—must show reasonable alternative design existed."
+    ],
     "source": "existing",
     "exam_frequency": "medium"
   },
@@ -1296,7 +1478,11 @@
       "Limiting Instructions (FRE 105)",
       "Rule of Completeness (FRE 106)"
     ],
-    "policy_rationales": [],
+    "policy_rationales": [
+      "Relevance is threshold requirement—irrelevant evidence wastes time and confuses issues",
+      "Rule 403 balancing protects against unfair prejudice even when evidence is relevant",
+      "Policy exclusions (subsequent remedial measures, settlement offers) encourage socially beneficial conduct"
+    ],
     "common_traps": [
       "Subsequent remedial measures",
       "settlements",
@@ -1304,7 +1490,12 @@
       "character evidence in civil vs criminal."
     ],
     "mnemonic": "403 Balance",
-    "micro_hypos": [],
+    "micro_hypos": [
+      "Personal injury case. Defendant's subsequent repair of stairway. RESULT: Inadmissible to prove negligence; admissible to prove ownership/control if disputed.",
+      "Settlement offer: 'I'll pay $10K because you'd win anyway.' RESULT: Inadmissible to prove liability or damage amount.",
+      "Gruesome photos of murder victim. Defense objects as prejudicial. RESULT: Court balances probative value against unfair prejudice; may limit or exclude.",
+      "Evidence of unrelated crime. Prosecutor offers to show D is 'bad person.' RESULT: Inadmissible—irrelevant and highly prejudicial."
+    ],
     "source": "existing",
     "exam_frequency": "medium"
   },
@@ -1317,10 +1508,19 @@
     "elements": [
       "Mnemonic"
     ],
-    "policy_rationales": [],
+    "policy_rationales": [
+      "Propensity evidence risks unfair prejudice—jury may convict for bad character, not evidence of crime",
+      "MIMIC purposes (motive, intent, identity, etc.) offer relevant non-propensity uses",
+      "Criminal defendant may open door to character evidence as shield"
+    ],
     "common_traps": [],
     "mnemonic": "CRIME",
-    "micro_hypos": [],
+    "micro_hypos": [
+      "Prosecution offers D's prior assault conviction to show D is violent person. RESULT: Inadmissible—propensity use of character evidence.",
+      "D claims self-defense. Prosecution offers evidence D started previous fights. RESULT: Inadmissible unless D first offers evidence of peacefulness.",
+      "D charged with fraud. Prosecution offers prior fraud conviction to show modus operandi. RESULT: Admissible under 404(b) for identity if distinctive pattern.",
+      "Civil case. Plaintiff tries to introduce D's prior similar acts. RESULT: Generally inadmissible in civil cases except for MIMIC purposes."
+    ],
     "source": "existing",
     "exam_frequency": "medium"
   },
@@ -1335,14 +1535,23 @@
       "Key Exceptions",
       "Traps"
     ],
-    "policy_rationales": [],
+    "policy_rationales": [
+      "Cross-examination tests accuracy and truthfulness of declarant",
+      "Exceptions exist when circumstances provide reliability equivalent to cross-examination",
+      "Jury should observe demeanor of witness to assess credibility"
+    ],
     "common_traps": [
       "Double hearsay",
       "testimonial statements confronting (Crawford)",
       "former testimony requirements."
     ],
     "mnemonic": "HEARSAY",
-    "micro_hypos": [],
+    "micro_hypos": [
+      "W testifies 'D told me he robbed the bank.' Offered to prove D committed robbery. RESULT: Hearsay—out-of-court statement offered for truth.",
+      "W testifies 'D said I'll kill you' in assault case to prove threat was made. RESULT: Not hearsay—verbal act (legally operative words), not offered for truth of matter asserted.",
+      "Contract case. W testifies 'Buyer said I accept.' Offered to prove acceptance. RESULT: Not hearsay—verbal act constituting acceptance.",
+      "W testifies V said 'I'm feeling great' day before claimed injury. Offered to show V's state of mind. RESULT: State of mind exception applies if relevant to issue."
+    ],
     "source": "existing",
     "exam_frequency": "medium"
   },
@@ -1539,7 +1748,11 @@
       "Traps",
       "Micro-Hypos"
     ],
-    "policy_rationales": [],
+    "policy_rationales": [
+      "Mutual assent ensures both parties voluntarily agreed to same terms",
+      "Consideration doctrine distinguishes enforceable promises from gratuitous ones",
+      "Mirror image rule provides certainty about when contract is formed"
+    ],
     "common_traps": [
       "Advertisements (invitations)",
       "UCC firm offers",
@@ -1548,7 +1761,12 @@
       "pre-existing duty rule."
     ],
     "mnemonic": "FOCI",
-    "micro_hypos": [],
+    "micro_hypos": [
+      "A offers to sell car for $10K. B says 'I'll take it for $9K.' RESULT: Counteroffer—mirror image rule rejects offer; B's statement is new offer.",
+      "A promises to give B $1,000 as a gift. A changes mind. RESULT: Unenforceable—no consideration; gift promises not binding.",
+      "A promises $1,000 if B quits smoking. B quits. RESULT: Enforceable—B's detriment (giving up legal right) is consideration.",
+      "A offers to sell house. B mails acceptance Monday. A revokes by phone Tuesday. RESULT: Contract formed—mailbox rule; acceptance effective when sent."
+    ],
     "source": "existing",
     "exam_frequency": "medium"
   },
@@ -1605,7 +1823,11 @@
       "Mnemonic",
       "Traps"
     ],
-    "policy_rationales": [],
+    "policy_rationales": [
+      "Expectation damages put non-breaching party in position performance would have achieved",
+      "Foreseeability limits liability to what parties could reasonably anticipate",
+      "Specific performance reserved for situations where money damages are inadequate"
+    ],
     "common_traps": [
       "Foreseeability (Hadley)",
       "mitigation duties",
@@ -1613,7 +1835,12 @@
       "not penalty)."
     ],
     "mnemonic": "ERRS",
-    "micro_hypos": [],
+    "micro_hypos": [
+      "Seller breaches contract to sell machine for $10K. Buyer finds replacement for $12K. RESULT: Expectation damages = $2K (difference in price).",
+      "Carrier loses package causing buyer to miss $1M deal. Carrier didn't know about deal. RESULT: Consequential damages likely denied—loss not foreseeable by carrier.",
+      "Seller breaches contract to sell unique painting. RESULT: Specific performance appropriate—painting is unique; money damages inadequate.",
+      "Contract has liquidated damages clause of $10K. Actual damages are $500. RESULT: Clause may be unenforceable as penalty if amount is unreasonable."
+    ],
     "source": "existing",
     "exam_frequency": "medium"
   },
@@ -1627,14 +1854,22 @@
       "Mnemonic",
       "Traps"
     ],
-    "policy_rationales": [],
+    "policy_rationales": [
+      "Mutual mistake doctrine protects parties from agreements based on shared false assumptions",
+      "Impossibility excuses performance when circumstances make it objectively impossible",
+      "Unconscionability protects weaker parties from oppressive contract terms"
+    ],
     "common_traps": [
       "SOF partial performance exceptions",
       "mutual mistake vs unilateral",
       "impossibility vs frustration."
     ],
     "mnemonic": "STUPID",
-    "micro_hypos": [],
+    "micro_hypos": [
+      "Both parties believe painting is by famous artist. It's a copy. RESULT: Voidable for mutual mistake—basic assumption, material effect.",
+      "Building burns down before contractor can renovate. RESULT: Impossibility—performance is objectively impossible; contractor excused.",
+      "Consumer signs contract with hidden 50% interest rate in fine print. RESULT: May be unconscionable—procedural (hidden) and substantive (oppressive) elements."
+    ],
     "source": "existing",
     "exam_frequency": "medium"
   },

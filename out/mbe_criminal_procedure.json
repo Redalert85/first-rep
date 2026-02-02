@@ -1,0 +1,236 @@
+{
+  "subject": "Criminal Procedure",
+  "generated_at": "2026-02-02",
+  "questions": [
+    {
+      "id": "crimpro_001",
+      "concept_id": "criminal_procedure_fourth_amendment",
+      "subject": "Criminal Procedure",
+      "tested_rule": "Fourth Amendment - Reasonable Expectation of Privacy",
+      "difficulty": "medium",
+      "fact_pattern": "Police suspected a man of growing marijuana. Without a warrant, officers flew a helicopter at 400 feet over his property and observed marijuana plants in his backyard greenhouse through gaps in the roof. The plants were not visible from ground level. The man moved to suppress the evidence.",
+      "options": {
+        "A": "The evidence should be suppressed because the police needed a warrant to conduct aerial surveillance.",
+        "B": "The evidence should be suppressed because the greenhouse was within the curtilage of the home.",
+        "C": "The evidence should not be suppressed because there was no reasonable expectation of privacy from aerial observation.",
+        "D": "The evidence should not be suppressed because the marijuana was in plain view."
+      },
+      "answer": "C",
+      "why_correct": "Under California v. Ciraolo and Florida v. Riley, aerial observation from navigable airspace does not violate the Fourth Amendment because a person has no reasonable expectation of privacy from lawful aerial observation. The helicopter flying at 400 feet was in navigable airspace, and the observation was lawful without a warrant.",
+      "why_others_wrong": {
+        "A": "Aerial surveillance from navigable airspace doesn't require a warrant.",
+        "B": "Curtilage protects against ground-level intrusion, not lawful aerial observation.",
+        "D": "Plain view is a seizure doctrine; the issue here is whether the observation was a search."
+      },
+      "trap_type": ["aerial surveillance", "expectation of privacy"],
+      "exam_frequency": "high"
+    },
+    {
+      "id": "crimpro_002",
+      "concept_id": "criminal_procedure_search_incident_to_arrest",
+      "subject": "Criminal Procedure",
+      "tested_rule": "Search Incident to Arrest - Automobile",
+      "difficulty": "hard",
+      "fact_pattern": "Police arrested a driver for driving with a suspended license. After handcuffing her and placing her in the patrol car, an officer searched her vehicle and found cocaine in the glove compartment. The driver moved to suppress the cocaine.",
+      "options": {
+        "A": "The search was valid as a search incident to arrest.",
+        "B": "The search was valid under the automobile exception.",
+        "C": "The search was invalid because the driver was secured and could not access the vehicle.",
+        "D": "The search was invalid because driving with a suspended license is not an arrestable offense."
+      },
+      "answer": "C",
+      "why_correct": "Under Arizona v. Gant, police may search a vehicle incident to arrest only if (1) the arrestee is unsecured and within reaching distance of the vehicle, or (2) it is reasonable to believe evidence of the crime of arrest might be found. Here, the driver was handcuffed in the patrol car (not within reach), and cocaine wouldn't be evidence of driving with a suspended license.",
+      "why_others_wrong": {
+        "A": "Gant limits vehicle searches incident to arrest when the arrestee is secured.",
+        "B": "The automobile exception requires independent probable cause, not just an arrest.",
+        "D": "The validity of the arrest doesn't determine search scope under Gant."
+      },
+      "trap_type": ["Gant limitation", "secured arrestee"],
+      "exam_frequency": "high"
+    },
+    {
+      "id": "crimpro_003",
+      "concept_id": "criminal_procedure_exclusionary_rule",
+      "subject": "Criminal Procedure",
+      "tested_rule": "Exclusionary Rule - Good Faith Exception",
+      "difficulty": "medium",
+      "fact_pattern": "Police obtained a warrant to search a home based on an informant's tip that drugs were being sold there. The search revealed large quantities of cocaine. Later, it was discovered that the magistrate who issued the warrant lacked authority to do so under state law. The defendant moved to suppress the evidence.",
+      "options": {
+        "A": "The evidence must be suppressed because the warrant was invalid.",
+        "B": "The evidence must be suppressed because the exclusionary rule applies to all Fourth Amendment violations.",
+        "C": "The evidence should not be suppressed because the officers relied in good faith on the warrant.",
+        "D": "The evidence should not be suppressed because the informant's tip established probable cause."
+      },
+      "answer": "C",
+      "why_correct": "Under United States v. Leon, evidence obtained by officers acting in reasonable reliance on a warrant issued by a neutral magistrate need not be suppressed, even if the warrant is later found to be invalid. The good faith exception applies because the officers reasonably believed the magistrate had authority to issue the warrant.",
+      "why_others_wrong": {
+        "A": "The good faith exception allows admission despite technical warrant invalidity.",
+        "B": "The exclusionary rule has several exceptions, including good faith reliance.",
+        "D": "Probable cause is not the issue; the warrant's technical validity is."
+      },
+      "trap_type": ["good faith exception", "Leon"],
+      "exam_frequency": "high"
+    },
+    {
+      "id": "crimpro_004",
+      "concept_id": "criminal_procedure_miranda",
+      "subject": "Criminal Procedure",
+      "tested_rule": "Miranda - Custody Requirement",
+      "difficulty": "medium",
+      "fact_pattern": "Police asked a woman to come to the station to answer questions about a robbery. She agreed and drove herself there. During two hours of questioning, she was told she was free to leave at any time. She eventually confessed. She was then arrested. She claims her confession should be suppressed because she wasn't given Miranda warnings.",
+      "options": {
+        "A": "The confession should be suppressed because she was at the police station for two hours.",
+        "B": "The confession should be suppressed because the police failed to warn her of her rights.",
+        "C": "The confession should not be suppressed because she was not in custody.",
+        "D": "The confession should not be suppressed because she voluntarily came to the station."
+      },
+      "answer": "C",
+      "why_correct": "Miranda warnings are only required during custodial interrogation. Custody exists when a reasonable person would not feel free to leave. Here, the woman came voluntarily, drove herself, and was told she could leave at any time. She was not in custody, so Miranda warnings were not required.",
+      "why_others_wrong": {
+        "A": "Duration alone doesn't establish custody if the person is free to leave.",
+        "B": "Warnings are only required if there is custody; no custody means no warning requirement.",
+        "D": "While relevant, the key is whether a reasonable person would feel free to leave."
+      },
+      "trap_type": ["custody determination", "free to leave"],
+      "exam_frequency": "high"
+    },
+    {
+      "id": "crimpro_005",
+      "concept_id": "criminal_procedure_miranda_invocation",
+      "subject": "Criminal Procedure",
+      "tested_rule": "Miranda - Invocation of Rights",
+      "difficulty": "hard",
+      "fact_pattern": "After receiving Miranda warnings, a suspect said, 'Maybe I should talk to a lawyer.' The detective replied, 'That's up to you. Do you want to tell me what happened?' The suspect then confessed. The suspect now claims his statement should be suppressed.",
+      "options": {
+        "A": "The statement should be suppressed because the suspect invoked his right to counsel.",
+        "B": "The statement should be suppressed because the detective continued questioning after the invocation.",
+        "C": "The statement should not be suppressed because the invocation was ambiguous.",
+        "D": "The statement should not be suppressed because the suspect voluntarily continued speaking."
+      },
+      "answer": "C",
+      "why_correct": "Under Davis v. United States, a suspect must unambiguously invoke the right to counsel. Statements like 'maybe I should talk to a lawyer' are ambiguous and do not require cessation of questioning. The police may continue questioning or seek clarification. An unambiguous statement would be 'I want a lawyer.'",
+      "why_others_wrong": {
+        "A": "'Maybe I should' is ambiguous, not a clear invocation.",
+        "B": "No clear invocation occurred, so police weren't required to stop.",
+        "D": "Voluntariness is not the primary issue; the ambiguity of invocation is."
+      },
+      "trap_type": ["ambiguous invocation", "Davis rule"],
+      "exam_frequency": "high"
+    },
+    {
+      "id": "crimpro_006",
+      "concept_id": "criminal_procedure_sixth_amendment",
+      "subject": "Criminal Procedure",
+      "tested_rule": "Sixth Amendment Right to Counsel - Attachment",
+      "difficulty": "hard",
+      "fact_pattern": "A suspect was arrested for robbery. Before any charges were filed, police placed an undercover informant in his cell. The informant engaged the suspect in conversation, and the suspect made incriminating statements about the robbery. The suspect moved to suppress the statements.",
+      "options": {
+        "A": "The statements should be suppressed because the police deliberately elicited them.",
+        "B": "The statements should be suppressed because the suspect had not been given Miranda warnings.",
+        "C": "The statements should not be suppressed because the Sixth Amendment right had not attached.",
+        "D": "The statements should not be suppressed because the informant was not a government agent."
+      },
+      "answer": "C",
+      "why_correct": "The Sixth Amendment right to counsel attaches only when formal adversarial proceedings begin (indictment, arraignment, formal charge). Here, no charges had been filed yet, so the right had not attached. The police could use an informant without violating the Sixth Amendment, though Miranda issues might arise in different circumstances.",
+      "why_others_wrong": {
+        "A": "Deliberate elicitation violates the Sixth Amendment only after it attaches.",
+        "B": "Miranda applies to interrogation; an informant's conversation may not be interrogation.",
+        "D": "The informant was working with police, so he was a government agent."
+      },
+      "trap_type": ["Sixth Amendment attachment", "formal charges"],
+      "exam_frequency": "high"
+    },
+    {
+      "id": "crimpro_007",
+      "concept_id": "criminal_procedure_automobile_exception",
+      "subject": "Criminal Procedure",
+      "tested_rule": "Automobile Exception - Probable Cause",
+      "difficulty": "medium",
+      "fact_pattern": "An officer stopped a car for speeding. While writing the ticket, the officer smelled marijuana coming from the car. The officer searched the entire vehicle, including a locked suitcase in the trunk, and found cocaine in the suitcase. The driver moved to suppress the cocaine.",
+      "options": {
+        "A": "The evidence should be suppressed because the officer needed a warrant to search a locked container.",
+        "B": "The evidence should be suppressed because the stop was for speeding, not drugs.",
+        "C": "The evidence should not be suppressed because the automobile exception allows warrantless searches with probable cause.",
+        "D": "The evidence should not be suppressed because the suitcase was in plain view in the trunk."
+      },
+      "answer": "C",
+      "why_correct": "Under the automobile exception, if police have probable cause to believe a vehicle contains contraband, they may search the entire vehicle and any containers within it that might contain the contraband, without a warrant. The smell of marijuana provided probable cause, allowing the search of the locked suitcase.",
+      "why_others_wrong": {
+        "A": "The automobile exception applies to containers within the car if there's probable cause.",
+        "B": "Probable cause arising during a lawful stop justifies a search.",
+        "D": "Plain view applies to items in open view, not locked containers; the automobile exception applies."
+      },
+      "trap_type": ["automobile exception", "containers"],
+      "exam_frequency": "high"
+    },
+    {
+      "id": "crimpro_008",
+      "concept_id": "criminal_procedure_consent_search",
+      "subject": "Criminal Procedure",
+      "tested_rule": "Consent Search - Voluntariness",
+      "difficulty": "medium",
+      "fact_pattern": "Four armed police officers came to a woman's apartment door at 11 PM. When she opened the door, they said, 'We'd like to search your apartment. You don't mind, do you?' She said 'Okay' and stepped aside. The search revealed stolen property. She claims her consent was not voluntary.",
+      "options": {
+        "A": "The consent was involuntary because of the coercive circumstances.",
+        "B": "The consent was involuntary because she was not told she could refuse.",
+        "C": "The consent was voluntary because she said 'Okay' without being threatened.",
+        "D": "The consent was voluntary because she physically stepped aside to allow entry."
+      },
+      "answer": "A",
+      "why_correct": "Consent must be voluntary under the totality of circumstances. Four armed officers arriving at night with a question phrased to suggest she should agree ('You don't mind, do you?') creates a coercive atmosphere. A reasonable person would not feel free to refuse. The circumstances suggest she acquiesced to authority rather than freely consented.",
+      "why_others_wrong": {
+        "B": "While knowledge of the right to refuse is relevant, it's not required; the issue is coercion.",
+        "C": "Absence of explicit threats doesn't negate coercion from the circumstances.",
+        "D": "Physical compliance under coercive circumstances doesn't establish voluntary consent."
+      },
+      "trap_type": ["totality of circumstances", "coercive environment"],
+      "exam_frequency": "medium"
+    },
+    {
+      "id": "crimpro_009",
+      "concept_id": "criminal_procedure_fruit_of_poisonous_tree",
+      "subject": "Criminal Procedure",
+      "tested_rule": "Fruit of the Poisonous Tree - Attenuation",
+      "difficulty": "hard",
+      "fact_pattern": "Police illegally arrested a suspect without probable cause. At the station, they discovered he had an outstanding arrest warrant. After being informed of the warrant and given Miranda warnings, the suspect confessed. The prosecution seeks to use the confession.",
+      "options": {
+        "A": "The confession is admissible because the warrant attenuated the taint of the illegal arrest.",
+        "B": "The confession is admissible because Miranda warnings purge the taint of Fourth Amendment violations.",
+        "C": "The confession is inadmissible as fruit of the illegal arrest.",
+        "D": "The confession is inadmissible because the warrant was discovered during the illegal arrest."
+      },
+      "answer": "A",
+      "why_correct": "Under Utah v. Strieff, the discovery of a valid pre-existing warrant attenuates the connection between an illegal stop/arrest and evidence subsequently discovered. The warrant is an intervening circumstance that breaks the causal chain. The confession, obtained after lawful arrest on the warrant with Miranda warnings, is admissible.",
+      "why_others_wrong": {
+        "B": "Miranda alone doesn't purge Fourth Amendment taints, but the warrant does.",
+        "C": "Attenuation through the valid warrant breaks the causal chain.",
+        "D": "The warrant's pre-existence makes it an intervening circumstance, not fruit of the illegality."
+      },
+      "trap_type": ["attenuation doctrine", "Strieff"],
+      "exam_frequency": "medium"
+    },
+    {
+      "id": "crimpro_010",
+      "concept_id": "criminal_procedure_confrontation_clause",
+      "subject": "Criminal Procedure",
+      "tested_rule": "Confrontation Clause - Testimonial Statements",
+      "difficulty": "hard",
+      "fact_pattern": "A victim of domestic violence gave a statement to police describing the assault. At trial, she refused to testify. The prosecution sought to introduce her statement to police through the officer's testimony. The defendant objected.",
+      "options": {
+        "A": "The statement is admissible under the excited utterance exception to hearsay.",
+        "B": "The statement is admissible because the defendant caused the witness's unavailability.",
+        "C": "The statement is inadmissible because it is testimonial and the defendant had no opportunity to cross-examine.",
+        "D": "The statement is inadmissible because it is hearsay without exception."
+      },
+      "answer": "C",
+      "why_correct": "Under Crawford v. Washington, testimonial statements are inadmissible unless the declarant is unavailable and the defendant had a prior opportunity to cross-examine. A statement to police describing past criminal conduct is testimonial. The victim's refusal to testify makes her unavailable, but there was no prior cross-examination. Even if a hearsay exception applies, the Confrontation Clause bars the statement.",
+      "why_others_wrong": {
+        "A": "Hearsay exceptions don't override Confrontation Clause requirements for testimonial statements.",
+        "B": "Forfeiture by wrongdoing requires proof that the defendant caused the unavailability.",
+        "D": "The statement might qualify under a hearsay exception, but Crawford still bars it."
+      },
+      "trap_type": ["Crawford", "testimonial statements"],
+      "exam_frequency": "high"
+    }
+  ]
+}

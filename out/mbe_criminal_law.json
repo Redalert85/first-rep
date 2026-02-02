@@ -1,0 +1,236 @@
+{
+  "subject": "Criminal Law",
+  "generated_at": "2026-02-02",
+  "questions": [
+    {
+      "id": "crimlaw_001",
+      "concept_id": "criminal_law_homicide_offenses",
+      "subject": "Criminal Law",
+      "tested_rule": "First Degree Murder - Premeditation",
+      "difficulty": "medium",
+      "fact_pattern": "A husband discovered his wife in bed with another man. Enraged, the husband grabbed a knife from the kitchen, returned to the bedroom, and stabbed the other man to death. The entire incident took approximately 90 seconds. The husband is charged with first-degree murder.",
+      "options": {
+        "A": "The husband is guilty because he left the room to get a weapon, showing premeditation.",
+        "B": "The husband is guilty because he intended to kill the victim.",
+        "C": "The husband is not guilty of first-degree murder because there was insufficient time for premeditation.",
+        "D": "The husband is not guilty of first-degree murder because he acted in the heat of passion."
+      },
+      "answer": "A",
+      "why_correct": "Premeditation and deliberation can occur in a very short period of time. The act of leaving the room, going to the kitchen, selecting a knife, and returning demonstrates a cooling period and deliberate choice to kill. Courts have found premeditation in seconds when the defendant takes deliberate steps.",
+      "why_others_wrong": {
+        "B": "Intent to kill alone is insufficient for first-degree murder; premeditation is also required.",
+        "C": "Premeditation can occur in seconds; the quality of reflection matters, not the duration.",
+        "D": "Heat of passion reduces murder to voluntary manslaughter only if there was insufficient cooling time."
+      },
+      "trap_type": ["instant premeditation", "cooling period"],
+      "exam_frequency": "high"
+    },
+    {
+      "id": "crimlaw_002",
+      "concept_id": "criminal_law_felony_murder",
+      "subject": "Criminal Law",
+      "tested_rule": "Felony Murder - Inherently Dangerous Felony",
+      "difficulty": "hard",
+      "fact_pattern": "Two defendants agreed to commit a robbery. During the robbery, a store clerk pulled a gun and shot one of the defendants dead. The surviving defendant fled but was captured. The prosecutor charged the surviving defendant with felony murder for the death of his co-felon.",
+      "options": {
+        "A": "The defendant is guilty because a death occurred during the commission of a felony.",
+        "B": "The defendant is guilty because he set in motion the events leading to death.",
+        "C": "The defendant is not guilty because the agency theory limits liability to killings by co-felons.",
+        "D": "The defendant is not guilty because felony murder does not apply when a co-felon is killed."
+      },
+      "answer": "C",
+      "why_correct": "Under the agency theory (majority rule), felony murder liability requires that a co-felon commit the killing. When a victim or police officer kills someone during a felony, the felons are not liable under felony murder because the killing was not committed by their 'agent.' The clerk is not an agent of the robbers.",
+      "why_others_wrong": {
+        "A": "The agency theory limits felony murder to killings committed by the felons themselves.",
+        "B": "Proximate cause theories are minority; the agency theory prevails in most jurisdictions.",
+        "D": "The identity of the victim is less important than who did the killing under agency theory."
+      },
+      "trap_type": ["agency theory", "victim shooting"],
+      "exam_frequency": "high"
+    },
+    {
+      "id": "crimlaw_003",
+      "concept_id": "criminal_law_voluntary_manslaughter",
+      "subject": "Criminal Law",
+      "tested_rule": "Voluntary Manslaughter - Adequate Provocation",
+      "difficulty": "medium",
+      "fact_pattern": "A woman discovered that her husband had been having an affair for two years. Three days later, she confronted him at his office, and when he admitted the affair and said he was leaving her, she shot and killed him with a gun she had brought from home. She is charged with murder.",
+      "options": {
+        "A": "She is guilty of murder because bringing the gun shows premeditation.",
+        "B": "She is guilty of murder because words alone are insufficient provocation.",
+        "C": "She should be convicted of voluntary manslaughter because she acted in the heat of passion.",
+        "D": "She should be convicted of voluntary manslaughter because adultery is adequate provocation."
+      },
+      "answer": "A",
+      "why_correct": "Three days is more than sufficient cooling time for a reasonable person. Additionally, she brought a gun from home to the confrontation, showing premeditation. Even if adultery could constitute adequate provocation, the cooling period defeats the heat of passion defense. The calculated act of bringing a weapon negates any claim of sudden passion.",
+      "why_others_wrong": {
+        "B": "While words alone are generally insufficient, this isn't the primary issue here—cooling time is.",
+        "C": "Three days of cooling time defeats the heat of passion defense.",
+        "D": "Even if adultery is provocation, the three-day delay and bringing a weapon show cooled passion."
+      },
+      "trap_type": ["cooling time", "premeditation"],
+      "exam_frequency": "high"
+    },
+    {
+      "id": "crimlaw_004",
+      "concept_id": "criminal_law_larceny",
+      "subject": "Criminal Law",
+      "tested_rule": "Larceny - Intent at Time of Taking",
+      "difficulty": "medium",
+      "fact_pattern": "A woman borrowed her neighbor's lawn mower, intending to return it the next day. After mowing her lawn, she decided she liked the mower and kept it permanently. The neighbor reported the mower stolen.",
+      "options": {
+        "A": "The woman is guilty of larceny because she permanently deprived the owner of the mower.",
+        "B": "The woman is guilty of larceny because she formed the intent to steal while in possession.",
+        "C": "The woman is not guilty of larceny because she had permission to take the mower.",
+        "D": "The woman is not guilty of larceny but may be guilty of embezzlement."
+      },
+      "answer": "C",
+      "why_correct": "Larceny requires a trespassory taking—taking without consent. Here, the woman had permission to take the mower initially. The later decision to keep it does not convert the lawful taking into larceny. This is 'continuing trespass' doctrine's limit: if the initial taking was lawful, subsequent intent to steal doesn't create larceny.",
+      "why_others_wrong": {
+        "A": "Permanent deprivation is not enough; the taking must also be trespassory (without consent).",
+        "B": "Intent formed after lawful possession begins does not satisfy larceny's contemporaneous intent requirement.",
+        "D": "Embezzlement requires the property be entrusted for a particular purpose, not merely borrowed."
+      },
+      "trap_type": ["intent at time of taking", "trespassory taking"],
+      "exam_frequency": "high"
+    },
+    {
+      "id": "crimlaw_005",
+      "concept_id": "criminal_law_burglary",
+      "subject": "Criminal Law",
+      "tested_rule": "Burglary - Intent to Commit Felony",
+      "difficulty": "medium",
+      "fact_pattern": "A homeless man broke into a cabin during a winter storm, intending only to escape the cold. Once inside, he found a wallet and decided to take it. He is charged with burglary.",
+      "options": {
+        "A": "He is guilty because he committed larceny inside the structure.",
+        "B": "He is guilty because breaking into another's property is inherently criminal.",
+        "C": "He is not guilty because he did not intend to commit a felony at the time of entry.",
+        "D": "He is not guilty because the cabin was not a dwelling."
+      },
+      "answer": "C",
+      "why_correct": "Common law burglary requires intent to commit a felony therein at the time of entry. The man entered intending only to escape the cold—a non-criminal purpose. His later decision to take the wallet doesn't satisfy the intent element because it was formed after entry. The intent must exist at the moment of breaking and entering.",
+      "why_others_wrong": {
+        "A": "The larceny occurred after entry; burglary requires felonious intent at the time of entry.",
+        "B": "Unlawful entry alone is not burglary; felonious intent is required.",
+        "D": "Modern statutes extend burglary beyond dwellings, but intent is still required at entry."
+      },
+      "trap_type": ["intent at time of entry", "subsequent intent"],
+      "exam_frequency": "high"
+    },
+    {
+      "id": "crimlaw_006",
+      "concept_id": "criminal_law_conspiracy",
+      "subject": "Criminal Law",
+      "tested_rule": "Conspiracy - Overt Act Requirement",
+      "difficulty": "medium",
+      "fact_pattern": "Two men agreed to rob a bank. They discussed the plan in detail, including escape routes and division of proceeds. Before taking any further action, one of them was arrested for an unrelated offense and told police about the plan. Both are charged with conspiracy to commit robbery.",
+      "options": {
+        "A": "Both are guilty because they had an agreement to commit a crime.",
+        "B": "Both are guilty because discussing the plan in detail constitutes an overt act.",
+        "C": "Neither is guilty because no overt act in furtherance of the conspiracy was committed.",
+        "D": "Neither is guilty because the conspiracy was abandoned before completion."
+      },
+      "answer": "C",
+      "why_correct": "Most jurisdictions require an overt act in furtherance of the conspiracy (though the federal rule and some states require only agreement). Mere agreement and discussion of plans is not an overt act. An overt act must be some step toward accomplishing the objective, such as buying supplies, scouting the location, or similar preparatory conduct.",
+      "why_others_wrong": {
+        "A": "Agreement alone is insufficient in jurisdictions requiring an overt act.",
+        "B": "Discussion of plans is part of the agreement itself, not an overt act in furtherance.",
+        "D": "Withdrawal from conspiracy requires affirmative steps to defeat the purpose; arrest doesn't count."
+      },
+      "trap_type": ["overt act requirement", "agreement vs. act"],
+      "exam_frequency": "high"
+    },
+    {
+      "id": "crimlaw_007",
+      "concept_id": "criminal_law_accomplice_liability",
+      "subject": "Criminal Law",
+      "tested_rule": "Accomplice Liability - Natural and Probable Consequences",
+      "difficulty": "hard",
+      "fact_pattern": "A woman drove her boyfriend to a store, knowing he intended to shoplift. While inside, the boyfriend encountered a security guard, panicked, and shot the guard dead. The woman, waiting in the car, knew nothing of the shooting until her boyfriend returned. She is charged with murder as an accomplice.",
+      "options": {
+        "A": "She is guilty because she aided the underlying crime that led to murder.",
+        "B": "She is guilty because murder was a natural and probable consequence of shoplifting.",
+        "C": "She is not guilty because she did not intend for anyone to be killed.",
+        "D": "She is not guilty because murder is not a natural and probable consequence of shoplifting."
+      },
+      "answer": "D",
+      "why_correct": "Under accomplice liability, an accomplice is liable for crimes committed by the principal that are the natural and probable consequences of the crime aided. Murder is not a natural and probable consequence of shoplifting—shoplifting is a minor, non-violent offense. A reasonable person would not foresee that shoplifting would lead to murder.",
+      "why_others_wrong": {
+        "A": "Accomplice liability extends only to foreseeable consequences of the aided crime.",
+        "B": "Murder is not foreseeable from shoplifting; this would apply more to armed robbery.",
+        "C": "While her lack of intent is relevant, the better answer focuses on foreseeability."
+      },
+      "trap_type": ["natural and probable consequences", "foreseeable crimes"],
+      "exam_frequency": "high"
+    },
+    {
+      "id": "crimlaw_008",
+      "concept_id": "criminal_law_self_defense",
+      "subject": "Criminal Law",
+      "tested_rule": "Self-Defense - Reasonable Force",
+      "difficulty": "medium",
+      "fact_pattern": "During an argument, a man punched another man in the face. The victim pulled out a knife and stabbed the aggressor to death. The victim claims self-defense.",
+      "options": {
+        "A": "Self-defense applies because the victim was responding to an attack.",
+        "B": "Self-defense applies because a knife is appropriate response to physical violence.",
+        "C": "Self-defense does not apply because deadly force cannot be used against non-deadly force.",
+        "D": "Self-defense does not apply because the victim could have retreated."
+      },
+      "answer": "C",
+      "why_correct": "Self-defense requires proportional force. Deadly force (a knife) can only be used in response to a threat of death or serious bodily harm. A single punch, while a battery, does not typically create a reasonable fear of death or serious bodily injury. The use of a deadly weapon was disproportionate to the threat faced.",
+      "why_others_wrong": {
+        "A": "Merely responding to an attack doesn't justify any level of force; proportionality is required.",
+        "B": "A knife is deadly force; a punch is generally not a deadly threat.",
+        "D": "While retreat may be relevant in some jurisdictions, the issue here is proportionality."
+      },
+      "trap_type": ["proportional force", "deadly vs non-deadly"],
+      "exam_frequency": "high"
+    },
+    {
+      "id": "crimlaw_009",
+      "concept_id": "criminal_law_insanity",
+      "subject": "Criminal Law",
+      "tested_rule": "Insanity Defense - M'Naghten Rule",
+      "difficulty": "hard",
+      "fact_pattern": "A defendant killed his neighbor because voices in his head commanded him to do so. A psychiatrist testified that the defendant knew killing was legally wrong but believed he was morally justified because God commanded him to kill. The jurisdiction follows the M'Naghten rule.",
+      "options": {
+        "A": "The defendant is legally insane because he was following divine commands.",
+        "B": "The defendant is legally insane because he suffered from a mental disease affecting his judgment.",
+        "C": "The defendant is not legally insane because he knew his act was legally wrong.",
+        "D": "The defendant is not legally insane because he could distinguish right from wrong."
+      },
+      "answer": "C",
+      "why_correct": "Under M'Naghten, a defendant is insane if, due to mental disease, he didn't know the nature and quality of his act OR didn't know it was wrong. 'Wrong' typically means legally wrong. Here, the defendant knew killing was legally wrong—he just believed it was morally justified. Knowledge of legal wrongfulness defeats the M'Naghten defense.",
+      "why_others_wrong": {
+        "A": "Divine command doesn't establish M'Naghten insanity if the defendant knew the act was illegal.",
+        "B": "Mental disease alone is insufficient; the disease must prevent knowledge of wrongfulness.",
+        "D": "This is close but imprecise; the key is knowledge of legal wrongfulness, which he had."
+      },
+      "trap_type": ["legal vs moral wrong", "M'Naghten test"],
+      "exam_frequency": "medium"
+    },
+    {
+      "id": "crimlaw_010",
+      "concept_id": "criminal_law_attempt",
+      "subject": "Criminal Law",
+      "tested_rule": "Attempt - Substantial Step",
+      "difficulty": "medium",
+      "fact_pattern": "A man decided to kill his business partner. He purchased a gun, conducted surveillance of his partner's home, and wrote detailed notes about how he would commit the murder. He was arrested before approaching his partner. He is charged with attempted murder.",
+      "options": {
+        "A": "He is guilty because he took substantial steps strongly corroborative of criminal purpose.",
+        "B": "He is guilty because he had the specific intent to kill.",
+        "C": "He is not guilty because he never came close to completing the crime.",
+        "D": "He is not guilty because he never confronted or endangered the victim."
+      },
+      "answer": "A",
+      "why_correct": "Under the MPC substantial step test (adopted by most jurisdictions), attempt requires (1) specific intent to commit the crime and (2) a substantial step strongly corroborative of that intent. Purchasing a weapon, conducting surveillance, and making detailed plans constitute substantial steps that go beyond mere preparation and strongly corroborate intent to kill.",
+      "why_others_wrong": {
+        "B": "Intent alone is insufficient; a substantial step is also required.",
+        "C": "The substantial step test doesn't require proximity to completion.",
+        "D": "Physical confrontation is not required; substantial preparatory steps suffice."
+      },
+      "trap_type": ["substantial step", "preparation vs. attempt"],
+      "exam_frequency": "high"
+    }
+  ]
+}

@@ -1,0 +1,190 @@
+{
+  "subject": "Civil Procedure",
+  "generated_at": "2026-02-02",
+  "questions": [
+    {
+      "id": "civpro_001",
+      "concept_id": "civil_procedure_personal_jurisdiction",
+      "subject": "Civil Procedure",
+      "tested_rule": "Personal Jurisdiction - Minimum Contacts",
+      "difficulty": "medium",
+      "fact_pattern": "A California resident was injured when a product manufactured by a Delaware corporation exploded in California. The corporation has no offices, employees, or property in California, but sells products to California retailers who then sell to consumers. The corporation's products constitute 15% of California sales in that market. The plaintiff sued the corporation in California state court. The corporation moved to dismiss for lack of personal jurisdiction.",
+      "options": {
+        "A": "Granted, because the corporation has no physical presence in California.",
+        "B": "Granted, because selling to retailers who resell in the forum is insufficient contact.",
+        "C": "Denied, because the corporation purposefully directed products to California through an established distribution channel.",
+        "D": "Denied, because the plaintiff is a California resident."
+      },
+      "answer": "C",
+      "why_correct": "Under the stream of commerce plus theory (Asahi plurality), specific jurisdiction exists when a defendant purposefully directs products into the forum through established distribution channels. Here, the corporation's regular sales to California retailers (15% market share) shows purposeful availment, and the claim arises from those contacts (product exploded in California).",
+      "why_others_wrong": {
+        "A": "Physical presence is not required for specific jurisdiction; minimum contacts suffice.",
+        "B": "Regular sales through established distribution channels to retailers can establish purposeful availment.",
+        "D": "Plaintiff's residence alone is insufficient; the focus is on defendant's contacts with the forum."
+      },
+      "trap_type": ["stream of commerce", "specific jurisdiction"],
+      "exam_frequency": "high"
+    },
+    {
+      "id": "civpro_002",
+      "concept_id": "civil_procedure_subject_matter_jurisdiction",
+      "subject": "Civil Procedure",
+      "tested_rule": "Diversity Jurisdiction - Amount in Controversy",
+      "difficulty": "medium",
+      "fact_pattern": "A citizen of Texas sued a citizen of Oklahoma in federal court, seeking $50,000 in compensatory damages for breach of contract. The plaintiff also sought punitive damages, claiming the breach was willful and malicious. Under state law, punitive damages in contract cases are capped at $30,000. The defendant moved to dismiss for lack of subject matter jurisdiction.",
+      "options": {
+        "A": "Granted, because the amount in controversy does not exceed $75,000.",
+        "B": "Granted, because punitive damages cannot be considered in calculating the amount in controversy.",
+        "C": "Denied, because the total potential recovery exceeds $75,000.",
+        "D": "Denied, because willful breach converts the claim to one sounding in tort."
+      },
+      "answer": "C",
+      "why_correct": "The amount in controversy includes all damages plaintiff seeks in good faith, including punitive damages. Here, $50,000 compensatory + $30,000 punitive = $80,000, which exceeds the $75,000 threshold. The fact that punitive damages are capped by state law means the claim is not made in bad faith.",
+      "why_others_wrong": {
+        "A": "This incorrectly ignores punitive damages, which count toward the amount in controversy.",
+        "B": "Punitive damages are included when claimed in good faith and legally available.",
+        "D": "The nature of the underlying claim (contract) doesn't change based on the defendant's mental state."
+      },
+      "trap_type": ["amount in controversy", "punitive damages"],
+      "exam_frequency": "high"
+    },
+    {
+      "id": "civpro_003",
+      "concept_id": "civil_procedure_supplemental_jurisdiction",
+      "subject": "Civil Procedure",
+      "tested_rule": "Supplemental Jurisdiction - 28 USC 1367",
+      "difficulty": "hard",
+      "fact_pattern": "A New York plaintiff sued a California defendant in federal court based on diversity, seeking $100,000 for injuries from a car accident. The plaintiff then sought to add a claim against a New York defendant who was also involved in the accident, seeking $50,000. The plaintiff argued the court had supplemental jurisdiction over the claim against the New York defendant.",
+      "options": {
+        "A": "The court has supplemental jurisdiction because the claims arise from a common nucleus of operative fact.",
+        "B": "The court has supplemental jurisdiction because the New York defendant was a joint tortfeasor.",
+        "C": "The court lacks supplemental jurisdiction because adding the New York defendant would destroy complete diversity.",
+        "D": "The court lacks supplemental jurisdiction because the claim against the New York defendant does not exceed $75,000."
+      },
+      "answer": "C",
+      "why_correct": "Under 28 USC 1367(b), in diversity cases, plaintiffs cannot use supplemental jurisdiction to join claims against parties that would destroy complete diversity. Adding a New York defendant when the plaintiff is from New York destroys complete diversity, so supplemental jurisdiction is barred.",
+      "why_others_wrong": {
+        "A": "While the claims share common facts, 1367(b) specifically bars this type of joinder by plaintiffs in diversity cases.",
+        "B": "Joint tortfeasor status doesn't override the 1367(b) limitation.",
+        "D": "Amount in controversy is not the issue; the diversity-destroying joinder is prohibited."
+      },
+      "trap_type": ["supplemental jurisdiction", "1367(b) limitation"],
+      "exam_frequency": "high"
+    },
+    {
+      "id": "civpro_004",
+      "concept_id": "civil_procedure_pleading_standard",
+      "subject": "Civil Procedure",
+      "tested_rule": "Twombly/Iqbal Plausibility Standard",
+      "difficulty": "medium",
+      "fact_pattern": "A plaintiff filed a complaint alleging that the defendant hospital was negligent in treating her father, who died after surgery. The complaint stated: 'The defendant's employees failed to follow proper protocols during and after surgery, causing the patient's death.' The complaint did not identify which protocols were violated or which employees were responsible. The defendant moved to dismiss under Rule 12(b)(6).",
+      "options": {
+        "A": "Granted, because the complaint fails to plead facts plausibly suggesting negligence.",
+        "B": "Granted, because medical malpractice claims require expert testimony to survive a motion to dismiss.",
+        "C": "Denied, because the complaint provides fair notice of the claim.",
+        "D": "Denied, because the plaintiff is entitled to discovery before the court rules on the motion."
+      },
+      "answer": "A",
+      "why_correct": "Under Twombly and Iqbal, a complaint must contain factual allegations that plausibly suggest the defendant is liable. Conclusory statements that 'protocols were not followed' without identifying what protocols or what was done wrong are insufficient. The complaint must provide more than labels and conclusions.",
+      "why_others_wrong": {
+        "B": "Expert testimony is not required at the pleading stage; the issue is factual sufficiency.",
+        "C": "Post-Twombly, mere 'fair notice' is insufficient; factual plausibility is required.",
+        "D": "Discovery is not guaranteed before a 12(b)(6) ruling; the complaint must state a plausible claim first."
+      },
+      "trap_type": ["plausibility standard", "conclusory allegations"],
+      "exam_frequency": "high"
+    },
+    {
+      "id": "civpro_005",
+      "concept_id": "civil_procedure_summary_judgment",
+      "subject": "Civil Procedure",
+      "tested_rule": "Summary Judgment Standard - Rule 56",
+      "difficulty": "medium",
+      "fact_pattern": "In a breach of contract case, the defendant moved for summary judgment, arguing there was no enforceable contract. The defendant submitted an affidavit stating the parties never agreed on price. The plaintiff opposed the motion with a declaration stating the parties orally agreed on a price of $10,000 and attaching emails showing price negotiations. The defendant argues the emails are insufficient because they don't explicitly state an agreement was reached.",
+      "options": {
+        "A": "Summary judgment should be granted because the plaintiff's evidence is circumstantial.",
+        "B": "Summary judgment should be granted because the defendant's affidavit directly contradicts the plaintiff's claim.",
+        "C": "Summary judgment should be denied because there is a genuine dispute of material fact.",
+        "D": "Summary judgment should be denied because the defendant has the burden of proving no contract existed."
+      },
+      "answer": "C",
+      "why_correct": "Summary judgment is inappropriate when there is a genuine dispute of material fact. The plaintiff's declaration and emails create a factual dispute about whether the parties agreed on price. The court cannot weigh evidence or assess credibility at this stage; it must view facts in the light most favorable to the non-movant.",
+      "why_others_wrong": {
+        "A": "Circumstantial evidence can defeat summary judgment if it creates a genuine dispute.",
+        "B": "Conflicting affidavits create a dispute for trial, not a basis for summary judgment.",
+        "D": "The movant's burden is to show no genuine dispute exists, not to prove the ultimate issue."
+      },
+      "trap_type": ["genuine dispute", "weighing evidence"],
+      "exam_frequency": "high"
+    },
+    {
+      "id": "civpro_006",
+      "concept_id": "civil_procedure_claim_preclusion",
+      "subject": "Civil Procedure",
+      "tested_rule": "Res Judicata - Claim Preclusion",
+      "difficulty": "hard",
+      "fact_pattern": "A plaintiff sued a driver for property damage to her car arising from an accident. The case went to trial and the plaintiff won $5,000. Two years later, the plaintiff sued the same driver for personal injuries from the same accident. The plaintiff had not discovered the extent of her injuries until after the first trial concluded.",
+      "options": {
+        "A": "The second suit is barred because it arises from the same transaction as the first suit.",
+        "B": "The second suit is barred because the plaintiff could have amended her complaint in the first action.",
+        "C": "The second suit is not barred because personal injury and property damage are separate claims.",
+        "D": "The second suit is not barred because the injuries were not discovered until after the first judgment."
+      },
+      "answer": "A",
+      "why_correct": "Claim preclusion bars all claims arising from the same transaction or occurrence that were or could have been raised in the prior action. Property damage and personal injury from the same accident constitute a single claim for preclusion purposes. The plaintiff should have raised both in the first suit.",
+      "why_others_wrong": {
+        "B": "While true, this is not the correct legal standard; the issue is same transaction, not amendment availability.",
+        "C": "The majority rule treats all claims from the same transaction as one claim for preclusion purposes.",
+        "D": "Claim preclusion applies even if the plaintiff was unaware of the full extent of damages; the claim existed."
+      },
+      "trap_type": ["same transaction", "splitting claims"],
+      "exam_frequency": "high"
+    },
+    {
+      "id": "civpro_007",
+      "concept_id": "civil_procedure_issue_preclusion",
+      "subject": "Civil Procedure",
+      "tested_rule": "Collateral Estoppel - Issue Preclusion",
+      "difficulty": "hard",
+      "fact_pattern": "A defendant was sued by Plaintiff A for injuries from a car accident. The jury found the defendant was not negligent, and judgment was entered for the defendant. Plaintiff B, a passenger in A's car, then sued the defendant for injuries from the same accident. The defendant moved to preclude relitigation of negligence based on the prior judgment.",
+      "options": {
+        "A": "Issue preclusion applies because negligence was actually litigated and necessarily decided.",
+        "B": "Issue preclusion applies because the defendant won the first case.",
+        "C": "Issue preclusion does not apply because Plaintiff B was not a party to the first action.",
+        "D": "Issue preclusion does not apply because it would be unfair to bind Plaintiff B."
+      },
+      "answer": "C",
+      "why_correct": "Issue preclusion generally cannot be used against someone who was not a party to the prior action. Plaintiff B, who was not a party to the first lawsuit, cannot be bound by the jury's finding in that case. Due process requires that a person have an opportunity to litigate before being bound by a judgment.",
+      "why_others_wrong": {
+        "A": "While negligence was litigated, preclusion cannot be used against non-parties.",
+        "B": "The defendant's victory doesn't allow offensive use against new plaintiffs.",
+        "D": "While this conclusion is correct, the precise reason is that B was not a party, not general unfairness."
+      },
+      "trap_type": ["non-party", "due process"],
+      "exam_frequency": "medium"
+    },
+    {
+      "id": "civpro_008",
+      "concept_id": "civil_procedure_removal",
+      "subject": "Civil Procedure",
+      "tested_rule": "Removal Jurisdiction - 28 USC 1441",
+      "difficulty": "medium",
+      "fact_pattern": "A Texas plaintiff sued a Texas defendant and a California defendant in Texas state court for $100,000 in damages. The California defendant sought to remove the case to federal court based on diversity jurisdiction 45 days after being served. The Texas defendant did not consent to removal.",
+      "options": {
+        "A": "Removal is proper because diversity exists between the plaintiff and the California defendant.",
+        "B": "Removal is proper because the amount in controversy exceeds $75,000.",
+        "C": "Removal is improper because all defendants must consent to removal.",
+        "D": "Removal is improper because a defendant cannot remove to a federal court in a state where it is not a citizen."
+      },
+      "answer": "C",
+      "why_correct": "Under 28 USC 1446, all defendants who have been properly served must join in or consent to removal. Here, the Texas defendant did not consent, making removal improper regardless of whether diversity otherwise exists.",
+      "why_others_wrong": {
+        "A": "Even if diversity existed, all defendants must consent to removal.",
+        "B": "Amount in controversy is not the issue; unanimous consent is required.",
+        "D": "The forum defendant rule (1441(b)(2)) is a separate issue; here, the problem is lack of unanimous consent."
+      },
+      "trap_type": ["unanimous consent", "removal procedure"],
+      "exam_frequency": "high"
+    }
+  ]
+}

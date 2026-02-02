@@ -1,0 +1,259 @@
+{
+  "subject": "Real Property",
+  "generated_at": "2026-02-02",
+  "questions": [
+    {
+      "id": "property_001",
+      "concept_id": "real_property_estates_and_future_interests",
+      "subject": "Real Property",
+      "tested_rule": "Fee Simple Determinable vs. Fee Simple Subject to Condition Subsequent",
+      "difficulty": "hard",
+      "fact_pattern": "A grantor conveyed land 'to the City so long as the land is used for a public park.' The city used the land as a park for 20 years, then built a municipal office building on part of the land. The grantor's heir now claims the land should revert.",
+      "options": {
+        "A": "The heir has no claim because the city has fee simple absolute.",
+        "B": "The heir has no claim because adverse possession has run.",
+        "C": "The heir owns the land because it automatically reverted when the condition was violated.",
+        "D": "The heir may claim the land only after exercising a right of entry."
+      },
+      "answer": "C",
+      "why_correct": "The language 'so long as' creates a fee simple determinable with a possibility of reverter. Upon violation of the condition (using land for non-park purposes), the estate automatically terminates and reverts to the grantor (or heir). No action by the grantor is needed—reversion is automatic upon breach.",
+      "why_others_wrong": {
+        "A": "The limiting language created a defeasible fee, not fee simple absolute.",
+        "B": "Adverse possession doesn't apply to future interest holders until the interest becomes possessory.",
+        "D": "Right of entry applies to fee simple subject to condition subsequent, not determinable."
+      },
+      "trap_type": ["determinable vs. condition subsequent", "automatic forfeiture"],
+      "exam_frequency": "high"
+    },
+    {
+      "id": "property_002",
+      "concept_id": "real_property_rule_against_perpetuities",
+      "subject": "Real Property",
+      "tested_rule": "Rule Against Perpetuities",
+      "difficulty": "hard",
+      "fact_pattern": "A testator devised property 'to my grandchildren who reach age 25.' At the testator's death, the testator had two living children and three grandchildren ages 2, 5, and 8. No grandchild had reached age 25.",
+      "options": {
+        "A": "The gift is valid because all grandchildren will reach 25 within their own lifetimes.",
+        "B": "The gift is valid because the grandchildren are identified at the testator's death.",
+        "C": "The gift is void because it might vest more than 21 years after a life in being.",
+        "D": "The gift is void because no grandchild had reached 25 at the testator's death."
+      },
+      "answer": "C",
+      "why_correct": "The Rule Against Perpetuities requires that an interest must vest, if at all, within 21 years after some life in being at the creation of the interest. Here, the testator's children could have another child after the testator's death. That afterborn grandchild might reach 25 more than 21 years after all lives in being have died. Because we cannot be certain the interest will vest in time, it violates RAP.",
+      "why_others_wrong": {
+        "A": "RAP requires vesting within 21 years after a life in being, not within the taker's lifetime.",
+        "B": "More grandchildren could be born after the testator's death through living children.",
+        "D": "The timing of vesting at death isn't the issue; the possibility of late vesting is."
+      },
+      "trap_type": ["fertile octogenarian", "unborn grandchildren"],
+      "exam_frequency": "high"
+    },
+    {
+      "id": "property_003",
+      "concept_id": "real_property_easements",
+      "subject": "Real Property",
+      "tested_rule": "Easement by Necessity",
+      "difficulty": "medium",
+      "fact_pattern": "An owner of a large parcel sold the back portion to a buyer. The back portion was completely surrounded by the seller's remaining land with no access to any public road. The deed made no mention of an easement. The buyer now claims an easement across the seller's land.",
+      "options": {
+        "A": "The buyer has an easement by necessity because the parcel is landlocked.",
+        "B": "The buyer has an easement by implication based on prior use.",
+        "C": "The buyer has no easement because none was mentioned in the deed.",
+        "D": "The buyer has no easement because the seller cannot be forced to grant one."
+      },
+      "answer": "A",
+      "why_correct": "An easement by necessity arises when (1) there was common ownership of the dominant and servient estates, (2) the necessity arose from the severance, and (3) the necessity is strict (landlocked). Here, the buyer's parcel was created by severance from the seller's land and is completely landlocked, creating strict necessity for access.",
+      "why_others_wrong": {
+        "B": "Easement by implication requires prior apparent and continuous use; this is necessity based on being landlocked.",
+        "C": "Easements by necessity arise by operation of law, not express grant.",
+        "D": "The law implies an easement when land is rendered inaccessible by severance."
+      },
+      "trap_type": ["necessity vs. implication", "landlocked parcel"],
+      "exam_frequency": "high"
+    },
+    {
+      "id": "property_004",
+      "concept_id": "real_property_recording_acts",
+      "subject": "Real Property",
+      "tested_rule": "Recording Acts - Race-Notice Jurisdiction",
+      "difficulty": "hard",
+      "fact_pattern": "O owned Blackacre. On Monday, O conveyed to A, who did not record. On Tuesday, O conveyed to B, who knew about the prior conveyance to A. On Wednesday, A recorded. On Thursday, B recorded. The jurisdiction is race-notice. Who owns Blackacre?",
+      "options": {
+        "A": "A, because A recorded before B.",
+        "B": "A, because B had notice of A's prior interest.",
+        "C": "B, because B recorded first after taking without notice.",
+        "D": "B, because B's deed was delivered after A's deed."
+      },
+      "answer": "B",
+      "why_correct": "In a race-notice jurisdiction, a subsequent purchaser wins only if they (1) take without notice AND (2) record first. B had actual notice of A's prior conveyance, so B cannot be a bona fide purchaser. B's notice at the time of conveyance disqualifies B, regardless of recording order. A wins because B had notice.",
+      "why_others_wrong": {
+        "A": "While A recorded first, that's not the determinative factor when B had notice.",
+        "C": "B had actual notice at the time of the conveyance, disqualifying B.",
+        "D": "Delivery order creates priority only in the absence of recording act protection."
+      },
+      "trap_type": ["race-notice", "notice at time of conveyance"],
+      "exam_frequency": "high"
+    },
+    {
+      "id": "property_005",
+      "concept_id": "real_property_adverse_possession",
+      "subject": "Real Property",
+      "tested_rule": "Adverse Possession - Tacking",
+      "difficulty": "medium",
+      "fact_pattern": "In a state with a 10-year statute of limitations, A adversely possessed Blackacre for 6 years and then sold the property to B. B continued possession in the same manner for 5 more years. The true owner now sues to eject B.",
+      "options": {
+        "A": "B has acquired title because the combined possession exceeds 10 years.",
+        "B": "B has not acquired title because B's possession was not hostile to A.",
+        "C": "B has not acquired title because B cannot tack A's period of possession.",
+        "D": "B has not acquired title because B has only possessed for 5 years."
+      },
+      "answer": "A",
+      "why_correct": "Tacking allows successive adverse possessors to combine their periods of possession if there is privity between them. A sale creates privity. A's 6 years plus B's 5 years equals 11 years, exceeding the 10-year statute. B has acquired title through adverse possession with tacking.",
+      "why_others_wrong": {
+        "B": "B's possession is hostile to the true owner, not to A; the sale doesn't affect hostility.",
+        "C": "Tacking is permitted when there is privity (sale, inheritance, gift).",
+        "D": "With tacking, B may count A's prior years, totaling more than 10."
+      },
+      "trap_type": ["tacking", "privity requirement"],
+      "exam_frequency": "high"
+    },
+    {
+      "id": "property_006",
+      "concept_id": "real_property_landlord_tenant",
+      "subject": "Real Property",
+      "tested_rule": "Implied Warranty of Habitability",
+      "difficulty": "medium",
+      "fact_pattern": "A tenant rented an apartment. After two months, the heating system broke during winter. The landlord, despite being notified, did not repair it for three weeks. The tenant withheld rent for that period. The landlord sued for the unpaid rent.",
+      "options": {
+        "A": "The landlord will prevail because the tenant must pay rent and sue for damages separately.",
+        "B": "The landlord will prevail because the tenant did not move out.",
+        "C": "The tenant will prevail because the landlord breached the implied warranty of habitability.",
+        "D": "The tenant will prevail because the landlord constructively evicted the tenant."
+      },
+      "answer": "C",
+      "why_correct": "The implied warranty of habitability requires landlords to maintain residential premises in habitable condition. Lack of heat in winter violates this warranty. When breached, tenants may withhold rent, repair and deduct, or treat the lease as terminated. The tenant's rent withholding was a valid remedy for the landlord's breach.",
+      "why_others_wrong": {
+        "A": "Rent withholding is a recognized remedy for habitability breaches in most jurisdictions.",
+        "B": "The tenant need not vacate to assert habitability claims; that's for constructive eviction.",
+        "D": "Constructive eviction requires the tenant to vacate; the tenant remained in possession."
+      },
+      "trap_type": ["habitability remedies", "rent withholding"],
+      "exam_frequency": "high"
+    },
+    {
+      "id": "property_007",
+      "concept_id": "real_property_covenants",
+      "subject": "Real Property",
+      "tested_rule": "Real Covenants - Touch and Concern",
+      "difficulty": "hard",
+      "fact_pattern": "A subdivider included a covenant in all deeds requiring lot owners to pay annual dues to maintain common areas. A subsequent purchaser of one lot refused to pay, arguing the covenant doesn't run with the land because it's merely a personal obligation to pay money.",
+      "options": {
+        "A": "The covenant runs because payment obligations for common areas touch and concern the land.",
+        "B": "The covenant runs because it was included in the chain of title.",
+        "C": "The covenant does not run because payment of money is a personal obligation.",
+        "D": "The covenant does not run because there is no horizontal privity."
+      },
+      "answer": "A",
+      "why_correct": "For a covenant to run with the land at law, it must touch and concern both the benefited and burdened land. Payment obligations for maintaining common areas that benefit all lots in a subdivision touch and concern the land because they directly relate to the use and enjoyment of the property. The obligation enhances the benefited land and burdens the paying land.",
+      "why_others_wrong": {
+        "B": "Inclusion in the chain of title provides notice but doesn't establish touch and concern.",
+        "C": "Money payments can touch and concern land when tied to land-related benefits like common areas.",
+        "D": "Subdivider-purchaser relationships typically create horizontal privity."
+      },
+      "trap_type": ["touch and concern", "homeowner dues"],
+      "exam_frequency": "medium"
+    },
+    {
+      "id": "property_008",
+      "concept_id": "real_property_mortgages",
+      "subject": "Real Property",
+      "tested_rule": "Mortgage Priority - Purchase Money Mortgage",
+      "difficulty": "hard",
+      "fact_pattern": "A buyer purchased property for $200,000. The buyer paid $50,000 down and obtained a $150,000 loan from Bank A, secured by a mortgage on the property. The mortgage was recorded one week after closing. Before Bank A recorded, a judgment creditor filed a judgment lien against the buyer for a prior debt. Bank A claims priority.",
+      "options": {
+        "A": "The judgment lien has priority because it was recorded first.",
+        "B": "The judgment lien has priority because it arose before the mortgage was recorded.",
+        "C": "Bank A's mortgage has priority because it is a purchase money mortgage.",
+        "D": "Bank A's mortgage has priority because the judgment was for a prior debt."
+      },
+      "answer": "C",
+      "why_correct": "A purchase money mortgage (PMM) has super-priority over liens that attach to the property, even if those liens are recorded first. The PMM is considered to attach simultaneously with the buyer's acquisition of title, preventing any gap during which other liens could attach. Bank A's mortgage enabled the purchase and therefore has priority.",
+      "why_others_wrong": {
+        "A": "PMM super-priority overrides normal first-in-time recording rules.",
+        "B": "The PMM is treated as attaching at the moment of purchase, before any intervening liens.",
+        "D": "The timing of when the underlying debt arose is not relevant to mortgage priority."
+      },
+      "trap_type": ["purchase money priority", "super-priority"],
+      "exam_frequency": "high"
+    },
+    {
+      "id": "property_009",
+      "concept_id": "real_property_fixtures",
+      "subject": "Real Property",
+      "tested_rule": "Fixtures - Intent Test",
+      "difficulty": "medium",
+      "fact_pattern": "A commercial tenant installed a custom-built pizza oven, bolting it to the floor and connecting it to the gas line. At the end of the lease, the tenant attempted to remove the oven. The landlord claims the oven is a fixture belonging to the landlord.",
+      "options": {
+        "A": "The oven is a fixture because it is attached to the building.",
+        "B": "The oven is a fixture because removal would damage the floor.",
+        "C": "The oven is not a fixture because it is a trade fixture removable by the tenant.",
+        "D": "The oven is not a fixture because the tenant intended to remove it."
+      },
+      "answer": "C",
+      "why_correct": "Trade fixtures are items attached by commercial tenants for use in their trade or business. Despite physical attachment, trade fixtures may be removed by the tenant before the lease ends, provided removal doesn't cause substantial damage to the premises. A pizza oven in a pizza restaurant is a classic trade fixture.",
+      "why_others_wrong": {
+        "A": "Physical attachment alone doesn't make an item a permanent fixture; intent and use matter.",
+        "B": "Minor damage from removal doesn't prevent trade fixture removal.",
+        "D": "Intent is relevant, but the trade fixture doctrine specifically protects business items."
+      },
+      "trap_type": ["trade fixtures", "commercial tenant"],
+      "exam_frequency": "medium"
+    },
+    {
+      "id": "property_010",
+      "concept_id": "real_property_zoning",
+      "subject": "Real Property",
+      "tested_rule": "Zoning - Variance",
+      "difficulty": "medium",
+      "fact_pattern": "An owner of an oddly-shaped lot applied for a variance to build closer to the property line than the zoning ordinance allows. The lot's unusual shape made it impossible to build a reasonably sized home while complying with setback requirements. Neighboring owners objected, arguing the variance would harm their property values.",
+      "options": {
+        "A": "The variance should be denied because it would harm neighboring property values.",
+        "B": "The variance should be denied because the owner knew of the zoning when purchasing.",
+        "C": "The variance should be granted because the lot's shape creates an unnecessary hardship.",
+        "D": "The variance should be granted because the owner has a right to reasonable use of the property."
+      },
+      "answer": "C",
+      "why_correct": "A variance may be granted when (1) there is unnecessary hardship due to unique property characteristics, (2) the hardship is not self-created, and (3) the variance won't substantially harm the neighborhood. The lot's unusual shape is a unique physical characteristic creating hardship not of the owner's making. This qualifies for a variance.",
+      "why_others_wrong": {
+        "A": "Harm to neighbors must be substantial; decreased property values alone may be insufficient.",
+        "B": "Knowledge of zoning doesn't bar variances when hardship stems from physical characteristics.",
+        "D": "There's no absolute right to reasonable use; the variance criteria must be met."
+      },
+      "trap_type": ["variance standards", "unnecessary hardship"],
+      "exam_frequency": "medium"
+    },
+    {
+      "id": "property_011",
+      "concept_id": "real_property_concurrent_ownership",
+      "subject": "Real Property",
+      "tested_rule": "Joint Tenancy - Severance",
+      "difficulty": "medium",
+      "fact_pattern": "A and B owned property as joint tenants. Without B's knowledge, A executed and recorded a deed conveying A's interest to C. A then died. B claims to own the entire property by right of survivorship.",
+      "options": {
+        "A": "B owns the entire property because A's conveyance was void without B's consent.",
+        "B": "B owns the entire property because the conveyance was secret.",
+        "C": "C owns a one-half interest as tenant in common with B.",
+        "D": "C owns a one-half interest as joint tenant with B."
+      },
+      "answer": "C",
+      "why_correct": "A joint tenant may unilaterally convey their interest without the other joint tenant's consent or knowledge. Such a conveyance severs the joint tenancy as to that interest. C received A's interest, and the severance converted the ownership to a tenancy in common. When A died, there was no survivorship right because the joint tenancy had been severed.",
+      "why_others_wrong": {
+        "A": "Joint tenants can convey their interest unilaterally; consent is not required.",
+        "B": "Secrecy doesn't invalidate the conveyance or prevent severance.",
+        "D": "The conveyance destroys the four unities; C holds as tenant in common, not joint tenant."
+      },
+      "trap_type": ["severance", "unilateral conveyance"],
+      "exam_frequency": "high"
+    }
+  ]
+}
