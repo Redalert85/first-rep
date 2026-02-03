@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bar Prep Flashcards</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 800px;
+            width: 100%;
+        }
+
+        .header {
+            text-align: center;
+            color: white;
+            margin-bottom: 30px;
+        }
+
+        .header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+
+        .stats {
+            background: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(10px);
+            padding: 15px;
+            border-radius: 10px;
+            display: flex;
+            justify-content: space-around;
+            margin-bottom: 20px;
+            color: white;
+        }
+
+        .stat-item {
+            text-align: center;
+        }
+
+        .stat-value {
+            font-size: 2em;
+            font-weight: bold;
+        }
+
+        .stat-label {
+            font-size: 0.9em;
+            opacity: 0.9;
+        }
+
+        .card-container {
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            padding: 40px;
+            min-height: 400px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .subject-badge {
+            display: inline-block;
+            background: #667eea;
+            color: white;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.9em;
+            margin-bottom: 20px;
+        }
+
+        .question {
+            font-size: 1.3em;
+            line-height: 1.6;
+            color: #333;
+            margin-bottom: 30px;
+        }
+
+        .answer-section {
+            margin-top: 20px;
+        }
+
+        .answer-input {
+            width: 100%;
+            padding: 15px;
+            font-size: 1.1em;
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            margin-bottom: 15px;
+            transition: border-color 0.3s;
+        }
+
+        .answer-input:focus {
+            outline: none;
+            border-color: #667eea;
+        }
+
+        .buttons {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
+        button {
+            flex: 1;
+            padding: 15px 30px;
+            font-size: 1em;
+            font-weight: bold;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s;
+            min-width: 150px;
+        }
+
+        .btn-primary {
+            background: #667eea;
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background: #5568d3;
+            transform: translateY(-2px);
+        }
+
+        .btn-secondary {
+            background: #48bb78;
+            color: white;
+        }
+
+        .btn-secondary:hover {
+            background: #38a169;
+            transform: translateY(-2px);
+        }
+
+        .btn-show {
+            background: #ed8936;
+            color: white;
+        }
+
+        .btn-show:hover {
+            background: #dd6b20;
+            transform: translateY(-2px);
+        }
+
+        .feedback {
+            margin-top: 20px;
+            padding: 15px;
+            border-radius: 8px;
+            display: none;
+        }
+
+        .feedback.correct {
+            background: #c6f6d5;
+            border: 2px solid #48bb78;
+            color: #22543d;
+        }
+
+        .feedback.incorrect {
+            background: #fed7d7;
+            border: 2px solid #f56565;
+            color: #742a2a;
+        }
+
+        .feedback.show-answer {
+            background: #feebc8;
+            border: 2px solid #ed8936;
+            color: #7c2d12;
+        }
+
+        .answer-display {
+            font-weight: bold;
+            margin-top: 10px;
+            font-size: 1.1em;
+        }
+
+        .loading {
+            text-align: center;
+            color: #666;
+            font-size: 1.2em;
+        }
+
+        @media (max-width: 600px) {
+            .header h1 {
+                font-size: 1.8em;
+            }
+
+            .card-container {
+                padding: 25px;
+            }
+
+            .buttons {
+                flex-direction: column;
+            }
+
+            button {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Bar Prep Flashcards</h1>
+            <p>Test your knowledge and track your progress</p>
+        </div>
+
+        <div class="stats">
+            <div class="stat-item">
+                <div class="stat-value" id="total-cards">0</div>
+                <div class="stat-label">Cards Studied</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-value" id="correct-cards">0</div>
+                <div class="stat-label">Correct</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-value" id="accuracy">0%</div>
+                <div class="stat-label">Accuracy</div>
+            </div>
+        </div>
+
+        <div class="card-container">
+            <div id="card-content">
+                <div class="loading">Loading flashcard...</div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let currentCard = null;
+
+        // Load a random flashcard
+        async function loadCard() {
+            try {
+                const response = await fetch('/api/card/random');
+                const data = await response.json();
+
+                if (data.error) {
+                    displayError('No flashcards found. Please add some cards first.');
+                    return;
+                }
+
+                currentCard = data;
+                displayCard(data);
+            } catch (error) {
+                displayError('Error loading flashcard: ' + error.message);
+            }
+        }
+
+        // Display the flashcard
+        function displayCard(card) {
+            const content = document.getElementById('card-content');
+            content.innerHTML = `
+                <div>
+                    <span class="subject-badge">${card.subject}</span>
+                    <div class="question">${card.question}</div>
+                </div>
+                <div class="answer-section">
+                    <input type="text" class="answer-input" id="user-answer"
+                           placeholder="Type your answer here..."
+                           onkeypress="handleKeyPress(event)">
+                    <div class="buttons">
+                        <button class="btn-primary" onclick="checkAnswer()">Check Answer</button>
+                        <button class="btn-show" onclick="showAnswer()">Show Answer</button>
+                        <button class="btn-secondary" onclick="nextCard()">Next Card</button>
+                    </div>
+                    <div class="feedback" id="feedback"></div>
+                </div>
+            `;
+            document.getElementById('user-answer').focus();
+        }
+
+        // Handle Enter key press
+        function handleKeyPress(event) {
+            if (event.key === 'Enter') {
+                checkAnswer();
+            }
+        }
+
+        // Check the user's answer
+        async function checkAnswer() {
+            const userAnswer = document.getElementById('user-answer').value.trim();
+
+            if (!userAnswer) {
+                alert('Please enter an answer');
+                return;
+            }
+
+            try {
+                const response = await fetch('/api/card/check', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({
+                        card_id: currentCard.id,
+                        user_answer: userAnswer
+                    })
+                });
+
+                const result = await response.json();
+                displayFeedback(result);
+                updateStats();
+            } catch (error) {
+                alert('Error checking answer: ' + error.message);
+            }
+        }
+
+        // Show the correct answer
+        function showAnswer() {
+            const feedback = document.getElementById('feedback');
+            feedback.className = 'feedback show-answer';
+            feedback.style.display = 'block';
+            feedback.innerHTML = `
+                <strong>Answer:</strong>
+                <div class="answer-display">${currentCard.answer}</div>
+            `;
+        }
+
+        // Display feedback after checking answer
+        function displayFeedback(result) {
+            const feedback = document.getElementById('feedback');
+            feedback.style.display = 'block';
+
+            if (result.is_correct) {
+                feedback.className = 'feedback correct';
+                feedback.innerHTML = `
+                    <strong>Correct!</strong>
+                    <div class="answer-display">${result.correct_answer}</div>
+                `;
+            } else {
+                feedback.className = 'feedback incorrect';
+                feedback.innerHTML = `
+                    <strong>Incorrect</strong>
+                    <div>Your answer: ${result.user_answer}</div>
+                    <div class="answer-display">Correct answer: ${result.correct_answer}</div>
+                `;
+            }
+        }
+
+        // Load next card
+        function nextCard() {
+            loadCard();
+        }
+
+        // Update statistics
+        async function updateStats() {
+            try {
+                const response = await fetch('/api/stats');
+                const stats = await response.json();
+
+                document.getElementById('total-cards').textContent = stats.total;
+                document.getElementById('correct-cards').textContent = stats.correct;
+                document.getElementById('accuracy').textContent = stats.accuracy + '%';
+            } catch (error) {
+                console.error('Error updating stats:', error);
+            }
+        }
+
+        // Display error message
+        function displayError(message) {
+            const content = document.getElementById('card-content');
+            content.innerHTML = `
+                <div class="loading" style="color: #e53e3e;">${message}</div>
+            `;
+        }
+
+        // Initialize the app
+        window.onload = function() {
+            loadCard();
+            updateStats();
+        };
+    </script>
+</body>
+</html>
